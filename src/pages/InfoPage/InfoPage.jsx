@@ -1,25 +1,18 @@
-import { useNavigate } from "react-router-dom";
-
 export default function InfoPage() {
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate("/news");
-  };
   return (
     <div
       style={{
-        fontFamily: "Futura, sans-serif",
         paddingLeft: "75px",
         paddingRight: "125px",
+        paddingTop: "50px",
+        fontWeight: "regular",
       }}
     >
       <p style={{ fontSize: "80px" }}>
         Информационный учебный полигон “Катариум”
       </p>
-      <button onClick={handleClick}>News</button>
-      <p style={{ fontSize: "28px", marginTop: "50px" }}>О системе</p>
-      <p style={{ fontSize: "28px" }}>
+      <p style={{ fontSize: "28px", marginTop: "30px" }}>О системе</p>
+      <p style={{ fontSize: "28px", marginTop: "60px" }}>
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
         ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
         dis parturient montes, nascetur ridiculus mus. Donec quam felis,
