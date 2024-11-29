@@ -15,6 +15,7 @@ export default function MagicButton() {
     border: "none",
     borderRadius: "4px",
     cursor: "pointer",
+    zIndex: "100",
   };
 
   const handleButtonClick = () => {
