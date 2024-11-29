@@ -1,4 +1,11 @@
+import { useNavigate } from "react-router-dom";
+
 export default function InfoPage() {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/news");
+  };
   return (
     <div
       style={{
@@ -10,6 +17,7 @@ export default function InfoPage() {
       <p style={{ fontSize: "80px" }}>
         Информационный учебный полигон “Катариум”
       </p>
+      <button onClick={handleClick}>News</button>
       <p style={{ fontSize: "28px", marginTop: "50px" }}>О системе</p>
       <p style={{ fontSize: "28px" }}>
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
