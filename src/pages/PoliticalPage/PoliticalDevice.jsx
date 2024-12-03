@@ -1,23 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import MagicButton from "../../components/MagicButton";
-import BackgroundPoliticalPage from "../../assets/BackgroundPoliticalPage.png";
-import DropdownArrow from "../../assets/DropdownArrow.svg";
+import PoliticalDeviceImage from "../../assets/PoliticalDeviceImage.png";
 
-export default function PoliticalPage() {
+export default function PoliticalDevice() {
   return (
     <div style={{ position: "relative" }}>
       <MagicButton />
-      <img
-        style={{ position: "absolute", width: "100%" }}
-        src={BackgroundPoliticalPage}
-        alt=""
-      />
       <header
         style={{
-          backgroundColor: "rgb(0, 0, 0, 0.5)",
-          position: "relative",
-          zIndex: "5",
+          backgroundColor: "#061424",
         }}
       >
         <div
@@ -49,16 +41,10 @@ export default function PoliticalPage() {
                 gap: "70px",
               }}
             >
-              <p
-                style={{
-                  fontSize: "18px",
-                  color: "#DED651",
-                  textDecoration: "underline",
-                }}
-              >
+               <p>
                 <Link
                   to="/political-site"
-                  style={{fontSize: "18px", color: "#DED651", textDecoration: "none" }}
+                  style={{fontSize: "18px", color: "#fff", textDecoration: "none" }}
                 >
                   Главная
                 </Link>
@@ -82,7 +68,7 @@ export default function PoliticalPage() {
               <p>
                 <Link
                   to="/political-site/device"
-                  style={{ fontSize: "18px", color: "#fff", textDecoration: "none" }}
+                  style={{ fontSize: "18px", color: "#DED651", textDecoration: "underline" }}
                 >
                   Политическое устройство
                 </Link>
@@ -91,120 +77,30 @@ export default function PoliticalPage() {
           </div>
         </div>
       </header>
-      <div
-        style={{
-          position: "relative",
-          zIndex: "1",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          marginTop: "190px",
-          alignItems: "center",
-        }}
-      >
-        <h1
-          style={{
-            fontFamily: "Cormorant Garamond",
-            fontSize: "50px",
-            color: "white",
-            textAlign: "center",
-          }}
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing.
-        </h1>
-        <p
-          style={{
-            fontFamily: "Cormorant Garamond",
-            fontSize: "28px",
-            color: "white",
-            textAlign: "center",
-            fontWeight: "regular",
-            maxWidth: "1044px",
-            marginTop: "20px",
-          }}
-        >
-          Proin rutrum euismod leo non aliquam. Mauris lacinia ultrices
-          diam, quis bibendum justo auctor eget. Praesent aliquam vestibulum
-          nisi et porttitor.
-        </p>
-        <div
-          style={{
-            padding: "25px 15px",
-            backgroundColor: "rgb(0,0,0,.4",
-            marginTop: "50px",
-            width: "1040px",
-          }}
-        >
-          <p
-            style={{
-              fontFamily: "Cormorant Garamond",
-              fontSize: "18px",
-              color: "#48A6D5",
-              textAlign: "center",
-            }}
-          >
-            Lorem ipsum dolor sit amet
-          </p>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
-              marginTop: "25px",
-            }}
-          >
-            <div
-              style={{
+      <div style={{ maxWidth: "1060px", padding: "0 15px", margin: "0 auto" }}>
+        <img src={PoliticalDeviceImage} alt="PoliticalDeviceImage" />
+        <h2 style={{fontFamily: "Cormorant Garamond",  textAlign: "center", fontSize: "50px", fontWeight: "medium", marginTop: "40px"}}>Демократическая республика с парламентской формой правления</h2>
+        <div style={{display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "60px"}}>
+          <button style={{
                 display: "flex",
-                padding: "10px 25px",
-                backgroundColor: "white",
+                width: "346px",
+                height: "41px",
+                backgroundColor: "#EC602B",
+                color: "white",
+                alignItems: "center", 
+                justifyContent: "center",
                 borderRadius: "3px",
-                maxWidth: "250px",
-                width: "100%",
-                justifyContent: "space-between",
-              }}
-            >
-              Все разделы <img src={DropdownArrow} alt="DropdownArrow" />
-            </div>
-            <input
-              style={{
+              }}>Партия республиканцев</button>
+          <button style={{
                 display: "flex",
-                padding: "10px 25px",
-                backgroundColor: "white",
-                borderRadius: "3px",
-                width: "100%",
-              }}
-              type="text"
-              placeholder="Поиск"
-            />
-            <button
-              style={{
-                display: "flex",
-                padding: "10px 60px",
-                backgroundColor: "#B64D4A",
+                width: "346px",
+                height: "41px",
+                alignItems: "center", 
+                justifyContent: "center",
+                backgroundColor: "#EC602B",
                 color: "white",
                 borderRadius: "3px",
-              }}
-            >
-              Поиск
-            </button>
-          </div>
-          <div
-            style={{
-              display: "flex",
-              padding: "10px 60px",
-              backgroundColor: "none",
-              border: "1px solid white",
-              color: "white",
-              borderRadius: "3px",
-              maxWidth: "250px",
-              marginTop: "10px",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            + Фильтр
-          </div>
+              }}>Партия демократов</button>
         </div>
       </div>
       <footer

@@ -201,6 +201,16 @@ export default function NewsPage() {
                 border: "none",
                 borderRadius: "5px",
                 cursor: "pointer",
+                fontWeight: "500",
+                transition: "background-color 0.3s ease, color 0.3s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.backgroundColor = "#FFC700";
+                e.target.style.color = "#845BFF"; 
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.backgroundColor = "#845BFF"; 
+                e.target.style.color = "#fff";
               }}
             >
               Я не робот

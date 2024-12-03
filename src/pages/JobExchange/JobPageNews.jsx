@@ -1,10 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 import ArrowButton from "../../assets/JobPage/ArrowButton.svg";
-import BackgroundElementsVacancy from "../../assets/JobPage/BackgroundElementsVacancy.svg";
-import BackgroundImageVacancy from "../../assets/JobPage/BackgroundImageVacancy.png";
-import BackgroundElementsCompany from "../../assets/JobPage/BackgroundElementsCompany.svg";
-import BackgroundImageCompany from "../../assets/JobPage/BackgroundImageCompany.png";
 
 import BackgroundImageCards1 from "../../assets/JobPage/IMAGE 2024-11-04 14_48_48 1.png";
 import BackgroundImageCards2 from "../../assets/JobPage/IMAGE 2024-11-04 14_50_18 1.png";
@@ -14,7 +11,13 @@ import BackgroundImageCards5 from "../../assets/JobPage/IMAGE 2024-11-04 14_56_3
 import BackgroundImageCards6 from "../../assets/JobPage/IMAGE 2024-11-04 15_02_58 1.png";
 import BackgroundImageCards7 from "../../assets/JobPage/IMAGE 2024-11-04 14_54_12 1.png";
 
-export default function JobPage() {
+import BackgroundImageCards8 from "../../assets/JobPage/IMAGE 2024-11-04 14_59_20 1.png";
+import BackgroundImageCards9 from "../../assets/JobPage/IMAGE 2024-11-05 18_36_38 1.png";
+import BackgroundImageCards10 from "../../assets/JobPage/IMAGE 2024-11-05 18_36_43 1.png";
+import BackgroundImageCards11 from "../../assets/JobPage/IMAGE 2024-11-05 18_36_29 1.png";
+import BackgroundImageCards12 from "../../assets/JobPage/IMAGE 2024-11-05 18_36_33 1.png";
+
+export default function JobPageNews() {
   return (
     <>
       <div style={{ backgroundColor: "black" }}>
@@ -53,13 +56,13 @@ export default function JobPage() {
               >
                 <Link
           to="/job-exchange"
-          style={{ textDecoration: "none", color: "#EF6C00" }}
+          style={{ textDecoration: "none", color: "black" }}
         >
           Главная
         </Link>
         <Link
           to="/job-exchange/news"
-          style={{ textDecoration: "none", color: "black" }}
+          style={{ textDecoration: "none", color: "#EF6C00" }}
         >
           Новости
         </Link>
@@ -78,172 +81,6 @@ export default function JobPage() {
               </div>
             </div>
           </header>
-          <div style={{ display: "flex", height: "980px" }}>
-            <div
-              style={{
-                position: "relative",
-                width: "100%",
-                padding: "60px 0 600px 0",
-                backgroundColor: "rgba(253, 235, 216, 1)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                margin: "0 auto",
-                flexDirection: "column",
-              }}
-            >
-              <h2
-                style={{
-                  color: "#EF6C00",
-                  fontSize: 36,
-                  fontFamily: "IBM Plex Sans",
-                  fontWeight: "500",
-                  textAlign: "center",
-                  wordWrap: "break-word",
-                  marginBottom: "24px",
-                }}
-              >
-                Вакансии
-              </h2>
-              <h2
-                style={{
-                  width: "100%",
-                  textAlign: "center",
-                  color: "black",
-                  fontSize: 36,
-                  fontFamily: "IBM Plex Sans",
-                  fontWeight: "400",
-                  maxWidth: "310px",
-                  wordWrap: "break-word",
-                  marginBottom: "24px",
-                }}
-              >
-                Lorem ipsum dolor sit amet
-              </h2>
-              <p
-                style={{
-                  textAlign: "center",
-                  color: "rgba(0, 0, 0, 0.40)",
-                  fontSize: 18,
-                  fontFamily: "IBM Plex Sans",
-                  fontWeight: "500",
-                  wordWrap: "break-word",
-                  marginBottom: "30px",
-                  width: "420px",
-                }}
-              >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore
-              </p>
-              <button
-                style={{
-                  borderRadius: "10px",
-                  background: "#EF6C00",
-                  display: "flex",
-                  padding: "12px 100px",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  gap: "13.523px",
-                  color: "white",
-                  maxWidth: "250px",
-                }}
-              >
-                Перейти <img src={ArrowButton} alt="ArrowButton" />
-              </button>
-              <img
-                style={{ position: "absolute", bottom: "0%" }}
-                src={BackgroundElementsVacancy}
-                alt="BackgroundElementsVacancy"
-              />
-              <img
-                style={{ position: "absolute", bottom: "0%" }}
-                src={BackgroundImageVacancy}
-                alt="BackgroundImageVacancy"
-              />
-            </div>
-            <div
-              style={{
-                width: "100%",
-                padding: "60px 0 600px 0",
-                backgroundColor: "rgba(204, 251, 248, 1)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                margin: "0 auto",
-                position: "relative",
-                flexDirection: "column",
-              }}
-            >
-              <h2
-                style={{
-                  color: "rgba(17, 94, 89, 1)",
-                  fontSize: 36,
-                  fontFamily: "IBM Plex Sans",
-                  fontWeight: "500",
-                  textAlign: "center",
-                  wordWrap: "break-word",
-                  marginBottom: "24px",
-                }}
-              >
-                Компании
-              </h2>
-              <h2
-                style={{
-                  width: "100%",
-                  textAlign: "center",
-                  color: "black",
-                  fontSize: 36,
-                  fontFamily: "IBM Plex Sans",
-                  fontWeight: "400",
-                  wordWrap: "break-word",
-                  maxWidth: "310px",
-                  marginBottom: "24px",
-                }}
-              >
-                Lorem ipsum dolor sit amet
-              </h2>
-              <p
-                style={{
-                  textAlign: "center",
-                  color: "rgba(0, 0, 0, 0.40)",
-                  fontSize: 18,
-                  fontFamily: "IBM Plex Sans",
-                  fontWeight: "500",
-                  wordWrap: "break-word",
-                  marginBottom: "30px",
-                  width: "420px",
-                }}
-              >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore
-              </p>
-              <button
-                style={{
-                  borderRadius: "10px",
-                  background: "#EF6C00",
-                  display: "flex",
-                  padding: "12px 100px",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  gap: "13.523px",
-                  color: "white",
-                  maxWidth: "250px",
-                }}
-              >
-                Перейти <img src={ArrowButton} alt="ArrowButton" />
-              </button>
-              <img
-                style={{ position: "absolute", bottom: "0%" }}
-                src={BackgroundElementsCompany}
-                alt="BackgroundElementsCompany"
-              />
-              <img
-                style={{ position: "absolute", bottom: "0%" }}
-                src={BackgroundImageCompany}
-                alt="BackgroundImageCompany"
-              />
-            </div>
-          </div>
           <div
             style={{ maxWidth: "1320px", margin: "0 auto", marginTop: "50px" }}
           >
@@ -256,9 +93,11 @@ export default function JobPage() {
                 wordWrap: "break-word",
               }}
             >
-              Что нового
+              Новости биржи
             </h3>
-            <div style={{ margin: "50px 0 0 0", display: "flex", gap: "10px" }}>
+            <div
+              style={{ margin: "100px 0 0 0", display: "flex", gap: "10px" }}
+            >
               <div
                 style={{
                   background: "#EEF1F7",
@@ -298,7 +137,8 @@ export default function JobPage() {
                     wordWrap: "break-word",
                   }}
                 >
-                  Биржа труда запустила новый онлайн-сервис для поиска работы
+                  Служба занятости запустила программу стажировок для
+                  выпускников ВУЗов
                 </p>
               </div>
               <div
@@ -374,7 +214,8 @@ export default function JobPage() {
                         wordWrap: "break-word",
                       }}
                     >
-                      Уровень безработицы снизился до рекордного минимума
+                      Служба занятости провела ярмарку вакансий для молодых
+                      специалистов
                     </p>
                   </div>
                   <div
@@ -395,8 +236,7 @@ export default function JobPage() {
                         wordWrap: "break-word",
                       }}
                     >
-                      Биржа труда запустила новый онлайн-сервис для поиска
-                      работы
+                      Наблюдается дефицит специалистов в сфере IT
                     </p>
                   </div>
                 </div>
@@ -422,10 +262,149 @@ export default function JobPage() {
                       wordWrap: "break-word",
                     }}
                   >
-                    Биржа труда организовала бесплатные курсы по обучению
-                    востребованным профессиям
+                    Служба занятости запустила программу стажировок для
+                    выпускников ВУЗов
                   </p>
                 </div>
+              </div>
+            </div>
+            <div
+              style={{
+                margin: "10px 0",
+                borderRadius: 52,
+                height: "700px",
+                backgroundImage: `url(${BackgroundImageCards8})`,
+                width: "100%",
+                position: "relative",
+                backgroundSize: "cover",
+              }}
+            >
+              <p
+                style={{
+                  position: "absolute",
+                  left: "55px",
+                  bottom: "60px",
+                  color: "white",
+                  fontSize: 36,
+                  fontFamily: "IBM Plex Sans",
+                  fontWeight: "500",
+                  wordWrap: "break-word",
+                }}
+              >
+                Биржа труда запускает программу субсидирования работодателей,
+                создающих новые рабочие места для молодых специалистов
+              </p>
+            </div>
+            <div style={{ margin: "10px 0 0 0", display: "flex", gap: "10px" }}>
+              <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+                <div style={{ display: "flex", gap: "10px", height: "345px" }}>
+                  <div
+                    style={{
+                      background: "#EEF1F7",
+                      borderRadius: 25,
+                      maxWidth: "330px",
+                    }}
+                  >
+                    <img
+                      style={{ height: "180px", width: "100%" }}
+                      src={BackgroundImageCards9}
+                      alt=""
+                    />
+                    <p
+                      style={{
+                        padding: "6px 20px 60px",
+                        color: "black",
+                        fontSize: 24,
+                        fontFamily: "IBM Plex Sans",
+                        fontWeight: "400",
+                        wordWrap: "break-word",
+                      }}
+                    >
+                      Биржа труда отчиталась об успешной работе по
+                      трудоустройству граждан
+                    </p>
+                  </div>
+                  <div
+                    style={{
+                      background: "#EEF1F7",
+                      borderRadius: 25,
+                      maxWidth: "330px",
+                    }}
+                  >
+                    <img
+                      style={{ height: "180px" }}
+                      src={BackgroundImageCards10}
+                      alt=""
+                    />
+                    <p
+                      style={{
+                        padding: "6px 20px 60px",
+                        color: "black",
+                        fontSize: 24,
+                        fontFamily: "IBM Plex Sans",
+                        fontWeight: "400",
+                        wordWrap: "break-word",
+                      }}
+                    >
+                      Ярмарка вакансий привлекла тысячи соискателей
+                    </p>
+                  </div>
+                </div>
+                <div
+                  style={{
+                    borderRadius: 25,
+                    height: "345px",
+                    backgroundImage: `url(${BackgroundImageCards11})`,
+                    width: "650px",
+                    position: "relative",
+                    backgroundSize: "cover",
+                  }}
+                >
+                  <p
+                    style={{
+                      position: "absolute",
+                      left: "20px",
+                      bottom: "30px",
+                      color: "white",
+                      fontSize: 24,
+                      fontFamily: "IBM Plex Sans",
+                      fontWeight: "500",
+                      wordWrap: "break-word",
+                    }}
+                  >
+                    Биржа труда запускает инновационную онлайн-платформу для
+                    поиска работы и подбора персонала
+                  </p>
+                </div>
+              </div>
+              <div
+                style={{
+                  background: "#EEF1F7",
+                  borderRadius: 25,
+                  display: "flex",
+                  flexDirection: "column",
+                  maxWidth: "670px",
+                  justifyContent: "space-between",
+                }}
+              >
+                <p
+                  style={{
+                    padding: "70px 60px 30px 20px",
+                    color: "black",
+                    fontSize: 36,
+                    fontFamily: "IBM Plex Sans",
+                    fontWeight: "400",
+                    wordWrap: "break-word",
+                  }}
+                >
+                  Ведущие компании региона подписали соглашение о сотрудничестве
+                  в сфере подготовки квалифицированных кадров
+                </p>
+                <img
+                  style={{ height: "340px" }}
+                  src={BackgroundImageCards12}
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -433,7 +412,7 @@ export default function JobPage() {
             style={{
               maxWidth: "1320px",
               margin: "0 auto",
-              padding: "50px",
+              padding: "100px 0 50px",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
