@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import logo from "../../assets/Logo.svg";
 import search from "../../assets/Search.svg";
 import flags from "../../assets/Flags.png";
 import Close from "../../assets/Close.svg";
-import MagicButton from "../../components/MagicButton";
 import Refresh from "../../assets/Refresh.svg";
 
 import Captha1 from "../../assets/captha/Captcha/Active/Captcha/1.svg";
@@ -172,10 +171,11 @@ export default function NewsPage() {
                     justifyContent: "center",
                     alignItems: "center",
                     cursor: "pointer",
+                    borderRadius: "11px",
                     transform:
-                      selectedIndex === index ? "scale(0.9)" : "scale(1)",
+                      selectedIndex === index ? "scale(0.95)" : "scale(1)",
                     border:
-                      selectedIndex === index ? "2px solid #845BFF" : "none",
+                      selectedIndex === index ? "3px solid #845BFF" : "none",
                   }}
                 >
                   <img
@@ -219,8 +219,7 @@ export default function NewsPage() {
         </div>
       )}
       <div style={{ backgroundColor: "#F5F1E7", width: "100%" }}>
-        <MagicButton />
-        <div style={{ maxWidth: "1440px", margin: "0 auto" }}>
+        <div style={{ maxWidth: "1370px", margin: "0 auto" }}>
           <header
             style={{
               display: "flex",
@@ -1306,10 +1305,12 @@ export default function NewsPage() {
             </div>
           </div>
           <hr style={{ margin: "40px 0 30px 0" }} />
+          <div style={{display: "flex", justifyContent: "space-between", paddingBottom: "30px"}}>
           <div
             style={{
               display: "flex",
-              flexDirection: "row",
+              flexDirection: "column",
+              gap: 40,
               justifyContent: "space-between",
             }}
           >
@@ -1335,6 +1336,8 @@ export default function NewsPage() {
             >
               2023. Все права защищены
             </p>
+          </div>
+          <Link to="/info" style={{color: 'black', fontSize: 16, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>Вернуться в контур системы</Link>
           </div>
         </div>
       </div>

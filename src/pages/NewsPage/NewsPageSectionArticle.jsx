@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import logo from "../../assets/Logo.svg";
 import Close from "../../assets/Close.svg";
 import ArrowBack from "../../assets/BackArrow.svg";
@@ -14,8 +14,6 @@ import Captha6 from "../../assets/captha/Captcha/Active/Captcha/6.svg";
 import Captha7 from "../../assets/captha/Captcha/Active/Captcha/7.svg";
 import Captha8 from "../../assets/captha/Captcha/Active/Captcha/8.svg";
 import Captha9 from "../../assets/captha/Captcha/Active/Captcha/9.svg";
-
-import MagicButton from "../../components/MagicButton";
 
 export default function NewsPageSectionArtice({ goToAuth }) {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -74,8 +72,7 @@ export default function NewsPageSectionArtice({ goToAuth }) {
 
   return (
     <div style={{ backgroundColor: "#F5F1E7", width: "100%" }}>
-      <MagicButton />
-      <div style={{ maxWidth: "1440px", margin: "0 auto" }}>
+      <div style={{ maxWidth: "1370px", margin: "0 auto" }}>
         <header
           style={{
             display: "flex",
@@ -461,36 +458,40 @@ export default function NewsPageSectionArtice({ goToAuth }) {
           </div>
         </div>
         <hr style={{ margin: "30px 0 30px 0" }} />
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-between",
-          }}
-        >
+        <div style={{display: "flex", justifyContent: "space-between", paddingBottom: "30px"}}>
           <div
             style={{
-              fontSize: "18px",
-              fontWeight: "500",
               display: "flex",
-              alignItems: "center",
-              gap: "15px",
+              flexDirection: "column",
+              gap: 40,
+              justifyContent: "space-between",
             }}
           >
-            <img style={{ height: "18px" }} src={logo} alt="" />
-            Новостной ресурс
+            <div
+              style={{
+                fontSize: "18px",
+                fontWeight: "500",
+                display: "flex",
+                alignItems: "center",
+                gap: "15px",
+              }}
+            >
+              <img style={{ height: "18px" }} src={logo} alt="" />
+              Новостной ресурс
+            </div>
+            <p
+              style={{
+                fontSize: "18px",
+                fontWeight: "400",
+                opacity: "0.5",
+                color: "black",
+              }}
+            >
+              2023. Все права защищены
+            </p>
           </div>
-          <p
-            style={{
-              fontSize: "18px",
-              fontWeight: "400",
-              opacity: "0.5",
-              color: "black",
-            }}
-          >
-            2023. Все права защищены
-          </p>
-        </div>
+          <Link to="/info" style={{color: 'black', fontSize: 16, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>Вернуться в контур системы</Link>
+          </div>
       </div>
     </div>
   );

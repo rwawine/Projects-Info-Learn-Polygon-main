@@ -1,11 +1,9 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import logo from "../../assets/Logo.svg";
 import flags from "../../assets/Flags.png";
 import Close from "../../assets/Close.svg";
 import ArrowBack from "../../assets/BackArrow.svg";
-
-import MagicButton from "../../components/MagicButton";
 
 export default function NewsPageArtice() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -40,8 +38,7 @@ export default function NewsPageArtice() {
 
   return (
     <div style={{ backgroundColor: "#F5F1E7", width: "100%" }}>
-      <MagicButton />
-      <div style={{ maxWidth: "1440px", margin: "0 auto" }}>
+      <div style={{ maxWidth: "1370px", margin: "0 auto" }}>
         <header
           style={{
             display: "flex",
@@ -321,36 +318,40 @@ export default function NewsPageArtice() {
           </div>
         </div>
         <hr style={{ margin: "50px 0 30px 0" }} />
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-between",
-          }}
-        >
+        <div style={{display: "flex", justifyContent: "space-between", paddingBottom: "30px"}}>
           <div
             style={{
-              fontSize: "18px",
-              fontWeight: "500",
               display: "flex",
-              alignItems: "center",
-              gap: "15px",
+              flexDirection: "column",
+              gap: 40,
+              justifyContent: "space-between",
             }}
           >
-            <img style={{ height: "18px" }} src={logo} alt="" />
-            Новостной ресурс
+            <div
+              style={{
+                fontSize: "18px",
+                fontWeight: "500",
+                display: "flex",
+                alignItems: "center",
+                gap: "15px",
+              }}
+            >
+              <img style={{ height: "18px" }} src={logo} alt="" />
+              Новостной ресурс
+            </div>
+            <p
+              style={{
+                fontSize: "18px",
+                fontWeight: "400",
+                opacity: "0.5",
+                color: "black",
+              }}
+            >
+              2023. Все права защищены
+            </p>
           </div>
-          <p
-            style={{
-              fontSize: "18px",
-              fontWeight: "400",
-              opacity: "0.5",
-              color: "black",
-            }}
-          >
-            2023. Все права защищены
-          </p>
-        </div>
+          <Link to="/info" style={{color: 'black', fontSize: 16, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>Вернуться в контур системы</Link>
+          </div>
       </div>
     </div>
   );
