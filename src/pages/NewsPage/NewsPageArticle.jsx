@@ -253,7 +253,7 @@ export default function NewsPageArtice() {
                   border: "1px solid #2A2A2A",
                   borderRadius: "70px",
                   cursor: "pointer",
-                  backgroundColor: "transparent",
+                  backgroundColor: "#fff",
                 }}
               >
                 Показать ещё

@@ -2,7 +2,7 @@ export default function InfoPage() {
   return (
     <div
       style={{
-        paddingLeft: "75px",
+        paddingLeft: "205px",
         paddingRight: "125px",
         paddingTop: "50px",
         fontWeight: "regular",

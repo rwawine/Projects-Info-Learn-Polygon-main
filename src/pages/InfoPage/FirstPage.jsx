@@ -46,22 +46,54 @@ function Burger({ isOpen, open, close }) {
       }}
     >
       <button
-        onClick={() => {
-          if (isOpen) {
-            close();
-          } else {
-            open();
-          }
-        }}
+        onClick={() => (isOpen ? close() : open())}
         style={{
-          background: "#E1D6E7",
+          background: "none",
+          border: "none",
+          cursor: "pointer",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          width: "30px",
+          height: "16px",
+          padding: 0,
         }}
       >
-        {isOpen ? <div style={{ border: "0px solid #000000" }}>X</div> : "="}
+        <div
+          style={{
+            width: "30px",
+            height: "2px",
+            backgroundColor: "#000",
+            borderRadius: "1px",
+            transition: "transform 0.3s ease, opacity 0.3s ease",
+            transform: isOpen ? "rotate(45deg) translate(5px, 5px)" : "none",
+          }}
+        />
+        <div
+          style={{
+            width: "30px",
+            height: "2px",
+            backgroundColor: "#000",
+            borderRadius: "1px",
+            opacity: isOpen ? 0 : 1,
+            transition: "opacity 0.3s ease",
+          }}
+        />
+        <div
+          style={{
+            width: "30px",
+            height: "2px",
+            backgroundColor: "#000",
+            borderRadius: "1px",
+            transition: "transform 0.3s ease, opacity 0.3s ease",
+            transform: isOpen ? "rotate(-45deg) translate(5px, -5px)" : "none",
+          }}
+        />
       </button>
     </div>
   );
 }
+
 
 function LoginForm() {
   return (
@@ -134,6 +166,8 @@ function AuthPage() {
 }
 
 export default function FirstPage() {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [isHovered, setIsHovered] = useState(false);
   const [burgerIsOpen, setBurgerIsOpen] = useState(false);
   const [isAuthPage, setIsAuthPage] = useState(true);
   const navigate = useNavigate();
@@ -174,6 +208,7 @@ export default function FirstPage() {
       </header>
       <section
         style={{
+          position: "relative",
           height: "100%",
           display: "flex",
           flexGrow: 1,
@@ -185,31 +220,34 @@ export default function FirstPage() {
             style={{
               position: "absolute",
               width: "100%",
-              height: "886px",
+              height: "100%",
               zIndex: "5",
               backgroundColor: "#EFEEEC",
               flexGrow: 1,
             }}
           >
-            {menuItems.map(({ label, route }) => (
-              <button
-                key={route}
-                onClick={() => navigate(route)}
-                style={{
-                  display: "flex",
-                  padding: "30px",
-                  gap: "40px",
-                  width: "100%",
-                  borderBottom: "1px solid #000000",
-                  backgroundColor: "#EFEEEC",
-                  paddingLeft: "75px",
-                  fontSize: "42px",
-                  cursor: "pointer",
-                }}
-              >
-                {label}
-              </button>
-            ))}
+            {menuItems.map(({ label, route }, index) => (
+        <button
+          key={route}
+          onClick={() => navigate(route)}
+          onMouseEnter={() => setHoveredIndex(index)}
+          onMouseLeave={() => setHoveredIndex(null)} 
+          style={{
+            display: "flex",
+            padding: "30px",
+            gap: "40px",
+            width: "100%",
+            borderBottom: "1px solid #000000",
+            backgroundColor: hoveredIndex === index ? "#E1D6E8" : "#EFEEEC", 
+            paddingLeft: "75px",
+            fontSize: "42px",
+            cursor: "pointer",
+            transition: "background-color 0.3s ease", 
+          }}
+        >
+          {label}
+        </button>
+      ))}
           </div>
         )}
         {isAuthPage ? <InfoPage /> : <AuthPage />}
@@ -217,21 +255,43 @@ export default function FirstPage() {
           onClick={togglePage}
           style={{
             position: "absolute",
-            backgroundColor: "#1D1D1B",
+            backgroundColor: isHovered ? "#E1D6E7 " : "#1D1D1B",
             padding: "10px 10px",
-            height: "886px",
+            borderRight: isHovered ? '1px #1D1D1B solid' : "1px solid transparent" ,
+            borderLeft: isHovered ? '1px #1D1D1B solid' : "1px solid transparent" ,
+            height: "100%",
+            width: "63px",
+            transition: "background 0.3s ease",
             ...buttonPosition,
           }}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)} 
         >
           <div
             style={{
               color: "#845BFF",
-              background: "#EEEDEB",
+              background: isHovered ? "#1D1D1B" : "#EEEDEB",
               borderRadius: "20px",
-              fontSize: "30px",
+              width: "40px",
+              height: "60px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
             }}
           >
-            {isAuthPage ? "<" : ">"}
+            {isAuthPage ? <div style={{transform: "rotate(-180deg)", marginBottom: "5px"}}><svg  onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)} width="13" height="25" viewBox="0 0 13 25" fill="none" xmlns="http://www.w3.org/2000/svg"  style={{
+        stroke: isHovered ? "#EFEEEC" : "#1D1D1B",
+      }}>
+<path d="M1.8125 23.4609L11.0439 13.3064C11.4797 12.827 11.4797 12.0949 11.0439 11.6155L1.8125 1.46094" stroke-width="1.69783" stroke-linecap="round"/>
+</svg>
+</div> : <div style={{marginTop: "5px"}}><svg  onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)} width="13" height="25" viewBox="0 0 13 25" fill="none" xmlns="http://www.w3.org/2000/svg"  style={{
+        stroke: isHovered ? "#EFEEEC" : "#1D1D1B",
+      }}>
+<path d="M1.8125 23.4609L11.0439 13.3064C11.4797 12.827 11.4797 12.0949 11.0439 11.6155L1.8125 1.46094" stroke-width="1.69783" stroke-linecap="round"/>
+</svg>
+</div>}
           </div>
         </button>
       </section>

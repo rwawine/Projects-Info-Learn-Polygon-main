@@ -4,6 +4,14 @@ import logo from "../../assets/Logo.svg";
 import ArrowInput from "../../assets/ArrowInput.svg";
 import ArrowPagination from "../../assets/ArrowPagination.svg";
 
+import Thubmnail7 from "../../assets/NewPage/Thumbnail7.png";
+import Thubmnail8 from "../../assets/NewPage/Thumbnail8.png";
+import Thubmnail9 from "../../assets/NewPage/Thumbnail9.png";
+import Thubmnail10 from "../../assets/NewPage/Thumbnail10.png";
+import Thubmnail11 from "../../assets/NewPage/Thumbnail11.png";
+import Thubmnail12 from "../../assets/NewPage/Thumbnail12.png";
+import Thubmnail13 from "../../assets/NewPage/Thumbnail13.png";
+
 export default function NewsPageEconomy() {
   const [hoveredIndex, setHoveredIndex] = React.useState(0);
   const navigate = useNavigate();
@@ -137,7 +145,7 @@ export default function NewsPageEconomy() {
                 maxHeight: "252px",
                 backgroundColor: "#D9D9D9",
               }}
-            />
+            ><img src={Thubmnail7} alt="" /></div>
             <div
               style={{
                 display: "flex",
@@ -185,7 +193,7 @@ export default function NewsPageEconomy() {
                     margin: "0 0 0 40px",
                   }}
                 >
-                  2 минуты назад
+                 1 час назад
                 </p>
               </div>
               <h4
@@ -196,8 +204,7 @@ export default function NewsPageEconomy() {
                   margin: "28px 0 32px 0",
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ipsum
-                dolor sit amet, consectetuer adipiscing elit.
+                 Уровень безработицы снизился до рекордного минимума за последние 10 лет
               </h4>
               <p
                 style={{
@@ -207,11 +214,7 @@ export default function NewsPageEconomy() {
                   color: "rgb(0,0,0,0.5)",
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam
-                dictum felis eu pede mollis pretium. Integer tincidunt. Cras
-                dapibus. Lorem ipsum dolor sit amet, consectetuer adipiscing
-                elit. Nullam dictum felis eu pede mollis pretium. Integer
-                tincidunt. Cras dapibus
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus
               </p>
             </div>
           </article>
@@ -227,7 +230,7 @@ export default function NewsPageEconomy() {
                 maxHeight: "252px",
                 backgroundColor: "#D9D9D9",
               }}
-            />
+            ><img src={Thubmnail8} alt="" /></div>
             <div
               style={{
                 display: "flex",
@@ -275,7 +278,7 @@ export default function NewsPageEconomy() {
                     margin: "0 0 0 40px",
                   }}
                 >
-                  2 минуты назад
+                  21 час назад
                 </p>
               </div>
               <h4
@@ -286,8 +289,7 @@ export default function NewsPageEconomy() {
                   margin: "28px 0 32px 0",
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ipsum
-                dolor sit amet, consectetuer adipiscing elit.
+                 Правительство выделило дополнительные средства на программы переобучения безработных
               </h4>
               <p
                 style={{
@@ -317,7 +319,7 @@ export default function NewsPageEconomy() {
                 maxHeight: "252px",
                 backgroundColor: "#D9D9D9",
               }}
-            />
+            ><img src={Thubmnail9} alt="" /></div>
             <div
               style={{
                 display: "flex",
@@ -353,7 +355,7 @@ export default function NewsPageEconomy() {
                     margin: "0 0 0 40px",
                   }}
                 >
-                  2 минуты назад
+                  21 час назад
                 </p>
               </div>
               <h4
@@ -364,8 +366,7 @@ export default function NewsPageEconomy() {
                   fontWeight: "500",
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ipsum
-                dolor sit amet, consectetuer adipiscing elit.
+              Крупнейшие компании страны объявили о масштабном наборе сотрудников
               </h4>
               <p
                 style={{
@@ -383,6 +384,7 @@ export default function NewsPageEconomy() {
               </p>
             </div>
           </article>
+          <div style={{display: "flex", justifyContent: "space-between"}}>
           <article
             style={{
               display: "flex",
@@ -395,7 +397,7 @@ export default function NewsPageEconomy() {
                 maxHeight: "252px",
                 backgroundColor: "#D9D9D9",
               }}
-            />
+            ><img src={Thubmnail10} alt="" /></div>
             <div
               style={{
                 display: "flex",
@@ -431,7 +433,7 @@ export default function NewsPageEconomy() {
                     margin: "0 0 0 40px",
                   }}
                 >
-                  2 минуты назад
+                  21 час назад
                 </p>
               </div>
               <h4
@@ -442,8 +444,7 @@ export default function NewsPageEconomy() {
                   margin: "28px 0 32px 0",
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ipsum
-                dolor sit amet, consectetuer adipiscing elit.
+                Исследование: большинство работодателей планируют повысить зарплаты в следующем году
               </h4>
               <p
                 style={{
@@ -461,6 +462,12 @@ export default function NewsPageEconomy() {
               </p>
             </div>
           </article>
+          <div style={{paddingTop: 6, height: "215px", width: "197px", paddingLeft: 14, paddingRight: 14, background: '#F6F6F6', borderRadius: 10,flexDirection: 'column', alignItems: 'flex-start', gap: 10, display: 'flex'}}>
+          <img style={{width: 164, height: 164, borderRadius: 11.09}} src={Thubmnail12} />
+          <div style={{color: 'black', fontSize: 12, fontFamily: 'Inter',textAlign: "center", fontWeight: '500'}}>Продажа крупного бизнеса по низким ценам</div>
+</div>
+          </div>
+          <div style={{display: "flex", justifyContent: "space-between"}}>
           <article
             style={{
               display: "flex",
@@ -473,7 +480,7 @@ export default function NewsPageEconomy() {
                 maxHeight: "252px",
                 backgroundColor: "#D9D9D9",
               }}
-            />
+            ><img src={Thubmnail11} alt="" /></div>
             <div
               style={{
                 display: "flex",
@@ -508,7 +515,7 @@ export default function NewsPageEconomy() {
                     margin: "0 0 0 40px",
                   }}
                 >
-                  2 минуты назад
+                  21 час назад
                 </p>
               </div>
               <h4
@@ -519,8 +526,7 @@ export default function NewsPageEconomy() {
                   margin: "28px 0 32px 0",
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ipsum
-                dolor sit amet, consectetuer adipiscing elit.
+                В стране наблюдается дефицит квалифицированных специалистов в сфере IT
               </h4>
               <p
                 style={{
@@ -538,6 +544,11 @@ export default function NewsPageEconomy() {
               </p>
             </div>
           </article>
+          <div style={{paddingTop: 6, height: "197px", width: "197px", paddingLeft: 14, paddingRight: 14, background: '#F6F6F6', borderRadius: 10,flexDirection: 'column', alignItems: 'flex-start', gap: 10, display: 'flex'}}>
+          <img style={{width: 164, height: 164, borderRadius: 11.09}} src={Thubmnail13} />
+          <div style={{width: 164, color: 'black',textAlign: "center", fontSize: 12, fontFamily: 'Inter', fontWeight: '500'}}>Услуги аудита за подписку </div>
+</div>
+          </div>
         </div>
         <div
           style={{

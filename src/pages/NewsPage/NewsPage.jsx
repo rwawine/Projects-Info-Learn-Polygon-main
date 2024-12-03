@@ -5,6 +5,7 @@ import search from "../../assets/Search.svg";
 import flags from "../../assets/Flags.png";
 import Close from "../../assets/Close.svg";
 import Refresh from "../../assets/Refresh.svg";
+import ArrowInput from "../../assets/ArrowInput.svg";
 
 import Captha1 from "../../assets/captha/Captcha/Active/Captcha/1.svg";
 import Captha2 from "../../assets/captha/Captcha/Active/Captcha/2.svg";
@@ -15,6 +16,13 @@ import Captha6 from "../../assets/captha/Captcha/Active/Captcha/6.svg";
 import Captha7 from "../../assets/captha/Captcha/Active/Captcha/7.svg";
 import Captha8 from "../../assets/captha/Captcha/Active/Captcha/8.svg";
 import Captha9 from "../../assets/captha/Captcha/Active/Captcha/9.svg";
+
+import Thumbnail1 from "../../assets/NewPage/Thumbnail1.png";
+import Thumbnail2 from "../../assets/NewPage/Thumbnail2.png";
+import Thumbnail3 from "../../assets/NewPage/Thumbnail3.png";
+import Thumbnail4 from "../../assets/NewPage/Thumbnail4.png";
+import Thumbnail5 from "../../assets/NewPage/Thumbnail5.png";
+import Thumbnail6 from "../../assets/NewPage/Thumbnail6.png";
 
 export default function NewsPage() {
   const [isModalVisible, setIsModalVisible] = useState(true);
@@ -81,6 +89,8 @@ export default function NewsPage() {
     Captha9,
   ];
 
+  const [isHovered, setIsHovered] = useState(false);
+
   const [placeholder, setPlaceholder] = useState("Введите ваш email");
 
   const changePlaceholder = () => {
@@ -89,15 +99,15 @@ export default function NewsPage() {
 
   useEffect(() => {
     if (isModalVisible) {
-      document.body.style.overflow = "hidden"; // Блокировка прокрутки
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "auto"; // Разблокировка прокрутки
+      document.body.style.overflow = "auto";
     }
   }, [isModalVisible]);
 
   const handleCloseModalWindow = () => {
     if (selectedIndex !== null) {
-      setIsModalVisible(false); // Закрыть модальное окно
+      setIsModalVisible(false);
     } else {
       alert("Выберите космонавта с табличкой в руках!");
     }
@@ -206,10 +216,10 @@ export default function NewsPage() {
               }}
               onMouseEnter={(e) => {
                 e.target.style.backgroundColor = "#FFC700";
-                e.target.style.color = "#845BFF"; 
+                e.target.style.color = "#845BFF";
               }}
               onMouseLeave={(e) => {
-                e.target.style.backgroundColor = "#845BFF"; 
+                e.target.style.backgroundColor = "#845BFF";
                 e.target.style.color = "#fff";
               }}
             >
@@ -291,17 +301,19 @@ export default function NewsPage() {
               gap: "20px",
             }}
           >
-            <input
-              type="text"
-              placeholder="Все разделы"
+            <div
               style={{
                 width: "190px",
+                display: "flex", alignItems: "center",
+                justifyContent: "space-between",
                 fontSize: "18px",
                 padding: "10px 24px",
                 border: "1px solid #1F1F1F",
                 borderRadius: "5px",
+                backgroundColor: "#FFFFFF",
+                cursor: "pointer"
               }}
-            />
+            ><p>Все разделы</p><img src={ArrowInput} alt="" /></div>
             с
             <input
               type="date"
@@ -309,6 +321,7 @@ export default function NewsPage() {
               style={{
                 fontSize: "18px",
                 padding: "9px 25px",
+                backgroundColor: "#FFFFFF",
                 border: "1px solid #1F1F1F",
                 borderRadius: "5px",
               }}
@@ -319,6 +332,7 @@ export default function NewsPage() {
               placeholder="по"
               style={{
                 fontSize: "18px",
+                backgroundColor: "#FFFFFF",
                 padding: "9px 25px",
                 border: "1px solid #1F1F1F",
                 borderRadius: "3px",
@@ -332,6 +346,7 @@ export default function NewsPage() {
                 height: "44px",
                 fontSize: "18px",
                 padding: "9px 25px",
+                backgroundColor: "#FFFFFF",
                 border: "1px solid #1F1F1F",
                 borderRadius: "3px",
               }}
@@ -542,7 +557,7 @@ export default function NewsPage() {
                     width: "308px",
                     maxHeight: "185px",
                   }}
-                  src={flags}
+                  src={Thumbnail1}
                   alt="thumbnail"
                 />
                 <div
@@ -605,7 +620,7 @@ export default function NewsPage() {
                     width: "308px",
                     maxHeight: "185px",
                   }}
-                  src={flags}
+                  src={Thumbnail2}
                   alt="thumbnail"
                 />
                 <div
@@ -649,8 +664,8 @@ export default function NewsPage() {
                     </span>
                   </div>
                   <h4 style={{ fontSize: "18px" }}>
-                    МИД оценил решение Международного суда ООН по иску Украины
-                    против России
+                    Совфед одобрил закон о переносе на год компенсации советских
+                    вкладов
                   </h4>
                   <p style={{ fontSize: "18px", color: "gray", margin: "0" }}>
                     2 минуты назад
@@ -668,7 +683,7 @@ export default function NewsPage() {
                     width: "308px",
                     maxHeight: "185px",
                   }}
-                  src={flags}
+                  src={Thumbnail3}
                   alt="thumbnail"
                 />
                 <div
@@ -712,8 +727,8 @@ export default function NewsPage() {
                     </span>
                   </div>
                   <h4 style={{ fontSize: "18px" }}>
-                    МИД оценил решение Международного суда ООН по иску Украины
-                    против России
+                    Сенаторы внесли в Госдуму законопроект об упрощении
+                    госзакупок
                   </h4>
                   <p style={{ fontSize: "18px", color: "gray", margin: "0" }}>
                     2 минуты назад
@@ -753,7 +768,7 @@ export default function NewsPage() {
                   gap: "10px",
                 }}
               >
-                Сайт использует cookie. <p style={{ margin: "0" }}>Зачем?</p>{" "}
+                Сайт использует cookie. <p style={{ margin: "0", textDecoration: "underline" }}>Зачем?</p>{" "}
               </div>
               <img src={Close} alt="close" />
             </div>
@@ -782,7 +797,7 @@ export default function NewsPage() {
                 maxWidth: "430px",
               }}
             >
-              <img style={{ width: "100%" }} src={flags} alt="flags" />
+              <img style={{ width: "100%" }} src={Thumbnail4} alt="flags" />
               <div
                 style={{
                   display: "flex",
@@ -807,9 +822,16 @@ export default function NewsPage() {
                 >
                   политика
                 </p>
-                <h4 style={{ margin: "20px 0 27px 0", fontWeight: "bold" }}>
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                  Ipsum dolor sit amet, consectetuer adipiscing elit.
+                <h4
+                  style={{
+                    margin: "20px 0 27px 0",
+                    fontSize: 18,
+                    fontFamily: "IBM Plex Sans",
+                    fontWeight: "400",
+                    wordWrap: "break-word",
+                  }}
+                >
+                  Скандал в правительстве: министр уличен в коррупции
                 </h4>
                 <p
                   style={{
@@ -828,7 +850,7 @@ export default function NewsPage() {
                 maxWidth: "430px",
               }}
             >
-              <img style={{ width: "100%" }} src={flags} alt="flags" />
+              <img style={{ width: "100%" }} src={Thumbnail5} alt="flags" />
               <div
                 style={{
                   display: "flex",
@@ -842,20 +864,27 @@ export default function NewsPage() {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    maxWidth: "103px",
                     height: "32px",
                     margin: "0",
+                    maxWidth: "122px",
                     fontSize: "18px",
                     color: "#1A1A1A",
                     border: "1px solid #2A2A2A",
                     borderRadius: "70px",
                   }}
                 >
-                  политика
+                  технологии
                 </p>
-                <h4 style={{ margin: "20px 0 27px 0", fontWeight: "bold" }}>
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                  Ipsum dolor sit amet, consectetuer adipiscing elit.
+                <h4
+                  style={{
+                    margin: "20px 0 27px 0",
+                    fontSize: 18,
+                    fontFamily: "IBM Plex Sans",
+                    fontWeight: "400",
+                    wordWrap: "break-word",
+                  }}
+                >
+                  Прорыв в медицине: ученые разработали новое лекарство от рака
                 </h4>
                 <p
                   style={{
@@ -865,7 +894,7 @@ export default function NewsPage() {
                     opacity: "0.5",
                   }}
                 >
-                  21 час назад
+                  1 день назад
                 </p>
               </div>
             </div>
@@ -874,7 +903,7 @@ export default function NewsPage() {
                 maxWidth: "430px",
               }}
             >
-              <img style={{ width: "100%" }} src={flags} alt="flags" />
+              <img style={{ width: "100%" }} src={Thumbnail6} alt="flags" />
               <div
                 style={{
                   display: "flex",
@@ -899,9 +928,17 @@ export default function NewsPage() {
                 >
                   политика
                 </p>
-                <h4 style={{ margin: "20px 0 27px 0", fontWeight: "bold" }}>
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                  Ipsum dolor sit amet, consectetuer adipiscing elit.
+                <h4
+                  style={{
+                    margin: "20px 0 27px 0",
+                    fontSize: 18,
+                    fontFamily: "IBM Plex Sans",
+                    fontWeight: "400",
+                    wordWrap: "break-word",
+                  }}
+                >
+                  Парламент принял спорный законопроект о регулировании
+                  социальных сетей
                 </h4>
                 <p
                   style={{
@@ -911,7 +948,7 @@ export default function NewsPage() {
                     opacity: "0.5",
                   }}
                 >
-                  21 час назад
+                  1 день назад
                 </p>
               </div>
             </div>
@@ -931,12 +968,15 @@ export default function NewsPage() {
                 padding: "5.5px 12px",
                 margin: "0",
                 fontSize: "18px",
-                color: "#1A1A1A",
+                color: isHovered ? "#FFFFFF" : "#1A1A1A",
                 border: "1px solid #2A2A2A",
                 borderRadius: "70px",
                 cursor: "pointer",
-                backgroundColor: "transparent",
+                backgroundColor: isHovered ? "#2A2A2A" : "#fff",
+                transition: "all 0.3s ease",
               }}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
             >
               Показать ещё
             </button>
@@ -999,7 +1039,7 @@ export default function NewsPage() {
                     opacity: "0.5",
                   }}
                 >
-                  21 час назад
+                  21 Апреля 2023
                 </p>
               </div>
               <h4
@@ -1010,8 +1050,7 @@ export default function NewsPage() {
                   lineHeight: "141%",
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ipsum
-                dolor sit amet, consectetuer adipiscing elit.
+                Лидеры стран G7 провели экстренный саммит по вопросам климата
               </h4>
               <p
                 style={{
@@ -1023,8 +1062,9 @@ export default function NewsPage() {
                   opacity: "0.5",
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ipsum
-                dolor sit amet, consectetuer adipiscing elit.
+                Главы государств "Большой семерки" собрались на внеочередную
+                встречу для обсуждения глобальных климатических проблем и
+                согласования совместных действий по борьбе с изменением климата.
               </p>
             </div>
             <div
@@ -1053,7 +1093,7 @@ export default function NewsPage() {
                     borderRadius: "70px",
                   }}
                 >
-                  политика
+                  общество
                 </p>
                 <p
                   style={{
@@ -1063,7 +1103,7 @@ export default function NewsPage() {
                     opacity: "0.5",
                   }}
                 >
-                  21 час назад
+                  21 Апреля 2023
                 </p>
               </div>
               <h4
@@ -1074,10 +1114,11 @@ export default function NewsPage() {
                   fontWeight: "bold",
                   fontSize: "28px",
                   lineHeight: "141%",
+                  color: "#2A2A2A",
+                  transition: "color 0.3s ease",
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ipsum
-                dolor sit amet, consectetuer adipiscing elit.
+                Президент подписал указ о повышении пенсий и пособий
               </h4>
               <p
                 style={{
@@ -1089,8 +1130,9 @@ export default function NewsPage() {
                   opacity: "0.5",
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ipsum
-                dolor sit amet, consectetuer adipiscing elit.
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam
+                dictum felis eu pede mollis pretium. Integer tincidunt. Cras
+                dapibus.
               </p>
             </div>
             <div
@@ -1129,7 +1171,7 @@ export default function NewsPage() {
                     opacity: "0.5",
                   }}
                 >
-                  21 час назад
+                  21 Апреля 2023
                 </p>
               </div>
               <h4
@@ -1140,8 +1182,7 @@ export default function NewsPage() {
                   lineHeight: "141%",
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ipsum
-                dolor sit amet, consectetuer adipiscing elit.
+                Оппозиционная партия объявила о бойкоте предстоящих выборов
               </h4>
               <p
                 style={{
@@ -1153,8 +1194,10 @@ export default function NewsPage() {
                   opacity: "0.5",
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ipsum
-                dolor sit amet, consectetuer adipiscing elit.
+                Крупнейшая оппозиционная партия заявила, что не будет
+                участвовать в предстоящих парламентских выборах, обвинив
+                правящую партию в манипуляциях и ограничении политической
+                конкуренции.
               </p>
             </div>
             <div
@@ -1193,7 +1236,7 @@ export default function NewsPage() {
                     opacity: "0.5",
                   }}
                 >
-                  21 час назад
+                  21 Апреля 2023
                 </p>
               </div>
               <h4
@@ -1204,8 +1247,8 @@ export default function NewsPage() {
                   lineHeight: "141%",
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ipsum
-                dolor sit amet, consectetuer adipiscing elit.
+                Страны-члены ООН договорились о новых мерах по борьбе с
+                терроризмом
               </h4>
               <p
                 style={{
@@ -1217,8 +1260,10 @@ export default function NewsPage() {
                   opacity: "0.5",
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ipsum
-                dolor sit amet, consectetuer adipiscing elit.
+                На заседании Генеральной Ассамблеи ООН государства-члены приняли
+                резолюцию, предусматривающую усиление международного
+                сотрудничества и обмена информацией в сфере противодействия
+                терроризму.
               </p>
             </div>
           </div>
@@ -1241,7 +1286,7 @@ export default function NewsPage() {
                 border: "1px solid #2A2A2A",
                 borderRadius: "70px",
                 cursor: "pointer",
-                backgroundColor: "transparent",
+                backgroundColor: "#fff",
               }}
             >
               Показать ещё
@@ -1305,39 +1350,56 @@ export default function NewsPage() {
             </div>
           </div>
           <hr style={{ margin: "40px 0 30px 0" }} />
-          <div style={{display: "flex", justifyContent: "space-between", paddingBottom: "30px"}}>
           <div
             style={{
               display: "flex",
-              flexDirection: "column",
-              gap: 40,
               justifyContent: "space-between",
+              paddingBottom: "30px",
             }}
           >
             <div
               style={{
-                fontSize: "18px",
-                fontWeight: "500",
                 display: "flex",
-                alignItems: "center",
-                gap: "15px",
+                flexDirection: "column",
+                gap: 40,
+                justifyContent: "space-between",
               }}
             >
-              <img style={{ height: "18px" }} src={logo} alt="" />
-              Новостной ресурс
+              <div
+                style={{
+                  fontSize: "18px",
+                  fontWeight: "500",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "15px",
+                }}
+              >
+                <img style={{ height: "18px" }} src={logo} alt="" />
+                Новостной ресурс
+              </div>
+              <p
+                style={{
+                  fontSize: "18px",
+                  fontWeight: "400",
+                  opacity: "0.5",
+                  color: "black",
+                }}
+              >
+                2023. Все права защищены
+              </p>
             </div>
-            <p
+            <Link
+              to="/info"
               style={{
-                fontSize: "18px",
-                fontWeight: "400",
-                opacity: "0.5",
                 color: "black",
+                fontSize: 16,
+                fontFamily: "IBM Plex Sans",
+                fontWeight: "400",
+                wordWrap: "break-word",
               }}
             >
-              2023. Все права защищены
-            </p>
-          </div>
-          <Link to="/info" style={{color: 'black', fontSize: 16, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>Вернуться в контур системы</Link>
+              Вернуться в контур системы
+            </Link>
           </div>
         </div>
       </div>

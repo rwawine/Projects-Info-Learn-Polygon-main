@@ -382,19 +382,29 @@ export default function NewsPageSectionArtice({ goToAuth }) {
                       ))}
                     </div>
                     <button
-                      onClick={handleCloseModal}
-                      style={{
-                        padding: "12px 130px",
-                        fontSize: "18px",
-                        backgroundColor: "#845BFF",
-                        color: "#fff",
-                        border: "none",
-                        borderRadius: "10px",
-                        cursor: "pointer",
-                      }}
-                    >
-                      Я не робот
-                    </button>
+              onClick={handleCloseModal}
+              style={{
+                padding: "10px 30px",
+                fontSize: "16px",
+                backgroundColor: "#845BFF",
+                color: "#fff",
+                border: "none",
+                borderRadius: "5px",
+                cursor: "pointer",
+                fontWeight: "500",
+                transition: "background-color 0.3s ease, color 0.3s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.backgroundColor = "#FFC700";
+                e.target.style.color = "#845BFF";
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.backgroundColor = "#845BFF";
+                e.target.style.color = "#fff";
+              }}
+            >
+              Я не робот
+            </button>
                   </div>
                 </div>
               )}

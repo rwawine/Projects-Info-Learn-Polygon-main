@@ -5,6 +5,12 @@ import ArrowInput from "../../assets/ArrowInput.svg";
 import ArrowPagination from "../../assets/ArrowPagination.svg";
 import BannerImage from "../../assets/NewsBannerPage.png";
 
+import Thumbnail14 from "../../assets/NewPage/Thumbnail14.png";
+import Thumbnail15 from "../../assets/NewPage/Thumbnail15.png";
+import Thumbnail16 from "../../assets/NewPage/Thumbnail16.png";
+import Thumbnail17 from "../../assets/NewPage/Thumbnail17.png";
+import Thumbnail18 from "../../assets/NewPage/Thumbnail18.png";
+
 export default function NewsPageOther() {
   const [hoveredIndex, setHoveredIndex] = React.useState(3);
   const navigate = useNavigate();
@@ -137,7 +143,7 @@ export default function NewsPageOther() {
                 maxHeight: "252px",
                 backgroundColor: "#D9D9D9",
               }}
-            />
+            ><img src={Thumbnail14} alt="" /></div>
             <div
               style={{
                 display: "flex",
@@ -163,7 +169,7 @@ export default function NewsPageOther() {
                     border: "1px solid #2A2A2A",
                   }}
                 >
-                  экономика
+                  политика
                 </span>
                 <span
                   style={{
@@ -185,7 +191,7 @@ export default function NewsPageOther() {
                     margin: "0 0 0 40px",
                   }}
                 >
-                  2 минуты назад
+                  1 час назад
                 </p>
               </div>
               <h4
@@ -196,22 +202,18 @@ export default function NewsPageOther() {
                   margin: "28px 0 32px 0",
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ipsum
-                dolor sit amet, consectetuer adipiscing elit.
+               Коалиционное правительство распалось из-за разногласий по ключевым вопросам
               </h4>
               <p
                 style={{
                   maxWidth: "670px",
                   fontSize: "18px",
                   margin: "0",
+                  lineHeight: "140%",
                   color: "rgb(0,0,0,0.5)",
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam
-                dictum felis eu pede mollis pretium. Integer tincidunt. Cras
-                dapibus. Lorem ipsum dolor sit amet, consectetuer adipiscing
-                elit. Nullam dictum felis eu pede mollis pretium. Integer
-                tincidunt. Cras dapibus
+                 Правящая коалиция, состоящая из нескольких политических партий, распалась в результате непреодолимых разногласий по ряду принципиальных вопросов, что привело к политическому кризису в стране.
               </p>
             </div>
           </article>
@@ -227,7 +229,7 @@ export default function NewsPageOther() {
                 maxHeight: "252px",
                 backgroundColor: "#D9D9D9",
               }}
-            />
+            ><img src={Thumbnail15} alt="" /></div>
             <div
               style={{
                 display: "flex",
@@ -253,7 +255,7 @@ export default function NewsPageOther() {
                     border: "1px solid #2A2A2A",
                   }}
                 >
-                  экономика
+                  оон
                 </span>
                 <span
                   style={{
@@ -275,7 +277,7 @@ export default function NewsPageOther() {
                     margin: "0 0 0 40px",
                   }}
                 >
-                  2 минуты назад
+                  21 час назад
                 </p>
               </div>
               <h4
@@ -283,25 +285,22 @@ export default function NewsPageOther() {
                   maxWidth: "670px",
                   fontSize: "18px",
                   fontWeight: "500",
+                  lineHeight: "140%",
                   margin: "28px 0 32px 0",
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ipsum
-                dolor sit amet, consectetuer adipiscing elit.
+                Страны-члены ООН договорились о новых мерах по борьбе с терроризмом
               </h4>
               <p
                 style={{
                   maxWidth: "670px",
                   fontSize: "18px",
                   margin: "0",
+                  lineHeight: "140%",
                   color: "rgb(0,0,0,0.5)",
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam
-                dictum felis eu pede mollis pretium. Integer tincidunt. Cras
-                dapibus. Lorem ipsum dolor sit amet, consectetuer adipiscing
-                elit. Nullam dictum felis eu pede mollis pretium. Integer
-                tincidunt. Cras dapibus
+                На заседании Генеральной Ассамблеи ООН государства-члены приняли резолюцию, предусматривающую усиление международного сотрудничества и обмена информацией в сфере противодействия терроризму.
               </p>
             </div>
           </article>
@@ -344,7 +343,7 @@ export default function NewsPageOther() {
                 maxHeight: "252px",
                 backgroundColor: "#D9D9D9",
               }}
-            />
+            ><img src={Thumbnail16} alt="" /></div>
             <div
               style={{
                 display: "flex",
@@ -370,7 +369,7 @@ export default function NewsPageOther() {
                     border: "1px solid #2A2A2A",
                   }}
                 >
-                  экономика
+                  политика
                 </span>
 
                 <p
@@ -380,7 +379,7 @@ export default function NewsPageOther() {
                     margin: "0 0 0 40px",
                   }}
                 >
-                  2 минуты назад
+                  21 час назад
                 </p>
               </div>
               <h4
@@ -389,24 +388,21 @@ export default function NewsPageOther() {
                   fontSize: "18px",
                   margin: "28px 0 32px 0",
                   fontWeight: "500",
+                  lineHeight: "140%",
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ipsum
-                dolor sit amet, consectetuer adipiscing elit.
+                Правительство объявило о масштабной приватизации государственных компаний
               </h4>
               <p
                 style={{
                   maxWidth: "670px",
                   fontSize: "18px",
                   margin: "0",
+                  lineHeight: "140%",
                   color: "rgb(0,0,0,0.5)",
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam
-                dictum felis eu pede mollis pretium. Integer tincidunt. Cras
-                dapibus. Lorem ipsum dolor sit amet, consectetuer adipiscing
-                elit. Nullam dictum felis eu pede mollis pretium. Integer
-                tincidunt. Cras dapibus
+                В рамках программы по сокращению государственного долга и стимулированию экономического роста правительство анонсировало планы по приватизации ряда крупных государственных предприятий.
               </p>
             </div>
           </article>
@@ -422,7 +418,7 @@ export default function NewsPageOther() {
                 maxHeight: "252px",
                 backgroundColor: "#D9D9D9",
               }}
-            />
+            ><img src={Thumbnail17} alt="" /></div>
             <div
               style={{
                 display: "flex",
@@ -448,9 +444,8 @@ export default function NewsPageOther() {
                     border: "1px solid #2A2A2A",
                   }}
                 >
-                  экономика
+                  выборы
                 </span>
-
                 <p
                   style={{
                     fontSize: "18px",
@@ -458,7 +453,7 @@ export default function NewsPageOther() {
                     margin: "0 0 0 40px",
                   }}
                 >
-                  2 минуты назад
+                  21 час назад
                 </p>
               </div>
               <h4
@@ -469,22 +464,18 @@ export default function NewsPageOther() {
                   margin: "28px 0 32px 0",
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ipsum
-                dolor sit amet, consectetuer adipiscing elit.
+              Оппозиционная партия объявила о бойкоте предстоящих выборов
               </h4>
               <p
                 style={{
                   maxWidth: "670px",
                   fontSize: "18px",
                   margin: "0",
+                  lineHeight: "140%",
                   color: "rgb(0,0,0,0.5)",
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam
-                dictum felis eu pede mollis pretium. Integer tincidunt. Cras
-                dapibus. Lorem ipsum dolor sit amet, consectetuer adipiscing
-                elit. Nullam dictum felis eu pede mollis pretium. Integer
-                tincidunt. Cras dapibus
+                Крупнейшая оппозиционная партия заявила, что не будет участвовать в предстоящих парламентских выборах, обвинив правящую партию в манипуляциях и ограничении политической конкуренции.
               </p>
             </div>
           </article>
@@ -500,7 +491,7 @@ export default function NewsPageOther() {
                 maxHeight: "252px",
                 backgroundColor: "#D9D9D9",
               }}
-            />
+            ><img src={Thumbnail18} alt="" /></div>
             <div
               style={{
                 display: "flex",
@@ -526,7 +517,7 @@ export default function NewsPageOther() {
                     border: "1px solid #2A2A2A",
                   }}
                 >
-                  экономика
+                  политика
                 </span>
                 <p
                   style={{
@@ -535,33 +526,30 @@ export default function NewsPageOther() {
                     margin: "0 0 0 40px",
                   }}
                 >
-                  2 минуты назад
+                  21 час назад
                 </p>
               </div>
               <h4
                 style={{
                   maxWidth: "670px",
                   fontSize: "18px",
+                  lineHeight: "140%",
                   fontWeight: "500",
                   margin: "28px 0 32px 0",
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ipsum
-                dolor sit amet, consectetuer adipiscing elit.
+               Дипломатический скандал: посол отозван из-за противоречивых высказываний
               </h4>
               <p
                 style={{
                   maxWidth: "670px",
                   fontSize: "18px",
+                  lineHeight: "140%",
                   margin: "0",
                   color: "rgb(0,0,0,0.5)",
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam
-                dictum felis eu pede mollis pretium. Integer tincidunt. Cras
-                dapibus. Lorem ipsum dolor sit amet, consectetuer adipiscing
-                elit. Nullam dictum felis eu pede mollis pretium. Integer
-                tincidunt. Cras dapibus
+                Министерство иностранных дел отозвало своего посла из союзной страны после того, как он сделал ряд спорных заявлений, вызвавших дипломатический конфликт между государствами.
               </p>
             </div>
           </article>
