@@ -1,14 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import MagicButton from "../../components/MagicButton";
 import ArrowPerson from "../../assets/ArrowPerson.svg";
 import ArrowButtonPerson from "../../assets/ArrowButtonPerson.svg";
 import Person1 from "../../assets//Persons/Person1.png";
+import Person2 from "../../assets//Persons/Person2.png";
+import Person3 from "../../assets//Persons/Person3.png";
+import Person4 from "../../assets//Persons/Person4.png";
 
 export default function PoliticalPersons() {
   return (
     <div style={{ position: "relative" }}>
-      <MagicButton />
       <header
         style={{
           backgroundColor: "#061424",
@@ -21,7 +22,7 @@ export default function PoliticalPersons() {
         >
           <div
             style={{
-              padding: "20px 20px",
+              padding: "20px 0",
               display: "flex",
               flexDirection: "row",
               justifyContent: "space-between",
@@ -33,9 +34,12 @@ export default function PoliticalPersons() {
               style={{
                 width: "117px",
                 height: "34px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
                 backgroundColor: "#B64D4A",
               }}
-            ></div>
+            ><div style={{color: 'white', fontSize: 16, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>Катариум</div></div>
             <div
               style={{
                 display: "flex",
@@ -104,7 +108,8 @@ export default function PoliticalPersons() {
             type="text"
             placeholder="Например, Аргаван Сумати"
           />
-          <button
+          <Link
+          to="/political-site/person/samira-narges"
             style={{
               padding: "10px 60px",
               backgroundColor: "#B64D4A",
@@ -113,7 +118,7 @@ export default function PoliticalPersons() {
             }}
           >
             Поиск
-          </button>
+          </Link>
         </div>
       </div>
 
@@ -162,10 +167,10 @@ export default function PoliticalPersons() {
           }}
         >
           <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-            <img src={Person1} alt="" />
+            <img src={Person2} alt="" />
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <p style={{ fontSize: "31px" }}>Абхай Аджит</p>
-              <p style={{ fontSize: "18px" }}>Представитель партии Роста</p>
+              <p style={{ fontSize: "31px" }}>Анушех Сартра</p>
+              <p style={{ fontSize: "18px" }}>Представитель партии Республиканцев</p>
             </div>
           </div>
           <p
@@ -178,6 +183,59 @@ export default function PoliticalPersons() {
           >
             Полная информация <img width={9} src={ArrowPerson} alt="" />
           </p>
+        </div>
+        <hr />
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "flex-start",
+          }}
+        >
+          <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+            <img src={Person3} alt="" />
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <p style={{ fontSize: "31px" }}>Аргаван Сумати</p>
+              <p style={{ fontSize: "18px" }}>Представитель партии Стремлений к справедливости</p>
+            </div>
+          </div>
+          <p
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "6px",
+              color: "#1A1A1A",
+            }}
+          >
+            Полная информация <img width={9} src={ArrowPerson} alt="" />
+          </p>
+        </div>
+        <hr />
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "flex-start",
+          }}
+        >
+          <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+            <img src={Person4} alt="" />
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <p style={{ fontSize: "31px" }}>Самира Наргес</p>
+              <p style={{ fontSize: "18px" }}>Республиканская партия</p>
+            </div>
+          </div>
+          <Link
+          to="/political-site/person/detail"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "6px",
+              color: "#1A1A1A",
+            }}
+          >
+            Полная информация <img width={9} src={ArrowPerson} alt="" />
+          </Link>
         </div>
         <hr />
         <div
@@ -214,10 +272,10 @@ export default function PoliticalPersons() {
           }}
         >
           <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-            <img src={Person1} alt="" />
+            <img src={Person2} alt="" />
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <p style={{ fontSize: "31px" }}>Абхай Аджит</p>
-              <p style={{ fontSize: "18px" }}>Представитель партии Роста</p>
+              <p style={{ fontSize: "31px" }}>Анушех Сартра</p>
+              <p style={{ fontSize: "18px" }}>Представитель партии Республиканцев</p>
             </div>
           </div>
           <p
@@ -240,10 +298,10 @@ export default function PoliticalPersons() {
           }}
         >
           <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-            <img src={Person1} alt="" />
+            <img src={Person3} alt="" />
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <p style={{ fontSize: "31px" }}>Абхай Аджит</p>
-              <p style={{ fontSize: "18px" }}>Представитель партии Роста</p>
+              <p style={{ fontSize: "31px" }}>Аргаван Сумати</p>
+              <p style={{ fontSize: "18px" }}>Представитель партии Стремлений к справедливости</p>
             </div>
           </div>
           <p
@@ -266,10 +324,10 @@ export default function PoliticalPersons() {
           }}
         >
           <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-            <img src={Person1} alt="" />
+            <img src={Person4} alt="" />
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <p style={{ fontSize: "31px" }}>Абхай Аджит</p>
-              <p style={{ fontSize: "18px" }}>Представитель партии Роста</p>
+              <p style={{ fontSize: "31px" }}>Самира Наргес</p>
+              <p style={{ fontSize: "18px" }}>Республиканская партия</p>
             </div>
           </div>
           <p
@@ -340,7 +398,8 @@ export default function PoliticalPersons() {
               </div>
             </div>
           </div>
-          <hr style={{ marginTop: "60px" }} />
+          <hr style={{ margin: "60px 0 20px 0" }} />
+          <div style={{display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between"}}>
           <p
             style={{
               fontSize: "18px",
@@ -351,6 +410,8 @@ export default function PoliticalPersons() {
           >
             2023. Все права защищены
           </p>
+          <Link to="/" style={{color: 'white', fontSize: 18, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>Вернуться в Контур системы</Link>
+          </div>
         </div>
       </footer>
     </div>

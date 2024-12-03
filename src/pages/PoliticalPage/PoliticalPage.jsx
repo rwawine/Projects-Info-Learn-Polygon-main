@@ -1,15 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import MagicButton from "../../components/MagicButton";
 import BackgroundPoliticalPage from "../../assets/BackgroundPoliticalPage.png";
 import DropdownArrow from "../../assets/DropdownArrow.svg";
 
 export default function PoliticalPage() {
   return (
     <div style={{ position: "relative" }}>
-      <MagicButton />
       <img
-        style={{ position: "absolute", width: "100%" }}
+        style={{ position: "absolute", width: "100%", height: "100%"}}
         src={BackgroundPoliticalPage}
         alt=""
       />
@@ -25,7 +23,7 @@ export default function PoliticalPage() {
         >
           <div
             style={{
-              padding: "20px 20px",
+              padding: "20px 0",
               display: "flex",
               flexDirection: "row",
               justifyContent: "space-between",
@@ -37,9 +35,12 @@ export default function PoliticalPage() {
               style={{
                 width: "117px",
                 height: "34px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
                 backgroundColor: "#B64D4A",
               }}
-            ></div>
+            ><div style={{color: 'white', fontSize: 16, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>Катариум</div></div>
             <div
               style={{
                 display: "flex",
@@ -246,7 +247,8 @@ export default function PoliticalPage() {
               </div>
             </div>
           </div>
-          <hr style={{ marginTop: "60px" }} />
+          <hr style={{ margin: "60px 0 20px 0" }} />
+          <div style={{display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between"}}>
           <p
             style={{
               fontSize: "18px",
@@ -257,6 +259,8 @@ export default function PoliticalPage() {
           >
             2023. Все права защищены
           </p>
+          <Link to="/" style={{color: 'white', fontSize: 18, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>Вернуться в Контур системы</Link>
+          </div>
         </div>
       </footer>
     </div>

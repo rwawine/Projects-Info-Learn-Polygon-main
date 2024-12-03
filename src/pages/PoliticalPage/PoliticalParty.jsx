@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import BackgroundPoliticalPartyImage from "../../assets/BackgroundPoliticalPartyImage.png";
-import MagicButton from "../../components/MagicButton";
 import Person1 from "../../assets/Person1.png";
 import Person2 from "../../assets/Person2.png";
 import Person3 from "../../assets/Person3.png";
@@ -12,7 +11,6 @@ import Person6 from "../../assets/Person6.png";
 export default function PoliticalParty() {
   return (
     <div style={{ position: "relative" }}>
-      <MagicButton />
       <div
         style={{
           backgroundImage: `url(${BackgroundPoliticalPartyImage})`,
@@ -31,7 +29,7 @@ export default function PoliticalParty() {
           >
             <div
               style={{
-                padding: "20px 20px",
+                padding: "20px 0",
                 display: "flex",
                 flexDirection: "row",
                 justifyContent: "space-between",
@@ -40,12 +38,15 @@ export default function PoliticalParty() {
               }}
             >
               <div
-                style={{
-                  width: "117px",
-                  height: "34px",
-                  backgroundColor: "#B64D4A",
-                }}
-              ></div>
+              style={{
+                width: "117px",
+                height: "34px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                backgroundColor: "#B64D4A",
+              }}
+            ><div style={{color: 'white', fontSize: 16, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>Катариум</div></div>
               <div
                 style={{
                   display: "flex",
@@ -382,7 +383,8 @@ export default function PoliticalParty() {
               </div>
             </div>
           </div>
-          <hr style={{ marginTop: "60px" }} />
+          <hr style={{ margin: "60px 0 20px 0" }} />
+          <div style={{display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between"}}>
           <p
             style={{
               fontSize: "18px",
@@ -393,6 +395,8 @@ export default function PoliticalParty() {
           >
             2023. Все права защищены
           </p>
+          <Link to="/" style={{color: 'white', fontSize: 18, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>Вернуться в Контур системы</Link>
+          </div>
         </div>
       </footer>
     </div>

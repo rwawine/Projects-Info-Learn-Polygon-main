@@ -1,5 +1,4 @@
 import React from "react";
-import MagicButton from "../../components/MagicButton";
 import ArrowBack from "../../assets/BackArrow.svg";
 import Person1 from "../../assets/Person1.png";
 import Person2 from "../../assets/Person2.png";
@@ -8,11 +7,12 @@ import Person4 from "../../assets/Person4.png";
 import Person5 from "../../assets/Person5.png";
 import Person6 from "../../assets/Person6.png";
 import SamiraNarges from "../../assets/SamiraNarges.png";
+import DownloadButton from "../../assets/DownloadButton.svg";
+import { Link } from "react-router-dom";
 
 export default function PoliticalPersonDetail() {
   return (
     <div style={{ position: "relative" }}>
-      <MagicButton />
       <header
         style={{
           backgroundColor: "#061424",
@@ -25,7 +25,7 @@ export default function PoliticalPersonDetail() {
         >
           <div
             style={{
-              padding: "20px 20px",
+              padding: "20px 0",
               display: "flex",
               flexDirection: "row",
               justifyContent: "space-between",
@@ -33,13 +33,16 @@ export default function PoliticalPersonDetail() {
               alignItems: "center",
             }}
           >
-            <div
+             <div
               style={{
                 width: "117px",
                 height: "34px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
                 backgroundColor: "#B64D4A",
               }}
-            ></div>
+            ><div style={{color: 'white', fontSize: 16, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>Катариум</div></div>
             <div
               style={{
                 display: "flex",
@@ -49,10 +52,38 @@ export default function PoliticalPersonDetail() {
                 gap: "70px",
               }}
             >
-              <p>Главная</p>
-              <p>Персоны</p>
-              <p>Партии</p>
-              <p>Политическое устройство</p>
+              <p>
+                <Link
+                  to="/political-site"
+                  style={{fontSize: "18px", color: "#fff", textDecoration: "none" }}
+                >
+                  Главная
+                </Link>
+              </p>
+              <p>
+                <Link
+                  to="/political-site/person"
+                  style={{ fontSize: "18px", color: "#DED651", textDecoration: "underline" }}
+                >
+                  Персоны
+                </Link>
+              </p>
+              <p>
+                <Link
+                  to="/political-site/party"
+                  style={{fontSize: "18px", color: "#fff", textDecoration: "none" }}
+                >
+                  Партии
+                </Link>
+              </p>
+              <p>
+                <Link
+                  to="/political-site/device"
+                  style={{fontSize: "18px", color: "#fff", textDecoration: "none" }}
+                >
+                  Политическое устройство
+                </Link>
+              </p>
             </div>
           </div>
         </div>
@@ -65,7 +96,7 @@ export default function PoliticalPersonDetail() {
           marginTop: "70px",
         }}
       >
-        <img src={ArrowBack} alt="ArrowBack" />
+        <Link to="/political-site/person"><img src={ArrowBack} alt="ArrowBack" /></Link>
       </div>
       <div style={{display: "flex",  maxWidth: "1060px",
           padding: "0 15px",
@@ -85,6 +116,10 @@ export default function PoliticalPersonDetail() {
             <li>Военная служба: нет</li>
             <li>Партия Республиканцев</li>
           </ul>
+          <div style={{cursor: "pointer", width: "340px", height: '100%', paddingLeft: 13, paddingRight: 13, paddingTop: 9, paddingBottom: 9, borderRadius: 3, border: '1px white solid', justifyContent: 'space-between', alignItems: 'center', display: 'inline-flex'}}>
+    <div style={{color: 'white', fontSize: 18, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>Скачать декларацию</div>
+    <img src={DownloadButton} alt="" />
+</div>
         </div>
       </div>
       <div
@@ -315,7 +350,8 @@ export default function PoliticalPersonDetail() {
               </div>
             </div>
           </div>
-          <hr style={{ marginTop: "60px" }} />
+          <hr style={{ margin: "60px 0 20px 0" }} />
+          <div style={{display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between"}}>
           <p
             style={{
               fontSize: "18px",
@@ -326,6 +362,8 @@ export default function PoliticalPersonDetail() {
           >
             2023. Все права защищены
           </p>
+          <Link to="/" style={{color: 'white', fontSize: 18, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>Вернуться в Контур системы</Link>
+          </div>
         </div>
       </footer>
     </div>

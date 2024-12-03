@@ -1,12 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import MagicButton from "../../components/MagicButton";
 import PoliticalDeviceImage from "../../assets/PoliticalDeviceImage.png";
 
 export default function PoliticalDevice() {
   return (
     <div style={{ position: "relative" }}>
-      <MagicButton />
       <header
         style={{
           backgroundColor: "#061424",
@@ -17,7 +15,7 @@ export default function PoliticalDevice() {
         >
           <div
             style={{
-              padding: "20px 20px",
+              padding: "20px 0",
               display: "flex",
               flexDirection: "row",
               justifyContent: "space-between",
@@ -25,13 +23,16 @@ export default function PoliticalDevice() {
               alignItems: "center",
             }}
           >
-            <div
+             <div
               style={{
                 width: "117px",
                 height: "34px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
                 backgroundColor: "#B64D4A",
               }}
-            ></div>
+            ><div style={{color: 'white', fontSize: 16, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>Катариум</div></div>
             <div
               style={{
                 display: "flex",
@@ -142,7 +143,8 @@ export default function PoliticalDevice() {
               </div>
             </div>
           </div>
-          <hr style={{ marginTop: "60px" }} />
+          <hr style={{ margin: "60px 0 20px 0" }} />
+          <div style={{display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between"}}>
           <p
             style={{
               fontSize: "18px",
@@ -153,6 +155,8 @@ export default function PoliticalDevice() {
           >
             2023. Все права защищены
           </p>
+          <Link to="/" style={{color: 'white', fontSize: 18, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>Вернуться в Контур системы</Link>
+          </div>
         </div>
       </footer>
     </div>
