@@ -2,14 +2,12 @@ import PoliticalParty from "../pages/PoliticalPage/PoliticalParty";
 
 export const translations = {
     ru: {
-        // Header
         systemContour: "Контур системы",
         landing: "Лендинг",
         politicalSite: "Сайт политического устройства",
         jobExchange: "Биржа труда",
         newsResource: "Новостной ресурс",
 
-        // Auth
         login: "Вход",
         registration: "Регистрация",
         username: "Логин",
@@ -19,13 +17,11 @@ export const translations = {
         enter: "Войти",
         accessRecovery: "Восстановление доступа",
 
-        // Info Page
         infoTitle: "Информационный учебный полигон \"Катариум\"",
         aboutSystem: "О системе",
 
         fromDate: "дд.мм.гггг",
 
-        // Katarium Page
         history: "ИСТОРИЯ",
         historyText1: "В 1550-х годах на севере острова Итугум, омываемом Аравийским морем, сложилось господство королевства Катарий, претендующего на обладание абсолютной властью. Оно постоянно вело разрушительные захватнические войны с соседями, завоевывая и присоединяя к себе все новые территории.",
         historyText2: "На южной стороне острова располагалось небольшое, но сильное королевство Риум. Его земли располагались вдоль крупных полноводных рек Гицем и Сея, а также в Ямчинских горах. Его населяли воинственные племена, грозно защищавшие границы своего королевства и совершающие стремительные набеги на территории Катария, доставляя много хлопот его властям.",
@@ -587,14 +583,12 @@ export const translations = {
         }
     },
     en: {
-        // Header
         systemContour: "System Contour",
         landing: "Landing",
         politicalSite: "Political Structure Site",
         jobExchange: "Job Exchange",
         newsResource: "News Resource",
 
-        // Auth
         login: "Login",
         registration: "Registration",
         username: "Username",
@@ -604,13 +598,11 @@ export const translations = {
         enter: "Enter",
         accessRecovery: "Access Recovery",
 
-        // Info Page
         infoTitle: "Information Training Ground \"Katarium\"",
         aboutSystem: "About System",
 
         fromDate: "dd.mm.yyyy",
 
-        // Katarium Page
         history: "HISTORY",
         historyText1: "In the 1550s, on the northern part of the Itugum Island, washed by the Arabian Sea, the dominance of the Katarium Kingdom was established, claiming absolute power. It constantly waged destructive aggressive wars with its neighbors, conquering and annexing new territories.",
         historyText2: "On the southern side of the island was a small but strong kingdom of Rium. Its lands were located along the large full-flowing rivers Gitsem and Seya, as well as in the Yamchin Mountains. It was inhabited by warlike tribes that fiercely defended the borders of their kingdom and made swift raids on the territories of Katarium, causing much trouble to its authorities.",
