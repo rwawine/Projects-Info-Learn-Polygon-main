@@ -12,9 +12,12 @@ import Thubmnail11 from "../../assets/NewPage/Thumbnail11.png";
 import Thubmnail12 from "../../assets/NewPage/Thumbnail12.png";
 import Thubmnail13 from "../../assets/NewPage/Thumbnail13.png";
 
+import { useLanguage } from "../../context/LanguageContext";
+
 export default function NewsPageEconomy() {
   const [hoveredIndex, setHoveredIndex] = React.useState(0);
   const navigate = useNavigate();
+  const { language, translations } = useLanguage();
 
   const handleClick = () => {
     navigate("/news");
@@ -23,18 +26,18 @@ export default function NewsPageEconomy() {
   const links = [
     {
       id: 1,
-      label: "Экономика",
+      label: translations[language].newsPageEconomy.economy,
       href: "#economy",
       pageName: "news/economy",
     },
     {
       id: 2,
-      label: "Технологии",
+      label: translations[language].newsPageEconomy.technology,
       href: "#technology",
       pageName: "news",
     },
-    { id: 3, label: "Общество", href: "#society", pageName: "news" },
-    { id: 4, label: "Другое", href: "#other", pageName: "news/other" },
+    { id: 3, label: translations[language].newsPageEconomy.society, href: "#society", pageName: "news" },
+    { id: 4, label: translations[language].newsPageEconomy.other, href: "#other", pageName: "news/other" },
   ];
 
   const handleLinkClickPage = (pageName) => {
@@ -129,7 +132,7 @@ export default function NewsPageEconomy() {
               alignItems: "center",
             }}
           >
-            Показывать: 30 <img src={ArrowInput} />
+            {translations[language].newsPageEconomy.show}: 30 <img src={ArrowInput} />
           </div>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: "35px" }}>
@@ -171,7 +174,7 @@ export default function NewsPageEconomy() {
                     border: "1px solid #2A2A2A",
                   }}
                 >
-                  экономика
+                  {translations[language].newsPageEconomy.economy}
                 </span>
                 <span
                   style={{
@@ -184,7 +187,7 @@ export default function NewsPageEconomy() {
                     border: "1px solid #C9543C",
                   }}
                 >
-                  горячие новости
+                  {translations[language].newsPageEconomy.hotNews}
                 </span>
                 <p
                   style={{
@@ -193,7 +196,7 @@ export default function NewsPageEconomy() {
                     margin: "0 0 0 40px",
                   }}
                 >
-                 1 час назад
+                  {translations[language].newsPageEconomy.oneHourAgo}
                 </p>
               </div>
               <h4
@@ -204,7 +207,7 @@ export default function NewsPageEconomy() {
                   margin: "28px 0 32px 0",
                 }}
               >
-                 Уровень безработицы снизился до рекордного минимума за последние 10 лет
+                {translations[language].newsPageEconomy.coalitionGovernment}
               </h4>
               <p
                 style={{
@@ -256,7 +259,7 @@ export default function NewsPageEconomy() {
                     border: "1px solid #2A2A2A",
                   }}
                 >
-                  экономика
+                  {translations[language].newsPageEconomy.economy}
                 </span>
                 <span
                   style={{
@@ -269,7 +272,7 @@ export default function NewsPageEconomy() {
                     border: "1px solid #C9543C",
                   }}
                 >
-                  горячие новости
+                  {translations[language].newsPageEconomy.hotNews}
                 </span>
                 <p
                   style={{
@@ -278,7 +281,7 @@ export default function NewsPageEconomy() {
                     margin: "0 0 0 40px",
                   }}
                 >
-                  21 час назад
+                  {translations[language].newsPageEconomy.TwentyOneHoursAgo}
                 </p>
               </div>
               <h4
@@ -289,7 +292,7 @@ export default function NewsPageEconomy() {
                   margin: "28px 0 32px 0",
                 }}
               >
-                 Правительство выделило дополнительные средства на программы переобучения безработных
+                {translations[language].newsPageEconomy.coalitionGovernmentDescription}
               </h4>
               <p
                 style={{
@@ -345,7 +348,7 @@ export default function NewsPageEconomy() {
                     border: "1px solid #2A2A2A",
                   }}
                 >
-                  экономика
+                  {translations[language].newsPageEconomy.economy}
                 </span>
 
                 <p
@@ -355,7 +358,7 @@ export default function NewsPageEconomy() {
                     margin: "0 0 0 40px",
                   }}
                 >
-                  21 час назад
+                  {translations[language].newsPageEconomy.TwentyOneHoursAgo}
                 </p>
               </div>
               <h4
@@ -366,7 +369,7 @@ export default function NewsPageEconomy() {
                   fontWeight: "500",
                 }}
               >
-              Крупнейшие компании страны объявили о масштабном наборе сотрудников
+              {translations[language].newsPageEconomy.coalitionGovernment2}
               </h4>
               <p
                 style={{
@@ -423,7 +426,7 @@ export default function NewsPageEconomy() {
                     border: "1px solid #2A2A2A",
                   }}
                 >
-                  экономика
+                  {translations[language].newsPageEconomy.economy}
                 </span>
 
                 <p
@@ -433,7 +436,7 @@ export default function NewsPageEconomy() {
                     margin: "0 0 0 40px",
                   }}
                 >
-                  21 час назад
+                  {translations[language].newsPageEconomy.TwentyOneHoursAgo}
                 </p>
               </div>
               <h4
@@ -444,7 +447,7 @@ export default function NewsPageEconomy() {
                   margin: "28px 0 32px 0",
                 }}
               >
-                Исследование: большинство работодателей планируют повысить зарплаты в следующем году
+                {translations[language].newsPageEconomy.coalitionGovernment3}
               </h4>
               <p
                 style={{
@@ -464,7 +467,7 @@ export default function NewsPageEconomy() {
           </article>
           <div style={{paddingTop: 6, height: "215px", width: "197px", paddingLeft: 14, paddingRight: 14, background: '#F6F6F6', borderRadius: 10,flexDirection: 'column', alignItems: 'flex-start', gap: 10, display: 'flex'}}>
           <img style={{width: 164, height: 164, borderRadius: 11.09}} src={Thubmnail12} />
-          <div style={{color: 'black', fontSize: 12, fontFamily: 'Inter',textAlign: "center", fontWeight: '500'}}>Продажа крупного бизнеса по низким ценам</div>
+          <div style={{color: 'black', fontSize: 12, fontFamily: 'Inter',textAlign: "center", fontWeight: '500'}}>{translations[language].newsPageEconomy.coalitionGovernment4}</div>
 </div>
           </div>
           <div style={{display: "flex", justifyContent: "space-between"}}>
@@ -506,7 +509,7 @@ export default function NewsPageEconomy() {
                     border: "1px solid #2A2A2A",
                   }}
                 >
-                  экономика
+                  {translations[language].newsPageEconomy.economy}
                 </span>
                 <p
                   style={{
@@ -515,7 +518,7 @@ export default function NewsPageEconomy() {
                     margin: "0 0 0 40px",
                   }}
                 >
-                  21 час назад
+                  {translations[language].newsPageEconomy.TwentyOneHoursAgo}
                 </p>
               </div>
               <h4
@@ -526,7 +529,7 @@ export default function NewsPageEconomy() {
                   margin: "28px 0 32px 0",
                 }}
               >
-                В стране наблюдается дефицит квалифицированных специалистов в сфере IT
+                {translations[language].newsPageEconomy.coalitionGovernment5}
               </h4>
               <p
                 style={{
@@ -546,7 +549,7 @@ export default function NewsPageEconomy() {
           </article>
           <div style={{paddingTop: 6, height: "197px", width: "197px", paddingLeft: 14, paddingRight: 14, background: '#F6F6F6', borderRadius: 10,flexDirection: 'column', alignItems: 'flex-start', gap: 10, display: 'flex'}}>
           <img style={{width: 164, height: 164, borderRadius: 11.09}} src={Thubmnail13} />
-          <div style={{width: 164, color: 'black',textAlign: "center", fontSize: 12, fontFamily: 'Inter', fontWeight: '500'}}>Услуги аудита за подписку </div>
+          <div style={{width: 164, color: 'black',textAlign: "center", fontSize: 12, fontFamily: 'Inter', fontWeight: '500'}}>{translations[language].newsPageEconomy.coalitionGovernment6}</div>
 </div>
           </div>
         </div>
@@ -654,7 +657,7 @@ export default function NewsPageEconomy() {
               }}
             >
               <img style={{ height: "18px" }} src={logo} alt="" />
-              Новостной ресурс
+              {translations[language].newsPageEconomy.newsResource}
             </div>
             <p
               style={{
@@ -664,10 +667,10 @@ export default function NewsPageEconomy() {
                 color: "black",
               }}
             >
-              2023. Все права защищены
+              2023. {translations[language].newsPageEconomy.copyright}
             </p>
           </div>
-          <Link to="/info" style={{color: 'black', fontSize: 16, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>Вернуться в контур системы</Link>
+          <Link to="/info" style={{color: 'black', fontSize: 16, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>{translations[language].newsPageEconomy.backToContour}</Link>
           </div>
       </div>
     </div>

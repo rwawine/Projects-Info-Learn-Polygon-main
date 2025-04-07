@@ -5,6 +5,7 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
+import { LanguageProvider } from "./context/LanguageContext";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import NewsPage from "./pages/NewsPage/NewsPage";
 import Katarium from "./pages/Katarium/Katarium";
@@ -27,34 +28,36 @@ import PoliticalPersonSearch from "./pages/PoliticalPage/PoliticalPersonSearch";
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Navigate to="/info" />} />
-        <Route path="/info" element={<FirstPage />} />
-        <Route path="/landing" element={<LandingPage />} />
+    <LanguageProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Navigate to="/info" />} />
+          <Route path="/info" element={<FirstPage />} />
+          <Route path="/landing" element={<LandingPage />} />
 
-        <Route path="/news" element={<NewsPage />} />
-        <Route path="/news/article" element={<NewsPageArtice />} />
-        <Route path="/news/articles" element={<NewsPageSectionArtice />} />
-        <Route path="/news/economy" element={<NewsPageEconomy />} />
-        <Route path="/news/other" element={<NewsPageOther />} />
+          <Route path="/news" element={<NewsPage />} />
+          <Route path="/news/article" element={<NewsPageArtice />} />
+          <Route path="/news/articles" element={<NewsPageSectionArtice />} />
+          <Route path="/news/economy" element={<NewsPageEconomy />} />
+          <Route path="/news/other" element={<NewsPageOther />} />
 
-        <Route path="/katarium" element={<Katarium />} />
+          <Route path="/katarium" element={<Katarium />} />
 
-        <Route path="/job-exchange" element={<JobPage />} />
-        <Route path="/job-exchange/vacancy" element={<JobPageVacancy />} />
-        <Route path="/job-exchange/company" element={<JobPageCompany />} />
-        <Route path="/job-exchange/company/detail" element={<JobPageCompanyDetail />} />
-        <Route path="/job-exchange/news" element={<JobPageNews />} />
+          <Route path="/job-exchange" element={<JobPage />} />
+          <Route path="/job-exchange/vacancy" element={<JobPageVacancy />} />
+          <Route path="/job-exchange/company" element={<JobPageCompany />} />
+          <Route path="/job-exchange/company/detail" element={<JobPageCompanyDetail />} />
+          <Route path="/job-exchange/news" element={<JobPageNews />} />
 
-        <Route path="/political-site" element={<PoliticalPage />} />
-        <Route path="/political-site/device" element={<PoliticalDevice />} />
-        <Route path="/political-site/party" element={<PoliticalParty />} />
-        <Route path="/political-site/person/detail" element={<PoliticalPersonDetail />} />
-        <Route path="/political-site/person" element={<PoliticalPersons />} />
-        <Route path="/political-site/person/samira-narges" element={<PoliticalPersonSearch />} />
-      </Routes>
-    </Router>
+          <Route path="/political-site" element={<PoliticalPage />} />
+          <Route path="/political-site/device" element={<PoliticalDevice />} />
+          <Route path="/political-site/party" element={<PoliticalParty />} />
+          <Route path="/political-site/person/detail" element={<PoliticalPersonDetail />} />
+          <Route path="/political-site/person" element={<PoliticalPersons />} />
+          <Route path="/political-site/person/samira-narges" element={<PoliticalPersonSearch />} />
+        </Routes>
+      </Router>
+    </LanguageProvider>
   );
 };
 

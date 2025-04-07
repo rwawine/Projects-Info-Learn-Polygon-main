@@ -5,10 +5,12 @@ import flags from "../../assets/Flags.png";
 import Close from "../../assets/Close.svg";
 import ArrowBack from "../../assets/BackArrow.svg";
 
+import { useLanguage } from "../../context/LanguageContext";
+
 export default function NewsPageArtice() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [isHovered, setIsHovered] = useState(false);
-
+  const { language, translations } = useLanguage();
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -18,18 +20,18 @@ export default function NewsPageArtice() {
   const links = [
     {
       id: 1,
-      label: "Экономика",
+      label: translations[language].newsPageArticle.economy,
       href: "#economy",
       pageName: "news/economy",
     },
     {
       id: 2,
-      label: "Технологии",
+      label: translations[language].newsPageArticle.technology,
       href: "#technology",
       pageName: "news",
     },
-    { id: 3, label: "Общество", href: "#society", pageName: "news" },
-    { id: 4, label: "Другое", href: "#other", pageName: "news/other" },
+    { id: 3, label: translations[language].newsPageArticle.society, href: "#society", pageName: "news" },
+    { id: 4, label: translations[language].newsPageArticle.other, href: "#other", pageName: "news/other" },
   ];
 
   const handleLinkClickPage = (pageName) => {
@@ -151,7 +153,7 @@ export default function NewsPageArtice() {
                     border: "1px solid #2A2A2A",
                   }}
                 >
-                  политика
+                  {translations[language].newsPageArticle.politics}
                 </span>
                 <span
                   style={{
@@ -165,7 +167,7 @@ export default function NewsPageArtice() {
                     border: "1px solid #C9543C",
                   }}
                 >
-                  горячие новости
+                  {translations[language].newsPageArticle.hotNews}
                 </span>
                 <h3
                   style={{
@@ -174,8 +176,7 @@ export default function NewsPageArtice() {
                     marginBottom: "110px",
                   }}
                 >
-                  Гондурас подал запрос на вступление в Новый банк развития
-                  БРИКС
+                  {translations[language].newsPageArticle.news1}
                 </h3>
                 <div
                   style={{
@@ -185,7 +186,7 @@ export default function NewsPageArtice() {
                   }}
                 >
                   <p style={{ fontSize: "18px", color: "black", margin: "0" }}>
-                    Источник: РБК
+                    {translations[language].newsPageArticle.news1Source}
                   </p>
                   <p
                     style={{
@@ -195,7 +196,7 @@ export default function NewsPageArtice() {
                       margin: "0",
                     }}
                   >
-                    2 минуты назад
+                    {translations[language].newsPageArticle.news1Time}
                   </p>
                 </div>
               </div>
@@ -256,7 +257,7 @@ export default function NewsPageArtice() {
                   backgroundColor: "#fff",
                 }}
               >
-                Показать ещё
+                {translations[language].newsPageArticle.showMore}
               </button>
             </div>
           </section>
@@ -298,7 +299,7 @@ export default function NewsPageArtice() {
                 src={logo}
                 alt=""
               />
-              Новостной ресурс
+              {translations[language].newsPageArticle.newsResource}
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: "25px" }}>
               <button
@@ -311,7 +312,7 @@ export default function NewsPageArtice() {
                   border: "none",
                 }}
               >
-                Подписаться
+                {translations[language].newsPageArticle.subscribe}
               </button>
               <img src={Close} alt="close" />
             </div>
@@ -337,7 +338,7 @@ export default function NewsPageArtice() {
               }}
             >
               <img style={{ height: "18px" }} src={logo} alt="" />
-              Новостной ресурс
+              {translations[language].newsPageArticle.newsResource}
             </div>
             <p
               style={{
@@ -347,10 +348,10 @@ export default function NewsPageArtice() {
                 color: "black",
               }}
             >
-              2023. Все права защищены
+              2023, {translations[language].newsPageArticle.copyright}
             </p>
           </div>
-          <Link to="/info" style={{color: 'black', fontSize: 16, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>Вернуться в контур системы</Link>
+          <Link to="/info" style={{color: 'black', fontSize: 16, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>{translations[language].newsPageArticle.backToContour}</Link>
           </div>
       </div>
     </div>

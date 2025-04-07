@@ -13,9 +13,11 @@ import GPSIcon from "../../assets/GPS.svg";
 import LampIcon from "../../assets/Lamp.svg";
 import OtherPlusIcon from "../../assets/OtherPlus.svg";
 
+import { useLanguage } from "../../context/LanguageContext";
+
 export default function JobPage() {
   const [isOpen, setIsOpen] = useState(false);
-
+  const { language, translations } = useLanguage();
   const toggleModal = () => setIsOpen((prev) => !prev);
   return (
     <>
@@ -23,7 +25,7 @@ export default function JobPage() {
         <div
           style={{ borderRadius: "0 0 50px 50px", backgroundColor: "white" }}
         >
-           <header
+          <header
             style={{
               borderTop: "1px #CACACA solid",
               borderBottom: "1px #CACACA solid",
@@ -48,35 +50,35 @@ export default function JobPage() {
                   fontWeight: "500",
                 }}
               >
-                Биржа труда
+                {translations[language].jobPageVacancy.jobExchange}
               </h3>
               <div
                 style={{ display: "flex", gap: "100px", alignItems: "center" }}
               >
                 <Link
-          to="/job-exchange"
-          style={{ textDecoration: "none", color: "black" }}
-        >
-          Главная
-        </Link>
-        <Link
-          to="/job-exchange/news"
-          style={{ textDecoration: "none", color: "black" }}
-        >
-          Новости
-        </Link>
-        <Link
-          to="/job-exchange/company"
-          style={{ textDecoration: "none", color: "black" }}
-        >
-          Компании
-        </Link>
-        <Link
-          to="/job-exchange/vacancy"
-          style={{ textDecoration: "none", color: "#EF6C00" }}
-        >
-          Вакансии
-        </Link>
+                  to="/job-exchange"
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  {translations[language].jobPageVacancy.main}
+                </Link>
+                <Link
+                  to="/job-exchange/news"
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  {translations[language].jobPageVacancy.news}
+                </Link>
+                <Link
+                  to="/job-exchange/company"
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  {translations[language].jobPageVacancy.companies}
+                </Link>
+                <Link
+                  to="/job-exchange/vacancy"
+                  style={{ textDecoration: "none", color: "#EF6C00" }}
+                >
+                  {translations[language].jobPageVacancy.vacancies}
+                </Link>
               </div>
             </div>
           </header>
@@ -93,7 +95,7 @@ export default function JobPage() {
                 marginTop: "25px",
               }}
             >
-              Вакансии
+              {translations[language].jobPageVacancy.vacancies}
             </h2>
             <div
               style={{
@@ -131,26 +133,26 @@ export default function JobPage() {
                       borderRadius: "26px",
                       padding: "45px 25px",
                       zIndex: 1000,
-                      display: "flex", 
-                      flexDirection: "column", 
+                      display: "flex",
+                      flexDirection: "column",
                       gap: "40px"
                     }}
                   >
-                    <div style={{display: "flex", flexDirection: "column", gap: "20px"}}>
-                    <div style={{display: "flex", alignItems: "center", gap: "10px"}}><img src={GPSIcon} alt="" /><p>Страна</p></div>
-                    <div style={{display: "flex", alignItems: "center", gap: "10px"}}><p>Выбрать</p><img src={OtherPlusIcon} alt="" /></div>  
-                    </div>
-                  
-                    <div style={{display: "flex", flexDirection: "column", gap: "20px"}}>
-                    <div style={{display: "flex", alignItems: "center", gap: "10px"}}><img src={LampIcon} alt="" /><p>Сфера деятельности</p></div>
-                    <div style={{display: "flex", alignItems: "center", gap: "10px"}}><p>Выбрать</p><img src={OtherPlusIcon} alt="" /></div>  
+                    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+                      <div style={{ display: "flex", alignItems: "center", gap: "10px" }}><img src={GPSIcon} alt="" /><p>{translations[language].jobPageVacancy.country}</p></div>
+                      <div style={{ display: "flex", alignItems: "center", gap: "10px" }}><p>{translations[language].jobPageVacancy.choose}</p><img src={OtherPlusIcon} alt="" /></div>
                     </div>
 
-                    <div style={{display: "flex", flexDirection: "column", gap: "30px"}}>
-                    <p style={{opacity: .5}}>Найдено 28 вакансий</p>
-                    <button style={{cursor: "pointer", width: '100%', height: '100%', paddingLeft: 100, paddingRight: 100, paddingTop: 12, paddingBottom: 12, background: '#EF6C00', borderRadius: 10, justifyContent: 'center', alignItems: 'center', gap: 13.52, display: 'inline-flex'}}>
-<div style={{textAlign: 'center', color: 'white', fontSize: 16, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>Применить</div>
-</button>
+                    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+                      <div style={{ display: "flex", alignItems: "center", gap: "10px" }}><img src={LampIcon} alt="" /><p>{translations[language].jobPageVacancy.activitySphere}</p></div>
+                      <div style={{ display: "flex", alignItems: "center", gap: "10px" }}><p>{translations[language].jobPageVacancy.chooseActivitySphere}</p><img src={OtherPlusIcon} alt="" /></div>
+                    </div>
+
+                    <div style={{ display: "flex", flexDirection: "column", gap: "30px" }}>
+                      <p style={{ opacity: .5 }}>{translations[language].jobPageVacancy.findVacancies}</p>
+                      <button style={{ cursor: "pointer", width: '100%', height: '100%', paddingLeft: 100, paddingRight: 100, paddingTop: 12, paddingBottom: 12, background: '#EF6C00', borderRadius: 10, justifyContent: 'center', alignItems: 'center', gap: 13.52, display: 'inline-flex' }}>
+                        <div style={{ textAlign: 'center', color: 'white', fontSize: 16, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word' }}>{translations[language].jobPageVacancy.apply}</div>
+                      </button>
                     </div>
 
                   </div>
@@ -175,7 +177,7 @@ export default function JobPage() {
                       wordWrap: "break-word",
                     }}
                   >
-                    Москва
+                    {translations[language].jobPageVacancy.moscow}
                   </p>
                   <p
                     style={{
@@ -196,7 +198,7 @@ export default function JobPage() {
                       wordWrap: "break-word",
                     }}
                   >
-                    Офисный
+                    {translations[language].jobPageVacancy.office}
                   </p>
                   <p
                     style={{
@@ -217,14 +219,14 @@ export default function JobPage() {
                       wordWrap: "break-word",
                     }}
                   >
-                    40 часов в неделю
+                    {translations[language].jobPageVacancy.hoursPerWeek}
                   </p>
                 </div>
               </div>
               <div style={{ display: "flex", gap: "33px" }}>
                 <input
                   type="text"
-                  placeholder="Например, аналитик"
+                  placeholder={translations[language].jobPageVacancy.placeholderAnalytic}
                   style={{
                     width: "510px",
                     paddingLeft: 37,
@@ -332,7 +334,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Аналитик данных
+                          {translations[language].jobPageVacancy.analyst}
                         </div>
                         <div
                           style={{
@@ -380,7 +382,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Москва
+                          {translations[language].jobPageVacancy.moscow}
                         </div>
                       </div>
                       <div
@@ -406,7 +408,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Офисный
+                          {translations[language].jobPageVacancy.office}
                         </div>
                       </div>
                       <div
@@ -432,7 +434,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          40 часов в неделю
+                          {translations[language].jobPageVacancy.hoursPerWeek}
                         </div>
                       </div>
                       <div
@@ -458,7 +460,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          2 часа назад
+                          {translations[language].jobPageVacancy.hoursBetween}
                         </div>
                       </div>
                     </div>
@@ -522,7 +524,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Консультант по визуализации данных - Power BI
+                          {translations[language].jobPageVacancy.consultant}
                         </div>
                         <div
                           style={{
@@ -570,7 +572,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Москва
+                          {translations[language].jobPageVacancy.moscow}
                         </div>
                       </div>
                       <div
@@ -596,7 +598,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Офисный
+                          {translations[language].jobPageVacancy.office}
                         </div>
                       </div>
                       <div
@@ -622,7 +624,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          40 часов в неделю
+                          {translations[language].jobPageVacancy.hoursPerWeek}
                         </div>
                       </div>
                       <div
@@ -648,7 +650,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          2 часа назад
+                          {translations[language].jobPageVacancy.hoursBetween}
                         </div>
                       </div>
                     </div>
@@ -712,7 +714,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Разработчик Full Stack
+                          {translations[language].jobPageVacancy.fullStackDeveloper}
                         </div>
                         <div
                           style={{
@@ -723,7 +725,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Яндекс
+                          {translations[language].jobPageVacancy.yandex}
                         </div>
                       </div>
                     </div>
@@ -760,7 +762,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Москва
+                          {translations[language].jobPageVacancy.moscow}
                         </div>
                       </div>
                       <div
@@ -786,7 +788,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Офисный
+                          {translations[language].jobPageVacancy.office}
                         </div>
                       </div>
                       <div
@@ -812,7 +814,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          40 часов в неделю
+                          {translations[language].jobPageVacancy.hoursPerWeek}
                         </div>
                       </div>
                       <div
@@ -838,7 +840,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          3 часа назад
+                          {translations[language].jobPageVacancy.hoursBetween2}
                         </div>
                       </div>
                     </div>
@@ -902,7 +904,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Cтажер по обработке данных и аналитике
+                          {translations[language].jobPageVacancy.dataAnalyst}
                         </div>
                         <div
                           style={{
@@ -950,7 +952,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Москва
+                          {translations[language].jobPageVacancy.moscow}
                         </div>
                       </div>
                       <div
@@ -976,7 +978,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Офисный
+                          {translations[language].jobPageVacancy.office}
                         </div>
                       </div>
                       <div
@@ -1002,7 +1004,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          20 часов в неделю
+                          {translations[language].jobPageVacancy.hoursPerWeek2}
                         </div>
                       </div>
                       <div
@@ -1028,7 +1030,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          3 часа назад
+                          {translations[language].jobPageVacancy.hoursBetween2}
                         </div>
                       </div>
                     </div>
@@ -1092,7 +1094,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Дипломированный аналитик данных
+                          {translations[language].jobPageVacancy.dataAnalyst2}
                         </div>
                         <div
                           style={{
@@ -1140,7 +1142,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Москва
+                          {translations[language].jobPageVacancy.moscow}
                         </div>
                       </div>
                       <div
@@ -1166,7 +1168,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Офисный
+                          {translations[language].jobPageVacancy.office}
                         </div>
                       </div>
                       <div
@@ -1192,7 +1194,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          20 часов в неделю
+                          {translations[language].jobPageVacancy.hoursPerWeek2}
                         </div>
                       </div>
                       <div
@@ -1218,7 +1220,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          2 часа назад
+                          {translations[language].jobPageVacancy.hoursBetween2}
                         </div>
                       </div>
                     </div>
@@ -1282,7 +1284,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Cтажер по обработке данных и аналитике
+                          {translations[language].jobPageVacancy.dataAnalyst}
                         </div>
                         <div
                           style={{
@@ -1330,7 +1332,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Москва
+                          {translations[language].jobPageVacancy.moscow}
                         </div>
                       </div>
                       <div
@@ -1356,7 +1358,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Офисный
+                          {translations[language].jobPageVacancy.office}
                         </div>
                       </div>
                       <div
@@ -1382,7 +1384,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          240 часов в неделю
+                          {translations[language].jobPageVacancy.hoursPerWeek}
                         </div>
                       </div>
                       <div
@@ -1408,7 +1410,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          3 часа назад
+                          {translations[language].jobPageVacancy.hoursBetween2}
                         </div>
                       </div>
                     </div>
@@ -1472,7 +1474,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Дипломированный аналитик данных
+                          {translations[language].jobPageVacancy.dataAnalyst2}
                         </div>
                         <div
                           style={{
@@ -1520,7 +1522,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Москва
+                          {translations[language].jobPageVacancy.moscow}
                         </div>
                       </div>
                       <div
@@ -1546,7 +1548,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Офисный
+                          {translations[language].jobPageVacancy.office}
                         </div>
                       </div>
                       <div
@@ -1572,7 +1574,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          20 часов в неделю
+                          {translations[language].jobPageVacancy.hoursPerWeek2}
                         </div>
                       </div>
                       <div
@@ -1598,7 +1600,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          4 часа назад
+                          {translations[language].jobPageVacancy.hoursBetween3}
                         </div>
                       </div>
                     </div>
@@ -1662,7 +1664,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Дипломированный аналитик данных
+                          {translations[language].jobPageVacancy.dataAnalyst2}
                         </div>
                         <div
                           style={{
@@ -1710,7 +1712,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Москва
+                          {translations[language].jobPageVacancy.moscow}
                         </div>
                       </div>
                       <div
@@ -1736,7 +1738,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Офисный
+                          {translations[language].jobPageVacancy.office}
                         </div>
                       </div>
                       <div
@@ -1762,7 +1764,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          20 часов в неделю
+                          {translations[language].jobPageVacancy.hoursPerWeek2}
                         </div>
                       </div>
                       <div
@@ -1788,7 +1790,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          4 часа назад
+                          {translations[language].jobPageVacancy.hoursBetween3}
                         </div>
                       </div>
                     </div>
@@ -1852,7 +1854,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Cтажер по обработке данных и аналитике
+                          {translations[language].jobPageVacancy.dataAnalyst}
                         </div>
                         <div
                           style={{
@@ -1900,7 +1902,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Москва
+                          {translations[language].jobPageVacancy.moscow}
                         </div>
                       </div>
                       <div
@@ -1926,7 +1928,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Офисный
+                          {translations[language].jobPageVacancy.office}
                         </div>
                       </div>
                       <div
@@ -1952,7 +1954,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          20 часов в неделю
+                          {translations[language].jobPageVacancy.hoursPerWeek2}
                         </div>
                       </div>
                       <div
@@ -1978,7 +1980,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          3 часа назад
+                          {translations[language].jobPageVacancy.hoursBetween2}
                         </div>
                       </div>
                     </div>
@@ -2042,7 +2044,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Дипломированный аналитик данных
+                          {translations[language].jobPageVacancy.dataAnalyst2}
                         </div>
                         <div
                           style={{
@@ -2090,7 +2092,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Москва
+                          {translations[language].jobPageVacancy.moscow}
                         </div>
                       </div>
                       <div
@@ -2116,7 +2118,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Офисный
+                          {translations[language].jobPageVacancy.office}
                         </div>
                       </div>
                       <div
@@ -2142,7 +2144,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          20 часов в неделю
+                          {translations[language].jobPageVacancy.hoursPerWeek2}
                         </div>
                       </div>
                       <div
@@ -2168,7 +2170,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          4 часа назад
+                          {translations[language].jobPageVacancy.hoursBetween3}
                         </div>
                       </div>
                     </div>
@@ -2256,7 +2258,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Аналитик данных
+                          {translations[language].jobPageVacancy.dataAnalyst3}
                         </div>
                         <div
                           style={{
@@ -2304,7 +2306,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Москва
+                          {translations[language].jobPageVacancy.moscow}
                         </div>
                       </div>
                       <div
@@ -2330,7 +2332,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Офисный
+                          {translations[language].jobPageVacancy.office}
                         </div>
                       </div>
                       <div
@@ -2356,7 +2358,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          40 часов в неделю
+                          {translations[language].jobPageVacancy.hoursPerWeek}
                         </div>
                       </div>
                       <div
@@ -2382,7 +2384,7 @@ export default function JobPage() {
                             wordWrap: "break-word",
                           }}
                         >
-                          2 часа назад
+                          {translations[language].jobPageVacancy.hoursBetween}
                         </div>
                       </div>
                     </div>
@@ -2475,7 +2477,7 @@ export default function JobPage() {
                               wordWrap: "break-word",
                             }}
                           >
-                            CAPCO, Москва, Россия
+                            {translations[language].jobPageVacancy.CAPCO}
                           </div>
                         </div>
                         <div
@@ -2503,7 +2505,7 @@ export default function JobPage() {
                               wordWrap: "break-word",
                             }}
                           >
-                            Подать резюме
+                            {translations[language].jobPageVacancy.applyResume}
                           </div>
                         </div>
                       </div>
@@ -2518,7 +2520,7 @@ export default function JobPage() {
                           wordWrap: "break-word",
                         }}
                       >
-                        Консультант по визуализации данных - Power BI
+                        {translations[language].jobPageVacancy.consultant}
                       </div>
                     </div>
                     <div
@@ -2575,7 +2577,7 @@ export default function JobPage() {
                                 wordWrap: "break-word",
                               }}
                             >
-                              Москва
+                              {translations[language].jobPageVacancy.moscow}
                             </div>
                           </div>
                           <div
@@ -2601,7 +2603,7 @@ export default function JobPage() {
                                 wordWrap: "break-word",
                               }}
                             >
-                              Офисный
+                              {translations[language].jobPageVacancy.office}
                             </div>
                           </div>
                           <div
@@ -2627,7 +2629,7 @@ export default function JobPage() {
                                 wordWrap: "break-word",
                               }}
                             >
-                              40 часов в неделю
+                              {translations[language].jobPageVacancy.hoursPerWeek}
                             </div>
                           </div>
                         </div>
@@ -2642,40 +2644,17 @@ export default function JobPage() {
                           }}
                         >
                           <p>
-                            Capco - это глобальная консалтинговая компания в
-                            области технологий и бизнеса, специализирующаяся на
-                            секторе финансовых услуг. Мы стремимся помочь нашим
-                            клиентам добиться успеха в постоянно меняющейся
-                            отрасли, сочетая инновационное мышление с
-                            уникальными экспертными ноу-хау. Решения, которые мы
-                            предлагаем нашим клиентам каждый день, так же
-                            разнообразны, как и наши сотрудники.
+                            {translations[language].jobPageVacancy.capcoDescription}
                           </p>
 
                           <p style={{ marginTop: "24px" }}>
-                            В рамках нашей продолжающейся глобальной стратегии
-                            расширения Capco расширяет свою практику обработки
-                            данных в Великобритании в нашем лондонском офисе. В
-                            настоящее время мы ищем консультантов по управлению,
-                            обладающих опытом анализа данных, для руководства и
-                            развития команд для поддержки крупномасштабных
-                            проектов по преобразованию для наших ведущих
-                            клиентов в сфере финансовых услуг.
+                           {translations[language].jobPageVacancy.capcoDescription2}
                           </p>
 
-                          <p style={{ marginTop: "24px" }}> Кандидат должен:</p>
+                          <p style={{ marginTop: "24px" }}>{translations[language].jobPageVacancy.candidateMust}:</p>
 
                           <p style={{ marginTop: "24px" }}>
-                            Обладаете настоящей страстью к обработке данных и
-                            стремлением перевести отрасль на перспективный
-                            подход к анализу данных Будьте готовы присоединиться
-                            к команде, которая будет развивать возможности
-                            британской практики визуализации данных и более
-                            широкую британскую и глобальную практику обработки
-                            данных для поддержки таких изменяющихся в отрасли
-                            тем, как визуализация данных, рассказывание историй
-                            о данных, описательная и диагностическая аналитика,
-                            Диалоговая аналитика и
+                            {translations[language].jobPageVacancy.candidateMust1}
                           </p>
                         </div>
                       </div>
@@ -2707,7 +2686,7 @@ export default function JobPage() {
                               wordWrap: "break-word",
                             }}
                           >
-                            Загрузить еще
+                            {translations[language].jobPageVacancy.loadMore}
                           </p>
                         </div>
                         <img src={ArrowMoreSVG} alt="ArrowMoreSVG" />
@@ -2737,7 +2716,7 @@ export default function JobPage() {
                       wordWrap: "break-word",
                     }}
                   >
-                    Обзор компании
+                    {translations[language].jobPageVacancy.companyOverview}
                   </div>
                   <div
                     style={{
@@ -2752,7 +2731,7 @@ export default function JobPage() {
                       wordWrap: "break-word",
                     }}
                   >
-                    Количество сотрудников
+                    {translations[language].jobPageVacancy.numberOfEmployees}
                   </div>
                   <div
                     style={{
@@ -2767,7 +2746,7 @@ export default function JobPage() {
                       wordWrap: "break-word",
                     }}
                   >
-                    От 5 тыс. до 10 тыс. чел
+                    {translations[language].jobPageVacancy.numberOfEmployees1}
                   </div>
                   <div
                     style={{
@@ -2782,7 +2761,7 @@ export default function JobPage() {
                       wordWrap: "break-word",
                     }}
                   >
-                    Средняя зарплата
+                    {translations[language].jobPageVacancy.averageSalary}
                   </div>
                   <div
                     style={{
@@ -2797,7 +2776,7 @@ export default function JobPage() {
                       wordWrap: "break-word",
                     }}
                   >
-                    Год создания
+                    {translations[language].jobPageVacancy.yearOfCreation}
                   </div>
                   <div
                     style={{
@@ -2812,7 +2791,7 @@ export default function JobPage() {
                       wordWrap: "break-word",
                     }}
                   >
-                    183 895 рублей (2023)
+                    {translations[language].jobPageVacancy.yearOfCreation1}
                   </div>
                   <div
                     style={{
@@ -2842,7 +2821,7 @@ export default function JobPage() {
                       wordWrap: "break-word",
                     }}
                   >
-                    Уставной капитал, ₽
+                    {translations[language].jobPageVacancy.capital}
                   </div>
                   <div
                     style={{
@@ -2857,7 +2836,7 @@ export default function JobPage() {
                       wordWrap: "break-word",
                     }}
                   >
-                    Чистая прибыль, ₽
+                    {translations[language].jobPageVacancy.netProfit}
                   </div>
                   <div
                     style={{
@@ -2872,7 +2851,7 @@ export default function JobPage() {
                       wordWrap: "break-word",
                     }}
                   >
-                    Баланс, ₽
+                    {translations[language].jobPageVacancy.balance}
                   </div>
                   <div
                     style={{
@@ -2887,7 +2866,7 @@ export default function JobPage() {
                       wordWrap: "break-word",
                     }}
                   >
-                    18,26 млрд (2023 г.)
+                    {translations[language].jobPageVacancy.balance1}
                   </div>
                   <div
                     style={{
@@ -2902,7 +2881,7 @@ export default function JobPage() {
                       wordWrap: "break-word",
                     }}
                   >
-                    2,6 млрд (2023 г.)
+                    {translations[language].jobPageVacancy.balance2}
                   </div>
                   <div
                     style={{
@@ -2917,7 +2896,7 @@ export default function JobPage() {
                       wordWrap: "break-word",
                     }}
                   >
-                    875,3 млн
+                    {translations[language].jobPageVacancy.balance3}
                   </div>
                 </div>
               </div>
@@ -2945,9 +2924,9 @@ export default function JobPage() {
             <div
               style={{ display: "flex", flexDirection: "column", gap: "130px" }}
             >
-              Биржа труда /
+              {translations[language].jobPageVacancy.jobExchange} /
               <Link
-              to="/info"
+                to="/info"
                 style={{
                   color: "rgba(255, 255, 255, 0.62)",
                   fontSize: 18,
@@ -2956,7 +2935,7 @@ export default function JobPage() {
                   wordWrap: "break-word",
                 }}
               >
-                Назад в контур
+                {translations[language].jobPageVacancy.backToContour}
               </Link>
             </div>
             <div style={{ display: "flex", flexDirection: "row", gap: "70px" }}>
@@ -2967,7 +2946,7 @@ export default function JobPage() {
                   gap: "24px",
                 }}
               >
-                <p style={{ color: "rgb(255,255,255,0.6)" }}>Работодателям</p>
+                <p style={{ color: "rgb(255,255,255,0.6)" }}>{translations[language].jobPageVacancy.employers}</p>
                 <div
                   style={{
                     display: "flex",
@@ -2975,7 +2954,7 @@ export default function JobPage() {
                     gap: "10px",
                   }}
                 >
-                  <p>Размещение вакансий</p> <p>Страница компании</p>
+                  <p>{translations[language].jobPageVacancy.placementOfVacancies}</p> <p>{translations[language].jobPageVacancy.companyPage}</p>
                 </div>
               </div>
               <div
@@ -2985,7 +2964,7 @@ export default function JobPage() {
                   gap: "24px",
                 }}
               >
-                <p style={{ color: "rgb(255,255,255,0.6)" }}>Соискателям</p>
+                <p style={{ color: "rgb(255,255,255,0.6)" }}>{translations[language].jobPageVacancy.jobSeekers}</p>
                 <div
                   style={{
                     display: "flex",
@@ -2993,7 +2972,7 @@ export default function JobPage() {
                     gap: "10px",
                   }}
                 >
-                  <p>Вакансии</p> <p>Создать резюме</p>
+                  <p>{translations[language].jobPageVacancy.vacancies}</p> <p>{translations[language].jobPageVacancy.createResume}</p>
                 </div>
               </div>
               <div
@@ -3003,9 +2982,9 @@ export default function JobPage() {
                   gap: "24px",
                 }}
               >
-                <p style={{ color: "rgb(255,255,255,0.6)" }}> О нас</p>
+                <p style={{ color: "rgb(255,255,255,0.6)" }}>{translations[language].jobPageVacancy.aboutUs}</p>
                 <div>
-                  <p>Новости</p>
+                  <p>{translations[language].jobPageVacancy.news}</p>
                 </div>
               </div>
             </div>
@@ -3029,7 +3008,7 @@ export default function JobPage() {
                   opacity: "0.6",
                 }}
               >
-                2023, Все права защищены
+                2023, {translations[language].jobPageVacancy.copyright}
               </div>
               <div style={{ display: "flex", gap: "16px" }}>
                 <p
@@ -3041,7 +3020,7 @@ export default function JobPage() {
                     textDecoration: "underline",
                   }}
                 >
-                  Пользовательское соглашение
+                  {translations[language].jobPageVacancy.userAgreement}
                 </p>
                 ●
                 <p
@@ -3053,7 +3032,7 @@ export default function JobPage() {
                     textDecoration: "underline",
                   }}
                 >
-                  Политика конфиденциальности
+                  {translations[language].jobPageVacancy.privacyPolicy}
                 </p>
               </div>
             </div>

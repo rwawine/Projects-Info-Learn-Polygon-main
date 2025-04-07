@@ -2,8 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import BackgroundPoliticalPage from "../../assets/BackgroundPoliticalPage.png";
 import DropdownArrow from "../../assets/DropdownArrow.svg";
+import { useLanguage } from "../../context/LanguageContext";
 
 export default function PoliticalPage() {
+  const { language, translations } = useLanguage();
+  
   return (
     <div style={{ position: "relative" }}>
       <img
@@ -40,7 +43,7 @@ export default function PoliticalPage() {
                 justifyContent: "center",
                 backgroundColor: "#B64D4A",
               }}
-            ><div style={{color: 'white', fontSize: 16, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>Катариум</div></div>
+            ><div style={{color: 'white', fontSize: 16, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>{translations[language].politicalPage.politicalSite}</div></div>
             <div
               style={{
                 display: "flex",
@@ -61,7 +64,7 @@ export default function PoliticalPage() {
                   to="/political-site"
                   style={{fontSize: "18px", color: "#DED651", textDecoration: "none" }}
                 >
-                  Главная
+                  {translations[language].politicalPage.main}
                 </Link>
               </p>
               <p>
@@ -69,7 +72,7 @@ export default function PoliticalPage() {
                   to="/political-site/person"
                   style={{fontSize: "18px", color: "#fff", textDecoration: "none" }}
                 >
-                  Персоны
+                  {translations[language].politicalPage.persons}
                 </Link>
               </p>
               <p>
@@ -77,7 +80,7 @@ export default function PoliticalPage() {
                   to="/political-site/party"
                   style={{fontSize: "18px", color: "#fff", textDecoration: "none" }}
                 >
-                  Партии
+                  {translations[language].politicalPage.parties}
                 </Link>
               </p>
               <p>
@@ -85,7 +88,7 @@ export default function PoliticalPage() {
                   to="/political-site/device"
                   style={{ fontSize: "18px", color: "#fff", textDecoration: "none" }}
                 >
-                  Политическое устройство
+                  {translations[language].politicalPage.politicalStructure}
                 </Link>
               </p>
             </div>
@@ -165,7 +168,7 @@ export default function PoliticalPage() {
                 justifyContent: "space-between",
               }}
             >
-              Все разделы <img src={DropdownArrow} alt="DropdownArrow" />
+              {translations[language].politicalPage.allSections} <img src={DropdownArrow} alt="DropdownArrow" />
             </div>
             <input
               style={{
@@ -176,7 +179,7 @@ export default function PoliticalPage() {
                 width: "100%",
               }}
               type="text"
-              placeholder="Поиск"
+              placeholder={translations[language].politicalPage.searchPlaceholder}
             />
             <button
               style={{
@@ -187,7 +190,7 @@ export default function PoliticalPage() {
                 borderRadius: "3px",
               }}
             >
-              Поиск
+              {translations[language].politicalPage.buttonSearch}
             </button>
           </div>
           <div
@@ -204,7 +207,7 @@ export default function PoliticalPage() {
               alignItems: "center",
             }}
           >
-            + Фильтр
+            + {translations[language].politicalPage.filter}
           </div>
         </div>
       </div>
@@ -222,7 +225,7 @@ export default function PoliticalPage() {
         >
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <p style={{ fontSize: "18px", color: "white" }}>
-              Сайт государственного устройства “Катариум”
+              {translations[language].politicalPage.politicalSiteTitle}
             </p>
             <div
               style={{
@@ -236,14 +239,14 @@ export default function PoliticalPage() {
               <div
                 style={{ display: "flex", gap: "8px", flexDirection: "column" }}
               >
-                <p>Главная</p>
-                <p>Персоны</p>
+                <p>{translations[language].politicalPage.main}</p>
+                <p>{translations[language].politicalPage.persons}</p>
               </div>
               <div
                 style={{ display: "flex", gap: "8px", flexDirection: "column" }}
               >
-                <p>Партии</p>
-                <p>Политическое устройство</p>
+                <p>{translations[language].politicalPage.parties}</p>
+                <p>{translations[language].politicalPage.politicalStructure}</p>
               </div>
             </div>
           </div>
@@ -257,9 +260,9 @@ export default function PoliticalPage() {
               marginTop: "16px",
             }}
           >
-            2023. Все права защищены
+          2023. {translations[language].politicalPage.copyright}
           </p>
-          <Link to="/" style={{color: 'white', fontSize: 18, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>Вернуться в Контур системы</Link>
+          <Link to="/" style={{color: 'white', fontSize: 18, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>{translations[language].politicalPage.returnToSystem}</Link>
           </div>
         </div>
       </footer>

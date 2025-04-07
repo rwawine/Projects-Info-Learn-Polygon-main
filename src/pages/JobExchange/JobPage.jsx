@@ -14,7 +14,11 @@ import BackgroundImageCards5 from "../../assets/JobPage/IMAGE 2024-11-04 14_56_3
 import BackgroundImageCards6 from "../../assets/JobPage/IMAGE 2024-11-04 15_02_58 1.png";
 import BackgroundImageCards7 from "../../assets/JobPage/IMAGE 2024-11-04 14_54_12 1.png";
 
+import { useLanguage } from "../../context/LanguageContext";
+
 export default function JobPage() {
+  const { language, translations } = useLanguage();
+
   return (
     <>
       <div style={{ backgroundColor: "black" }}>
@@ -46,7 +50,7 @@ export default function JobPage() {
                   fontWeight: "500",
                 }}
               >
-                Биржа труда
+                {translations[language].jobPage.jobExchange}
               </h3>
               <div
                 style={{ display: "flex", gap: "100px", alignItems: "center" }}
@@ -55,25 +59,25 @@ export default function JobPage() {
           to="/job-exchange"
           style={{ textDecoration: "none", color: "#EF6C00" }}
         >
-          Главная
+          {translations[language].jobPage.main}
         </Link>
         <Link
           to="/job-exchange/news"
           style={{ textDecoration: "none", color: "black" }}
         >
-          Новости
+          {translations[language].jobPage.news}
         </Link>
         <Link
           to="/job-exchange/company"
           style={{ textDecoration: "none", color: "black" }}
         >
-          Компании
+          {translations[language].jobPage.companies}
         </Link>
         <Link
           to="/job-exchange/vacancy"
           style={{ textDecoration: "none", color: "black" }}
         >
-          Вакансии
+          {translations[language].jobPage.vacancies}
         </Link>
               </div>
             </div>
@@ -103,7 +107,7 @@ export default function JobPage() {
                   marginBottom: "24px",
                 }}
               >
-                Вакансии
+                {translations[language].jobPage.vacancies}
               </h2>
               <h2
                 style={{
@@ -145,10 +149,10 @@ export default function JobPage() {
                   alignItems: "center",
                   gap: "13.523px",
                   color: "white",
-                  maxWidth: "250px",
+                  maxWidth: "270px",
                 }}
               >
-                Перейти <img src={ArrowButton} alt="ArrowButton" />
+                {translations[language].jobPage.goTo} <img src={ArrowButton} alt="ArrowButton" />
               </button>
               <img
                 style={{ position: "absolute", bottom: "0%" }}
@@ -185,7 +189,7 @@ export default function JobPage() {
                   marginBottom: "24px",
                 }}
               >
-                Компании
+                {translations[language].jobPage.companies}
               </h2>
               <h2
                 style={{
@@ -227,10 +231,10 @@ export default function JobPage() {
                   alignItems: "center",
                   gap: "13.523px",
                   color: "white",
-                  maxWidth: "250px",
+                  maxWidth: "270px",
                 }}
               >
-                Перейти <img src={ArrowButton} alt="ArrowButton" />
+                {translations[language].jobPage.goTo} <img src={ArrowButton} alt="ArrowButton" />
               </button>
               <img
                 style={{ position: "absolute", bottom: "0%" }}
@@ -256,7 +260,7 @@ export default function JobPage() {
                 wordWrap: "break-word",
               }}
             >
-              Что нового
+              {translations[language].jobPage.whatIsNew}
             </h3>
             <div style={{ margin: "50px 0 0 0", display: "flex", gap: "10px" }}>
               <div
@@ -277,7 +281,7 @@ export default function JobPage() {
                     wordWrap: "break-word",
                   }}
                 >
-                  Уровень безработицы снизился до рекордного минимума
+                  {translations[language].jobPage.whatIsNewNews1}
                 </p>
               </div>
               <div
@@ -298,7 +302,7 @@ export default function JobPage() {
                     wordWrap: "break-word",
                   }}
                 >
-                  Биржа труда запустила новый онлайн-сервис для поиска работы
+                  {translations[language].jobPage.whatIsNewNews2}
                 </p>
               </div>
               <div
@@ -322,8 +326,7 @@ export default function JobPage() {
                     wordWrap: "break-word",
                   }}
                 >
-                  Биржа труда организовала бесплатные курсы по обучению
-                  востребованным профессиям
+                  {translations[language].jobPage.whatIsNewNews3}
                 </p>
               </div>
             </div>
@@ -332,6 +335,9 @@ export default function JobPage() {
                 style={{
                   background: "#EEF1F7",
                   borderRadius: 25,
+                  display: "flex",
+                  justifyContent: "space-between",
+                  flexDirection: "column",
                   maxWidth: "650px",
                 }}
               >
@@ -345,8 +351,7 @@ export default function JobPage() {
                     wordWrap: "break-word",
                   }}
                 >
-                  Эксперты прогнозируют рост спроса на специалистов в области
-                  искусственного интеллекта
+                  {translations[language].jobPage.whatIsNewNews4}
                 </p>
                 <img
                   style={{ height: "410px" }}
@@ -374,7 +379,7 @@ export default function JobPage() {
                         wordWrap: "break-word",
                       }}
                     >
-                      Уровень безработицы снизился до рекордного минимума
+                      {translations[language].jobPage.whatIsNewNews1}
                     </p>
                   </div>
                   <div
@@ -395,8 +400,7 @@ export default function JobPage() {
                         wordWrap: "break-word",
                       }}
                     >
-                      Биржа труда запустила новый онлайн-сервис для поиска
-                      работы
+                      {translations[language].jobPage.whatIsNewNews2}
                     </p>
                   </div>
                 </div>
@@ -422,8 +426,7 @@ export default function JobPage() {
                       wordWrap: "break-word",
                     }}
                   >
-                    Биржа труда организовала бесплатные курсы по обучению
-                    востребованным профессиям
+                    {translations[language].jobPage.whatIsNewNews3}
                   </p>
                 </div>
               </div>
@@ -451,7 +454,7 @@ export default function JobPage() {
                 color: "white",
               }}
             >
-              Все новости <img src={ArrowButton} alt="ArrowButton" />
+              {translations[language].jobPage.allNews} <img src={ArrowButton} alt="ArrowButton" />
             </button>
           </div>
         </div>
@@ -476,7 +479,7 @@ export default function JobPage() {
             <div
               style={{ display: "flex", flexDirection: "column", gap: "130px" }}
             >
-              Биржа труда /
+              {translations[language].jobPage.jobExchange} /
               <Link
               to="/info"
                 style={{
@@ -487,7 +490,7 @@ export default function JobPage() {
                   wordWrap: "break-word",
                 }}
               >
-                Назад в контур
+                {translations[language].jobPage.backToContour}
               </Link>
             </div>
             <div style={{ display: "flex", flexDirection: "row", gap: "70px" }}>
@@ -498,7 +501,7 @@ export default function JobPage() {
                   gap: "24px",
                 }}
               >
-                <p style={{ color: "rgb(255,255,255,0.6)" }}>Работодателям</p>
+                <p style={{ color: "rgb(255,255,255,0.6)" }}>{translations[language].jobPage.employers}</p>
                 <div
                   style={{
                     display: "flex",
@@ -506,7 +509,7 @@ export default function JobPage() {
                     gap: "10px",
                   }}
                 >
-                  <p>Размещение вакансий</p> <p>Страница компании</p>
+                  <p>{translations[language].jobPage.placementOfVacancies}</p> <p>{translations[language].jobPage.companyPage}</p>
                 </div>
               </div>
               <div
@@ -516,7 +519,7 @@ export default function JobPage() {
                   gap: "24px",
                 }}
               >
-                <p style={{ color: "rgb(255,255,255,0.6)" }}>Соискателям</p>
+                <p style={{ color: "rgb(255,255,255,0.6)" }}>{translations[language].jobPage.applicants}</p>
                 <div
                   style={{
                     display: "flex",
@@ -524,7 +527,7 @@ export default function JobPage() {
                     gap: "10px",
                   }}
                 >
-                  <p>Вакансии</p> <p>Создать резюме</p>
+                  <p>{translations[language].jobPage.vacancies}</p> <p>{translations[language].jobPage.createResume}</p>
                 </div>
               </div>
               <div
@@ -534,9 +537,9 @@ export default function JobPage() {
                   gap: "24px",
                 }}
               >
-                <p style={{ color: "rgb(255,255,255,0.6)" }}> О нас</p>
+                <p style={{ color: "rgb(255,255,255,0.6)" }}>{translations[language].jobPage.aboutUs}</p>
                 <div>
-                  <p>Новости</p>
+                  <p>{translations[language].jobPage.news}</p>
                 </div>
               </div>
             </div>
@@ -560,7 +563,7 @@ export default function JobPage() {
                   opacity: "0.6",
                 }}
               >
-                2023, Все права защищены
+                2023, {translations[language].jobPage.copyright}
               </div>
               <div style={{ display: "flex", gap: "16px" }}>
                 <p
@@ -572,7 +575,7 @@ export default function JobPage() {
                     textDecoration: "underline",
                   }}
                 >
-                  Пользовательское соглашение
+                  {translations[language].jobPage.userAgreement}
                 </p>
                 ●
                 <p
@@ -584,7 +587,7 @@ export default function JobPage() {
                     textDecoration: "underline",
                   }}
                 >
-                  Политика конфиденциальности
+                  {translations[language].jobPage.privacyPolicy}
                 </p>
               </div>
             </div>

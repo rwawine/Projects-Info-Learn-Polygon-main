@@ -8,7 +8,11 @@ import Person4 from "../../assets/Person4.png";
 import Person5 from "../../assets/Person5.png";
 import Person6 from "../../assets/Person6.png";
 
+import { useLanguage } from "../../context/LanguageContext";
+
 export default function PoliticalParty() {
+  const { language, translations } = useLanguage();
+
   return (
     <div style={{ position: "relative" }}>
       <div
@@ -46,7 +50,7 @@ export default function PoliticalParty() {
                 justifyContent: "center",
                 backgroundColor: "#B64D4A",
               }}
-            ><div style={{color: 'white', fontSize: 16, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>Катариум</div></div>
+            ><div style={{color: 'white', fontSize: 16, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>{translations[language].politicalParty.politicalSite}</div></div>
               <div
                 style={{
                   display: "flex",
@@ -61,7 +65,7 @@ export default function PoliticalParty() {
                   to="/political-site"
                   style={{fontSize: "18px", color: "#fff", textDecoration: "none" }}
                 >
-                  Главная
+                  {translations[language].politicalParty.main}
                 </Link>
               </p>
               <p>
@@ -69,7 +73,7 @@ export default function PoliticalParty() {
                   to="/political-site/person"
                   style={{fontSize: "18px", color: "#fff", textDecoration: "none" }}
                 >
-                  Персоны
+                  {translations[language].politicalParty.persons}
                 </Link>
               </p>
               <p>
@@ -77,7 +81,7 @@ export default function PoliticalParty() {
                   to="/political-site/party"
                   style={{fontSize: "18px", color: "#DED651", textDecoration: "underline" }}
                 >
-                  Партии
+                  {translations[language].politicalParty.parties}
                 </Link>
               </p>
               <p>
@@ -85,7 +89,7 @@ export default function PoliticalParty() {
                   to="/political-site/device"
                   style={{ fontSize: "18px", color: "#fff", textDecoration: "none" }}
                 >
-                  Политическое устройство
+                  {translations[language].politicalParty.politicalStructure}
                 </Link>
               </p>
               </div>
@@ -174,7 +178,7 @@ export default function PoliticalParty() {
             marginTop: "150px",
           }}
         >
-          Представители партии
+          {translations[language].politicalParty.representativesOfTheParty}
         </h2>
         <p
           style={{
@@ -214,11 +218,11 @@ export default function PoliticalParty() {
               justifyContent: "center",
             }}
           >
-            <p style={{ color: "white", fontSize: "18px" }}>Председатель</p>
+            <p style={{ color: "white", fontSize: "18px" }}>{translations[language].politicalParty.chairman}</p>
             <p
               style={{ color: "white", fontSize: "14px", fontStyle: "italic" }}
             >
-              Рамин Шахрам
+              {translations[language].politicalParty.raminShahram}
             </p>
           </div>
           <img src={Person1} alt="Person1" />
@@ -238,11 +242,11 @@ export default function PoliticalParty() {
               justifyContent: "center",
             }}
           >
-            <p style={{ color: "white", fontSize: "18px" }}>Секретарь</p>
+            <p style={{ color: "white", fontSize: "18px" }}>{translations[language].politicalParty.secretary}</p>
             <p
               style={{ color: "white", fontSize: "14px", fontStyle: "italic" }}
             >
-              Джавед Мехран
+              {translations[language].politicalParty.javadMehran}
             </p>
           </div>
           <img src={Person2} alt="Person2" />
@@ -262,11 +266,11 @@ export default function PoliticalParty() {
               justifyContent: "center",
             }}
           >
-            <p style={{ color: "white", fontSize: "18px" }}>Министр</p>
+            <p style={{ color: "white", fontSize: "18px" }}>{translations[language].politicalParty.minister}</p>
             <p
               style={{ color: "white", fontSize: "14px", fontStyle: "italic" }}
             >
-              Дильшат Лалек
+              {translations[language].politicalParty.dilshatLalek}
             </p>
           </div>
           <img src={Person3} alt="Person3" />
@@ -286,11 +290,11 @@ export default function PoliticalParty() {
               justifyContent: "center",
             }}
           >
-            <p style={{ color: "white", fontSize: "18px" }}>Министр</p>
+            <p style={{ color: "white", fontSize: "18px" }}>{translations[language].politicalParty.minister}</p>
             <p
               style={{ color: "white", fontSize: "14px", fontStyle: "italic" }}
             >
-              Булат Берим
+              {translations[language].politicalParty.bulatBerim}
             </p>
           </div>
           <img src={Person4} alt="Person4" />
@@ -310,11 +314,11 @@ export default function PoliticalParty() {
               justifyContent: "center",
             }}
           >
-            <p style={{ color: "white", fontSize: "18px" }}>Министр</p>
+            <p style={{ color: "white", fontSize: "18px" }}>{translations[language].politicalParty.minister}</p>
             <p
               style={{ color: "white", fontSize: "14px", fontStyle: "italic" }}
             >
-              Фарзан Шабнам
+              {translations[language].politicalParty.farnazShabnam}
             </p>
           </div>
           <img src={Person5} alt="Person5" />
@@ -334,11 +338,11 @@ export default function PoliticalParty() {
               justifyContent: "center",
             }}
           >
-            <p style={{ color: "white", fontSize: "18px" }}>Министр</p>
+            <p style={{ color: "white", fontSize: "18px" }}>{translations[language].politicalParty.minister}</p>
             <p
               style={{ color: "white", fontSize: "14px", fontStyle: "italic" }}
             >
-              Милинда Зейнаб
+              {translations[language].politicalParty.milindaZeinab}
             </p>
           </div>
           <img src={Person6} alt="Person6" />
@@ -358,7 +362,7 @@ export default function PoliticalParty() {
         >
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <p style={{ fontSize: "18px", color: "white" }}>
-              Сайт государственного устройства “Катариум”
+              {translations[language].politicalParty.politicalSiteTitle}
             </p>
             <div
               style={{
@@ -372,14 +376,14 @@ export default function PoliticalParty() {
               <div
                 style={{ display: "flex", gap: "8px", flexDirection: "column" }}
               >
-                <p>Главная</p>
-                <p>Персоны</p>
+                <p>{translations[language].politicalParty.main}</p>
+                <p>{translations[language].politicalParty.persons}</p>
               </div>
               <div
                 style={{ display: "flex", gap: "8px", flexDirection: "column" }}
               >
-                <p>Партии</p>
-                <p>Политическое устройство</p>
+                <p>{translations[language].politicalParty.parties}</p>
+                <p>{translations[language].politicalParty.politicalStructure}</p>
               </div>
             </div>
           </div>
@@ -393,9 +397,9 @@ export default function PoliticalParty() {
               marginTop: "16px",
             }}
           >
-            2023. Все права защищены
+            2023. {translations[language].politicalParty.copyright}
           </p>
-          <Link to="/" style={{color: 'white', fontSize: 18, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>Вернуться в Контур системы</Link>
+          <Link to="/" style={{color: 'white', fontSize: 18, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>{translations[language].politicalParty.returnToSystem}</Link>
           </div>
         </div>
       </footer>

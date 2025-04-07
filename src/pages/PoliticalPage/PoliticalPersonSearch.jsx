@@ -8,7 +8,11 @@ import Person3 from "../../assets//Persons/Person3.png";
 import Person4 from "../../assets//Persons/Person4.png";
 import Person6 from "../../assets//Persons/Person6.png";
 
+import { useLanguage } from "../../context/LanguageContext";
+
 export default function PoliticalPersonSearch() {
+  const { language, translations } = useLanguage();
+
   return (
     <div style={{ position: "relative" }}>
       <header
@@ -50,7 +54,7 @@ export default function PoliticalPersonSearch() {
                   wordWrap: "break-word",
                 }}
               >
-                Катариум
+                {translations[language].politicalPersonSearch.politicalSite}
               </div>
             </div>
             <div
@@ -67,7 +71,7 @@ export default function PoliticalPersonSearch() {
                   to="/political-site"
                   style={{fontSize: "18px", color: "#fff", textDecoration: "none" }}
                 >
-                  Главная
+                  {translations[language].politicalPersonSearch.main}
                 </Link>
               </p>
               <p>
@@ -75,7 +79,7 @@ export default function PoliticalPersonSearch() {
                   to="/political-site/person"
                   style={{fontSize: "18px", color: "#DED651", textDecoration: "underline" }}
                 >
-                  Персоны
+                  {translations[language].politicalPersonSearch.persons}
                 </Link>
               </p>
               <p>
@@ -83,7 +87,7 @@ export default function PoliticalPersonSearch() {
                   to="/political-site/party"
                   style={{fontSize: "18px", color: "#fff", textDecoration: "none" }}
                 >
-                  Партии
+                  {translations[language].politicalPersonSearch.parties}
                 </Link>
               </p>
               <p>
@@ -91,7 +95,7 @@ export default function PoliticalPersonSearch() {
                   to="/political-site/device"
                   style={{ fontSize: "18px", color: "#fff", textDecoration: "none" }}
                 >
-                  Политическое устройство
+                  {translations[language].politicalPersonSearch.politicalStructure}
                 </Link>
               </p>
             </div>
@@ -107,7 +111,7 @@ export default function PoliticalPersonSearch() {
             marginTop: "60px",
           }}
         >
-          Результат поиска по запросу: “Самира Наргес”
+          {translations[language].politicalPersonSearch.searchResult}
         </h2>
         <div
           style={{
@@ -120,8 +124,8 @@ export default function PoliticalPersonSearch() {
           <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
             <img width={210} src={Person4} alt="" />
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <p style={{ fontSize: "56px" }}>Самира Наргес</p>
-              <p style={{ fontSize: "28px" }}>Республиканская партия</p>
+              <p style={{ fontSize: "56px" }}>{translations[language].politicalPersonSearch.name}</p>
+              <p style={{ fontSize: "28px" }}>{translations[language].politicalPersonSearch.party}</p>
             </div>
           </div>
           <Link
@@ -134,7 +138,7 @@ export default function PoliticalPersonSearch() {
               color: "#1A1A1A",
             }}
           >
-            Полная информация <img width={9} src={ArrowPerson} alt="" />
+            {translations[language].politicalPersonSearch.fullInformation} <img width={9} src={ArrowPerson} alt="" />
           </Link>
         </div>
         <hr style={{ color: "#111A28", marginTop: "20px" }} />
@@ -158,7 +162,7 @@ export default function PoliticalPersonSearch() {
             marginBottom: "60px",
           }}
         >
-          Другие политические деятели
+          {translations[language].politicalPersonSearch.otherPoliticalFigures}
         </h2>
         <div
           style={{
@@ -170,8 +174,8 @@ export default function PoliticalPersonSearch() {
           <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
             <img src={Person1} alt="" />
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <p style={{ fontSize: "31px" }}>Абхай Аджит</p>
-              <p style={{ fontSize: "18px" }}>Представитель партии Роста</p>
+              <p style={{ fontSize: "31px" }}>{translations[language].politicalPersonSearch.name}</p>
+              <p style={{ fontSize: "18px" }}>{translations[language].politicalPersonSearch.party}</p>
             </div>
           </div>
           <p
@@ -182,7 +186,7 @@ export default function PoliticalPersonSearch() {
               color: "#1A1A1A",
             }}
           >
-            Полная информация <img width={9} src={ArrowPerson} alt="" />
+            {translations[language].politicalPersonSearch.fullInformation} <img width={9} src={ArrowPerson} alt="" />
           </p>
         </div>
         <hr />
@@ -196,8 +200,8 @@ export default function PoliticalPersonSearch() {
           <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
             <img src={Person2} alt="" />
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <p style={{ fontSize: "31px" }}>Анушех Сартра</p>
-              <p style={{ fontSize: "18px" }}>Представитель партии Республиканцев</p>
+              <p style={{ fontSize: "31px" }}>{translations[language].politicalPersonSearch.otherPoliticalFiguresName2}</p>
+              <p style={{ fontSize: "18px" }}>{translations[language].politicalPersonSearch.otherPoliticalFiguresParty2}</p>
             </div>
           </div>
           <p
@@ -208,7 +212,7 @@ export default function PoliticalPersonSearch() {
               color: "#1A1A1A",
             }}
           >
-            Полная информация <img width={9} src={ArrowPerson} alt="" />
+            {translations[language].politicalPersonSearch.fullInformation} <img width={9} src={ArrowPerson} alt="" />
           </p>
         </div>
         <hr />
@@ -222,8 +226,8 @@ export default function PoliticalPersonSearch() {
           <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
             <img src={Person3} alt="" />
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <p style={{ fontSize: "31px" }}>Аргаван Сумати</p>
-              <p style={{ fontSize: "18px" }}>Представитель партии Стремления к справедливости</p>
+              <p style={{ fontSize: "31px" }}>{translations[language].politicalPersonSearch.otherPoliticalFiguresName3}</p>
+              <p style={{ fontSize: "18px" }}>{translations[language].politicalPersonSearch.otherPoliticalFiguresParty3}</p>
             </div>
           </div>
           <p
@@ -234,7 +238,7 @@ export default function PoliticalPersonSearch() {
               color: "#1A1A1A",
             }}
           >
-            Полная информация <img width={9} src={ArrowPerson} alt="" />
+            {translations[language].politicalPersonSearch.fullInformation} <img width={9} src={ArrowPerson} alt="" />
           </p>
         </div>
         <hr />
@@ -248,8 +252,8 @@ export default function PoliticalPersonSearch() {
           <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
             <img src={Person6} alt="" />
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <p style={{ fontSize: "31px" }}>Биджой Ванада</p>
-              <p style={{ fontSize: "18px" }}>Представитель партии “Новый Катариум”</p>
+              <p style={{ fontSize: "31px" }}>{translations[language].politicalPersonSearch.otherPoliticalFiguresName4}</p>
+              <p style={{ fontSize: "18px" }}>{translations[language].politicalPersonSearch.otherPoliticalFiguresParty4}</p>
             </div>
           </div>
           <p
@@ -260,7 +264,7 @@ export default function PoliticalPersonSearch() {
               color: "#1A1A1A",
             }}
           >
-            Полная информация <img width={9} src={ArrowPerson} alt="" />
+            {translations[language].politicalPersonSearch.fullInformation} <img width={9} src={ArrowPerson} alt="" />
           </p>
         </div>
         <button
@@ -278,7 +282,7 @@ export default function PoliticalPersonSearch() {
             fontSize: "20px",
           }}
         >
-          Загрузить еще <img src={ArrowButtonPerson} alt="" />
+          {translations[language].politicalPersonSearch.loadMore} <img src={ArrowButtonPerson} alt="" />
         </button>
       </div>
       <footer
@@ -295,7 +299,7 @@ export default function PoliticalPersonSearch() {
         >
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <p style={{ fontSize: "18px", color: "white" }}>
-              Сайт государственного устройства “Катариум”
+              {translations[language].politicalPersonSearch.politicalSiteTitle}
             </p>
             <div
               style={{
@@ -309,14 +313,14 @@ export default function PoliticalPersonSearch() {
               <div
                 style={{ display: "flex", gap: "8px", flexDirection: "column" }}
               >
-                <p>Главная</p>
-                <p>Персоны</p>
+                <p>{translations[language].politicalPersonSearch.main}</p>
+                <p>{translations[language].politicalPersonSearch.persons}</p>
               </div>
               <div
                 style={{ display: "flex", gap: "8px", flexDirection: "column" }}
               >
-                <p>Партии</p>
-                <p>Политическое устройство</p>
+                <p>{translations[language].politicalPersonSearch.parties}</p>
+                <p>{translations[language].politicalPersonSearch.politicalStructure}</p>
               </div>
             </div>
           </div>
@@ -330,9 +334,9 @@ export default function PoliticalPersonSearch() {
               marginTop: "16px",
             }}
           >
-            2023. Все права защищены
+            2023. {translations[language].politicalPersonSearch.copyright}
           </p>
-          <Link to="/" style={{color: 'white', fontSize: 18, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>Вернуться в Контур системы</Link>
+          <Link to="/" style={{color: 'white', fontSize: 18, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>{translations[language].politicalPersonSearch.returnToSystem}</Link>
           </div>
         </div>
       </footer>

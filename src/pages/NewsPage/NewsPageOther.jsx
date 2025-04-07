@@ -11,9 +11,12 @@ import Thumbnail16 from "../../assets/NewPage/Thumbnail16.png";
 import Thumbnail17 from "../../assets/NewPage/Thumbnail17.png";
 import Thumbnail18 from "../../assets/NewPage/Thumbnail18.png";
 
+import { useLanguage } from "../../context/LanguageContext";
+
 export default function NewsPageOther() {
   const [hoveredIndex, setHoveredIndex] = React.useState(3);
   const navigate = useNavigate();
+  const { language, translations } = useLanguage();
 
   const handleClick = () => {
     navigate("/news");
@@ -21,18 +24,18 @@ export default function NewsPageOther() {
   const links = [
     {
       id: 1,
-      label: "Экономика",
+      label: translations[language].newsPageOther.economy,
       href: "#economy",
       pageName: "news/economy",
     },
     {
       id: 2,
-      label: "Технологии",
+      label: translations[language].newsPageOther.technology,
       href: "#technology",
       pageName: "news",
     },
-    { id: 3, label: "Общество", href: "#society", pageName: "news" },
-    { id: 4, label: "Другое", href: "#other", pageName: "news/other" },
+    { id: 3, label: translations[language].newsPageOther.society, href: "#society", pageName: "news" },
+    { id: 4, label: translations[language].newsPageOther.other, href: "#other", pageName: "news/other" },
   ];
 
   const handleLinkClickPage = (pageName) => {
@@ -127,7 +130,7 @@ export default function NewsPageOther() {
               alignItems: "center",
             }}
           >
-            Показывать: 30 <img src={ArrowInput} />
+            {translations[language].newsPageOther.show}: 30 <img src={ArrowInput} />
           </div>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: "35px" }}>
@@ -169,7 +172,7 @@ export default function NewsPageOther() {
                     border: "1px solid #2A2A2A",
                   }}
                 >
-                  политика
+                  {translations[language].newsPageOther.politics}
                 </span>
                 <span
                   style={{
@@ -182,7 +185,7 @@ export default function NewsPageOther() {
                     border: "1px solid #C9543C",
                   }}
                 >
-                  горячие новости
+                  {translations[language].newsPageOther.hotNews}
                 </span>
                 <p
                   style={{
@@ -191,7 +194,7 @@ export default function NewsPageOther() {
                     margin: "0 0 0 40px",
                   }}
                 >
-                  1 час назад
+                  {translations[language].newsPageOther.oneHourAgo}
                 </p>
               </div>
               <h4
@@ -202,7 +205,7 @@ export default function NewsPageOther() {
                   margin: "28px 0 32px 0",
                 }}
               >
-               Коалиционное правительство распалось из-за разногласий по ключевым вопросам
+                {translations[language].newsPageOther.coalitionGovernment}
               </h4>
               <p
                 style={{
@@ -213,7 +216,7 @@ export default function NewsPageOther() {
                   color: "rgb(0,0,0,0.5)",
                 }}
               >
-                 Правящая коалиция, состоящая из нескольких политических партий, распалась в результате непреодолимых разногласий по ряду принципиальных вопросов, что привело к политическому кризису в стране.
+                {translations[language].newsPageOther.coalitionGovernmentDescription}
               </p>
             </div>
           </article>
@@ -255,7 +258,7 @@ export default function NewsPageOther() {
                     border: "1px solid #2A2A2A",
                   }}
                 >
-                  оон
+                  {translations[language].newsPageOther.ooh}
                 </span>
                 <span
                   style={{
@@ -268,7 +271,7 @@ export default function NewsPageOther() {
                     border: "1px solid #C9543C",
                   }}
                 >
-                  горячие новости
+                  {translations[language].newsPageOther.hotNews}
                 </span>
                 <p
                   style={{
@@ -277,7 +280,7 @@ export default function NewsPageOther() {
                     margin: "0 0 0 40px",
                   }}
                 >
-                  21 час назад
+                  {translations[language].newsPageOther.TwentyOneHoursAgo}
                 </p>
               </div>
               <h4
@@ -289,7 +292,7 @@ export default function NewsPageOther() {
                   margin: "28px 0 32px 0",
                 }}
               >
-                Страны-члены ООН договорились о новых мерах по борьбе с терроризмом
+                {translations[language].newsPageOther.oohAgreement}
               </h4>
               <p
                 style={{
@@ -300,7 +303,7 @@ export default function NewsPageOther() {
                   color: "rgb(0,0,0,0.5)",
                 }}
               >
-                На заседании Генеральной Ассамблеи ООН государства-члены приняли резолюцию, предусматривающую усиление международного сотрудничества и обмена информацией в сфере противодействия терроризму.
+                {translations[language].newsPageOther.oohAgreementDescription}
               </p>
             </div>
           </article>
@@ -319,7 +322,7 @@ export default function NewsPageOther() {
                 color: "white",
               }}
             >
-              Искусство ведения дебатов.
+              {translations[language].newsPageOther.artOfDebating}
             </p>
             <p
               style={{
@@ -328,7 +331,7 @@ export default function NewsPageOther() {
                 color: "white",
               }}
             >
-              Курсы “Прямая речь”
+              {translations[language].newsPageOther.artOfDebating}
             </p>
           </div>
           <article
@@ -369,7 +372,7 @@ export default function NewsPageOther() {
                     border: "1px solid #2A2A2A",
                   }}
                 >
-                  политика
+                  {translations[language].newsPageOther.politics}
                 </span>
 
                 <p
@@ -379,7 +382,7 @@ export default function NewsPageOther() {
                     margin: "0 0 0 40px",
                   }}
                 >
-                  21 час назад
+                  {translations[language].newsPageOther.TwentyOneHoursAgo}
                 </p>
               </div>
               <h4
@@ -391,7 +394,7 @@ export default function NewsPageOther() {
                   lineHeight: "140%",
                 }}
               >
-                Правительство объявило о масштабной приватизации государственных компаний
+                {translations[language].newsPageOther.governmentAnnouncedMassivePrivatization}
               </h4>
               <p
                 style={{
@@ -402,7 +405,7 @@ export default function NewsPageOther() {
                   color: "rgb(0,0,0,0.5)",
                 }}
               >
-                В рамках программы по сокращению государственного долга и стимулированию экономического роста правительство анонсировало планы по приватизации ряда крупных государственных предприятий.
+                {translations[language].newsPageOther.governmentAnnouncedMassivePrivatizationDescription}
               </p>
             </div>
           </article>
@@ -444,7 +447,7 @@ export default function NewsPageOther() {
                     border: "1px solid #2A2A2A",
                   }}
                 >
-                  выборы
+                  {translations[language].newsPageOther.elections}
                 </span>
                 <p
                   style={{
@@ -453,7 +456,7 @@ export default function NewsPageOther() {
                     margin: "0 0 0 40px",
                   }}
                 >
-                  21 час назад
+                  {translations[language].newsPageOther.TwentyOneHoursAgo}
                 </p>
               </div>
               <h4
@@ -464,7 +467,7 @@ export default function NewsPageOther() {
                   margin: "28px 0 32px 0",
                 }}
               >
-              Оппозиционная партия объявила о бойкоте предстоящих выборов
+              {translations[language].newsPageOther.oppositionPartyAnnouncedBoycottOfUpcomingElections}
               </h4>
               <p
                 style={{
@@ -475,7 +478,7 @@ export default function NewsPageOther() {
                   color: "rgb(0,0,0,0.5)",
                 }}
               >
-                Крупнейшая оппозиционная партия заявила, что не будет участвовать в предстоящих парламентских выборах, обвинив правящую партию в манипуляциях и ограничении политической конкуренции.
+                {translations[language].newsPageOther.oppositionPartyAnnouncedBoycottOfUpcomingElectionsDescription}
               </p>
             </div>
           </article>
@@ -517,7 +520,7 @@ export default function NewsPageOther() {
                     border: "1px solid #2A2A2A",
                   }}
                 >
-                  политика
+                  {translations[language].newsPageOther.politics}
                 </span>
                 <p
                   style={{
@@ -526,7 +529,7 @@ export default function NewsPageOther() {
                     margin: "0 0 0 40px",
                   }}
                 >
-                  21 час назад
+                  {translations[language].newsPageOther.TwentyOneHoursAgo}
                 </p>
               </div>
               <h4
@@ -538,7 +541,7 @@ export default function NewsPageOther() {
                   margin: "28px 0 32px 0",
                 }}
               >
-               Дипломатический скандал: посол отозван из-за противоречивых высказываний
+                {translations[language].newsPageOther.diplomaticScandal}
               </h4>
               <p
                 style={{
@@ -549,7 +552,7 @@ export default function NewsPageOther() {
                   color: "rgb(0,0,0,0.5)",
                 }}
               >
-                Министерство иностранных дел отозвало своего посла из союзной страны после того, как он сделал ряд спорных заявлений, вызвавших дипломатический конфликт между государствами.
+                {translations[language].newsPageOther.diplomaticScandalDescription}
               </p>
             </div>
           </article>
@@ -658,7 +661,7 @@ export default function NewsPageOther() {
               }}
             >
               <img style={{ height: "18px" }} src={logo} alt="" />
-              Новостной ресурс
+              {translations[language].newsPageOther.newsResource}
             </div>
             <p
               style={{
@@ -668,10 +671,10 @@ export default function NewsPageOther() {
                 color: "black",
               }}
             >
-              2023. Все права защищены
+              2023. {translations[language].newsPageOther.copyright}
             </p>
           </div>
-          <Link to="/info" style={{color: 'black', fontSize: 16, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>Вернуться в контур системы</Link>
+          <Link to="/info" style={{color: 'black', fontSize: 16, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>{translations[language].newsPageOther.backToContour}</Link>
           </div>
       </div>
     </div>

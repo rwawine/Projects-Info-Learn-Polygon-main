@@ -7,8 +7,11 @@ import YandexIcon from "../../assets/Yandex.png";
 import TinkoffIcon from "../../assets/Tinkoff.png";
 import CAPCOIcon from "../../assets/CAPCO.png";
 
+import { useLanguage } from "../../context/LanguageContext";
+
 export default function JobPageCompany() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const { language, translations } = useLanguage();
 
   return (
     <>
@@ -41,7 +44,7 @@ export default function JobPageCompany() {
                   fontWeight: "500",
                 }}
               >
-                Биржа труда
+                {translations[language].jobPage.jobExchange}
               </h3>
               <div
                 style={{ display: "flex", gap: "100px", alignItems: "center" }}
@@ -50,25 +53,25 @@ export default function JobPageCompany() {
           to="/job-exchange"
           style={{ textDecoration: "none", color: "black" }}
         >
-          Главная
+          {translations[language].jobPage.main}
         </Link>
         <Link
           to="/job-exchange/news"
           style={{ textDecoration: "none", color: "black" }}
         >
-          Новости
+          {translations[language].jobPage.news}
         </Link>
         <Link
           to="/job-exchange/company"
           style={{ textDecoration: "none", color: "#EF6C00" }}
         >
-          Компании
+          {translations[language].jobPage.companies}
         </Link>
         <Link
           to="/job-exchange/vacancy"
           style={{ textDecoration: "none", color: "black" }}
         >
-          Вакансии
+          {translations[language].jobPage.vacancies}
         </Link>
               </div>
             </div>
@@ -83,7 +86,7 @@ export default function JobPageCompany() {
               gap: "40px",
             }}
           >
-            <h2 style={{ fontSize: "48px", marginTop: "47px" }}>Компании</h2>
+            <h2 style={{ fontSize: "48px", marginTop: "47px" }}>{translations[language].jobPage.companies}</h2>
             <div
               style={{
                 display: "flex",
@@ -94,7 +97,7 @@ export default function JobPageCompany() {
             >
               <div style={{ display: "flex", gap: "16px" }}>
                 <input
-                  placeholder="Например, Яндекс"
+                  placeholder={translations[language].jobPageCompany.placeholder}
                   style={{width: '100%', height: '68px', paddingLeft: 37, paddingRight: 37, paddingTop: 22, paddingBottom: 22, background: '#F2F2F4', borderRadius: 25, justifyContent: 'flex-start', alignItems: 'center', gap: 10, display: 'inline-flex'}}
                 />
                  <button
@@ -161,7 +164,7 @@ export default function JobPageCompany() {
                   >
                     <img width={45} src={YandexIcon} alt="YandexIcon" />
                     <p style={{ fontWeight: "medium", fontSize: "28px" }}>
-                      Аналитик данных
+                      {translations[language].jobPageCompany.dataAnalyst}
                     </p>
                   </div>
                   <p
@@ -171,10 +174,7 @@ export default function JobPageCompany() {
                       marginTop: "35px",
                     }}
                   >
-                    Яндекс — одна из крупнейших IT-компаний в России. Мы
-                    развиваем самую популярную в стране поисковую систему и
-                    создаём сервисы, которые делают жизнь людей более комфортной
-                    и яркой.
+                    {translations[language].jobPageCompany.yandexDescription}
                   </p>
                   <div
                     style={{
@@ -184,7 +184,7 @@ export default function JobPageCompany() {
                       marginTop: "35px",
                     }}
                   >
-                    <p>3 вакансии</p>
+                    <p>3 {translations[language].jobPageCompany.vacancies}</p>
                     <img src={ArrowBack} alt="" />
                   </div>
                 </Link>
@@ -221,7 +221,7 @@ export default function JobPageCompany() {
                   >
                     <img width={45} src={TinkoffIcon} alt="TinkoffIcon" />
                     <p style={{ fontWeight: "medium", fontSize: "28px" }}>
-                      Тинькофф
+                      {translations[language].jobPageCompany.tinkoff}
                     </p>
                   </div>
                   <p
@@ -231,10 +231,7 @@ export default function JobPageCompany() {
                       marginTop: "35px",
                     }}
                   >
-                    Тинькофф — финансовая экосистема для 15 млн клиентов. Наша
-                    команда создает и развивает удобные продукты и сервисы:
-                    суперприложение, голосовых роботов, инвестиции, кредитные и
-                    дебетовые карты.
+                    {translations[language].jobPageCompany.tinkoffDescription}
                   </p>
                   <div
                     style={{
@@ -244,7 +241,7 @@ export default function JobPageCompany() {
                       marginTop: "35px",
                     }}
                   >
-                    <p>3 вакансии</p>
+                    <p>3 {translations[language].jobPageCompany.vacancies}</p>
                     <img src={ArrowBack} alt="" />
                   </div>
                 </div>
@@ -289,9 +286,7 @@ export default function JobPageCompany() {
                       marginTop: "35px",
                     }}
                   >
-                    VK Team — это 10 тысяч профессионалов, которые создают
-                    удобные сервисы для миллионов людей. Мы стремимся улучшить
-                    все сферы жизни наших пользователей.
+                    {translations[language].jobPageCompany.vkDescription}
                   </p>
                   <div
                     style={{
@@ -301,7 +296,7 @@ export default function JobPageCompany() {
                       marginTop: "35px",
                     }}
                   >
-                    <p>2 вакансии</p>
+                    <p>2 {translations[language].jobPageCompany.vacancies}</p>
                     <img src={ArrowBack} alt="" />
                   </div>
                 </div>
@@ -358,7 +353,7 @@ export default function JobPageCompany() {
                       marginTop: "35px",
                     }}
                   >
-                    Capco - это глобальная консалтинговая компания в области технологий и бизнеса, специализирующаяся на секторе финансовых услуг. Мы стремимся помочь нашим клиентам добиться успеха в постоянно меняющейся отрасли.
+                    {translations[language].jobPageCompany.capcoDescription}
                   </p>
                   <div
                     style={{
@@ -368,7 +363,7 @@ export default function JobPageCompany() {
                       marginTop: "35px",
                     }}
                   >
-                    <p>3 вакансии</p>
+                    <p>3 {translations[language].jobPageCompany.vacancies}</p>
                     <img src={ArrowBack} alt="" />
                   </div>
                 </div>
@@ -397,7 +392,7 @@ export default function JobPageCompany() {
             <div
               style={{ display: "flex", flexDirection: "column", gap: "130px" }}
             >
-              Биржа труда /
+              {translations[language].jobPage.jobExchange} /
               <Link
               to="/info"
                 style={{
@@ -408,7 +403,7 @@ export default function JobPageCompany() {
                   wordWrap: "break-word",
                 }}
               >
-                Назад в контур
+                {translations[language].jobPage.backToContour}
               </Link>
             </div>
             <div style={{ display: "flex", flexDirection: "row", gap: "70px" }}>
@@ -419,7 +414,7 @@ export default function JobPageCompany() {
                   gap: "24px",
                 }}
               >
-                <p style={{ color: "rgb(255,255,255,0.6)" }}>Работодателям</p>
+                <p style={{ color: "rgb(255,255,255,0.6)" }}>{translations[language].jobPage.employers}</p>
                 <div
                   style={{
                     display: "flex",
@@ -427,7 +422,7 @@ export default function JobPageCompany() {
                     gap: "10px",
                   }}
                 >
-                  <p>Размещение вакансий</p> <p>Страница компании</p>
+                  <p>{translations[language].jobPage.placementOfVacancies}</p> <p>{translations[language].jobPage.companyPage}</p>
                 </div>
               </div>
               <div
@@ -437,7 +432,7 @@ export default function JobPageCompany() {
                   gap: "24px",
                 }}
               >
-                <p style={{ color: "rgb(255,255,255,0.6)" }}>Соискателям</p>
+                <p style={{ color: "rgb(255,255,255,0.6)" }}>{translations[language].jobPage.applicants}</p>
                 <div
                   style={{
                     display: "flex",
@@ -445,7 +440,7 @@ export default function JobPageCompany() {
                     gap: "10px",
                   }}
                 >
-                  <p>Вакансии</p> <p>Создать резюме</p>
+                  <p>{translations[language].jobPage.vacancies}</p> <p>{translations[language].jobPage.createResume}</p>
                 </div>
               </div>
               <div
@@ -455,9 +450,9 @@ export default function JobPageCompany() {
                   gap: "24px",
                 }}
               >
-                <p style={{ color: "rgb(255,255,255,0.6)" }}> О нас</p>
+                <p style={{ color: "rgb(255,255,255,0.6)" }}>{translations[language].jobPage.aboutUs}</p>
                 <div>
-                  <p>Новости</p>
+                  <p>{translations[language].jobPage.news}</p>
                 </div>
               </div>
             </div>
@@ -481,7 +476,7 @@ export default function JobPageCompany() {
                   opacity: "0.6",
                 }}
               >
-                2023, Все права защищены
+                2023, {translations[language].jobPage.copyright}
               </div>
               <div style={{ display: "flex", gap: "16px" }}>
                 <p
@@ -493,7 +488,7 @@ export default function JobPageCompany() {
                     textDecoration: "underline",
                   }}
                 >
-                  Пользовательское соглашение
+                  {translations[language].jobPage.userAgreement}
                 </p>
                 ●
                 <p
@@ -505,7 +500,7 @@ export default function JobPageCompany() {
                     textDecoration: "underline",
                   }}
                 >
-                  Политика конфиденциальности
+                  {translations[language].jobPage.privacyPolicy}
                 </p>
               </div>
             </div>

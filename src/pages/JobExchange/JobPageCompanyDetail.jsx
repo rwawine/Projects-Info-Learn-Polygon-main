@@ -4,10 +4,13 @@ import ArrowMoreSVG from "../../assets/ArrowMore.svg";
 import ArrowBack from "../../assets/BackArrow.svg";
 import YandexIcon167 from "../../assets/Yandex167.png";
 
-export default function JobPageCompanyDetail() {
-  const [activeTab, setActiveTab] = useState("Описание");
+import { useLanguage } from "../../context/LanguageContext";
 
-  const tabs = ["Описание", "Вакансии", "События"];
+export default function JobPageCompanyDetail() {
+  const { language, translations } = useLanguage();
+  const [activeTab, setActiveTab] = useState(translations[language].jobPageCompanyDetail.description);
+
+  const tabs = [translations[language].jobPageCompanyDetail.description, translations[language].jobPageCompanyDetail.vacancies, translations[language].jobPageCompanyDetail.events];
 
   return (
     <>
@@ -40,7 +43,7 @@ export default function JobPageCompanyDetail() {
                   fontWeight: "500",
                 }}
               >
-                Биржа труда
+                {translations[language].jobPageCompanyDetail.jobExchange}
               </h3>
               <div
                 style={{ display: "flex", gap: "100px", alignItems: "center" }}
@@ -49,25 +52,25 @@ export default function JobPageCompanyDetail() {
                   to="/job-exchange"
                   style={{ textDecoration: "none", color: "black" }}
                 >
-                  Главная
+                  {translations[language].jobPageCompanyDetail.main}
                 </Link>
                 <Link
                   to="/job-exchange/news"
                   style={{ textDecoration: "none", color: "#EF6C00" }}
                 >
-                  Новости
+                  {translations[language].jobPageCompanyDetail.news}
                 </Link>
                 <Link
                   to="/job-exchange/company"
                   style={{ textDecoration: "none", color: "black" }}
                 >
-                  Компании
+                  {translations[language].jobPageCompanyDetail.companies}
                 </Link>
                 <Link
                   to="/job-exchange/vacancy"
                   style={{ textDecoration: "none", color: "black" }}
                 >
-                  Вакансии
+                  {translations[language].jobPageCompanyDetail.vacancies}
                 </Link>
               </div>
             </div>
@@ -98,7 +101,7 @@ export default function JobPageCompanyDetail() {
               }}
             >
               <div style={{ width: "990px" }}>
-                <h2 style={{ fontSize: "48px" }}>Яндекс</h2>
+                <h2 style={{ fontSize: "48px" }}>{translations[language].jobPageCompanyDetail.companyName}</h2>
                 <p
                   style={{
                     fontSize: "22px",
@@ -155,7 +158,7 @@ export default function JobPageCompanyDetail() {
               ))}
             </div>
 
-            {activeTab === "Описание" && (
+            {activeTab === translations[language].jobPageCompanyDetail.descriptionCompany && (
               <div
                 style={{
                   display: "flex",
@@ -199,7 +202,7 @@ export default function JobPageCompanyDetail() {
                         wordWrap: "break-word",
                       }}
                     >
-                      Обзор
+                      {translations[language].jobPageCompanyDetail.companyOverview}
                     </div>
                     <div
                       style={{
@@ -230,7 +233,7 @@ export default function JobPageCompanyDetail() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Количество сотрудников
+                          {translations[language].jobPageCompanyDetail.numberOfEmployees}
                         </div>
                         <div
                           style={{
@@ -242,7 +245,7 @@ export default function JobPageCompanyDetail() {
                             wordWrap: "break-word",
                           }}
                         >
-                          От 300 до 800 чел
+                          {translations[language].jobPageCompanyDetail.numberOfEmployeesFrom} 300 {translations[language].jobPageCompanyDetail.numberOfEmployeesTo} 800 {translations[language].jobPageCompanyDetail.numberOfEmployees}
                         </div>
                       </div>
                       <div
@@ -263,7 +266,7 @@ export default function JobPageCompanyDetail() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Средняя зарплата
+                          {translations[language].jobPageCompanyDetail.averageSalary}
                         </div>
                         <div
                           style={{
@@ -275,7 +278,7 @@ export default function JobPageCompanyDetail() {
                             wordWrap: "break-word",
                           }}
                         >
-                          183 895 рублей (2023 г.)
+                          183 895 {translations[language].jobPageCompanyDetail.averageSalaryUnit} ({translations[language].jobPageCompanyDetail.averageSalaryYear})
                         </div>
                       </div>
                       <div
@@ -296,7 +299,7 @@ export default function JobPageCompanyDetail() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Год создания
+                          {translations[language].jobPageCompanyDetail.yearOfCreation}
                         </div>
                         <div
                           style={{
@@ -330,7 +333,7 @@ export default function JobPageCompanyDetail() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Уставной капитал, ₽
+                          {translations[language].jobPageCompanyDetail.authorizedCapital}
                         </div>
                         <div
                           style={{
@@ -342,7 +345,7 @@ export default function JobPageCompanyDetail() {
                             wordWrap: "break-word",
                           }}
                         >
-                          875,3 млн
+                          875,3 {translations[language].jobPageCompanyDetail.authorizedCapitalUnit}
                         </div>
                       </div>
                       <div
@@ -363,7 +366,7 @@ export default function JobPageCompanyDetail() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Чистая прибыль, ₽
+                          {translations[language].jobPageCompanyDetail.netProfit}
                         </div>
                         <div
                           style={{
@@ -375,7 +378,7 @@ export default function JobPageCompanyDetail() {
                             wordWrap: "break-word",
                           }}
                         >
-                          2,6 млрд (2023 г.)
+                          2,6 {translations[language].jobPageCompanyDetail.netProfitUnit} ({translations[language].jobPageCompanyDetail.netProfitYear})
                         </div>
                       </div>
                       <div
@@ -396,7 +399,7 @@ export default function JobPageCompanyDetail() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Баланс, ₽
+                          {translations[language].jobPageCompanyDetail.balance}
                         </div>
                         <div
                           style={{
@@ -408,7 +411,7 @@ export default function JobPageCompanyDetail() {
                             wordWrap: "break-word",
                           }}
                         >
-                          18,26 млрд (2023 г.)
+                          18,26 {translations[language].jobPageCompanyDetail.balanceUnit} ({translations[language].jobPageCompanyDetail.balanceYear})
                         </div>
                       </div>
                     </div>
@@ -451,7 +454,7 @@ export default function JobPageCompanyDetail() {
                         wordWrap: "break-word",
                       }}
                     >
-                      Продукты
+                      {translations[language].jobPageCompanyDetail.products}
                     </div>
                     <p
                       style={{
@@ -476,7 +479,7 @@ export default function JobPageCompanyDetail() {
                 </div>
               </div>
             )}
-            {activeTab === "Вакансии" && (
+            {activeTab === translations[language].jobPageCompanyDetail.vacancies && (
               <div
                 style={{
                   display: "flex",
@@ -562,7 +565,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            Продуктовый аналитик в команду HR-маркетинга
+                            {translations[language].jobPageCompanyDetail.vacancyName}
                           </div>
                           <div
                             style={{
@@ -573,7 +576,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            Яндекс
+                            {translations[language].jobPageCompanyDetail.companyName}
                           </div>
                         </div>
                       </div>
@@ -610,7 +613,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            Москва
+                            {translations[language].jobPageCompanyDetail.location}
                           </div>
                         </div>
                         <div
@@ -636,7 +639,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            Офисный
+                            {translations[language].jobPageCompanyDetail.office}
                           </div>
                         </div>
                         <div
@@ -662,7 +665,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            40 часов в неделю
+                            {translations[language].jobPageCompanyDetail.workHours}
                           </div>
                         </div>
                         <div
@@ -688,7 +691,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            2 часа назад
+                            {translations[language].jobPageCompanyDetail.time}
                           </div>
                         </div>
                       </div>
@@ -766,7 +769,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            Технический менеджер ML-проектов в Yandex Cloud
+                            {translations[language].jobPageCompanyDetail.vacancyName}
                           </div>
                           <div
                             style={{
@@ -777,7 +780,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            Яндекс
+                            {translations[language].jobPageCompanyDetail.companyName2}
                           </div>
                         </div>
                       </div>
@@ -814,7 +817,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            Москва
+                            {translations[language].jobPageCompanyDetail.location2}
                           </div>
                         </div>
                         <div
@@ -840,7 +843,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            Офисный
+                            {translations[language].jobPageCompanyDetail.office2}
                           </div>
                         </div>
                         <div
@@ -866,7 +869,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            40 часов в неделю
+                            {translations[language].jobPageCompanyDetail.workHours2}
                           </div>
                         </div>
                         <div
@@ -892,7 +895,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            2 часа назад
+                            {translations[language].jobPageCompanyDetail.time2}
                           </div>
                         </div>
                       </div>
@@ -970,7 +973,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            Разработчик Full Stack
+                            {translations[language].jobPageCompanyDetail.vacancyName2}
                           </div>
                           <div
                             style={{
@@ -981,7 +984,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            Яндекс
+                            {translations[language].jobPageCompanyDetail.companyName3}
                           </div>
                         </div>
                       </div>
@@ -1018,7 +1021,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            Москва
+                            {translations[language].jobPageCompanyDetail.location3}
                           </div>
                         </div>
                         <div
@@ -1044,7 +1047,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            Офисный
+                            {translations[language].jobPageCompanyDetail.office3}
                           </div>
                         </div>
                         <div
@@ -1070,7 +1073,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            40 часов в неделю
+                            {translations[language].jobPageCompanyDetail.workHours3}
                           </div>
                         </div>
                         <div
@@ -1096,7 +1099,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            2 часа назад
+                            {translations[language].jobPageCompanyDetail.time3}
                           </div>
                         </div>
                       </div>
@@ -1174,7 +1177,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            Разработчик платформы данных в Yandex Cloud
+                            {translations[language].jobPageCompanyDetail.vacancyName3}
                           </div>
                           <div
                             style={{
@@ -1185,7 +1188,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            Яндекс
+                            {translations[language].jobPageCompanyDetail.companyName4}
                           </div>
                         </div>
                       </div>
@@ -1222,7 +1225,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            Москва
+                            {translations[language].jobPageCompanyDetail.location4}
                           </div>
                         </div>
                         <div
@@ -1248,7 +1251,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            Офисный
+                            {translations[language].jobPageCompanyDetail.office4}
                           </div>
                         </div>
                         <div
@@ -1274,7 +1277,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            20 часов в неделю
+                            {translations[language].jobPageCompanyDetail.workHours4}
                           </div>
                         </div>
                         <div
@@ -1300,7 +1303,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            2 часа назад
+                            {translations[language].jobPageCompanyDetail.time4}
                           </div>
                         </div>
                       </div>
@@ -1378,7 +1381,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            Python-разработчик в Pro Acquisition
+                            {translations[language].jobPageCompanyDetail.vacancyName4}
                           </div>
                           <div
                             style={{
@@ -1389,7 +1392,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            Яндекс
+                            {translations[language].jobPageCompanyDetail.companyName5}
                           </div>
                         </div>
                       </div>
@@ -1426,7 +1429,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            Москва
+                            {translations[language].jobPageCompanyDetail.location5}
                           </div>
                         </div>
                         <div
@@ -1452,7 +1455,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            Офисный
+                            {translations[language].jobPageCompanyDetail.office5}
                           </div>
                         </div>
                         <div
@@ -1478,7 +1481,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            20 часов в неделю
+                            {translations[language].jobPageCompanyDetail.workHours5}
                           </div>
                         </div>
                         <div
@@ -1504,7 +1507,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            2 часа назад
+                            {translations[language].jobPageCompanyDetail.time5}
                           </div>
                         </div>
                       </div>
@@ -1582,7 +1585,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            Security Engineer в команду Инфраструктуры
+                            {translations[language].jobPageCompanyDetail.vacancyName5}
                           </div>
                           <div
                             style={{
@@ -1593,7 +1596,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            Яндекс
+                            {translations[language].jobPageCompanyDetail.companyName6}
                           </div>
                         </div>
                       </div>
@@ -1630,7 +1633,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            Москва
+                            {translations[language].jobPageCompanyDetail.location6}
                           </div>
                         </div>
                         <div
@@ -1656,7 +1659,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            Офисный
+                            {translations[language].jobPageCompanyDetail.office6}
                           </div>
                         </div>
                         <div
@@ -1682,7 +1685,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            20 часов в неделю
+                            {translations[language].jobPageCompanyDetail.workHours6}
                           </div>
                         </div>
                         <div
@@ -1708,7 +1711,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            2 часа назад
+                            {translations[language].jobPageCompanyDetail.time6}
                           </div>
                         </div>
                       </div>
@@ -1786,7 +1789,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            Разработчик бэкенда на Python и Go в Вертикали
+                            {translations[language].jobPageCompanyDetail.vacancyName6}
                           </div>
                           <div
                             style={{
@@ -1797,7 +1800,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            Яндекс
+                            {translations[language].jobPageCompanyDetail.companyName7}
                           </div>
                         </div>
                       </div>
@@ -1834,7 +1837,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            Москва
+                            {translations[language].jobPageCompanyDetail.location7}
                           </div>
                         </div>
                         <div
@@ -1860,7 +1863,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            Офисный
+                            {translations[language].jobPageCompanyDetail.office7}
                           </div>
                         </div>
                         <div
@@ -1886,7 +1889,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            20 часов в неделю
+                            {translations[language].jobPageCompanyDetail.workHours7}
                           </div>
                         </div>
                         <div
@@ -1912,7 +1915,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            2 часа назад
+                            {translations[language].jobPageCompanyDetail.time7}
                           </div>
                         </div>
                       </div>
@@ -2005,7 +2008,7 @@ export default function JobPageCompanyDetail() {
                                 wordWrap: "break-word",
                               }}
                             >
-                              Яндекс
+                              {translations[language].jobPageCompanyDetail.companyName8}
                             </div>
                           </div>
                           <div
@@ -2033,7 +2036,7 @@ export default function JobPageCompanyDetail() {
                                 wordWrap: "break-word",
                               }}
                             >
-                              Подать резюме
+                              {translations[language].jobPageCompanyDetail.apply}
                             </div>
                           </div>
                         </div>
@@ -2048,7 +2051,7 @@ export default function JobPageCompanyDetail() {
                             wordWrap: "break-word",
                           }}
                         >
-                          Продуктовый аналитик в команду HR-маркетинга
+                          {translations[language].jobPageCompanyDetail.vacancyName8}
                         </div>
                       </div>
                       <div
@@ -2105,7 +2108,7 @@ export default function JobPageCompanyDetail() {
                                   wordWrap: "break-word",
                                 }}
                               >
-                                Москва
+                                {translations[language].jobPageCompanyDetail.location8}
                               </div>
                             </div>
                             <div
@@ -2131,7 +2134,7 @@ export default function JobPageCompanyDetail() {
                                   wordWrap: "break-word",
                                 }}
                               >
-                                Гибридный
+                                {translations[language].jobPageCompanyDetail.office8}
                               </div>
                             </div>
                             <div
@@ -2157,7 +2160,7 @@ export default function JobPageCompanyDetail() {
                                   wordWrap: "break-word",
                                 }}
                               >
-                                20 часов в неделю
+                                {translations[language].jobPageCompanyDetail.workHours8}
                               </div>
                             </div>
                           </div>
@@ -2172,65 +2175,45 @@ export default function JobPageCompanyDetail() {
                             }}
                           >
                             <p>
-                              Команда people-аналитики Яндекса ищет специалиста,
-                              который будет помогать развивать аналитику
-                              HR-маркетинга. Вам предстоит исследовать, как на
-                              воронку найма влияют разные каналы привлечения:
-                              рекламные кампании, DevRel, CRM-маркетинг,
-                              мероприятия Weekend Offer и Fast Track.
+                              {translations[language].jobPageCompanyDetail.description}
                             </p>
-                            <p>Какие задачи вас ждут</p>
+                            <p>{translations[language].jobPageCompanyDetail.tasks}</p>
                             <ul></ul>
                             <li>
-                              Развивать аналитику DevRel, мероприятий быстрого
-                              найма и удовлетворённости кандидатов
+                              {translations[language].jobPageCompanyDetail.task1}
                             </li>
                             <li>
-                              Анализировать базу кандидатов и CRM-коммуникации
+                              {translations[language].jobPageCompanyDetail.task2}
                             </li>
                             <li>
-                              Строить сквозную аналитику из разных источников
-                              данных (Яндекс Метрики, Форм, Контеста, Фемиды,
-                              Трекера, внешних рекламных источников)
+                              {translations[language].jobPageCompanyDetail.task3}
                             </li>
                             <li>
-                              Создавать аналитические отчёты и дашборды, считать
-                              корреляции и регрессии
+                              {translations[language].jobPageCompanyDetail.task4}
                             </li>
                             <li>
-                              Выдвигать гипотезы, исследовать данные и искать в
-                              них инсайты
+                              {translations[language].jobPageCompanyDetail.task5}
                             </li>
                             <ul />
                             <p>
-                              Команда people-аналитики Яндекса ищет специалиста,
-                              который будет помогать развивать аналитику
-                              HR-маркетинга. Вам предстоит исследовать, как на
-                              воронку найма влияют разные каналы привлечения:
-                              рекламные кампании, DevRel, CRM-маркетинг,
-                              мероприятия Weekend Offer и Fast Track.
+                              {translations[language].jobPageCompanyDetail.description}
                             </p>
-                            <p>Какие задачи вас ждут</p>
+                            <p>{translations[language].jobPageCompanyDetail.tasks}</p>
                             <ul></ul>
                             <li>
-                              Развивать аналитику DevRel, мероприятий быстрого
-                              найма и удовлетворённости кандидатов
+                              {translations[language].jobPageCompanyDetail.task1}
                             </li>
                             <li>
-                              Анализировать базу кандидатов и CRM-коммуникации
+                              {translations[language].jobPageCompanyDetail.task2}
                             </li>
                             <li>
-                              Строить сквозную аналитику из разных источников
-                              данных (Яндекс Метрики, Форм, Контеста, Фемиды,
-                              Трекера, внешних рекламных источников)
+                              {translations[language].jobPageCompanyDetail.task3}
                             </li>
                             <li>
-                              Создавать аналитические отчёты и дашборды, считать
-                              корреляции и регрессии
+                              {translations[language].jobPageCompanyDetail.task4}
                             </li>
                             <li>
-                              Выдвигать гипотезы, исследовать данные и искать в
-                              них инсайты
+                              {translations[language].jobPageCompanyDetail.task5}
                             </li>
                             <ul />
                           </div>
@@ -2263,7 +2246,7 @@ export default function JobPageCompanyDetail() {
                                 wordWrap: "break-word",
                               }}
                             >
-                              Загрузить еще
+                              {translations[language].jobPageCompanyDetail.loadMore}
                             </p>
                           </div>
                           <img src={ArrowMoreSVG} alt="" />
@@ -2293,7 +2276,7 @@ export default function JobPageCompanyDetail() {
                         wordWrap: "break-word",
                       }}
                     >
-                      Обзор компании
+                      {translations[language].jobPageCompanyDetail.companyOverview}
                     </div>
                     <div
                       style={{
@@ -2308,7 +2291,7 @@ export default function JobPageCompanyDetail() {
                         wordWrap: "break-word",
                       }}
                     >
-                      Количество сотрудников
+                      {translations[language].jobPageCompanyDetail.numberOfEmployees}
                     </div>
                     <div
                       style={{
@@ -2323,7 +2306,7 @@ export default function JobPageCompanyDetail() {
                         wordWrap: "break-word",
                       }}
                     >
-                      От 5 тыс. до 10 тыс. чел
+                      {translations[language].jobPageCompanyDetail.numberOfEmployeesAll}
                     </div>
                     <div
                       style={{
@@ -2338,7 +2321,7 @@ export default function JobPageCompanyDetail() {
                         wordWrap: "break-word",
                       }}
                     >
-                      Средняя зарплата
+                      {translations[language].jobPageCompanyDetail.averageSalary}
                     </div>
                     <div
                       style={{
@@ -2353,7 +2336,7 @@ export default function JobPageCompanyDetail() {
                         wordWrap: "break-word",
                       }}
                     >
-                      Год создания
+                      {translations[language].jobPageCompanyDetail.yearOfCreation}
                     </div>
                     <div
                       style={{
@@ -2368,7 +2351,7 @@ export default function JobPageCompanyDetail() {
                         wordWrap: "break-word",
                       }}
                     >
-                      183 895 рублей (2023)
+                      {translations[language].jobPageCompanyDetail.yearOfCreationAll}
                     </div>
                     <div
                       style={{
@@ -2398,7 +2381,7 @@ export default function JobPageCompanyDetail() {
                         wordWrap: "break-word",
                       }}
                     >
-                      Уставной капитал, ₽
+                      {translations[language].jobPageCompanyDetail.capital}
                     </div>
                     <div
                       style={{
@@ -2413,7 +2396,7 @@ export default function JobPageCompanyDetail() {
                         wordWrap: "break-word",
                       }}
                     >
-                      Чистая прибыль, ₽
+                      {translations[language].jobPageCompanyDetail.netProfit}
                     </div>
                     <div
                       style={{
@@ -2443,7 +2426,7 @@ export default function JobPageCompanyDetail() {
                         wordWrap: "break-word",
                       }}
                     >
-                      18,26 млрд (2023 г.)
+                      {translations[language].jobPageCompanyDetail.balanceAll}
                     </div>
                     <div
                       style={{
@@ -2458,7 +2441,7 @@ export default function JobPageCompanyDetail() {
                         wordWrap: "break-word",
                       }}
                     >
-                      2,6 млрд (2023 г.)
+                      2,6 {translations[language].jobPageCompanyDetail.netProfitUnit} ({translations[language].jobPageCompanyDetail.netProfitYear})
                     </div>
                     <div
                       style={{
@@ -2473,13 +2456,13 @@ export default function JobPageCompanyDetail() {
                         wordWrap: "break-word",
                       }}
                     >
-                      875,3 млн
+                      875,3 {translations[language].jobPageCompanyDetail.authorizedCapitalUnit}
                     </div>
                   </div>
                 </div>
               </div>
             )}
-            {activeTab === "События" && <p>В разработке...</p>}
+            {activeTab === translations[language].jobPageCompanyDetail.events && <p>{translations[language].jobPageCompanyDetail.events}...</p>}
           </div>
         </div>
       </div>
@@ -2503,7 +2486,7 @@ export default function JobPageCompanyDetail() {
             <div
               style={{ display: "flex", flexDirection: "column", gap: "130px" }}
             >
-              Биржа труда /
+              {translations[language].jobPageCompanyDetail.jobExchange} /
               <Link
               to="/info"
                 style={{
@@ -2514,7 +2497,7 @@ export default function JobPageCompanyDetail() {
                   wordWrap: "break-word",
                 }}
               >
-                Назад в контур
+                {translations[language].jobPageCompanyDetail.backToContour}
               </Link>
             </div>
             <div style={{ display: "flex", flexDirection: "row", gap: "70px" }}>
@@ -2525,7 +2508,7 @@ export default function JobPageCompanyDetail() {
                   gap: "24px",
                 }}
               >
-                <p style={{ color: "rgb(255,255,255,0.6)" }}>Работодателям</p>
+                <p style={{ color: "rgb(255,255,255,0.6)" }}>{translations[language].jobPageCompanyDetail.employers}</p>
                 <div
                   style={{
                     display: "flex",
@@ -2533,7 +2516,7 @@ export default function JobPageCompanyDetail() {
                     gap: "10px",
                   }}
                 >
-                  <p>Размещение вакансий</p> <p>Страница компании</p>
+                  <p>{translations[language].jobPageCompanyDetail.vacancyPlacement}</p> <p>{translations[language].jobPageCompanyDetail.companyPage}</p>
                 </div>
               </div>
               <div
@@ -2543,7 +2526,7 @@ export default function JobPageCompanyDetail() {
                   gap: "24px",
                 }}
               >
-                <p style={{ color: "rgb(255,255,255,0.6)" }}>Соискателям</p>
+                <p style={{ color: "rgb(255,255,255,0.6)" }}>{translations[language].jobPageCompanyDetail.applicants}</p>
                 <div
                   style={{
                     display: "flex",
@@ -2551,7 +2534,7 @@ export default function JobPageCompanyDetail() {
                     gap: "10px",
                   }}
                 >
-                  <p>Вакансии</p> <p>Создать резюме</p>
+                  <p>{translations[language].jobPageCompanyDetail.vacancies}</p> <p>{translations[language].jobPageCompanyDetail.createResume}</p>
                 </div>
               </div>
               <div
@@ -2561,9 +2544,9 @@ export default function JobPageCompanyDetail() {
                   gap: "24px",
                 }}
               >
-                <p style={{ color: "rgb(255,255,255,0.6)" }}> О нас</p>
+                <p style={{ color: "rgb(255,255,255,0.6)" }}>{translations[language].jobPageCompanyDetail.aboutUs}</p>
                 <div>
-                  <p>Новости</p>
+                  <p>{translations[language].jobPageCompanyDetail.news}</p>
                 </div>
               </div>
             </div>
@@ -2587,7 +2570,7 @@ export default function JobPageCompanyDetail() {
                   opacity: "0.6",
                 }}
               >
-                2023, Все права защищены
+                2023, {translations[language].jobPageCompanyDetail.copyright}
               </div>
               <div style={{ display: "flex", gap: "16px" }}>
                 <p
@@ -2599,7 +2582,7 @@ export default function JobPageCompanyDetail() {
                     textDecoration: "underline",
                   }}
                 >
-                  Пользовательское соглашение
+                  {translations[language].jobPageCompanyDetail.userAgreement}
                 </p>
                 ●
                 <p
@@ -2611,7 +2594,7 @@ export default function JobPageCompanyDetail() {
                     textDecoration: "underline",
                   }}
                 >
-                  Политика конфиденциальности
+                  {translations[language].jobPageCompanyDetail.privacyPolicy}
                 </p>
               </div>
             </div>

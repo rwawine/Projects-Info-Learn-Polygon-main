@@ -10,7 +10,11 @@ import SamiraNarges from "../../assets/SamiraNarges.png";
 import DownloadButton from "../../assets/DownloadButton.svg";
 import { Link } from "react-router-dom";
 
+import { useLanguage } from "../../context/LanguageContext";
+
 export default function PoliticalPersonDetail() {
+  const { language, translations } = useLanguage();
+
   return (
     <div style={{ position: "relative" }}>
       <header
@@ -42,7 +46,7 @@ export default function PoliticalPersonDetail() {
                 justifyContent: "center",
                 backgroundColor: "#B64D4A",
               }}
-            ><div style={{color: 'white', fontSize: 16, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>Катариум</div></div>
+            ><div style={{color: 'white', fontSize: 16, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>{translations[language].politicalPersonDetail.politicalSite}</div></div>
             <div
               style={{
                 display: "flex",
@@ -57,7 +61,7 @@ export default function PoliticalPersonDetail() {
                   to="/political-site"
                   style={{fontSize: "18px", color: "#fff", textDecoration: "none" }}
                 >
-                  Главная
+                  {translations[language].politicalPersonDetail.main}
                 </Link>
               </p>
               <p>
@@ -65,7 +69,7 @@ export default function PoliticalPersonDetail() {
                   to="/political-site/person"
                   style={{ fontSize: "18px", color: "#DED651", textDecoration: "underline" }}
                 >
-                  Персоны
+                  {translations[language].politicalPersonDetail.persons}
                 </Link>
               </p>
               <p>
@@ -73,7 +77,7 @@ export default function PoliticalPersonDetail() {
                   to="/political-site/party"
                   style={{fontSize: "18px", color: "#fff", textDecoration: "none" }}
                 >
-                  Партии
+                  {translations[language].politicalPersonDetail.parties}
                 </Link>
               </p>
               <p>
@@ -81,7 +85,7 @@ export default function PoliticalPersonDetail() {
                   to="/political-site/device"
                   style={{fontSize: "18px", color: "#fff", textDecoration: "none" }}
                 >
-                  Политическое устройство
+                  {translations[language].politicalPersonDetail.politicalStructure}
                 </Link>
               </p>
             </div>
@@ -105,19 +109,19 @@ export default function PoliticalPersonDetail() {
           marginTop: "70px",}}>
         <img style={{position: "relative", zIndex: "1"}} src={SamiraNarges} alt="SamiraNarges" />
         <div style={{position: "absolute", top: "-15%", right: "0", maxWidth: "600px", height: "640px", display: "flex", flexDirection: "column", gap: "20px", padding: "120px 40px 110px 140px", backgroundColor: "#A8494B"}}>
-          <p style={{fontFamily: "Cormorant Garamond",  fontSize: "18px", color: "white"}}>Министр Здравоохранения</p>
-          <p style={{fontSize: "50px", color: "white"}}>Самира Наргес</p>
+          <p style={{fontFamily: "Cormorant Garamond",  fontSize: "18px", color: "white"}}>{translations[language].politicalPersonDetail.minister}</p>
+          <p style={{fontSize: "50px", color: "white"}}>{translations[language].politicalPersonDetail.name}</p>
           <ul style={{fontSize: "18px", listStyleType: "disc", color: "white", lineHeight: "170%"}}>
-            <li>Пол: женский</li>
-            <li>Дата рождения: 19.09. 1975</li>
-            <li>Семейное положение: в браке</li>
-            <li>Количество детей: 1</li>
-            <li>Образование: Магистратура Катарийский государственный университет имени Давида Кемпа</li>
-            <li>Военная служба: нет</li>
-            <li>Партия Республиканцев</li>
+            <li>{translations[language].politicalPersonDetail.gender}</li>
+            <li>{translations[language].politicalPersonDetail.birthDate}</li>
+            <li>{translations[language].politicalPersonDetail.familyStatus}</li>
+            <li>{translations[language].politicalPersonDetail.children}</li>
+            <li>{translations[language].politicalPersonDetail.education}</li>
+            <li>{translations[language].politicalPersonDetail.militaryService}</li>
+            <li>{translations[language].politicalPersonDetail.party}</li>
           </ul>
           <div style={{cursor: "pointer", width: "340px", height: '100%', paddingLeft: 13, paddingRight: 13, paddingTop: 9, paddingBottom: 9, borderRadius: 3, border: '1px white solid', justifyContent: 'space-between', alignItems: 'center', display: 'inline-flex'}}>
-    <div style={{color: 'white', fontSize: 18, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>Скачать декларацию</div>
+    <div style={{color: 'white', fontSize: 18, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>{translations[language].politicalPersonDetail.downloadDeclaration}</div>
     <img src={DownloadButton} alt="" />
 </div>
         </div>
@@ -142,7 +146,7 @@ export default function PoliticalPersonDetail() {
             marginTop: "150px",
           }}
         >
-          Однопартийцы
+          {translations[language].politicalPersonDetail.onePartyMembers}
         </h2>
         <p
           style={{
@@ -181,11 +185,11 @@ export default function PoliticalPersonDetail() {
               justifyContent: "center",
             }}
           >
-            <p style={{ color: "white", fontSize: "18px" }}>Председатель</p>
+            <p style={{ color: "white", fontSize: "18px" }}>{translations[language].politicalPersonDetail.chairman}</p>
             <p
               style={{ color: "white", fontSize: "14px", fontStyle: "italic" }}
             >
-              Рамин Шахрам
+              {translations[language].politicalPersonDetail.chairmanName}
             </p>
           </div>
           <img src={Person1} alt="Person1" />
@@ -205,11 +209,11 @@ export default function PoliticalPersonDetail() {
               justifyContent: "center",
             }}
           >
-            <p style={{ color: "white", fontSize: "18px" }}>Секретарь</p>
+            <p style={{ color: "white", fontSize: "18px" }}>{translations[language].politicalPersonDetail.secretary}</p>
             <p
               style={{ color: "white", fontSize: "14px", fontStyle: "italic" }}
             >
-              Джавед Мехран
+              {translations[language].politicalPersonDetail.secretaryName}
             </p>
           </div>
           <img src={Person2} alt="Person2" />
@@ -229,11 +233,11 @@ export default function PoliticalPersonDetail() {
               justifyContent: "center",
             }}
           >
-            <p style={{ color: "white", fontSize: "18px" }}>Министр</p>
+            <p style={{ color: "white", fontSize: "18px" }}>{translations[language].politicalPersonDetail.ministerOne}</p>
             <p
               style={{ color: "white", fontSize: "14px", fontStyle: "italic" }}
             >
-              Дильшат Лалек
+              {translations[language].politicalPersonDetail.ministerOneName}
             </p>
           </div>
           <img src={Person3} alt="Person3" />
@@ -253,11 +257,11 @@ export default function PoliticalPersonDetail() {
               justifyContent: "center",
             }}
           >
-            <p style={{ color: "white", fontSize: "18px" }}>Министр</p>
+            <p style={{ color: "white", fontSize: "18px" }}>{translations[language].politicalPersonDetail.ministerTwo}</p>
             <p
               style={{ color: "white", fontSize: "14px", fontStyle: "italic" }}
             >
-              Булат Берим
+              {translations[language].politicalPersonDetail.ministerTwoName}
             </p>
           </div>
           <img src={Person4} alt="Person4" />
@@ -277,11 +281,11 @@ export default function PoliticalPersonDetail() {
               justifyContent: "center",
             }}
           >
-            <p style={{ color: "white", fontSize: "18px" }}>Министр</p>
+            <p style={{ color: "white", fontSize: "18px" }}>{translations[language].politicalPersonDetail.ministerThree}</p>
             <p
               style={{ color: "white", fontSize: "14px", fontStyle: "italic" }}
             >
-              Фарзан Шабнам
+              {translations[language].politicalPersonDetail.ministerThreeName}
             </p>
           </div>
           <img src={Person5} alt="Person5" />
@@ -301,11 +305,11 @@ export default function PoliticalPersonDetail() {
               justifyContent: "center",
             }}
           >
-            <p style={{ color: "white", fontSize: "18px" }}>Министр</p>
+            <p style={{ color: "white", fontSize: "18px" }}>{translations[language].politicalPersonDetail.ministerFour}</p>
             <p
               style={{ color: "white", fontSize: "14px", fontStyle: "italic" }}
             >
-              Милинда Зейнаб
+              {translations[language].politicalPersonDetail.ministerFourName}
             </p>
           </div>
           <img src={Person6} alt="Person6" />
@@ -325,7 +329,7 @@ export default function PoliticalPersonDetail() {
         >
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <p style={{ fontSize: "18px", color: "white" }}>
-              Сайт государственного устройства “Катариум”
+              {translations[language].politicalPersonDetail.politicalSiteTitle}
             </p>
             <div
               style={{
@@ -339,14 +343,14 @@ export default function PoliticalPersonDetail() {
               <div
                 style={{ display: "flex", gap: "8px", flexDirection: "column" }}
               >
-                <p>Главная</p>
-                <p>Персоны</p>
+                <p>{translations[language].politicalPersonDetail.main}</p>
+                <p>{translations[language].politicalPersonDetail.persons}</p>
               </div>
               <div
                 style={{ display: "flex", gap: "8px", flexDirection: "column" }}
               >
-                <p>Партии</p>
-                <p>Политическое устройство</p>
+                <p>{translations[language].politicalPersonDetail.parties}</p>
+                <p>{translations[language].politicalPersonDetail.politicalStructure}</p>
               </div>
             </div>
           </div>
@@ -360,9 +364,9 @@ export default function PoliticalPersonDetail() {
               marginTop: "16px",
             }}
           >
-            2023. Все права защищены
+            2023. {translations[language].politicalPersonDetail.copyright}
           </p>
-          <Link to="/" style={{color: 'white', fontSize: 18, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>Вернуться в Контур системы</Link>
+          <Link to="/" style={{color: 'white', fontSize: 18, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>{translations[language].politicalPersonDetail.returnToSystem}</Link>
           </div>
         </div>
       </footer>

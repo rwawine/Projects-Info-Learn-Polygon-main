@@ -4,10 +4,12 @@ import waterfallImage from "../../assets/Waterfall.png";
 import mapImage from "../../assets/Map.png";
 import behmanImage from "../../assets/Behman.png";
 import tinaImage from "../../assets/Tina.png";
-
+import { useLanguage } from "../../context/LanguageContext";
 import MagicButton from "../../components/MagicButton"
 
 export default function Katarium() {
+  const { language, translations } = useLanguage();
+  
   return (
     <div style={{ backgroundColor: "#F5F1E7", width: "100%" }}>
       <MagicButton />
@@ -20,7 +22,7 @@ export default function Katarium() {
           paddingRight: "230px",
         }}
       >
-        ИСТОРИЯ
+        {translations[language].history}
       </p>
       <p
         style={{
@@ -30,10 +32,7 @@ export default function Katarium() {
           fontSize: "28px",
         }}
       >
-        В 1550-х годах на севере острова Итугум, омываемом Аравийским морем,
-        сложилось господство королевства Катарий, претендующего на обладание
-        абсолютной властью. Оно постоянно вело разрушительные захватнические
-        войны с соседями, завоевывая и присоединяя к себе все новые территории.
+        {translations[language].historyText1}
       </p>
       <p
         style={{
@@ -43,11 +42,7 @@ export default function Katarium() {
           fontSize: "28px",
         }}
       >
-        На южной стороне острова располагалось небольшое, но сильное королевство
-        Риум. Его земли располагались вдоль крупных полноводных рек Гицем и Сея,
-        а также в Ямчинских горах. Его населяли воинственные племена, грозно
-        защищавшие границы своего королевства и совершающие стремительные набеги
-        на территории Катария, доставляя много хлопот его властям.
+        {translations[language].historyText2}
       </p>
       <img src={waterfallImage} style={{ width: "100%" }} alt="waterfall"></img>
       <p
@@ -58,11 +53,7 @@ export default function Katarium() {
           fontSize: "28px",
         }}
       >
-        Население Риума занималось поиском золотых и серебрянных месторождений,
-        а также добычей железной руды, необходимой для производства оружия
-        и военной амуниции. Кроме добычи металлов, большое внимание было уделено
-        скотоводству и земледелию. Этому способствовало наличие плодородных
-        земель и множества горных и равнинных пастбищ.
+        {translations[language].historyText3}
       </p>
       <hr
         style={{
@@ -79,9 +70,7 @@ export default function Katarium() {
           position: "center",
         }}
       >
-        Однако власти Катария имели большие планы на плодородные земли и
-        богатства южной территории острова, где располагался Риум, для роста
-        благосостояния жителей королевства.
+        {translations[language].historyText4}
       </p>
       <p
         style={{
@@ -91,10 +80,7 @@ export default function Katarium() {
           fontSize: "28px",
         }}
       >
-        В 1556 году Королевство Катарий начало военный поход против государства
-        Риум. Его войска провели долгие недели в изнуряющих сражениях, так и не
-        сумев захватить власть над столицей. Изнуренные постоянными войнами,
-        правители двух королевств решили сесть за стол переговоров.
+        {translations[language].historyText5}
       </p>
       <p
         style={{
@@ -104,12 +90,7 @@ export default function Katarium() {
           fontSize: "28px",
         }}
       >
-        В ходе долгих дискуссий, правители поняли, что объединение двух
-        королевств в одну сильную и самостоятельную республику станет наилучшим
-        решением для процветания и благополучия жителей. Они подписали
-        Итугумский мирный договор, который послужил началом для развития нового
-        государства – Катариум, в составе которого находятся две провинции
-        Катарий и Риум.
+        {translations[language].historyText6}
       </p>
       <p
         style={{
@@ -120,7 +101,7 @@ export default function Katarium() {
           position: "center",
         }}
       >
-        ГЕОГРАФИЧЕСКОЕ ПОЛОЖЕНИЕ
+        {translations[language].geography}
       </p>
       <img src={mapImage} alt="map" style={{ width: "100%" }} />
       <p
@@ -131,9 +112,7 @@ export default function Katarium() {
           fontSize: "28px",
         }}
       >
-        На территории острова преобладает тропический климат с сезоном муссонов.
-        Температура воздуха стабильна круглый год — 25–30 градусов. С конца мая
-        по август выпадает 80% осадков.
+        {translations[language].geographyText}
       </p>
       <p
         style={{
@@ -144,7 +123,7 @@ export default function Katarium() {
           position: "center",
         }}
       >
-        ПОЛИТИЧЕСКОЕ УСТРОЙСТВО
+        {translations[language].politicalStructure}
       </p>
       <p
         style={{
@@ -155,8 +134,7 @@ export default function Katarium() {
           textAlign: "center",
         }}
       >
-        Сегодня Катариум — это демократическая республика с парламентской формой
-        правления
+        {translations[language].politicalStructureText1}
       </p>
       <p
         style={{
@@ -167,7 +145,7 @@ export default function Katarium() {
           textAlign: "center",
         }}
       >
-        Главы государства
+        {translations[language].politicalStructureText2}
       </p>
       <div style={{ display: "flex", paddingLeft: "350px" }}>
         <div style={{ padding: "50px", left: "200px" }}>
@@ -186,7 +164,7 @@ export default function Katarium() {
               textAlign: "center",
             }}
           >
-            Тина Вильсон
+            {translations[language].tinaWilson}
           </p>
           <p
             style={{
@@ -197,7 +175,7 @@ export default function Katarium() {
               textAlign: "center",
             }}
           >
-            Капитан-Регент
+            {translations[language].tinaWilsonTitle}
           </p>
         </div>
         <div style={{ padding: "50px", left: "200px" }}>

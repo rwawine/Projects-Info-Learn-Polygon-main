@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import InfoPage from "./InfoPage";
 import "../../index.css";
+import LanguageSwitcher from "../../components/LanguageSwitcher";
+import { useLanguage } from "../../context/LanguageContext";
 
 function CollapseButton({ name, children, symbol }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -94,27 +96,23 @@ function Burger({ isOpen, open, close }) {
   );
 }
 
-
 function LoginForm() {
+  const { language, translations } = useLanguage();
+  
   return (
     <div className="ring">
-      {/* <i style={{ '--clr': '#00ff0a' }}></i>
-        <i style={{ '--clr': '#ff0057' }}></i>
-        <i style={{ '--clr': '#fffd44' }}></i> */}
       <div className="login">
-        {/* <h2>Login</h2> */}
         <div className="inputBx">
-          <input type="text" placeholder="Логин" />
+          <input type="text" placeholder={translations[language].username} />
         </div>
         <div className="inputBx">
-          <input type="password" placeholder="Пароль" />
+          <input type="password" placeholder={translations[language].password} />
         </div>
         <div className="inputBx">
-          <input type="submit" value="Войти" />
+          <input type="submit" value={translations[language].enter} />
         </div>
         <div className="links">
-          <a href="#">Восстановление доступа</a>
-          {/* <a href="#">Signup</a> */}
+          <a href="#">{translations[language].accessRecovery}</a>
         </div>
       </div>
     </div>
@@ -122,24 +120,25 @@ function LoginForm() {
 }
 
 function RegForm() {
+  const { language, translations } = useLanguage();
+  
   return (
     <div className="ring">
       <div className="login">
-        {/* <h2>Login</h2> */}
         <div className="inputBx">
-          <input type="text" placeholder="Логин" />
+          <input type="text" placeholder={translations[language].username} />
         </div>
         <div className="inputBx">
-          <input type="password" placeholder="Пароль" />
+          <input type="password" placeholder={translations[language].password} />
         </div>
         <div className="inputBx">
-          <input type="phone" placeholder="Номер телефона" />
+          <input type="phone" placeholder={translations[language].phone} />
         </div>
         <div className="inputBx">
-          <input type="group" placeholder="Номер группы" />
+          <input type="group" placeholder={translations[language].groupNumber} />
         </div>
         <div className="inputBx">
-          <input type="submit" value="Войти" />
+          <input type="submit" value={translations[language].enter} />
         </div>
       </div>
     </div>
@@ -147,15 +146,17 @@ function RegForm() {
 }
 
 function AuthPage() {
+  const { language, translations } = useLanguage();
+  
   return (
     <div style={{ width: "100%" }}>
       <div style={{ flexGrow: 1, background: "#E1D6E7" }}>
-        <CollapseButton name="Вход" symbol={">"}>
+        <CollapseButton name={translations[language].login} symbol={">"}>
           <div>
             <LoginForm />
           </div>
         </CollapseButton>
-        <CollapseButton name="Регистрация" symbol={">"}>
+        <CollapseButton name={translations[language].registration} symbol={">"}>
           <div>
             <RegForm />
           </div>
@@ -171,16 +172,17 @@ export default function FirstPage() {
   const [burgerIsOpen, setBurgerIsOpen] = useState(false);
   const [isAuthPage, setIsAuthPage] = useState(true);
   const navigate = useNavigate();
+  const { language, translations } = useLanguage();
 
   const togglePage = () => {
     setIsAuthPage((prev) => !prev);
   };
 
   const menuItems = [
-    { label: "Лендинг", route: "/katarium" },
-    { label: "Сайт политического устройства", route: "/political-site" },
-    { label: "Биржа труда", route: "/job-exchange" },
-    { label: "Новостной ресурс", route: "/news" },
+    { label: translations[language].landing, route: "/katarium" },
+    { label: translations[language].politicalSite, route: "/political-site" },
+    { label: translations[language].jobExchange, route: "/job-exchange" },
+    { label: translations[language].newsResource, route: "/news" },
   ];
 
   const buttonPosition = isAuthPage ? { left: "0" } : { right: "0" };
@@ -198,13 +200,16 @@ export default function FirstPage() {
         }}
       >
         <span style={{ fontSize: "22px", paddingLeft: "60px" }}>
-          Контур системы
+          {translations[language].systemContour}
         </span>
-        <Burger
-          isOpen={burgerIsOpen}
-          open={() => setBurgerIsOpen(true)}
-          close={() => setBurgerIsOpen(false)}
-        />
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <Burger
+            isOpen={burgerIsOpen}
+            open={() => setBurgerIsOpen(true)}
+            close={() => setBurgerIsOpen(false)}
+          />
+          <LanguageSwitcher />
+        </div>
       </header>
       <section
         style={{
@@ -227,27 +232,27 @@ export default function FirstPage() {
             }}
           >
             {menuItems.map(({ label, route }, index) => (
-        <button
-          key={route}
-          onClick={() => navigate(route)}
-          onMouseEnter={() => setHoveredIndex(index)}
-          onMouseLeave={() => setHoveredIndex(null)} 
-          style={{
-            display: "flex",
-            padding: "30px",
-            gap: "40px",
-            width: "100%",
-            borderBottom: "1px solid #000000",
-            backgroundColor: hoveredIndex === index ? "#E1D6E8" : "#EFEEEC", 
-            paddingLeft: "75px",
-            fontSize: "42px",
-            cursor: "pointer",
-            transition: "background-color 0.3s ease", 
-          }}
-        >
-          {label}
-        </button>
-      ))}
+              <button
+                key={route}
+                onClick={() => navigate(route)}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+                style={{
+                  display: "flex",
+                  padding: "30px",
+                  gap: "40px",
+                  width: "100%",
+                  borderBottom: "1px solid #000000",
+                  backgroundColor: hoveredIndex === index ? "#E1D6E8" : "#EFEEEC",
+                  paddingLeft: "75px",
+                  fontSize: "42px",
+                  cursor: "pointer",
+                  transition: "background-color 0.3s ease",
+                }}
+              >
+                {label}
+              </button>
+            ))}
           </div>
         )}
         {isAuthPage ? <InfoPage /> : <AuthPage />}
@@ -257,15 +262,15 @@ export default function FirstPage() {
             position: "absolute",
             backgroundColor: isHovered ? "#E1D6E7 " : "#1D1D1B",
             padding: "10px 10px",
-            borderRight: isHovered ? '1px #1D1D1B solid' : "1px solid transparent" ,
-            borderLeft: isHovered ? '1px #1D1D1B solid' : "1px solid transparent" ,
+            borderRight: isHovered ? '1px #1D1D1B solid' : "1px solid transparent",
+            borderLeft: isHovered ? '1px #1D1D1B solid' : "1px solid transparent",
             height: "100%",
             width: "63px",
             transition: "background 0.3s ease",
             ...buttonPosition,
           }}
           onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)} 
+          onMouseLeave={() => setIsHovered(false)}
         >
           <div
             style={{
@@ -279,19 +284,19 @@ export default function FirstPage() {
               justifyContent: "center",
             }}
           >
-            {isAuthPage ? <div style={{transform: "rotate(-180deg)", marginBottom: "5px"}}><svg  onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)} width="13" height="25" viewBox="0 0 13 25" fill="none" xmlns="http://www.w3.org/2000/svg"  style={{
-        stroke: isHovered ? "#EFEEEC" : "#1D1D1B",
-      }}>
-<path d="M1.8125 23.4609L11.0439 13.3064C11.4797 12.827 11.4797 12.0949 11.0439 11.6155L1.8125 1.46094" stroke-width="1.69783" stroke-linecap="round"/>
-</svg>
-</div> : <div style={{marginTop: "5px"}}><svg  onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)} width="13" height="25" viewBox="0 0 13 25" fill="none" xmlns="http://www.w3.org/2000/svg"  style={{
-        stroke: isHovered ? "#EFEEEC" : "#1D1D1B",
-      }}>
-<path d="M1.8125 23.4609L11.0439 13.3064C11.4797 12.827 11.4797 12.0949 11.0439 11.6155L1.8125 1.46094" stroke-width="1.69783" stroke-linecap="round"/>
-</svg>
-</div>}
+            {isAuthPage ? <div style={{ transform: "rotate(-180deg)", marginBottom: "5px" }}><svg onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)} width="13" height="25" viewBox="0 0 13 25" fill="none" xmlns="http://www.w3.org/2000/svg" style={{
+                stroke: isHovered ? "#EFEEEC" : "#1D1D1B",
+              }}>
+              <path d="M1.8125 23.4609L11.0439 13.3064C11.4797 12.827 11.4797 12.0949 11.0439 11.6155L1.8125 1.46094" strokeWidth="1.69783" strokeLinecap="round" />
+            </svg>
+            </div> : <div style={{ marginTop: "5px" }}><svg onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)} width="13" height="25" viewBox="0 0 13 25" fill="none" xmlns="http://www.w3.org/2000/svg" style={{
+                stroke: isHovered ? "#EFEEEC" : "#1D1D1B",
+              }}>
+              <path d="M1.8125 23.4609L11.0439 13.3064C11.4797 12.827 11.4797 12.0949 11.0439 11.6155L1.8125 1.46094" strokeWidth="1.69783" strokeLinecap="round" />
+            </svg>
+            </div>}
           </div>
         </button>
       </section>

@@ -15,10 +15,12 @@ import Captha7 from "../../assets/captha/Captcha/Active/Captcha/7.svg";
 import Captha8 from "../../assets/captha/Captcha/Active/Captcha/8.svg";
 import Captha9 from "../../assets/captha/Captcha/Active/Captcha/9.svg";
 
+import { useLanguage } from "../../context/LanguageContext";
+
 export default function NewsPageSectionArtice({ goToAuth }) {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [isHovered, setIsHovered] = useState(false);
-
+  const { language, translations } = useLanguage();
   const navigate = useNavigate();
 
   const newsPage = () => {
@@ -32,18 +34,18 @@ export default function NewsPageSectionArtice({ goToAuth }) {
   const links = [
     {
       id: 1,
-      label: "Экономика",
+      label: translations[language].newsPageSectionArticle.economy,
       href: "#economy",
       pageName: "news/economy",
     },
     {
       id: 2,
-      label: "Технологии",
+      label: translations[language].newsPageSectionArticle.technology,
       href: "#technology",
       pageName: "news",
     },
-    { id: 3, label: "Общество", href: "#society", pageName: "news" },
-    { id: 4, label: "Другое", href: "#other", pageName: "news/other" },
+    { id: 3, label: translations[language].newsPageSectionArticle.society, href: "#society", pageName: "news" },
+    { id: 4, label: translations[language].newsPageSectionArticle.other, href: "#other", pageName: "news/other" },
   ];
 
   const [isModalVisible, setIsModalVisible] = useState(true);
@@ -180,7 +182,7 @@ export default function NewsPageSectionArtice({ goToAuth }) {
                     border: "1px solid #2A2A2A",
                   }}
                 >
-                  политика
+                  {translations[language].newsPageSectionArticle.politics}
                 </span>
                 <span
                   style={{
@@ -194,7 +196,7 @@ export default function NewsPageSectionArtice({ goToAuth }) {
                     border: "1px solid #C9543C",
                   }}
                 >
-                  горячие новости
+                  {translations[language].newsPageSectionArticle.hotNews}
                 </span>
                 <h3
                   style={{
@@ -203,8 +205,7 @@ export default function NewsPageSectionArtice({ goToAuth }) {
                     marginBottom: "110px",
                   }}
                 >
-                  Гондурас подал запрос на вступление в Новый банк развития
-                  БРИКС
+                  {translations[language].newsPageSectionArticle.title}
                 </h3>
                 <div
                   style={{
@@ -214,7 +215,7 @@ export default function NewsPageSectionArtice({ goToAuth }) {
                   }}
                 >
                   <p style={{ fontSize: "18px", color: "black", margin: "0" }}>
-                    Источник: РБК
+                    {translations[language].newsPageSectionArticle.source}
                   </p>
                   <p
                     style={{
@@ -224,7 +225,7 @@ export default function NewsPageSectionArtice({ goToAuth }) {
                       margin: "0",
                     }}
                   >
-                    2 минуты назад
+                    {translations[language].newsPageSectionArticle.sourceTime}
                   </p>
                 </div>
               </div>
@@ -293,7 +294,7 @@ export default function NewsPageSectionArtice({ goToAuth }) {
                       backgroundColor: "transparent",
                     }}
                   >
-                    Показать ещё
+                    {translations[language].newsPageSectionArticle.showMore}
                   </button>
                 </div>
               </div>
@@ -343,7 +344,7 @@ export default function NewsPageSectionArtice({ goToAuth }) {
                           lineHeight: "100%",
                         }}
                       >
-                        Выберите космонавта с табличкой в руках
+                        {translations[language].newsPageSectionArticle.selectCosmonaut}
                       </h2>
                       <img src={Refresh} />
                     </div>
@@ -403,7 +404,7 @@ export default function NewsPageSectionArtice({ goToAuth }) {
                 e.target.style.color = "#fff";
               }}
             >
-              Я не робот
+              {translations[language].newsPageSectionArticle.selectCosmonaut}
             </button>
                   </div>
                 </div>
@@ -448,7 +449,7 @@ export default function NewsPageSectionArtice({ goToAuth }) {
                 src={logo}
                 alt=""
               />
-              Новостной ресурс
+              {translations[language].newsPageSectionArticle.newsResource}
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: "25px" }}>
               <button
@@ -461,7 +462,7 @@ export default function NewsPageSectionArtice({ goToAuth }) {
                   border: "none",
                 }}
               >
-                Подписаться
+                {translations[language].newsPageSectionArticle.subscribe}
               </button>
               <img src={Close} alt="close" />
             </div>
@@ -487,7 +488,7 @@ export default function NewsPageSectionArtice({ goToAuth }) {
               }}
             >
               <img style={{ height: "18px" }} src={logo} alt="" />
-              Новостной ресурс
+              {translations[language].newsPageSectionArticle.newsResource}
             </div>
             <p
               style={{
@@ -497,10 +498,10 @@ export default function NewsPageSectionArtice({ goToAuth }) {
                 color: "black",
               }}
             >
-              2023. Все права защищены
+              2023. {translations[language].newsPageSectionArticle.copyright}
             </p>
           </div>
-          <Link to="/info" style={{color: 'black', fontSize: 16, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>Вернуться в контур системы</Link>
+          <Link to="/info" style={{color: 'black', fontSize: 16, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>{translations[language].newsPageSectionArticle.backToContour}</Link>
           </div>
       </div>
     </div>

@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import PoliticalDeviceImage from "../../assets/PoliticalDeviceImage.png";
+import { useLanguage } from "../../context/LanguageContext";
 
 export default function PoliticalDevice() {
+  const { language, translations } = useLanguage();
+
   return (
     <div style={{ position: "relative" }}>
       <header
@@ -32,7 +35,7 @@ export default function PoliticalDevice() {
                 justifyContent: "center",
                 backgroundColor: "#B64D4A",
               }}
-            ><div style={{color: 'white', fontSize: 16, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>Катариум</div></div>
+            ><div style={{color: 'white', fontSize: 16, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>{translations[language].politicalPage.politicalSite}</div></div>
             <div
               style={{
                 display: "flex",
@@ -47,7 +50,7 @@ export default function PoliticalDevice() {
                   to="/political-site"
                   style={{fontSize: "18px", color: "#fff", textDecoration: "none" }}
                 >
-                  Главная
+                  {translations[language].politicalPage.main}
                 </Link>
               </p>
               <p>
@@ -55,7 +58,7 @@ export default function PoliticalDevice() {
                   to="/political-site/person"
                   style={{fontSize: "18px", color: "#fff", textDecoration: "none" }}
                 >
-                  Персоны
+                  {translations[language].politicalPage.persons}
                 </Link>
               </p>
               <p>
@@ -63,7 +66,7 @@ export default function PoliticalDevice() {
                   to="/political-site/party"
                   style={{fontSize: "18px", color: "#fff", textDecoration: "none" }}
                 >
-                  Партии
+                  {translations[language].politicalPage.parties}
                 </Link>
               </p>
               <p>
@@ -71,7 +74,7 @@ export default function PoliticalDevice() {
                   to="/political-site/device"
                   style={{ fontSize: "18px", color: "#DED651", textDecoration: "underline" }}
                 >
-                  Политическое устройство
+                  {translations[language].politicalPage.politicalStructure}
                 </Link>
               </p>
             </div>
@@ -80,7 +83,7 @@ export default function PoliticalDevice() {
       </header>
       <div style={{ maxWidth: "1060px", padding: "0 15px", margin: "0 auto" }}>
         <img src={PoliticalDeviceImage} alt="PoliticalDeviceImage" />
-        <h2 style={{fontFamily: "Cormorant Garamond",  textAlign: "center", fontSize: "50px", fontWeight: "medium", marginTop: "40px"}}>Демократическая республика с парламентской формой правления</h2>
+        <h2 style={{fontFamily: "Cormorant Garamond",  textAlign: "center", fontSize: "50px", fontWeight: "medium", marginTop: "40px"}}>{translations[language].politicalDevice.politicalStructureText1}</h2>
         <div style={{display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "60px"}}>
           <button style={{
                 display: "flex",
@@ -91,7 +94,7 @@ export default function PoliticalDevice() {
                 alignItems: "center", 
                 justifyContent: "center",
                 borderRadius: "3px",
-              }}>Партия республиканцев</button>
+              }}>{translations[language].politicalDevice.republicanParty}</button>
           <button style={{
                 display: "flex",
                 width: "346px",
@@ -101,7 +104,7 @@ export default function PoliticalDevice() {
                 backgroundColor: "#EC602B",
                 color: "white",
                 borderRadius: "3px",
-              }}>Партия демократов</button>
+              }}>{translations[language].politicalDevice.democraticParty}</button>
         </div>
       </div>
       <footer
@@ -118,7 +121,7 @@ export default function PoliticalDevice() {
         >
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <p style={{ fontSize: "18px", color: "white" }}>
-              Сайт государственного устройства “Катариум”
+              {translations[language].politicalDevice.politicalSiteTitle}
             </p>
             <div
               style={{
@@ -132,14 +135,14 @@ export default function PoliticalDevice() {
               <div
                 style={{ display: "flex", gap: "8px", flexDirection: "column" }}
               >
-                <p>Главная</p>
-                <p>Персоны</p>
+                <p>{translations[language].politicalPage.main}</p>
+                <p>{translations[language].politicalPage.persons}</p>
               </div>
               <div
                 style={{ display: "flex", gap: "8px", flexDirection: "column" }}
               >
-                <p>Партии</p>
-                <p>Политическое устройство</p>
+                <p>{translations[language].politicalPage.parties}</p>
+                <p>{translations[language].politicalPage.politicalStructure}</p>
               </div>
             </div>
           </div>
@@ -153,9 +156,9 @@ export default function PoliticalDevice() {
               marginTop: "16px",
             }}
           >
-            2023. Все права защищены
+          2023.  {translations[language].politicalDevice.copyright}
           </p>
-          <Link to="/" style={{color: 'white', fontSize: 18, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>Вернуться в Контур системы</Link>
+          <Link to="/" style={{color: 'white', fontSize: 18, fontFamily: 'IBM Plex Sans', fontWeight: '400', wordWrap: 'break-word'}}>{translations[language].politicalDevice.returnToSystem}</Link>
           </div>
         </div>
       </footer>

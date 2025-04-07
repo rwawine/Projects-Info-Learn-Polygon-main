@@ -24,7 +24,10 @@ import Thumbnail4 from "../../assets/NewPage/Thumbnail4.png";
 import Thumbnail5 from "../../assets/NewPage/Thumbnail5.png";
 import Thumbnail6 from "../../assets/NewPage/Thumbnail6.png";
 
+import { useLanguage } from "../../context/LanguageContext";
+
 export default function NewsPage() {
+  const { language, translations } = useLanguage();
   const [isModalVisible, setIsModalVisible] = useState(true);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [selectedIndex, setSelectedIndex] = useState(null);
@@ -45,18 +48,18 @@ export default function NewsPage() {
   const links = [
     {
       id: 1,
-      label: "Экономика",
+      label: translations[language].newPage.economy,
       href: "#economy",
       pageName: "news/economy",
     },
     {
       id: 2,
-      label: "Технологии",
+      label: translations[language].newPage.technology,
       href: "#technology",
       pageName: "news",
     },
-    { id: 3, label: "Общество", href: "#society", pageName: "news" },
-    { id: 4, label: "Другое", href: "#other", pageName: "news/other" },
+    { id: 3, label: translations[language].newPage.society, href: "#society", pageName: "news" },
+    { id: 4, label: translations[language].newPage.other, href: "#other", pageName: "news/other" },
   ];
 
   const handleLinkClickPage = (pageName) => {
@@ -91,7 +94,7 @@ export default function NewsPage() {
 
   const [isHovered, setIsHovered] = useState(false);
 
-  const [placeholder, setPlaceholder] = useState("Введите ваш email");
+  const [placeholder, setPlaceholder] = useState(translations[language].newPage.placeholder);
 
   const changePlaceholder = () => {
     setPlaceholder("ekkaterinasmirnova@mail.ru");
@@ -109,7 +112,7 @@ export default function NewsPage() {
     if (selectedIndex !== null) {
       setIsModalVisible(false);
     } else {
-      alert("Выберите космонавта с табличкой в руках!");
+      alert(translations[language].newPage.captcha);
     }
   };
 
@@ -158,7 +161,7 @@ export default function NewsPage() {
                   lineHeight: "100%",
                 }}
               >
-                Выберите космонавта с табличкой в руках
+                {translations[language].newPage.captcha}
               </h2>
               <img src={Refresh} />
             </div>
@@ -223,7 +226,7 @@ export default function NewsPage() {
                 e.target.style.color = "#fff";
               }}
             >
-              Я не робот
+              {translations[language].newPage.captcha2}
             </button>
           </div>
         </div>
@@ -313,11 +316,11 @@ export default function NewsPage() {
                 backgroundColor: "#FFFFFF",
                 cursor: "pointer"
               }}
-            ><p>Все разделы</p><img src={ArrowInput} alt="" /></div>
-            с
+            ><p>{translations[language].newPage.allSections}</p><img src={ArrowInput} alt="" /></div>
+            {translations[language].newPage.from}
             <input
               type="date"
-              placeholder="с"
+              placeholder={translations[language].fromDate}
               style={{
                 fontSize: "18px",
                 padding: "9px 25px",
@@ -326,10 +329,10 @@ export default function NewsPage() {
                 borderRadius: "5px",
               }}
             />
-            по
+            {translations[language].newPage.to}
             <input
               type="date"
-              placeholder="по"
+              placeholder={translations[language].fromDate}
               style={{
                 fontSize: "18px",
                 backgroundColor: "#FFFFFF",
@@ -340,7 +343,7 @@ export default function NewsPage() {
             />
             <input
               type="search"
-              placeholder="Поиск"
+              placeholder={translations[language].newPage.search}
               style={{
                 width: "311px",
                 height: "44px",
@@ -398,8 +401,7 @@ export default function NewsPage() {
                       width: "410px",
                     }}
                   >
-                    Подпишитесь, чтобы получать актуальные новости сразу на
-                    почту
+                    {translations[language].newPage.subscribe}
                   </h2>
                   <div
                     style={{
@@ -432,7 +434,7 @@ export default function NewsPage() {
                       }}
                       onClick={handleCloseModal}
                     >
-                      Подписаться
+                      {translations[language].newPage.subscribe2}
                     </button>
                   </div>
                   <p
@@ -445,7 +447,7 @@ export default function NewsPage() {
                     }}
                     onClick={handleCloseModal}
                   >
-                    Условия подписки
+                    {translations[language].newPage.conditions}
                   </p>
                 </div>
               </div>
@@ -478,7 +480,7 @@ export default function NewsPage() {
                       border: "1px solid #2A2A2A",
                     }}
                   >
-                    политика
+                    {translations[language].newPage.politics}
                   </span>
                   <span
                     style={{
@@ -492,7 +494,7 @@ export default function NewsPage() {
                       border: "1px solid #C9543C",
                     }}
                   >
-                    горячие новости
+                    {translations[language].newPage.hotNews}
                   </span>
                   <h3
                     onClick={NewsPageArticle}
@@ -502,8 +504,7 @@ export default function NewsPage() {
                       marginTop: "30px",
                     }}
                   >
-                    Гондурас подал запрос на вступление в Новый банк развития
-                    БРИКС
+                    {translations[language].newPage.news1}
                   </h3>
                   <div
                     style={{
@@ -521,7 +522,7 @@ export default function NewsPage() {
                         margin: "0",
                       }}
                     >
-                      2 минуты назад
+                      {translations[language].newPage.news1Time}
                     </p>
                     <p
                       style={{
@@ -530,7 +531,7 @@ export default function NewsPage() {
                         margin: "0",
                       }}
                     >
-                      Источник: РИА
+                      {translations[language].newPage.news1Source}
                     </p>
                   </div>
                 </div>
@@ -584,7 +585,7 @@ export default function NewsPage() {
                         border: "1px solid #2A2A2A",
                       }}
                     >
-                      политика
+                      {translations[language].newPage.politics}
                     </span>
                     <span
                       style={{
@@ -597,15 +598,14 @@ export default function NewsPage() {
                         border: "1px solid #C9543C",
                       }}
                     >
-                      горячие новости
+                      {translations[language].newPage.hotNews}
                     </span>
                   </div>
                   <h4 style={{ fontSize: "18px" }}>
-                    МИД оценил решение Международного суда ООН по иску Украины
-                    против России
+                    {translations[language].newPage.news2}
                   </h4>
                   <p style={{ fontSize: "18px", color: "gray", margin: "0" }}>
-                    2 минуты назад
+                    {translations[language].newPage.news2Time}
                   </p>
                 </div>
               </article>
@@ -647,7 +647,7 @@ export default function NewsPage() {
                         border: "1px solid #2A2A2A",
                       }}
                     >
-                      политика
+                      {translations[language].newPage.politics}
                     </span>
                     <span
                       style={{
@@ -660,15 +660,14 @@ export default function NewsPage() {
                         border: "1px solid #C9543C",
                       }}
                     >
-                      горячие новости
+                      {translations[language].newPage.hotNews}
                     </span>
                   </div>
                   <h4 style={{ fontSize: "18px" }}>
-                    Совфед одобрил закон о переносе на год компенсации советских
-                    вкладов
+                    {translations[language].newPage.news3}
                   </h4>
                   <p style={{ fontSize: "18px", color: "gray", margin: "0" }}>
-                    2 минуты назад
+                    {translations[language].newPage.news3Time}
                   </p>
                 </div>
               </article>
@@ -710,7 +709,7 @@ export default function NewsPage() {
                         border: "1px solid #2A2A2A",
                       }}
                     >
-                      политика
+                      {translations[language].newPage.politics}
                     </span>
                     <span
                       style={{
@@ -723,15 +722,14 @@ export default function NewsPage() {
                         border: "1px solid #C9543C",
                       }}
                     >
-                      горячие новости
+                      {translations[language].newPage.hotNews}
                     </span>
                   </div>
                   <h4 style={{ fontSize: "18px" }}>
-                    Сенаторы внесли в Госдуму законопроект об упрощении
-                    госзакупок
+                    {translations[language].newPage.news4}
                   </h4>
                   <p style={{ fontSize: "18px", color: "gray", margin: "0" }}>
-                    2 минуты назад
+                    {translations[language].newPage.news4Time}
                   </p>
                 </div>
               </article>
@@ -768,7 +766,7 @@ export default function NewsPage() {
                   gap: "10px",
                 }}
               >
-                Сайт использует cookie. <p style={{ margin: "0", textDecoration: "underline" }}>Зачем?</p>{" "}
+                {translations[language].newPage.cookie} <p style={{ margin: "0", textDecoration: "underline" }}>{translations[language].newPage.why}</p>{" "}
               </div>
               <img src={Close} alt="close" />
             </div>
@@ -781,7 +779,7 @@ export default function NewsPage() {
               fontWeight: "400",
             }}
           >
-            Последние
+            {translations[language].newPage.last}
           </h2>
           <hr style={{ margin: "0" }} />
           <div
@@ -820,7 +818,7 @@ export default function NewsPage() {
                     borderRadius: "70px",
                   }}
                 >
-                  политика
+                  {translations[language].newPage.politics}
                 </p>
                 <h4
                   style={{
@@ -831,7 +829,7 @@ export default function NewsPage() {
                     wordWrap: "break-word",
                   }}
                 >
-                  Скандал в правительстве: министр уличен в коррупции
+                  {translations[language].newPage.news5}
                 </h4>
                 <p
                   style={{
@@ -841,7 +839,7 @@ export default function NewsPage() {
                     opacity: "0.5",
                   }}
                 >
-                  21 час назад
+                  {translations[language].newPage.news5Time}
                 </p>
               </div>
             </div>
@@ -873,7 +871,7 @@ export default function NewsPage() {
                     borderRadius: "70px",
                   }}
                 >
-                  технологии
+                  {translations[language].newPage.technology}
                 </p>
                 <h4
                   style={{
@@ -884,7 +882,7 @@ export default function NewsPage() {
                     wordWrap: "break-word",
                   }}
                 >
-                  Прорыв в медицине: ученые разработали новое лекарство от рака
+                  {translations[language].newPage.news6}
                 </h4>
                 <p
                   style={{
@@ -894,7 +892,7 @@ export default function NewsPage() {
                     opacity: "0.5",
                   }}
                 >
-                  1 день назад
+                  {translations[language].newPage.news6Time}
                 </p>
               </div>
             </div>
@@ -926,7 +924,7 @@ export default function NewsPage() {
                     borderRadius: "70px",
                   }}
                 >
-                  политика
+                  {translations[language].newPage.society}
                 </p>
                 <h4
                   style={{
@@ -937,8 +935,7 @@ export default function NewsPage() {
                     wordWrap: "break-word",
                   }}
                 >
-                  Парламент принял спорный законопроект о регулировании
-                  социальных сетей
+                  {translations[language].newPage.news7}
                 </h4>
                 <p
                   style={{
@@ -948,7 +945,7 @@ export default function NewsPage() {
                     opacity: "0.5",
                   }}
                 >
-                  1 день назад
+                  {translations[language].newPage.news7Time}
                 </p>
               </div>
             </div>
@@ -978,7 +975,7 @@ export default function NewsPage() {
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
-              Показать ещё
+              {translations[language].newPage.showMore}
             </button>
           </div>
           <h2
@@ -990,7 +987,7 @@ export default function NewsPage() {
               fontWeight: "400",
             }}
           >
-            Более старые
+            {translations[language].newPage.moreOld}
           </h2>
           <hr style={{ margin: "0" }} />
           <div
@@ -1029,7 +1026,7 @@ export default function NewsPage() {
                     borderRadius: "70px",
                   }}
                 >
-                  политика
+                  {translations[language].newPage.politics}
                 </p>
                 <p
                   style={{
@@ -1039,7 +1036,7 @@ export default function NewsPage() {
                     opacity: "0.5",
                   }}
                 >
-                  21 Апреля 2023
+                  {translations[language].newPage.news1Time}
                 </p>
               </div>
               <h4
@@ -1050,7 +1047,7 @@ export default function NewsPage() {
                   lineHeight: "141%",
                 }}
               >
-                Лидеры стран G7 провели экстренный саммит по вопросам климата
+                {translations[language].newPage.news8}
               </h4>
               <p
                 style={{
@@ -1062,9 +1059,7 @@ export default function NewsPage() {
                   opacity: "0.5",
                 }}
               >
-                Главы государств "Большой семерки" собрались на внеочередную
-                встречу для обсуждения глобальных климатических проблем и
-                согласования совместных действий по борьбе с изменением климата.
+                {translations[language].newPage.news8Description}
               </p>
             </div>
             <div
@@ -1093,7 +1088,7 @@ export default function NewsPage() {
                     borderRadius: "70px",
                   }}
                 >
-                  общество
+                  {translations[language].newPage.society}
                 </p>
                 <p
                   style={{
@@ -1103,7 +1098,7 @@ export default function NewsPage() {
                     opacity: "0.5",
                   }}
                 >
-                  21 Апреля 2023
+                  {translations[language].newPage.news8Time}
                 </p>
               </div>
               <h4
@@ -1118,7 +1113,7 @@ export default function NewsPage() {
                   transition: "color 0.3s ease",
                 }}
               >
-                Президент подписал указ о повышении пенсий и пособий
+                {translations[language].newPage.news8}
               </h4>
               <p
                 style={{
@@ -1161,7 +1156,7 @@ export default function NewsPage() {
                     borderRadius: "70px",
                   }}
                 >
-                  политика
+                  {translations[language].newPage.politics}
                 </p>
                 <p
                   style={{
@@ -1171,7 +1166,7 @@ export default function NewsPage() {
                     opacity: "0.5",
                   }}
                 >
-                  21 Апреля 2023
+                  {translations[language].newPage.news8Time}
                 </p>
               </div>
               <h4
@@ -1182,7 +1177,7 @@ export default function NewsPage() {
                   lineHeight: "141%",
                 }}
               >
-                Оппозиционная партия объявила о бойкоте предстоящих выборов
+                {translations[language].newPage.news9}
               </h4>
               <p
                 style={{
@@ -1194,10 +1189,7 @@ export default function NewsPage() {
                   opacity: "0.5",
                 }}
               >
-                Крупнейшая оппозиционная партия заявила, что не будет
-                участвовать в предстоящих парламентских выборах, обвинив
-                правящую партию в манипуляциях и ограничении политической
-                конкуренции.
+              {translations[language].newPage.news9Description}
               </p>
             </div>
             <div
@@ -1226,7 +1218,7 @@ export default function NewsPage() {
                     borderRadius: "70px",
                   }}
                 >
-                  политика
+                  {translations[language].newPage.politics}
                 </p>
                 <p
                   style={{
@@ -1236,7 +1228,7 @@ export default function NewsPage() {
                     opacity: "0.5",
                   }}
                 >
-                  21 Апреля 2023
+                  {translations[language].newPage.news9Time}
                 </p>
               </div>
               <h4
@@ -1247,8 +1239,7 @@ export default function NewsPage() {
                   lineHeight: "141%",
                 }}
               >
-                Страны-члены ООН договорились о новых мерах по борьбе с
-                терроризмом
+                {translations[language].newPage.news10}
               </h4>
               <p
                 style={{
@@ -1260,10 +1251,7 @@ export default function NewsPage() {
                   opacity: "0.5",
                 }}
               >
-                На заседании Генеральной Ассамблеи ООН государства-члены приняли
-                резолюцию, предусматривающую усиление международного
-                сотрудничества и обмена информацией в сфере противодействия
-                терроризму.
+                {translations[language].newPage.news10Description}
               </p>
             </div>
           </div>
@@ -1289,7 +1277,7 @@ export default function NewsPage() {
                 backgroundColor: "#fff",
               }}
             >
-              Показать ещё
+              {translations[language].newPage.showMore}
             </button>
           </div>
           <div
@@ -1328,7 +1316,7 @@ export default function NewsPage() {
                   src={logo}
                   alt=""
                 />
-                Новостной ресурс
+                {translations[language].newPage.newsResource}
               </div>
               <div
                 style={{ display: "flex", alignItems: "center", gap: "25px" }}
@@ -1343,7 +1331,7 @@ export default function NewsPage() {
                     border: "none",
                   }}
                 >
-                  Подписаться
+                  {translations[language].newPage.subscribe}
                 </button>
                 <img src={Close} alt="close" />
               </div>
@@ -1375,7 +1363,7 @@ export default function NewsPage() {
                 }}
               >
                 <img style={{ height: "18px" }} src={logo} alt="" />
-                Новостной ресурс
+                {translations[language].newPage.newsResource}
               </div>
               <p
                 style={{
@@ -1385,7 +1373,7 @@ export default function NewsPage() {
                   color: "black",
                 }}
               >
-                2023. Все права защищены
+                2023, {translations[language].newPage.copyright}
               </p>
             </div>
             <Link
@@ -1398,7 +1386,7 @@ export default function NewsPage() {
                 wordWrap: "break-word",
               }}
             >
-              Вернуться в контур системы
+              {translations[language].newPage.backToContour}
             </Link>
           </div>
         </div>

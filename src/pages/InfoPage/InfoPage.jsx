@@ -1,4 +1,8 @@
+import { useLanguage } from "../../context/LanguageContext";
+
 export default function InfoPage() {
+  const { language, translations } = useLanguage();
+  
   return (
     <div
       style={{
@@ -9,9 +13,11 @@ export default function InfoPage() {
       }}
     >
       <p style={{ fontSize: "80px" }}>
-        Информационный учебный полигон “Катариум”
+        {translations[language].infoTitle}
       </p>
-      <p style={{ fontSize: "28px", marginTop: "30px" }}>О системе</p>
+      <p style={{ fontSize: "28px", marginTop: "30px" }}>
+        {translations[language].aboutSystem}
+      </p>
       <p style={{ fontSize: "28px", marginTop: "60px" }}>
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
         ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
