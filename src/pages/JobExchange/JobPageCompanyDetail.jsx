@@ -2411,7 +2411,7 @@ export default function JobPageCompanyDetail() {
                         wordWrap: "break-word",
                       }}
                     >
-                      Баланс, ₽
+                      {translations[language].jobPageCompanyDetail.balance}
                     </div>
                     <div
                       style={{

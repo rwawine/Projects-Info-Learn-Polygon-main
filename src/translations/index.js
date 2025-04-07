@@ -231,6 +231,7 @@ export const translations = {
         },
 
         jobPageCompanyDetail: {
+            balance: "Баланс, ₽",
             description: "Описание",
             vacancies: "Вакансии",
             events: "События",
@@ -919,6 +920,7 @@ export const translations = {
             createResume: "Create a resume",
             aboutUs: "About us",
             news: "News",
+            balance: "Balance, ₽",
             copyright: "All rights reserved",
             userAgreement: "User agreement",
             privacyPolicy: "Privacy policy",
