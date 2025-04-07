@@ -1,8 +1,66 @@
-# React + Vite
+# InfoLearnPolygons
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Система переводов
 
-Currently, two official plugins are available:
+Проект использует контекстный подход к управлению переводами через React Context API. Основные компоненты системы переводов:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **LanguageContext** - управляет состоянием языка и предоставляет функции для переключения языков
+2. **translations/index.js** - содержит все текстовые строки на русском и английском языках
+3. **useLanguage** - хук для доступа к переводам в компонентах
+
+### Принцип работы системы переводов
+
+1. **Инициализация**
+   - При первом запуске приложения проверяется наличие сохраненного языка в localStorage
+   - Если язык не найден, устанавливается русский язык по умолчанию
+   - Создается контекст с текущим языком и функциями управления
+
+2. **Управление языком**
+   - Функция `toggleLanguage` переключает между русским и английским языками
+   - При смене языка новое значение сохраняется в localStorage
+   - Все компоненты, использующие переводы, автоматически обновляются
+
+3. **Использование переводов**
+   - Компоненты получают доступ к переводам через хук `useLanguage`
+   - Переводы выбираются на основе текущего языка
+   - Поддержка вложенных ключей для организации переводов:
+
+```jsx
+   {translations[language].newsPageArticle.showMore}
+
+   translations - объект со всеми переводами
+   language - текущий язык (ru/en)
+   newsPageArticle - раздел переводов для страницы новостей
+   showMore - конкретный ключ перевода для кнопки "Показать больше"
+```
+
+4. **Структура переводов**
+   - Все переводы хранятся в едином файле `translations/index.js`
+   - Организация по разделам и компонентам
+   - Поддержка форматирования и переменных в переводах
+
+### Примеры использования
+
+1. **Базовое использование**
+```jsx
+const { language, translations } = useLanguage();
+const text = translations[language].someKey;
+```
+
+2. **Переключение языка**
+```jsx
+const { toggleLanguage } = useLanguage();
+<button onClick={toggleLanguage}>Сменить язык</button>
+```
+
+3. **Вложенные переводы**
+```jsx
+const { language, translations } = useLanguage();
+const text = translations[language].section.subsection.key;
+```
+
+4. **Переводы с переменными**
+```jsx
+const { language, translations } = useLanguage();
+const text = translations[language].welcome.replace('{name}', userName);
+```

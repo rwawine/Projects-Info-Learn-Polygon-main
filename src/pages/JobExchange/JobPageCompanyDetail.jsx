@@ -10,6 +10,7 @@ export default function JobPageCompanyDetail() {
   const { language, translations } = useLanguage();
   const [activeTab, setActiveTab] = useState(translations[language].jobPageCompanyDetail.description);
 
+
   const tabs = [translations[language].jobPageCompanyDetail.description, translations[language].jobPageCompanyDetail.vacancies, translations[language].jobPageCompanyDetail.events];
 
   return (
@@ -101,7 +102,7 @@ export default function JobPageCompanyDetail() {
               }}
             >
               <div style={{ width: "990px" }}>
-                <h2 style={{ fontSize: "48px" }}>{translations[language].jobPageCompanyDetail.companyName}</h2>
+                <h2 style={{ fontSize: "48px" }}>{translations[language].jobPageCompanyDetail.companyNameYandex}</h2>
                 <p
                   style={{
                     fontSize: "22px",
@@ -158,7 +159,7 @@ export default function JobPageCompanyDetail() {
               ))}
             </div>
 
-            {activeTab === translations[language].jobPageCompanyDetail.descriptionCompany && (
+            {activeTab === translations[language].jobPageCompanyDetail.description && (
               <div
                 style={{
                   display: "flex",
@@ -245,7 +246,7 @@ export default function JobPageCompanyDetail() {
                             wordWrap: "break-word",
                           }}
                         >
-                          {translations[language].jobPageCompanyDetail.numberOfEmployeesFrom} 300 {translations[language].jobPageCompanyDetail.numberOfEmployeesTo} 800 {translations[language].jobPageCompanyDetail.numberOfEmployees}
+                          {translations[language].jobPageCompanyDetail.numberOfEmployeesRange}
                         </div>
                       </div>
                       <div
@@ -278,7 +279,7 @@ export default function JobPageCompanyDetail() {
                             wordWrap: "break-word",
                           }}
                         >
-                          183 895 {translations[language].jobPageCompanyDetail.averageSalaryUnit} ({translations[language].jobPageCompanyDetail.averageSalaryYear})
+                          {translations[language].jobPageCompanyDetail.yearOfCreation1}
                         </div>
                       </div>
                       <div
@@ -333,7 +334,7 @@ export default function JobPageCompanyDetail() {
                             wordWrap: "break-word",
                           }}
                         >
-                          {translations[language].jobPageCompanyDetail.authorizedCapital}
+                          {translations[language].jobPageCompanyDetail.capital}
                         </div>
                         <div
                           style={{
@@ -345,7 +346,7 @@ export default function JobPageCompanyDetail() {
                             wordWrap: "break-word",
                           }}
                         >
-                          875,3 {translations[language].jobPageCompanyDetail.authorizedCapitalUnit}
+                          875,3 {translations[language].jobPageCompanyDetail.capitalMln}
                         </div>
                       </div>
                       <div
@@ -378,7 +379,7 @@ export default function JobPageCompanyDetail() {
                             wordWrap: "break-word",
                           }}
                         >
-                          2,6 {translations[language].jobPageCompanyDetail.netProfitUnit} ({translations[language].jobPageCompanyDetail.netProfitYear})
+                          {translations[language].jobPageCompanyDetail.netProfit2}
                         </div>
                       </div>
                       <div
@@ -411,7 +412,7 @@ export default function JobPageCompanyDetail() {
                             wordWrap: "break-word",
                           }}
                         >
-                          18,26 {translations[language].jobPageCompanyDetail.balanceUnit} ({translations[language].jobPageCompanyDetail.balanceYear})
+                          {translations[language].jobPageCompanyDetail.balance1}
                         </div>
                       </div>
                     </div>
@@ -565,7 +566,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.vacancyName}
+                            {translations[language].jobPageCompanyDetail.productAnalyst}
                           </div>
                           <div
                             style={{
@@ -576,7 +577,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.companyName}
+                            {translations[language].jobPageCompanyDetail.companyNameYandex}
                           </div>
                         </div>
                       </div>
@@ -613,7 +614,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.location}
+                            {translations[language].jobPageCompanyDetail.moscow}
                           </div>
                         </div>
                         <div
@@ -665,7 +666,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.workHours}
+                            {translations[language].jobPageCompanyDetail.hoursPerWeek}
                           </div>
                         </div>
                         <div
@@ -691,7 +692,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.time}
+                            {translations[language].jobPageCompanyDetail.hoursPerLater}
                           </div>
                         </div>
                       </div>
@@ -769,7 +770,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.vacancyName}
+                            {translations[language].jobPageCompanyDetail.technicalManager}
                           </div>
                           <div
                             style={{
@@ -780,7 +781,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.companyName2}
+                            {translations[language].jobPageCompanyDetail.companyNameYandex}
                           </div>
                         </div>
                       </div>
@@ -817,7 +818,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.location2}
+                            {translations[language].jobPageCompanyDetail.moscow}
                           </div>
                         </div>
                         <div
@@ -843,7 +844,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.office2}
+                            {translations[language].jobPageCompanyDetail.office}
                           </div>
                         </div>
                         <div
@@ -869,7 +870,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.workHours2}
+                            {translations[language].jobPageCompanyDetail.hoursPerWeek}
                           </div>
                         </div>
                         <div
@@ -895,7 +896,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.time2}
+                            {translations[language].jobPageCompanyDetail.hoursPerLater}
                           </div>
                         </div>
                       </div>
@@ -973,7 +974,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.vacancyName2}
+                            {translations[language].jobPageCompanyDetail.fullStackDeveloper}
                           </div>
                           <div
                             style={{
@@ -984,7 +985,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.companyName3}
+                            {translations[language].jobPageCompanyDetail.companyNameYandex}
                           </div>
                         </div>
                       </div>
@@ -1021,7 +1022,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.location3}
+                            {translations[language].jobPageCompanyDetail.moscow}
                           </div>
                         </div>
                         <div
@@ -1047,7 +1048,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.office3}
+                            {translations[language].jobPageCompanyDetail.office}
                           </div>
                         </div>
                         <div
@@ -1073,7 +1074,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.workHours3}
+                            {translations[language].jobPageCompanyDetail.hoursPerWeek}
                           </div>
                         </div>
                         <div
@@ -1099,7 +1100,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.time3}
+                            {translations[language].jobPageCompanyDetail.hoursPerLater}
                           </div>
                         </div>
                       </div>
@@ -1177,7 +1178,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.vacancyName3}
+                            {translations[language].jobPageCompanyDetail.dataPlatformDeveloper}
                           </div>
                           <div
                             style={{
@@ -1188,7 +1189,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.companyName4}
+                            {translations[language].jobPageCompanyDetail.companyNameYandex}
                           </div>
                         </div>
                       </div>
@@ -1225,7 +1226,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.location4}
+                            {translations[language].jobPageCompanyDetail.moscow}
                           </div>
                         </div>
                         <div
@@ -1251,7 +1252,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.office4}
+                            {translations[language].jobPageCompanyDetail.office}
                           </div>
                         </div>
                         <div
@@ -1277,7 +1278,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.workHours4}
+                            {translations[language].jobPageCompanyDetail.hoursPerWeek20}
                           </div>
                         </div>
                         <div
@@ -1303,7 +1304,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.time4}
+                            {translations[language].jobPageCompanyDetail.hoursPerLater}
                           </div>
                         </div>
                       </div>
@@ -1381,7 +1382,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.vacancyName4}
+                            {translations[language].jobPageCompanyDetail.pythonDeveloper}
                           </div>
                           <div
                             style={{
@@ -1392,7 +1393,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.companyName5}
+                            {translations[language].jobPageCompanyDetail.companyNameYandex}
                           </div>
                         </div>
                       </div>
@@ -1429,7 +1430,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.location5}
+                            {translations[language].jobPageCompanyDetail.moscow}
                           </div>
                         </div>
                         <div
@@ -1455,7 +1456,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.office5}
+                            {translations[language].jobPageCompanyDetail.office}
                           </div>
                         </div>
                         <div
@@ -1481,7 +1482,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.workHours5}
+                            {translations[language].jobPageCompanyDetail.hoursPerWeek20}
                           </div>
                         </div>
                         <div
@@ -1507,7 +1508,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.time5}
+                            {translations[language].jobPageCompanyDetail.hoursPerLater}
                           </div>
                         </div>
                       </div>
@@ -1585,7 +1586,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.vacancyName5}
+                            {translations[language].jobPageCompanyDetail.securityEngineer}
                           </div>
                           <div
                             style={{
@@ -1596,7 +1597,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.companyName6}
+                            {translations[language].jobPageCompanyDetail.companyNameYandex}
                           </div>
                         </div>
                       </div>
@@ -1633,7 +1634,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.location6}
+                            {translations[language].jobPageCompanyDetail.moscow}
                           </div>
                         </div>
                         <div
@@ -1659,7 +1660,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.office6}
+                            {translations[language].jobPageCompanyDetail.office}
                           </div>
                         </div>
                         <div
@@ -1685,7 +1686,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.workHours6}
+                            {translations[language].jobPageCompanyDetail.hoursPerWeek20}
                           </div>
                         </div>
                         <div
@@ -1711,7 +1712,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.time6}
+                            {translations[language].jobPageCompanyDetail.hoursPerLater}
                           </div>
                         </div>
                       </div>
@@ -1789,7 +1790,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.vacancyName6}
+                            {translations[language].jobPageCompanyDetail.backendDeveloper}
                           </div>
                           <div
                             style={{
@@ -1800,7 +1801,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.companyName7}
+                            {translations[language].jobPageCompanyDetail.companyNameYandex}
                           </div>
                         </div>
                       </div>
@@ -1837,7 +1838,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.location7}
+                            {translations[language].jobPageCompanyDetail.moscow}
                           </div>
                         </div>
                         <div
@@ -1863,7 +1864,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.office7}
+                            {translations[language].jobPageCompanyDetail.office}
                           </div>
                         </div>
                         <div
@@ -1889,7 +1890,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.workHours7}
+                            {translations[language].jobPageCompanyDetail.hoursPerWeek20}
                           </div>
                         </div>
                         <div
@@ -1915,7 +1916,7 @@ export default function JobPageCompanyDetail() {
                               wordWrap: "break-word",
                             }}
                           >
-                            {translations[language].jobPageCompanyDetail.time7}
+                            {translations[language].jobPageCompanyDetail.hoursPerLater}
                           </div>
                         </div>
                       </div>
@@ -2008,7 +2009,7 @@ export default function JobPageCompanyDetail() {
                                 wordWrap: "break-word",
                               }}
                             >
-                              {translations[language].jobPageCompanyDetail.companyName8}
+                              {translations[language].jobPageCompanyDetail.companyNameYandex}
                             </div>
                           </div>
                           <div
@@ -2051,7 +2052,7 @@ export default function JobPageCompanyDetail() {
                             wordWrap: "break-word",
                           }}
                         >
-                          {translations[language].jobPageCompanyDetail.vacancyName8}
+                          {translations[language].jobPageCompanyDetail.dataPlatformDeveloper3}
                         </div>
                       </div>
                       <div
@@ -2108,7 +2109,7 @@ export default function JobPageCompanyDetail() {
                                   wordWrap: "break-word",
                                 }}
                               >
-                                {translations[language].jobPageCompanyDetail.location8}
+                                {translations[language].jobPageCompanyDetail.moscow}
                               </div>
                             </div>
                             <div
@@ -2134,7 +2135,7 @@ export default function JobPageCompanyDetail() {
                                   wordWrap: "break-word",
                                 }}
                               >
-                                {translations[language].jobPageCompanyDetail.office8}
+                                {translations[language].jobPageCompanyDetail.hybrid}
                               </div>
                             </div>
                             <div
@@ -2160,7 +2161,7 @@ export default function JobPageCompanyDetail() {
                                   wordWrap: "break-word",
                                 }}
                               >
-                                {translations[language].jobPageCompanyDetail.workHours8}
+                                {translations[language].jobPageCompanyDetail.hoursPerWeek20}
                               </div>
                             </div>
                           </div>
@@ -2175,45 +2176,45 @@ export default function JobPageCompanyDetail() {
                             }}
                           >
                             <p>
-                              {translations[language].jobPageCompanyDetail.description}
+                              {translations[language].jobPageCompanyDetail.jobDescription}
                             </p>
-                            <p>{translations[language].jobPageCompanyDetail.tasks}</p>
+                            <p>{translations[language].jobPageCompanyDetail.jobTasks}</p>
                             <ul></ul>
                             <li>
-                              {translations[language].jobPageCompanyDetail.task1}
+                              {translations[language].jobPageCompanyDetail.jobTasks1}
                             </li>
                             <li>
-                              {translations[language].jobPageCompanyDetail.task2}
+                              {translations[language].jobPageCompanyDetail.jobTasks2}
                             </li>
                             <li>
-                              {translations[language].jobPageCompanyDetail.task3}
+                              {translations[language].jobPageCompanyDetail.jobTasks3}
                             </li>
                             <li>
-                              {translations[language].jobPageCompanyDetail.task4}
+                              {translations[language].jobPageCompanyDetail.jobTasks4}
                             </li>
                             <li>
-                              {translations[language].jobPageCompanyDetail.task5}
+                              {translations[language].jobPageCompanyDetail.jobTasks5}
                             </li>
                             <ul />
                             <p>
-                              {translations[language].jobPageCompanyDetail.description}
+                              {translations[language].jobPageCompanyDetail.jobTasks6}
                             </p>
-                            <p>{translations[language].jobPageCompanyDetail.tasks}</p>
+                            <p>{translations[language].jobPageCompanyDetail.jobTasks7}</p>
                             <ul></ul>
                             <li>
-                              {translations[language].jobPageCompanyDetail.task1}
+                              {translations[language].jobPageCompanyDetail.jobTasks8}
                             </li>
                             <li>
-                              {translations[language].jobPageCompanyDetail.task2}
+                              {translations[language].jobPageCompanyDetail.jobTasks9}
                             </li>
                             <li>
-                              {translations[language].jobPageCompanyDetail.task3}
+                              {translations[language].jobPageCompanyDetail.jobTasks10}
                             </li>
                             <li>
-                              {translations[language].jobPageCompanyDetail.task4}
+                              {translations[language].jobPageCompanyDetail.jobTasks11}
                             </li>
                             <li>
-                              {translations[language].jobPageCompanyDetail.task5}
+                              {translations[language].jobPageCompanyDetail.jobTasks12}
                             </li>
                             <ul />
                           </div>
@@ -2306,7 +2307,7 @@ export default function JobPageCompanyDetail() {
                         wordWrap: "break-word",
                       }}
                     >
-                      {translations[language].jobPageCompanyDetail.numberOfEmployeesAll}
+                      {translations[language].jobPageCompanyDetail.numberOfEmployees}
                     </div>
                     <div
                       style={{
@@ -2351,7 +2352,7 @@ export default function JobPageCompanyDetail() {
                         wordWrap: "break-word",
                       }}
                     >
-                      {translations[language].jobPageCompanyDetail.yearOfCreationAll}
+                      {translations[language].jobPageCompanyDetail.yearOfCreation}
                     </div>
                     <div
                       style={{
@@ -2426,7 +2427,7 @@ export default function JobPageCompanyDetail() {
                         wordWrap: "break-word",
                       }}
                     >
-                      {translations[language].jobPageCompanyDetail.balanceAll}
+                      {translations[language].jobPageCompanyDetail.balance}
                     </div>
                     <div
                       style={{
@@ -2441,7 +2442,7 @@ export default function JobPageCompanyDetail() {
                         wordWrap: "break-word",
                       }}
                     >
-                      2,6 {translations[language].jobPageCompanyDetail.netProfitUnit} ({translations[language].jobPageCompanyDetail.netProfitYear})
+                      {translations[language].jobPageCompanyDetail.netProfit2}
                     </div>
                     <div
                       style={{
@@ -2456,13 +2457,13 @@ export default function JobPageCompanyDetail() {
                         wordWrap: "break-word",
                       }}
                     >
-                      875,3 {translations[language].jobPageCompanyDetail.authorizedCapitalUnit}
+                      {translations[language].jobPageCompanyDetail.balance2}
                     </div>
                   </div>
                 </div>
               </div>
             )}
-            {activeTab === translations[language].jobPageCompanyDetail.events && <p>{translations[language].jobPageCompanyDetail.events}...</p>}
+            {activeTab === translations[language].jobPageCompanyDetail.events && <p>{translations[language].jobPageCompanyDetail.events1}...</p>}
           </div>
         </div>
       </div>
@@ -2516,7 +2517,7 @@ export default function JobPageCompanyDetail() {
                     gap: "10px",
                   }}
                 >
-                  <p>{translations[language].jobPageCompanyDetail.vacancyPlacement}</p> <p>{translations[language].jobPageCompanyDetail.companyPage}</p>
+                  <p>{translations[language].jobPageCompanyDetail.placementOfVacancies}</p> <p>{translations[language].jobPageCompanyDetail.companyPage}</p>
                 </div>
               </div>
               <div
@@ -2570,7 +2571,7 @@ export default function JobPageCompanyDetail() {
                   opacity: "0.6",
                 }}
               >
-                2023, {translations[language].jobPageCompanyDetail.copyright}
+                2023, {translations[language].jobPageCompanyDetail.allRightsReserved}
               </div>
               <div style={{ display: "flex", gap: "16px" }}>
                 <p
