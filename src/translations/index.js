@@ -398,6 +398,7 @@ export const translations = {
         },
 
         newPage: {
+            fromDate: "дд.мм.гггг",
             economy: "Экономика",
             technology: "Технологии",
             society: "Общество",
@@ -558,8 +559,6 @@ export const translations = {
 
         infoTitle: "Information Training Ground \"Katarium\"",
         aboutSystem: "About System",
-
-        fromDate: "dd.mm.yyyy",
 
         history: "HISTORY",
         historyText1: "In the 1550s, on the northern part of the Itugum Island, washed by the Arabian Sea, the dominance of the Katarium Kingdom was established, claiming absolute power. It constantly waged destructive aggressive wars with its neighbors, conquering and annexing new territories.",
@@ -937,6 +936,7 @@ export const translations = {
         },
 
         newPage: {
+            fromDate: "dd.mm.yyyy",
             economy: "Economy",
             technology: "Technology",
             society: "Society",

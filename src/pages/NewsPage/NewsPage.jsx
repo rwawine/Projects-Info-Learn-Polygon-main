@@ -318,29 +318,33 @@ export default function NewsPage() {
               }}
             ><p>{translations[language].newPage.allSections}</p><img src={ArrowInput} alt="" /></div>
             {translations[language].newPage.from}
-            <input
-              type="date"
-              placeholder={translations[language].fromDate}
+            <div
               style={{
+                width: "190px",
+                display: "flex", alignItems: "center",
+                justifyContent: "space-between",
                 fontSize: "18px",
-                padding: "9px 25px",
-                backgroundColor: "#FFFFFF",
+                padding: "10px 24px",
                 border: "1px solid #1F1F1F",
                 borderRadius: "5px",
-              }}
-            />
-            {translations[language].newPage.to}
-            <input
-              type="date"
-              placeholder={translations[language].fromDate}
-              style={{
-                fontSize: "18px",
                 backgroundColor: "#FFFFFF",
-                padding: "9px 25px",
-                border: "1px solid #1F1F1F",
-                borderRadius: "3px",
+                cursor: "pointer"
               }}
-            />
+            ><p>{translations[language].newPage.fromDate}</p><img src={ArrowInput} alt="" /></div>
+            {translations[language].newPage.to}
+            <div
+              style={{
+                width: "190px",
+                display: "flex", alignItems: "center",
+                justifyContent: "space-between",
+                fontSize: "18px",
+                padding: "10px 24px",
+                border: "1px solid #1F1F1F",
+                borderRadius: "5px",
+                backgroundColor: "#FFFFFF",
+                cursor: "pointer"
+              }}
+            ><p>{translations[language].newPage.fromDate}</p><img src={ArrowInput} alt="" /></div>
             <input
               type="search"
               placeholder={translations[language].newPage.search}
