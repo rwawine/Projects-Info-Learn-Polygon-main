@@ -407,7 +407,7 @@ export const translations = {
             placeholder: "Введите ваш email",
             captcha2: "Я не робот",
             allSections: "Все разделы",
-            from: "От",
+            from: "С",
             to: "По",
             search: "Поиск",
             subscribe: "Подпишитесь, чтобы получать актуальные новости сразу на почту",
