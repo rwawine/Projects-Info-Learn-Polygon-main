@@ -240,7 +240,10 @@ export default function FirstPage() {
                 style={{
                   display: "flex",
                   padding: "30px",
-                  gap: "40px",
+                  height: "25%",
+                  gap: "32px",
+                  alignItems: "center",
+                  justifyContent: "flex-start",
                   width: "100%",
                   borderBottom: "1px solid #000000",
                   backgroundColor: hoveredIndex === index ? "#E1D6E8" : "#EFEEEC",
@@ -251,6 +254,9 @@ export default function FirstPage() {
                 }}
               >
                 {label}
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none">
+  <path d="M26.09 11.4186L37.1716 22.5H6C4.89542 22.5 4 23.3956 4 24.5C4 25.6046 4.89542 26.5 6 26.5H37.1716L26.09 37.5816C25.309 38.3626 25.309 39.629 26.09 40.41C26.8712 41.191 28.1374 41.191 28.9184 40.41L43.4142 25.9144C44.1952 25.1332 44.1952 23.867 43.4142 23.0858L28.9184 8.59018C28.5266 8.1983 28.0126 8.00304 27.499 8.0044C27.3728 8.00474 27.2466 8.01694 27.1222 8.041C26.744 8.11422 26.383 8.29728 26.09 8.59018C25.309 9.37122 25.309 10.6376 26.09 11.4186Z" fill="black"/>
+</svg>
               </button>
             ))}
           </div>
