@@ -578,14 +578,24 @@
     display: flex;
 }
 
-.moreLink  {
+.moreLink {
     transition: 0.3s ease;
     cursor: pointer;
+    stroke: #202124;
+}
+
+.moreLink svg {
+    transition: 0.3s ease;
+}
+
+.sectionTitleRow:hover .moreLink svg {
+    stroke: #E63946;
+    transform: rotate(-45deg);
 }
 
 .sectionTitleRow:hover .moreLink {
     color: #E63946;
-}  
+}
 
 @media (width <=991px) {
     .sectionTitleRow {
@@ -603,17 +613,17 @@
 }
 
 .moreLink {
-    justify-content: start;
-    align-self: stretch;
-    align-items: end;
+    align-self: center;
+    align-items: center;
     gap: 5px;
     margin-top: auto;
-    margin-bottom: auto;
     font-size: 14px;
     font-weight: 400;
     line-height: 1.3;
     display: flex;
 }
+
+
 
 .moreIcon {
     aspect-ratio: 1;
@@ -1174,9 +1184,9 @@
     align-items: stretch;
     font-family: Manrope, -apple-system, Roboto, Helvetica, sans-serif;
     display: flex;
-  }
-  
-  .breadcrumbSection {
+}
+
+.breadcrumbSection {
     flex-wrap: wrap;
     justify-content: start;
     align-items: center;
@@ -1186,34 +1196,34 @@
     font-weight: 500;
     line-height: 1;
     display: flex;
-  }
-  
-  @media (width <= 991px) {
+}
+
+@media (width <=991px) {
     .breadcrumbSection {
-      max-width: 100%;
+        max-width: 100%;
     }
-  }
-  
+}
+
 .breadcrumbsContainer {
     gap: 4px;
     display: flex;
     align-items: center;
 }
 
-.breadcrumbsContainer > div {
-    display: flex;  
+.breadcrumbsContainer>div {
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 4px;
 }
 
-.breadcrumbsContainer > div > button {
+.breadcrumbsContainer>div>button {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-  .backButton {
+.backButton {
     color: #000;
     white-space: nowrap;
     text-align: center;
@@ -1231,15 +1241,15 @@
     overflow: hidden;
     border: none;
     cursor: pointer;
-  }
-  
-  @media (width <= 991px) {
+}
+
+@media (width <=991px) {
     .backButton {
-      white-space: initial;
+        white-space: initial;
     }
-  }
-  
-  .backIcon {
+}
+
+.backIcon {
     aspect-ratio: 1;
     object-fit: contain;
     object-position: center;
@@ -1248,52 +1258,52 @@
     width: 18px;
     margin-top: auto;
     margin-bottom: auto;
-  }
-  
-  .backText {
+}
+
+.backText {
     align-self: stretch;
     margin-top: auto;
     margin-bottom: auto;
-  }
-  
-  .heroImage {
+}
+
+.heroImage {
     aspect-ratio: 2.33;
     object-fit: contain;
     object-position: center;
     border-radius: 4px;
     width: 100%;
     margin-top: 32px;
-  }
-  
-  @media (width <= 991px) {
+}
+
+@media (width <=991px) {
     .heroImage {
-      max-width: 100%;
+        max-width: 100%;
     }
-  }
-  
-  .articleContainer {
+}
+
+.articleContainer {
     align-self: center;
     width: 1006px;
     max-width: 100%;
     margin: 0 auto;
     margin-top: 32px;
-  }
-  
-  .articleWrapper {
+}
+
+.articleWrapper {
     flex-direction: column;
     justify-content: start;
     align-items: stretch;
     width: 100%;
     display: flex;
-  }
-  
-  @media (width <= 991px) {
+}
+
+@media (width <=991px) {
     .articleWrapper {
-      max-width: 100%;
+        max-width: 100%;
     }
-  }
-  
-  .tagsContainer {
+}
+
+.tagsContainer {
     color: #b64d4a;
     letter-spacing: 0.1px;
     justify-content: start;
@@ -1303,9 +1313,9 @@
     font-size: 14px;
     font-weight: 400;
     display: flex;
-  }
-  
-  .authorSection {
+}
+
+.authorSection {
     color: #202124;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -1316,23 +1326,23 @@
     margin-top: 12px;
     line-height: 1.4;
     display: flex;
-  }
-  
-  @media (width <= 991px) {
+}
+
+@media (width <=991px) {
     .authorSection {
-      max-width: 100%;
+        max-width: 100%;
     }
-  }
-  
-  .authorName {
+}
+
+.authorName {
     align-self: stretch;
     margin-top: auto;
     margin-bottom: auto;
     font-size: 18px;
     font-weight: 500;
-  }
-  
-  .dateSection {
+}
+
+.dateSection {
     letter-spacing: -0.64px;
     justify-content: start;
     align-self: stretch;
@@ -1343,69 +1353,68 @@
     font-size: 16px;
     font-weight: 400;
     display: flex;
-  }
-  
-  .dateIcon {
+}
+
+.dateIcon {
     aspect-ratio: 1;
     object-fit: contain;
     object-position: center;
     flex-shrink: 0;
     width: 22px;
-  }
-  
-  .contentSection {
+}
+
+.contentSection {
     color: #202124;
     width: 100%;
     margin-top: 32px;
     position: relative;
-  }
-  
-  @media (width <= 991px) {
+}
+
+@media (width <=991px) {
     .contentSection {
-      max-width: 100%;
+        max-width: 100%;
     }
-  }
-  
-  .articleTitle {
+}
+
+.articleTitle {
     font-size: 36px;
     font-weight: 500;
     line-height: 43px;
-  }
-  
-  @media (width <= 991px) {
+}
+
+@media (width <=991px) {
     .articleTitle {
-      max-width: 100%;
+        max-width: 100%;
     }
-  }
-  
-  .articleText {
+}
+
+.articleText {
     letter-spacing: -0.72px;
     margin-top: 24px;
     font-size: 18px;
     font-weight: 400;
     line-height: 29px;
-  }
-  
-  @media (width <= 991px) {
+}
+
+@media (width <=991px) {
     .articleText {
-      max-width: 100%;
+        max-width: 100%;
     }
-  }
-  
+}
+
 .blurContent {
-  filter: blur(5px);
-  pointer-events: none;
-  user-select: none;
+    filter: blur(5px);
+    pointer-events: none;
+    user-select: none;
 }
 
 .contentSection.blurred {
-  filter: blur(8px);
-  pointer-events: none;
-  user-select: none;
+    filter: blur(8px);
+    pointer-events: none;
+    user-select: none;
 }
 
 .activeCategory {
-  color: #E63946;
-  font-weight: bold;
+    color: #E63946;
+    font-weight: bold;
 }
-  

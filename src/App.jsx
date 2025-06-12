@@ -6,7 +6,6 @@ import {
   Navigate,
 } from "react-router-dom";
 import { LanguageProvider } from "./context/LanguageContext";
-import LandingPage from "./pages/LandingPage/LandingPage";
 import Katarium from "./pages/Katarium/Katarium";
 import FirstPage from "./pages/InfoPage/FirstPage";
 import JobPage from "./pages/JobExchange/JobPage";
@@ -32,7 +31,6 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Navigate to="/info" />} />
           <Route path="/info" element={<FirstPage />} />
-          <Route path="/landing" element={<LandingPage />} />
 
           <Route path="/news" element={<NewsPage />} />
           <Route path="/news/article" element={<NewsPageArticle />} />
