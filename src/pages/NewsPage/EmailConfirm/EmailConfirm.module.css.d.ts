@@ -1,5 +1,6 @@
 declare const styles: {
   readonly container: string;
+  readonly leftContainer: string;
   readonly title: string;
   readonly subtitle: string;
   readonly form: string;
@@ -11,6 +12,7 @@ declare const styles: {
   readonly success: string;
   readonly successText: string;
   readonly closeButton: string;
+  readonly confirmContainer: string;
 };
 
 export default styles; 

@@ -14,7 +14,7 @@ export const LoadMoreButton: React.FC = () => {
       onClick={handleLoadMore}
       type="button"
     >
-      Показа��ь еще
+      Показать еще
     </button>
   );
 };

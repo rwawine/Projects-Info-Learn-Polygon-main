@@ -7,9 +7,10 @@ interface NavigationProps {
     text: string;
     link: string;
   }>;
+  activeCategory?: string;
 }
 
-export const Navigation: React.FC<NavigationProps> = ({ categories }) => {
+export const Navigation: React.FC<NavigationProps> = ({ categories, activeCategory }) => {
   return (
     <nav className={styles.navigationSection}>
            <span className={styles.headerDivider} />
@@ -17,7 +18,9 @@ export const Navigation: React.FC<NavigationProps> = ({ categories }) => {
         {categories.map((category, index) => (
           <a 
             key={index} 
-            className={styles.navItem} 
+            className={
+              `${styles.navItem} ${activeCategory === category.text ? styles.activeCategory : ''}`
+            }
             href={category.link}
           >
             {category.text}

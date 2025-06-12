@@ -1357,6 +1357,7 @@
     color: #202124;
     width: 100%;
     margin-top: 32px;
+    position: relative;
   }
   
   @media (width <= 991px) {
@@ -1395,5 +1396,16 @@
   filter: blur(5px);
   pointer-events: none;
   user-select: none;
+}
+
+.contentSection.blurred {
+  filter: blur(8px);
+  pointer-events: none;
+  user-select: none;
+}
+
+.activeCategory {
+  color: #E63946;
+  font-weight: bold;
 }
   

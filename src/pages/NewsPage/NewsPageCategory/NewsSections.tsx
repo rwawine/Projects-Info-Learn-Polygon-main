@@ -65,11 +65,7 @@ function NewsSection() {
                         subtitle="Показано 10 из 1245 новостей"
                     />
 
-                    <img
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/6d007025fc94d751cad8f5833b2c2dd3866f299e?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf"
-                        alt="News section divider"
-                        className={styles.dividerImage}
-                    />
+<div className={styles.dividerImage}></div>
 
                     <section className={styles.articlesSection}>
                         {newsArticles.map((article, index) => (

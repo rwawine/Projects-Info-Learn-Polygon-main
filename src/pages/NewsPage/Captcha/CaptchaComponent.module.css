@@ -7,7 +7,6 @@
   padding: 24px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   max-width: 500px;
-  width: 90%;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -25,9 +24,10 @@
 .headerContainer {
   display: flex;
   align-items: center;
+  width: 100%;
   gap: 16px;
+  justify-content: space-between;
   padding-bottom: 16px;
-  border-bottom: 1px solid #e0e0e0;
 }
 
 .iconWrapper {
@@ -44,11 +44,13 @@
 }
 
 .title {
-  font-size: 18px;
-  font-weight: 500;
-  color: #202124;
-  white-space: pre-line;
-  line-height: 1.4;
+    color: #845BFF;
+    font-family: Montserrat;
+    font-size: 16.309px;
+    font-style: normal;
+    font-weight: 600;
+    max-width: 200px;
+    line-height: normal;
 }
 
 .gridContainer {
@@ -56,13 +58,14 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 8px;
-  width: 100%;
 }
 
 .gridItem {
   aspect-ratio: 1;
   border-radius: 4px;
   overflow: hidden;
+  width: 95px;
+  height: 95px;
   position: relative;
   cursor: pointer;
   border: 2px solid transparent;
@@ -70,7 +73,8 @@
 }
 
 .gridItem.selected {
-  border-color: #4285f4;
+  border-color: #845BFF;
+  transform: scale(0.8);
 }
 
 .gridItemImage {
@@ -101,7 +105,7 @@
 
 .button {
   margin-top: 24px;
-  background-color: #E63946;
+  background-color: #845BFF;
   color: white;
   border: none;
   border-radius: 4px;
@@ -114,7 +118,7 @@
 }
 
 .button:hover:not(:disabled) {
-  background-color: #d32f3a;
+  background-color: #845BFF;
 }
 
 .button:disabled {
@@ -128,8 +132,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
 }
 
 .blurContent {
@@ -137,7 +141,7 @@
 }
 
 .error {
-  color: #E63946;
+  color: #845BFF;
   font-size: 14px;
   margin-top: 12px;
   text-align: center;
@@ -150,7 +154,7 @@
 }
 
 .randomizeButton {
-  background-color: #845bff;
+  background-color: #fff;
   color: white;
   border: none;
   border-radius: 4px;
@@ -170,4 +174,30 @@
 
 .randomizeButton svg {
   flex-shrink: 0;
+}
+
+.inlineContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  z-index: 1001;
+  width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.inlineAbsolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  z-index: 10;
+  width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }

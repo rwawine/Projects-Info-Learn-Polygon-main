@@ -7,10 +7,29 @@
     min-height: 260px;
     margin-top: 20px;
     display: flex;
+    cursor: pointer;
   }
   
   .newsCard:first-child {
     margin-top: 0;
+  }
+
+  .newsCard:hover .newsImage {
+    transform: scale(1.05);
+  }
+
+.articleTitle {
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+  .newsCard:hover .articleTitle {
+    color: #E63946;
+  }
+  
+  .newsImage {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
   }
   
   .imageContainer {
