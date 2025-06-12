@@ -7,13 +7,8 @@ import {
 } from "react-router-dom";
 import { LanguageProvider } from "./context/LanguageContext";
 import LandingPage from "./pages/LandingPage/LandingPage";
-import NewsPage from "./pages/NewsPage/NewsPage";
 import Katarium from "./pages/Katarium/Katarium";
 import FirstPage from "./pages/InfoPage/FirstPage";
-import NewsPageArtice from "./pages/NewsPage/NewsPageArticle";
-import NewsPageSectionArtice from "./pages/NewsPage/NewsPageSectionArticle";
-import NewsPageEconomy from "./pages/NewsPage/NewsPageEconomy";
-import NewsPageOther from "./pages/NewsPage/NewsPageOther";
 import JobPage from "./pages/JobExchange/JobPage";
 import PoliticalPage from "./pages/PoliticalPage/PoliticalPage";
 import JobPageVacancy from "./pages/JobExchange/JobPageVacancy";
@@ -26,6 +21,10 @@ import PoliticalPersonDetail from "./pages/PoliticalPage/PoliticalPersonDetail";
 import PoliticalPersons from "./pages/PoliticalPage/PoliticalPersons";
 import PoliticalPersonSearch from "./pages/PoliticalPage/PoliticalPersonSearch";
 
+import NewsPage from "./pages/NewsPage/NewsPage";
+import NewsPageArticle from "./pages/NewsPage/NewsPageArticle/NewsPageArticle";
+import NewsPageCategory from "./pages/NewsPage/NewsPageCategory/NewsPageCategory";
+
 const App = () => {
   return (
     <LanguageProvider>
@@ -36,10 +35,8 @@ const App = () => {
           <Route path="/landing" element={<LandingPage />} />
 
           <Route path="/news" element={<NewsPage />} />
-          <Route path="/news/article" element={<NewsPageArtice />} />
-          <Route path="/news/articles" element={<NewsPageSectionArtice />} />
-          <Route path="/news/economy" element={<NewsPageEconomy />} />
-          <Route path="/news/other" element={<NewsPageOther />} />
+          <Route path="/news/article" element={<NewsPageArticle />} />
+          <Route path="/news/category" element={<NewsPageCategory />} />
 
           <Route path="/katarium" element={<Katarium />} />
 

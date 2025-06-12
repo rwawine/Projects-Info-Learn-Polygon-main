@@ -1,0 +1,49 @@
+.headerContainer {
+    width: 100%;
+    max-width: 1135px;
+    font-family: Manrope, -apple-system, Roboto, Helvetica, sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  
+  @media (width <= 991px) {
+    .headerContainer {
+      max-width: 100%;
+    }
+  }
+  
+  .headerContent {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px 100px;
+    width: 100%;
+    display: flex;
+  }
+  
+  @media (width <= 991px) {
+    .headerContent {
+      max-width: 100%;
+    }
+  }
+  
+  .sectionTitle {
+    color: #202124;
+    align-self: stretch;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  
+  .newsCount {
+    color: #000;
+    align-self: stretch;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  
