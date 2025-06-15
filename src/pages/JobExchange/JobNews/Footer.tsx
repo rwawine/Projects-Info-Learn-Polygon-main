@@ -151,9 +151,9 @@ export const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-        <p style={footerStyles.backLink}>
+        <a href="/" style={footerStyles.backLink}>
           Вернуться в Контур системы
-        </p>
+        </a>
       </div>
       <div style={footerStyles.divider} />
       <div style={footerStyles.bottomSection}>

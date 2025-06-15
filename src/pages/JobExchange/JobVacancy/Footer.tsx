@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-        <a href="#" className={styles.backToContour}>Вернуться в Контур системы</a>
+        <a href="/" className={styles.backToContour}>Вернуться в Контур системы</a>
       </div>
       <div className={styles.footerDivider} />
       <div className={styles.footerBottom}>

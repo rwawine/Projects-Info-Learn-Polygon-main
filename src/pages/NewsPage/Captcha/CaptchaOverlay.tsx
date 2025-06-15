@@ -54,6 +54,13 @@ export const CaptchaOverlay: React.FC<CaptchaOverlayProps> = ({ onVerify, mode =
         ? styles.container 
         : styles.inlineContainer;
 
+    const captchaIcons = [
+        new URL('../../../assets/captha/Captcha/Active/Captcha/1.svg', import.meta.url).href,
+        new URL('../../../assets/captha/Captcha/Active/Captcha/2.svg', import.meta.url).href,
+        new URL('../../../assets/captha/Captcha/Active/Captcha/3.svg', import.meta.url).href,
+        new URL('../../../assets/captha/Captcha/Active/Captcha/4.svg', import.meta.url).href
+    ];
+
     return (
         <>
             {mode === 'fullscreen' && <div className={styles.overlay}></div>}
@@ -82,6 +89,12 @@ export const CaptchaOverlay: React.FC<CaptchaOverlayProps> = ({ onVerify, mode =
                             style={{ backgroundColor: color }}
                             onClick={() => handleSquareClick(index, color)}
                         >
+                            <img
+                                src={captchaIcons[index % captchaIcons.length]}
+                                alt="Captcha icon"
+                                width="24"
+                                height="24"
+                            />
                         </div>
                     ))}
                 </div>

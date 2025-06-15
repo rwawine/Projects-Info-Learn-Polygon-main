@@ -80,9 +80,13 @@ select {
 }
 
 .sign-in {
-  padding: 20px;
-  border-bottom: 1px solid black;
-  font-size: 42px;
+  color: #000;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 66.973px; /* 104.646% */
+  letter-spacing: 3.349px;
+  text-transform: capitalize;
 }
 
 .sign-up {
@@ -149,9 +153,8 @@ select {
 
 .login {
   background-color: #efeeec;
-  position: absolute;
-  width: 350px;
   height: 100%;
+  max-width: 460px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -164,35 +167,46 @@ select {
   color: #fff;
 }
 
-.login .inputBx {
+.login {
   position: relative;
   width: 100%;
 }
 
-.login .inputBx input {
-  position: relative;
-  width: 100%;
-  padding: 12px 20px;
-  background: #ffffff;
-  border: 1.56px solid #000000;
-  border-radius: 40px;
-  font-size: 1.2em;
-  color: #9b9b9b;
-  box-shadow: none;
-  outline: none;
+.login input {
+  display: flex;
+  height: 56px;
+  padding: 14px 18px;
+  align-items: center;
+  gap: 18px;
+  border-radius: var(--radius-controls-input-l, 14px);
+  border: 1px solid var(--control-input-border, rgba(31, 31, 31, 0.20));
+  background: #FFF;
+  align-self: stretch;
 }
 
-.login .inputBx input[type="submit"] {
-  width: 112%;
-  background: #0078ff;
-  background: linear-gradient(45deg, #ffffff);
+.login input[type="submit"] {
+  display: flex;
+  height: 56px;
+  padding: var(--spacing-global-200, 16px) var(--spacing-global-300, 24px);
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-global-125, 10px);
   border: none;
-  padding: 12px 20px;
-  color: #ffffff;
-  cursor: pointer;
+  align-self: stretch;
+  border-radius: 16px;
+  width: 100%;
+  background: var(--control-btnPrimary-bg, #FF5E00);
+  overflow: hidden;
+  color: var(--control-btnPrimary-content, #FFF);
+  text-align: center;
+  font-variant-numeric: lining-nums proportional-nums;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 130%;
 }
 
-.login .inputBx input::placeholder {
+.login input::placeholder {
   color: #9b9b9b;
 }
 
@@ -201,8 +215,7 @@ select {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
+  justify-content: flex-end;
 }
 
 .login .links a {

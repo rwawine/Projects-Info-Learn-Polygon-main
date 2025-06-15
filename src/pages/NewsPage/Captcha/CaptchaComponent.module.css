@@ -44,13 +44,13 @@
 }
 
 .title {
-    color: #845BFF;
-    font-family: Montserrat;
-    font-size: 16.309px;
-    font-style: normal;
-    font-weight: 600;
-    max-width: 200px;
-    line-height: normal;
+  color: #845BFF;
+  font-family: Montserrat;
+  font-size: 16.309px;
+  font-style: normal;
+  font-weight: 600;
+  max-width: 200px;
+  line-height: normal;
 }
 
 .gridContainer {
@@ -65,11 +65,18 @@
   border-radius: 4px;
   overflow: hidden;
   width: 95px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 95px;
   position: relative;
   cursor: pointer;
   border: 2px solid transparent;
   transition: border-color 0.2s;
+}
+
+.gridItem img {
+  width: 150px
 }
 
 .gridItem.selected {

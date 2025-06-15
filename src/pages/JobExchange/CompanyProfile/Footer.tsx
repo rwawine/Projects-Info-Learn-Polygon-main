@@ -28,7 +28,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <a href="#" className={styles.backToSystem}>
+        <a href="/" className={styles.backToSystem}>
           Вернуться в Контур системы
         </a>
       </div>
