@@ -10,9 +10,9 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ logo, activeNavItem = "Главная" }) => {
   const navItems = [
     { label: "Главная", href: "/political-site" },
-    { label: "Персоны", href: "#" },
+    { label: "Персоны", href: "/political-site/directory" },
     { label: "Партии", href: "/political-site/party" },
-    { label: "Политическое устройство", href: "#" }
+    { label: "Политическое устройство", href: "/political-site/system" }
   ];
 
   return (

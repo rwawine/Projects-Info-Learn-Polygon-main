@@ -22,23 +22,22 @@ export function ProfileHero() {
             </h1>
           </div>
           <div className={styles.personalInfo}>
-            Пол: женский
-            <br />
-            Дата рождения: 19.09. 1975
-            <br />
-            Семейное положение: в браке
-            <br />
-            Количество детей: 1<br />
-            Образование: Магистратура Катарийский государственный
-            университет имени Давида Кемпа
-            <br />
-            Военная служба: нет
-            <br />
-            Партия Республиканцев
+            <p>Пол: женский</p>
+            <p>Дата рождения: 19.09. 1975</p>
+            <p>Семейное положение: в браке</p>
+            <p>Количество детей: 1</p>
+            <p>Образование: Магистратура Катарийский государственный
+              университет имени Давида Кемпа</p>
+            <p>Военная служба: нет</p>
+            <p>Партия Республиканцев</p>
           </div>
         </div>
         <button className={styles.downloadButton}>
           Скачать декларацию
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path d="M5 5L9 1M9 1L13 5M9 1V13" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M1 13V17H17V13" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
         </button>
       </article>
     </section>

@@ -14,9 +14,9 @@ export function SearchSection() {
             className={styles.searchInput}
           />
         </div>
-        <button className={styles.searchButton}>
+        <a href="/political-site/search" className={styles.searchButton}>
           Найти
-        </button>
+        </a>
       </div>
       <div className={styles.sortDropdown}>
         <span className={styles.sortLabel}>

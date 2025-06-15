@@ -2,6 +2,8 @@ import React from 'react';
 import { ArrowIcon } from './ArrowIcon.tsx';
 import styles from './PoliticalSearchPage.module.css';
 
+import person1 from "../../../assets/Persons/Person4.png";
+
 export const SearchResult: React.FC = () => {
   return (
     <section className={styles.searchResultSection}>
@@ -11,7 +13,7 @@ export const SearchResult: React.FC = () => {
       <article className={styles.mainResultCard}>
         <div className={styles.mainImageContainer}>
           <img
-            src="https://placehold.co/213x213/293856/293856"
+            src={person1}
             alt=""
             className={styles.mainProfileImage}
           />
@@ -26,9 +28,9 @@ export const SearchResult: React.FC = () => {
             </p>
           </div>
           <div className={styles.fullInfoLink}>
-            <span className={styles.fullInfoText}>
+            <a href="/political-site/search/person" className={styles.fullInfoText}>
               Полная информация
-            </span>
+            </a>
             <ArrowIcon />
           </div>
         </div>

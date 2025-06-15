@@ -10,10 +10,10 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ siteTitle, copyright, backLinkText }) => {
   const navItems = [
-    { label: "Главная", href: "#" },
-    { label: "Партии", href: "#" },
-    { label: "Персоны", href: "#" },
-    { label: "Политическое устройство", href: "#" }
+    { label: "Главная", href: "/political-site" },
+    { label: "Партии", href: "/political-site/party" },
+    { label: "Персоны", href: "/political-site/person" },
+    { label: "Политическое устройство", href: "/political-site/system" }
   ];
 
   return (
@@ -31,7 +31,7 @@ export const Footer: React.FC<FooterProps> = ({ siteTitle, copyright, backLinkTe
       <div className={styles.footerDivider} />
       <div className={styles.footerBottom}>
         <span className={styles.copyright}>{copyright}</span>
-        <a href="#" className={styles.backLink}>{backLinkText}</a>
+        <a href="/" className={styles.backLink}>{backLinkText}</a>
       </div>
     </footer>
   );
