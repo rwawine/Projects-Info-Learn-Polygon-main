@@ -21,10 +21,8 @@ export const Footer: React.FC<FooterProps> = ({ siteTitle, copyright, backLinkTe
       <div className={styles.footerContent}>
         <h4 className={styles.footerTitle}>{siteTitle}</h4>
         <nav className={styles.footerNavigation}>
-          {navItems.map((item, index) => (
-            <div key={item.label} className={index > 0 ? styles.footerNavItem : ""}>
-              <a href={item.href}>{item.label}</a>
-            </div>
+          {navItems.map((item) => (
+            <a key={item.label} href={item.href}>{item.label}</a>
           ))}
         </nav>
       </div>
