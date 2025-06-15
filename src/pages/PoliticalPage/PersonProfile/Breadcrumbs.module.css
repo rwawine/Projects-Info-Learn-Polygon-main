@@ -1,0 +1,120 @@
+.breadcrumbsContainer {
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    min-height: 41px;
+    font-family: Manrope, -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    display: flex;
+  }
+  
+  @media (width <= 991px) {
+    .breadcrumbsContainer {
+      max-width: 100%;
+    }
+  }
+  
+  .backButton {
+    color: #000;
+    white-space: nowrap;
+    text-align: center;
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    justify-content: center;
+    align-self: stretch;
+    align-items: center;
+    gap: 6px;
+    min-height: 41px;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 12px 16px;
+    display: flex;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+  }
+  
+  @media (width <= 991px) {
+    .backButton {
+      white-space: initial;
+    }
+  }
+  
+  .backIcon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    flex-shrink: 0;
+    align-self: stretch;
+    width: 18px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  
+  .backText {
+    align-self: stretch;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  
+  .breadcrumbsPath {
+    color: #9e9e9e;
+    justify-content: start;
+    align-self: stretch;
+    align-items: center;
+    gap: 4px;
+    min-width: 240px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+  }
+  
+  .breadcrumbIcon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    flex-shrink: 0;
+    align-self: stretch;
+    width: 21px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  
+  .breadcrumbItem {
+    justify-content: start;
+    align-self: stretch;
+    align-items: center;
+    gap: 4px;
+    min-width: 240px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+  }
+  
+  .breadcrumbButton {
+    justify-content: start;
+    align-self: stretch;
+    align-items: start;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+  }
+  
+  .breadcrumbText {
+    color: #9e9e9e;
+    font-feature-settings: "liga" off, "clig" off;
+    align-self: stretch;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 48px;
+    justify-content: center;
+    align-items: center;
+    min-height: 21px;
+    padding: 3px 4px;
+    display: flex;
+  }
+  

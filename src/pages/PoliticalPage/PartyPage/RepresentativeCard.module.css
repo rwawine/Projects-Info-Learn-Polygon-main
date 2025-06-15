@@ -1,0 +1,76 @@
+.representativeCard {
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    justify-content: start;
+    align-items: stretch;
+    width: 308px;
+    min-width: 240px;
+    display: flex;
+    position: relative;
+  }
+  
+  .representativeImage {
+    aspect-ratio: 1.07;
+    object-fit: contain;
+    object-position: center;
+    z-index: 0;
+    border-radius: 8px;
+    width: 100%;
+  }
+  
+  .representativeInfo {
+    z-index: 0;
+    background-color: #b64d4a;
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-self: start;
+    align-items: stretch;
+    padding: 8px 16px;
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: -100px;
+  }
+  
+  .representativeTitle {
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  .representativeName {
+    text-align: center;
+    align-self: start;
+    margin-top: 4px;
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+  
+  /* Variations for different card positions */
+  .representativeCard:nth-child(2) .representativeInfo {
+    right: -113px;
+  }
+  
+  .representativeCard:nth-child(3) .representativeInfo {
+    right: -108px;
+  }
+  
+  .representativeCard:nth-child(4) .representativeInfo {
+    right: -75px;
+  }
+  
+  .representativeCard:nth-child(5) .representativeInfo {
+    right: -113px;
+  }
+  
+  .representativeCard:nth-child(6) .representativeInfo {
+    right: -123px;
+  }
+  
+  .representativeCard:nth-child(4) .representativeImage {
+    align-self: center;
+    width: 385px;
+    max-width: 100%;
+  }
+  

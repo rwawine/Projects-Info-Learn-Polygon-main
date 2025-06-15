@@ -1,0 +1,14 @@
+.container {
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.mainWrapper {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    min-height: 828px;
+    padding-bottom: 109px;
+    display: flex;
+    position: relative;
+}

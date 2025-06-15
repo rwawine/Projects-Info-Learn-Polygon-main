@@ -1,0 +1,32 @@
+.pageContainer {
+    background-color: #fff;
+    flex-direction: column;
+    align-items: stretch;
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .mainContent {
+    align-self: center;
+    width: 100%;
+    max-width: 1520px;
+    margin-top: 95px;
+  }
+  
+  @media (width <= 991px) {
+    .mainContent {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+  
+  .contentWrapper {
+    width: 100%;
+  }
+  
+  @media (width <= 991px) {
+    .contentWrapper {
+      max-width: 100%;
+    }
+  }
+  

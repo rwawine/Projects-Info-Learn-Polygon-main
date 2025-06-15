@@ -1,0 +1,66 @@
+.profileContainer {
+    color: #000;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px 100px;
+    margin-top: 33px;
+    font-weight: 400;
+    display: flex;
+  }
+  
+  @media (width <= 991px) {
+    .profileContainer {
+      max-width: 100%;
+    }
+  }
+  
+  .companyLogo {
+    aspect-ratio: 1.05;
+    object-fit: contain;
+    object-position: center;
+    flex-shrink: 0;
+    align-self: stretch;
+    width: 160px;
+    margin: auto 0;
+  }
+  
+  .companyInfo {
+    align-self: stretch;
+    width: 993px;
+    min-width: 240px;
+    margin: auto 0;
+  }
+  
+  @media (width <= 991px) {
+    .companyInfo {
+      max-width: 100%;
+    }
+  }
+  
+  .companyName {
+    font-size: 48px;
+    margin: 0;
+  }
+  
+  @media (width <= 991px) {
+    .companyName {
+      max-width: 100%;
+      font-size: 40px;
+    }
+  }
+  
+  .companyDescription {
+    min-height: 100px;
+    margin-top: 24px;
+    font-size: 22px;
+    line-height: 31px;
+    margin-bottom: 0;
+  }
+  
+  @media (width <= 991px) {
+    .companyDescription {
+      max-width: 100%;
+    }
+  }
+  

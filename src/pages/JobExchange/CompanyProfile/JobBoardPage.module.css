@@ -1,0 +1,125 @@
+.pageContainer {
+    background-color: #fff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 80px;
+    font-family: Manrope, -apple-system, Roboto, Helvetica, sans-serif;
+    display: flex;
+    overflow: hidden;
+  }
+  
+  @media (width <= 991px) {
+    .pageContainer {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  
+  .contentWrapper {
+    width: 100%;
+    max-width: 1520px;
+  }
+  
+  @media (width <= 991px) {
+    .contentWrapper {
+      max-width: 100%;
+    }
+  }
+  
+  .mainContent {
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: start;
+    gap: 32px;
+    width: 100%;
+    margin-top: 24px;
+    display: flex;
+  }
+  
+  @media (width <= 991px) {
+    .mainContent {
+      max-width: 100%;
+    }
+  }
+  
+  .tabsContainer {
+    margin-top: 42px;
+  }
+  
+  .segmentedControl {
+    color: #1f1f1f;
+    white-space: nowrap;
+    text-align: center;
+    background-color: #1f1f1f08;
+    border-radius: 12px;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    padding: 2px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3;
+    display: flex;
+  }
+  
+  @media (width <= 991px) {
+    .segmentedControl {
+      max-width: 100%;
+      white-space: initial;
+    }}
+
+
+    
+  .segmentInactive {
+    cursor: pointer;
+    -webkit-line-clamp: 1;
+    font-variant-numeric: lining-nums proportional-nums;
+    text-overflow: ellipsis;
+    min-width: 240px;
+    padding: 14px var(--spacing-global-200, 16px);
+    border-radius: 12px;
+    -webkit-box-orient: vertical;
+    flex: 1;
+    align-self: stretch;
+    margin: auto 0;
+    transition: background-color 0.3s ease;
+    overflow: hidden;
+  }
+
+  .segmentInactive:hover {
+    background-color: #13121208;
+  }
+  
+  @media (width <= 991px) {
+    .segmentInactive {
+      max-width: 100%;
+      white-space: initial;
+    }}
+
+    
+  .segmentActive {
+    -webkit-line-clamp: 1;
+    color: #fff;
+    font-variant-numeric: lining-nums proportional-nums;
+    text-overflow: ellipsis;
+    box-shadow: 0px 1px 10px 1px var(--shadow-Shadow-1, #4a505e0d), 0px 1px 4px 0px var(--shadow-Shadow-2, #3c538717);
+    min-width: 240px;
+    padding: 14px var(--spacing-global-200, 16px);
+    background-color: #ef6c00;
+    border-radius: 12px;
+    -webkit-box-orient: vertical;
+    flex: 1;
+    align-self: stretch;
+    margin: auto 0;
+    overflow: hidden;
+  }
+  
+  @media (width <= 991px) {
+    .segmentActive {
+      max-width: 100%;
+      white-space: initial;
+    }
+  }

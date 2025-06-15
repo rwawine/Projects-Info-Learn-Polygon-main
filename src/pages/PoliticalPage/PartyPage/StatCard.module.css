@@ -1,0 +1,38 @@
+.statCard {
+    align-self: stretch;
+    width: 240px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  
+  .numberPrimary {
+    color: #c54143;
+    font-size: 62px;
+    line-height: 0.7;
+  }
+  
+  @media (width <= 991px) {
+    .numberPrimary {
+      font-size: 40px;
+    }
+  }
+  
+  .numberSecondary {
+    color: #c54143;
+    font-size: 62px;
+    line-height: 0.7;
+  }
+  
+  @media (width <= 991px) {
+    .numberSecondary {
+      font-size: 40px;
+    }
+  }
+  
+  .description {
+    color: #fff;
+    margin-top: 16px;
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  

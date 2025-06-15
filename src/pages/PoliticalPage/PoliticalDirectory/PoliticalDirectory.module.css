@@ -1,0 +1,99 @@
+.pageContainer {
+    background-color: #fff;
+    width: 100%;
+    min-height: 100vh;
+    font-family: Manrope, -apple-system, Roboto, Helvetica, sans-serif;
+  }
+  
+  .mainContent {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    width: calc(100% - 400px);
+    margin: 95px 200px 0;
+    display: flex;
+  }
+  
+  @media (width <= 991px) {
+    .mainContent {
+      width: calc(100% - 80px);
+      margin: 95px 40px 0;
+    }
+  }
+  
+  @media (width <= 640px) {
+    .mainContent {
+      width: calc(100% - 40px);
+      margin: 20px 20px 0;
+    }
+  }
+  
+  .contentSection {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    width: 100%;
+    display: flex;
+  }
+  
+  .pageTitle {
+    color: #000;
+    align-self: stretch;
+    font-family: Cormorant Garamond, -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    margin: 0;
+  }
+  
+  @media (width <= 640px) {
+    .pageTitle {
+      font-size: 32px;
+    }
+  }
+  
+  .personsGrid {
+    flex-shrink: 0;
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin-top: 50px;
+    display: grid;
+  }
+  
+  @media (width <= 991px) {
+    .personsGrid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  
+  @media (width <= 640px) {
+    .personsGrid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+  }
+  
+  .loadMoreButton {
+    -webkit-line-clamp: 1;
+    color: #fff;
+    text-align: center;
+    font-variant-numeric: lining-nums proportional-nums;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    background-color: #b64d4a;
+    border: none;
+    border-radius: 10px;
+    -webkit-box-orient: vertical;
+    flex-shrink: 0;
+    gap: 10px;
+    height: 56px;
+    margin: 50px auto 0;
+    padding: 16px 24px;
+    font-family: Manrope, -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 130%;
+    overflow: hidden;
+  }
+  

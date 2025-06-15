@@ -1,0 +1,182 @@
+.container {
+    flex-direction: column;
+    align-self: stretch;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    display: flex;
+    position: relative;
+  }
+  
+  .statsSection {
+    border: 1px solid #1414140d;
+    border-radius: 8px;
+    justify-content: space-between;
+    align-self: stretch;
+    align-items: flex-start;
+    height: 236px;
+    padding: 32px;
+    display: flex;
+    position: relative;
+  }
+  
+  @media (width <= 991px) {
+    .statsSection {
+      min-height: 200px;
+      height: auto !important;
+    }
+  }
+  
+  @media (width <= 640px) {
+    .statsSection {
+      gap: 8px;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      height: auto !important;
+      padding: 16px !important;
+    }
+  }
+  
+  .sectionTitle {
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    margin: 0;
+  }
+  
+  @media (width <= 640px) {
+    .sectionTitle {
+      font-size: 18px !important;
+    }
+  }
+  
+  .statsContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    display: flex;
+    position: relative;
+  }
+  
+  @media (width <= 991px) {
+    .statsContainer {
+      max-width: 424px;
+      width: 100% !important;
+    }
+  }
+  
+  @media (width <= 640px) {
+    .statsContainer {
+      width: 100% !important;
+    }
+  }
+  
+  .statItem {
+    justify-content: space-between;
+    align-self: stretch;
+    align-items: center;
+    display: flex;
+    position: relative;
+  }
+  
+  @media (width <= 640px) {
+    .statItem {
+      gap: 8px;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+    }
+  }
+  
+  .statLabel {
+    color: #000;
+    width: 250px;
+
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    margin: 0;
+  }
+  
+  @media (width <= 991px) {
+    .statLabel {
+      width: 200px !important;
+    }
+  }
+  
+  @media (width <= 640px) {
+    .statLabel {
+      margin-bottom: 4px;
+      width: 100% !important;
+      font-size: 14px !important;
+    }
+  }
+  
+  .statValue {
+    color: #000;
+
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    margin: 0;
+  }
+  
+  @media (width <= 640px) {
+    .statValue {
+      font-size: 14px !important;
+    }
+  }
+  
+  .productsSection {
+    border: 1px solid #1414140d;
+    border-radius: 8px;
+    justify-content: space-between;
+    align-self: stretch;
+    align-items: flex-start;
+    height: 174px;
+    padding: 32px;
+    display: flex;
+    position: relative;
+  }
+  
+  @media (width <= 991px) {
+    .productsSection {
+      min-height: 150px;
+      height: auto !important;
+    }
+  }
+  
+  @media (width <= 640px) {
+    .productsSection {
+      gap: 8px;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      height: auto !important;
+      padding: 16px !important;
+    }
+  }
+  
+  .productsDescription {
+    color: #000;
+    width: 600px;
+
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    margin: 0;
+  }
+  
+  @media (width <= 991px) {
+    .productsDescription {
+      max-width: 600px;
+      width: 100% !important;
+    }
+  }
+  
+  @media (width <= 640px) {
+    .productsDescription {
+      width: 100% !important;
+      font-size: 14px !important;
+    }
+  }
+  

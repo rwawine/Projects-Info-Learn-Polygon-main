@@ -1,0 +1,75 @@
+.representativesSection {
+    flex-direction: column;
+    justify-content: start;
+    align-self: center;
+    align-items: stretch;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1520px;
+    margin-top: 100px;
+    display: flex;
+  }
+  
+  @media (width <= 991px) {
+    .representativesSection {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+  
+  .sectionHeader {
+    color: #000;
+    text-align: center;
+    align-self: center;
+    width: 654px;
+    max-width: 100%;
+  }
+  
+  .sectionTitle {
+    font-family: Cormorant Garamond, -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  @media (width <= 991px) {
+    .sectionTitle {
+      max-width: 100%;
+      font-size: 40px;
+    }
+  }
+  
+  .sectionDescription {
+    margin-top: 21px;
+    font-family: Manrope, -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+  
+  @media (width <= 991px) {
+    .sectionDescription {
+      max-width: 100%;
+    }
+  }
+  
+  .representativesGrid {
+    color: #fff;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: start;
+    gap: 20px 128px;
+    width: 100%;
+    margin-top: 50px;
+    font-family: Manrope, -apple-system, Roboto, Helvetica, sans-serif;
+    font-weight: 400;
+    display: flex;
+  }
+  
+  @media (width <= 991px) {
+    .representativesGrid {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+  

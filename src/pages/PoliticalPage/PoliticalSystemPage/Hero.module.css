@@ -1,0 +1,15 @@
+.heroSection {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 86px;
+  }
+  
+  .heroImage {
+    border-radius: 3px;
+    flex-shrink: 0;
+    width: 1520px;
+    height: 619px;
+    display: block;
+  }
+  

@@ -1,0 +1,21 @@
+import React from 'react';
+import styles from "./JobVacancy.module.css";
+
+const FilterControls: React.FC = () => {
+  return (
+    <div className={styles.filterControls}>
+      <div className={styles.filtersButton}>
+        <div className={styles.filtersContent}>
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f421666852abc14cef0f91a1ac1b06af326229c8?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf" className={styles.filterIcon} alt="" />
+          <span className={styles.filtersText}>Фильтры</span>
+        </div>
+      </div>
+      <div className={styles.sortDropdown}>
+        <span className={styles.sortText}>Сортировать по</span>
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4b85ca9008a9ad320b2a03b59d84901d35103d3c?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf" className={styles.sortIcon} alt="" />
+      </div>
+    </div>
+  );
+};
+
+export default FilterControls;

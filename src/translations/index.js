@@ -1,5 +1,3 @@
-import PoliticalParty from "../pages/PoliticalPage/PoliticalParty";
-
 export const translations = {
     ru: {
         systemContour: "Контур системы",

@@ -1,0 +1,566 @@
+.pageContainer {
+    background-color: #fff;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+.header {
+    box-sizing: border-box;
+    background-color: #061424;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 65px;
+    padding: 20px 200px;
+    display: flex;
+}
+
+@media (width <=991px) {
+    .header {
+        padding: 20px 40px;
+    }
+}
+
+@media (width <=640px) {
+    .header {
+        flex-direction: column;
+        gap: 16px;
+        height: auto;
+        padding: 16px 20px;
+    }
+}
+
+.brandTitle {
+    color: #fff;
+    font-family: Manrope, -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 141%;
+    margin: 0;
+}
+
+.navigation {
+    align-items: center;
+    gap: 24px;
+    display: flex;
+}
+
+@media (width <=640px) {
+    .navigation {
+        display: none;
+    }
+}
+
+.navLink {
+    color: #fff;
+    font-family: Manrope, -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.mainContent {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 100px;
+    width: 1521px;
+    max-width: calc(100% - 400px);
+    margin: 0 auto;
+    padding: 95px 0;
+    display: flex;
+}
+
+@media (width <=991px) {
+    .mainContent {
+        gap: 60px;
+        width: calc(100% - 80px);
+        max-width: none;
+        padding: 60px 0;
+    }
+}
+
+@media (width <=640px) {
+    .mainContent {
+        gap: 40px;
+        width: calc(100% - 40px);
+        padding: 40px 0;
+    }
+}
+
+.searchResultSection {
+    flex-direction: column;
+    align-self: stretch;
+    align-items: flex-start;
+    gap: 32px;
+    display: flex;
+}
+
+.searchTitle {
+    color: #000;
+    align-self: stretch;
+    font-family: Cormorant Garamond, -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    margin: 0;
+}
+
+@media (width <=991px) {
+    .searchTitle {
+        font-size: 36px;
+    }
+}
+
+@media (width <=640px) {
+    .searchTitle {
+        font-size: 28px;
+    }
+}
+
+.mainResultCard {
+    border-radius: 20px;
+    justify-content: center;
+    align-self: stretch;
+    align-items: center;
+    gap: 16px;
+    padding: 24px;
+    display: flex;
+}
+
+@media (width <=640px) {
+    .mainResultCard {
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.mainImageContainer {
+    background-color: #293856;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    padding: 7px 4px 0 3px;
+    display: flex;
+    position: relative;
+}
+
+.mainProfileImage {
+    aspect-ratio: 1;
+    flex-shrink: 0;
+    width: 213px;
+    height: 213px;
+}
+
+.mainResultContent {
+    flex: 1 0 0;
+    justify-content: space-between;
+    align-self: stretch;
+    align-items: flex-end;
+    display: flex;
+}
+
+@media (width <=640px) {
+    .mainResultContent {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+}
+
+.mainResultInfo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    display: flex;
+}
+
+@media (width <=640px) {
+    .mainResultInfo {
+        align-items: center;
+    }
+}
+
+.mainPersonName {
+    color: #b64d4a;
+    font-family: Cormorant Garamond, -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 120%;
+    margin: 0;
+}
+
+@media (width <=991px) {
+    .mainPersonName {
+        font-size: 48px;
+    }
+}
+
+@media (width <=640px) {
+    .mainPersonName {
+        text-align: center;
+        font-size: 36px;
+    }
+}
+
+.mainPartyName {
+    color: #000;
+    font-family: Manrope, -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0;
+}
+
+@media (width <=991px) {
+    .mainPartyName {
+        font-size: 20px;
+    }
+}
+
+@media (width <=640px) {
+    .mainPartyName {
+        text-align: center;
+        font-size: 18px;
+    }
+}
+
+.fullInfoLink {
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    height: 27px;
+    display: flex;
+    cursor: pointer;
+}
+
+.fullInfoText {
+    color: #1a1a1a;
+    font-family: Manrope, -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.otherPoliticiansSection {
+    flex-direction: column;
+    align-self: stretch;
+    align-items: flex-start;
+    gap: 32px;
+    display: flex;
+}
+
+.otherPoliticiansTitle {
+    color: #000;
+    align-self: stretch;
+    font-family: Cormorant Garamond, -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    margin: 0;
+}
+
+@media (width <=991px) {
+    .otherPoliticiansTitle {
+        font-size: 32px;
+    }
+}
+
+@media (width <=640px) {
+    .otherPoliticiansTitle {
+        font-size: 28px;
+    }
+}
+
+.politiciansContainer {
+    flex-direction: column;
+    align-self: stretch;
+    align-items: center;
+    gap: 24px;
+    display: flex;
+}
+
+.politiciansGrid {
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-self: stretch;
+    align-items: flex-start;
+    gap: 20px;
+    display: flex;
+}
+
+@media (width <=991px) {
+    .politiciansGrid {
+        gap: 16px;
+    }
+}
+
+@media (width <=640px) {
+    .politiciansGrid {
+        flex-direction: column;
+    }
+}
+
+.politicalCard {
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    align-items: center;
+    gap: 12px;
+    width: 493px;
+    padding: 24px;
+    display: flex;
+}
+
+@media (width <=991px) {
+    .politicalCard {
+        width: calc(50% - 8px);
+        min-width: 300px;
+    }
+}
+
+@media (width <=640px) {
+    .politicalCard {
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+.cardImageContainer {
+    background-color: #293856;
+    border-radius: 8px;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 4px 0 3px;
+    display: flex;
+    position: relative;
+}
+
+.cardProfileImage {
+    aspect-ratio: 1;
+    width: 213px;
+    height: 213px;
+}
+
+.cardContent {
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    align-self: stretch;
+    align-items: flex-start;
+    display: flex;
+}
+
+@media (width <=640px) {
+    .cardContent {
+        align-items: center;
+    }
+}
+
+.cardInfo {
+    flex-direction: column;
+    align-self: stretch;
+    align-items: flex-start;
+    gap: 8px;
+    display: flex;
+}
+
+@media (width <=640px) {
+    .cardInfo {
+        align-items: center;
+    }
+}
+
+.cardPersonName {
+    color: #000;
+    align-self: stretch;
+    font-family: Cormorant Garamond, -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 120%;
+    margin: 0;
+}
+
+@media (width <=640px) {
+    .cardPersonName {
+        text-align: center;
+    }
+}
+
+.cardPartyName {
+    color: #000;
+    align-self: stretch;
+    font-family: Manrope, -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+}
+
+@media (width <=640px) {
+    .cardPartyName {
+        text-align: center;
+    }
+}
+
+.cardInfoLink {
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    height: 27px;
+    display: flex;
+    cursor: pointer;
+}
+
+.cardInfoText {
+    color: #1a1a1a;
+    font-family: Manrope, -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.loadMoreButton {
+    -webkit-line-clamp: 1;
+    color: #fff;
+    text-align: center;
+    font-variant-numeric: lining-nums proportional-nums;
+    text-overflow: ellipsis;
+    background-color: #b64d4a;
+    border-radius: 10px;
+    -webkit-box-orient: vertical;
+    align-self: stretch;
+    gap: 10px;
+    height: 56px;
+    padding: 16px 24px;
+    font-family: Manrope, -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 130%;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+}
+
+.footer {
+    box-sizing: border-box;
+    background-color: #061424;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    padding: 24px 200px;
+    display: flex;
+}
+
+@media (width <=991px) {
+    .footer {
+        padding: 24px 40px;
+    }
+}
+
+@media (width <=640px) {
+    .footer {
+        padding: 20px;
+    }
+}
+
+.footerContent {
+    justify-content: space-between;
+    align-self: stretch;
+    align-items: flex-start;
+    display: flex;
+}
+
+@media (width <=640px) {
+    .footerContent {
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+}
+
+.footerTitle {
+    color: #fff;
+    font-family: Manrope, -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 141%;
+}
+
+@media (width <=640px) {
+    .footerTitle {
+        font-size: 16px;
+    }
+}
+
+.footerNavigation {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    display: flex;
+}
+
+.footerNavLink {
+    color: #ffffff80;
+    font-family: Manrope, -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 141%;
+    text-decoration: none;
+}
+
+@media (width <=640px) {
+    .footerNavLink {
+        font-size: 16px;
+    }
+}
+
+.footerDivider {
+    background-color: #fff;
+    align-self: stretch;
+    height: 1px;
+}
+
+.footerBottom {
+    justify-content: space-between;
+    align-self: stretch;
+    align-items: center;
+    display: flex;
+}
+
+@media (width <=640px) {
+    .footerBottom {
+        text-align: center;
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+.copyrightText {
+    color: #fff;
+    font-family: Manrope, -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 141%;
+}
+
+@media (width <=640px) {
+    .copyrightText {
+        font-size: 16px;
+    }
+}
+
+.systemLink {
+    color: #ffffff80;
+    font-family: Manrope, -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 141%;
+}
+
+@media (width <=640px) {
+    .systemLink {
+        font-size: 16px;
+    }
+}

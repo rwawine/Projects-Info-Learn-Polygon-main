@@ -181,7 +181,7 @@ export default function FirstPage() {
   const menuItems = [
     { label: translations[language].landing, route: "/katarium" },
     { label: translations[language].politicalSite, route: "/political-site" },
-    { label: translations[language].jobExchange, route: "/job-exchange" },
+    { label: translations[language].jobExchange, route: "/job-board" },
     { label: translations[language].newsResource, route: "/news" },
   ];
 
