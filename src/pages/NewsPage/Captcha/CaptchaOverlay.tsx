@@ -50,8 +50,8 @@ export const CaptchaOverlay: React.FC<CaptchaOverlayProps> = ({ onVerify, mode =
         }
     };
 
-    const containerClassName = mode === 'fullscreen' 
-        ? styles.container 
+    const containerClassName = mode === 'fullscreen'
+        ? styles.container
         : styles.inlineContainer;
 
     const captchaIcons = [
@@ -80,7 +80,7 @@ export const CaptchaOverlay: React.FC<CaptchaOverlayProps> = ({ onVerify, mode =
                         </button>
                     </div>
                 </div>
-               
+
                 <div className={styles.gridContainer}>
                     {colors.map((color, index) => (
                         <div

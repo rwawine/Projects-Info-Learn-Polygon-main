@@ -16,6 +16,7 @@ declare const styles: {
     readonly overlay: string;
     readonly blurContent: string;
     readonly error: string;
+    readonly inlineContainer: string;
 };
 
 export default styles; 
