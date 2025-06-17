@@ -468,6 +468,9 @@ export const translations = {
         },
 
         featuredArticle: {
+            title: "Глубокое погружение в влияние культурных движений на современное общество",
+            date: "9 сентября 2024 года",
+            readTime: "06 минут",
             badgeText: "Горячие новости"
         },
 

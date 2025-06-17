@@ -35,7 +35,7 @@ function NewsPage() {
         "#" + translations[language].newsPageArticle.tag2
     ];
 
-    const articleContent = translations[language].newsPageArticle.articleContent;
+    const articleContent = translations[language].newsPageArticle.ArticleContent;
 
     const handleBackClick = () => {
         console.log("Navigate back");
