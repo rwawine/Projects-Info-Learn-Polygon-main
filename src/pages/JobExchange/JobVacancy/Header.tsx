@@ -10,7 +10,7 @@ const Header: React.FC = () => {
           <a href="/job-board" className={styles.navLink}>
             Главная
           </a>
-          <a href="#" className={styles.navLink}>
+          <a href="/job-news" className={styles.navLink}>
             Новости
           </a>
           <a href="/job-companies" className={styles.navLink}>

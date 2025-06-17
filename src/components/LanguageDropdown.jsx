@@ -2,13 +2,16 @@ import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import styles from './LanguageDropdown.module.css';
 
+import ru from '../assets/flags/ru.svg';
+import en from '../assets/flags/en.svg';
+
 const LanguageDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { language, toggleLanguage } = useLanguage();
 
   const languages = [
-    { code: 'ru', name: 'Ru', flag: '🇷🇺' },
-    { code: 'en', name: 'En', flag: '🇺🇸' }
+    { code: 'ru', name: 'Ru', flag: ru },
+    { code: 'en', name: 'En', flag: en }
   ];
 
   const currentLanguage = languages.find(lang => lang.code === language);
@@ -21,7 +24,9 @@ const LanguageDropdown = () => {
         aria-expanded={isOpen}
         aria-haspopup="listbox"
       >
-        <span className={styles.flag}>{currentLanguage?.flag}</span>
+        <span className={styles.flag}>
+          <img src={currentLanguage?.flag} alt={`${currentLanguage?.name} flag`} />
+        </span>
         <span className={styles.language}>{currentLanguage?.name}</span>
         <span className={`${styles.chevron} ${isOpen ? styles.chevronUp : ''}`}>
           ▼
@@ -41,7 +46,9 @@ const LanguageDropdown = () => {
                 setIsOpen(false);
               }}
             >
-              <span className={styles.flag}>{lang.flag}</span>
+              <span className={styles.flag}>
+                <img src={lang.flag} alt={`${lang.name} flag`} />
+              </span>
               <span className={styles.language}>{lang.name}</span>
             </button>
           ))}

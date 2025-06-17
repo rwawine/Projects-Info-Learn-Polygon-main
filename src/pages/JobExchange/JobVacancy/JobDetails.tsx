@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './JobVacancy.module.css';
 
 const JobDetails: React.FC = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const toggleDescription = () => {
+    setIsExpanded(!isExpanded);
+  };
+
   return (
     <aside className={styles.jobDetails}>
       <div className={styles.jobDetailsCard}>
         <div className={styles.jobDetailsHeader}>
           <div className={styles.companyInfo}>
             <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/04224ac7b1ec90a658947e6bfe73ba67349b58f5?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf" className={styles.companyIcon} alt="CAPCO logo" />
-            <span className={styles.companyLocation}>CAPCO, Москва, Россия</span>
+            <span className={styles.companyLocation}>CAPCO, <span>Москва, Россия</span></span>
           </div>
           <button className={styles.applyButton}>Откликнуться</button>
         </div>
@@ -21,12 +27,14 @@ const JobDetails: React.FC = () => {
             <span className={styles.tag}>40 часов в неделю</span>
           </div>
           <div className={styles.jobDescription}>
-            <p className={styles.descriptionText}>
+            <p className={`${styles.descriptionText} ${!isExpanded ? styles.collapsed : ''}`}>
               Capco - это глобальная консалтинговая компания в области технологий и бизнеса, специализирующаяся на секторе финансовых услуг. Мы стремимся помочь нашим клиентам добиться успеха в постоянно меняющейся отрасли, сочетая инновационное мышление с уникальными экспертными ноу-хау. Решения, которые мы предлагаем нашим клиентам каждый день, так же разнообразны, как и наши сотрудники.
               <br />В рамках нашей продолжающейся глобальной стратегии расширения Capco расширяет свою практику обработки данных в Великобритании в нашем лондонском офисе. В настоящее время мы ищем консультантов по управлению, обладающих опытом анализа данных, для руководства и развития команд для поддержки крупномасштабных проектов по преобразованию для наших ведущих клиентов в сфере финансовых услуг.
               <br />Кандидат должен:Обладаете настоящей страстью к обработке данных и стремлением перевести отрасль на перспективный подход к анализу данныхБудьте готовы присоединиться к команде, которая будет развивать возможности британской практики визуализации данных и более широкую британскую и глобальную практику обработки данных для поддержки таких изменяющихся в отрасли тем, как визуализация данных, рассказывание историй о данных, описательная и диагностическая аналитика, Диалоговая аналитика и
             </p>
-            <button className={styles.loadMoreButton}>Загрузить еще</button>
+            <button className={styles.loadMoreButton} onClick={toggleDescription}>
+              {isExpanded ? 'Свернуть' : 'Загрузить еще'}
+            </button>
           </div>
         </div>
       </div>

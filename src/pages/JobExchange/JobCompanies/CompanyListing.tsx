@@ -2,7 +2,7 @@
 import * as React from "react";
 import styles from "./CompanyListing.module.css";
 import { Header } from "./Header.tsx";
-import { SearchSection } from "./SearchSection.tsx";
+import SearchSection from "../JobVacancy/SearchSection";
 import { CompanyCard } from "./CompanyCard.tsx";
 import { Pagination } from "./Pagination.tsx";
 import { Footer } from "./Footer.tsx";

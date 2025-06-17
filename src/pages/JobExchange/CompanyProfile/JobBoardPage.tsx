@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import styles from './JobBoardPage.module.css';
-import Header from './Header.tsx';
+import { Header } from './Header.tsx';
 import Breadcrumb from './Breadcrumb.tsx';
 import CompanyProfile from './CompanyProfile.tsx';
 import JobListings from './JobListings.tsx';

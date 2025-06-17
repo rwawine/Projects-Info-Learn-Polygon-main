@@ -89,15 +89,12 @@
   }
   
   .navItemHome {
-    width: 76px;
   }
   
   .navItemNews {
-    width: 89px;
   }
   
   .navItemCompanies {
-    width: 86px;
   }
   
   @media (width <= 991px) {

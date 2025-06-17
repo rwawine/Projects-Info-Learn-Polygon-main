@@ -12,19 +12,19 @@ const Footer: React.FC = () => {
               <h3 className={styles.footerColumnTitle}>Работодателям</h3>
               <div className={styles.footerColumnLinks}>
                 <a href="#" className={styles.footerLink}>Размещение вакансий</a>
-                <a href="#" className={styles.footerLink}>Страница компании</a>
+                <a href="/job-companies" className={styles.footerLink}>Страница компании</a>
               </div>
             </div>
             <div className={styles.footerColumn}>
               <h3 className={styles.footerColumnTitle}>Соискателям</h3>
               <div className={styles.footerColumnLinks}>
-                <a href="#" className={styles.footerLink}>Вакансии</a>
+                <a href="/job-board/vacancy" className={styles.footerLink}>Вакансии</a>
                 <a href="#" className={styles.footerLink}>Создать резюме</a>
               </div>
             </div>
             <div className={styles.footerColumn}>
               <h3 className={styles.footerColumnTitle}>О нас</h3>
-              <a href="#" className={styles.footerLink}>Новости</a>
+              <a href="/job-news" className={styles.footerLink}>Новости</a>
             </div>
           </div>
         </div>

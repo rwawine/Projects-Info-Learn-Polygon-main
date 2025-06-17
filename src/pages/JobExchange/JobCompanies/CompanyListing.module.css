@@ -336,7 +336,7 @@
 .companyHeader {
     justify-content: start;
     align-self: start;
-    align-items: start;
+    align-items: center;
     gap: 16px;
     display: flex
 }
@@ -364,7 +364,7 @@
     gap: 8px;
     font-size: 18px;
     font-weight: 500;
-    line-height: 2
+    line-height: 120%;
 }
 
 @media (width<=991px) {

@@ -1,22 +1,24 @@
 "use client";
 import * as React from "react";
 import styles from "./MainContent.module.css";
+import { useLanguage } from "../../../context/LanguageContext";
 
 export function MainContent() {
+  const { language, translations } = useLanguage();
   return (
     <main className={styles.mainSection}>
       <h1 className={styles.mainTitle}>
-        Демократическая республика с парламентской формой правления
+      {translations[language].political.politicalSystemPageTitle}
       </h1>
       <div className={styles.buttonGroup}>
         <button className={styles.partyButton}>
           <span className={styles.buttonLabel}>
-            Партия республиканцев
+            {translations[language].political.republicanParty}
           </span>
         </button>
         <button className={styles.partyButton}>
           <span className={styles.buttonLabel}>
-            Партия демократов
+            {translations[language].political.democraticParty}
           </span>
         </button>
       </div>

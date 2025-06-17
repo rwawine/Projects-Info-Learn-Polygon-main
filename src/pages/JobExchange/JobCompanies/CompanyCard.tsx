@@ -1,5 +1,6 @@
 "use client";
 import * as React from "react";
+import { Link } from "react-router-dom";
 import styles from "./CompanyListing.module.css";
 
 interface CompanyCardProps {
@@ -48,11 +49,13 @@ export const CompanyCard: React.FC<CompanyCardProps> = ({
         <span className={styles.jobCount}>
           {jobCount}
         </span>
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/8675a5e792e8b47823971e353e190316ac786133?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf"
-          alt="View company"
-          className={styles.searchIcon}
-        />
+        <Link to={`/job-companies/profile`}>
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/8675a5e792e8b47823971e353e190316ac786133?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf"
+            alt="View company"
+            className={styles.searchIcon}
+          />
+        </Link>
       </footer>
     </article>
   );

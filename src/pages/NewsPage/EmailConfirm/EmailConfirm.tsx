@@ -105,7 +105,7 @@ export const EmailConfirm: React.FC<EmailConfirmProps> = ({
                 bottom: '20px',
                 left: '50%',
                 transform: 'translateX(-50%)',
-                zIndex: 9999,
+                zIndex: 50,
                 width: '600px !important',
                 display: 'flex',
                 justifyContent: 'space-between',
