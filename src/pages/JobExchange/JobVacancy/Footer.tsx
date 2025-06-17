@@ -1,45 +1,47 @@
 import React from 'react';
-import styles from './JobVacancy.module.css';
+import styles from '../CompanyProfile/Footer.module.css';
+import { useLanguage } from '../../../context/LanguageContext';
 
-const Footer: React.FC = () => {
+export default function Footer() {
+  const { language, translations } = useLanguage();
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footerContainer}>
       <div className={styles.footerContent}>
         <div className={styles.footerTop}>
-          <h2 className={styles.footerLogo}>Биржа труда</h2>
+          <h2 className={styles.footerTitle}>{translations[language].footer.title}</h2>
           <div className={styles.footerLinks}>
-            <div className={styles.footerColumn}>
-              <h3 className={styles.footerColumnTitle}>Работодателям</h3>
-              <div className={styles.footerColumnLinks}>
-                <a href="#" className={styles.footerLink}>Размещение вакансий</a>
-                <a href="/job-companies" className={styles.footerLink}>Страница компании</a>
+            <div className={styles.linkColumn}>
+              <h3 className={styles.columnTitle}>{translations[language].footer.employers}</h3>
+              <div className={styles.columnLinks}>
+                <a href="#" className={styles.footerLink}>{translations[language].footer.vacancyPlacement}</a>
+                <a href="#" className={styles.footerLink}>{translations[language].footer.companyPage}</a>
               </div>
             </div>
-            <div className={styles.footerColumn}>
-              <h3 className={styles.footerColumnTitle}>Соискателям</h3>
-              <div className={styles.footerColumnLinks}>
-                <a href="/job-board/vacancy" className={styles.footerLink}>Вакансии</a>
-                <a href="#" className={styles.footerLink}>Создать резюме</a>
+            <div className={styles.linkColumn}>
+              <h3 className={styles.columnTitle}>{translations[language].footer.jobSeekers}</h3>
+              <div className={styles.columnLinks}>
+                <a href="#" className={styles.footerLink}>{translations[language].footer.vacancies}</a>
+                <a href="#" className={styles.footerLink}>{translations[language].footer.createResume}</a>
               </div>
             </div>
-            <div className={styles.footerColumn}>
-              <h3 className={styles.footerColumnTitle}>О нас</h3>
-              <a href="/job-news" className={styles.footerLink}>Новости</a>
+            <div className={styles.linkColumn}>
+              <h3 className={styles.columnTitle}>{translations[language].footer.aboutUs}</h3>
+              <a href="#" className={styles.footerLink}>{translations[language].footer.news}</a>
             </div>
           </div>
         </div>
-        <a href="/" className={styles.backToContour}>Вернуться в Контур системы</a>
+        <a href="/" className={styles.backToSystem}>
+          {translations[language].footer.backToSystem}
+        </a>
       </div>
       <div className={styles.footerDivider} />
       <div className={styles.footerBottom}>
-        <span className={styles.copyright}>2023, Все права защищены</span>
+        <span className={styles.copyright}>{translations[language].footer.copyright}</span>
         <div className={styles.legalLinks}>
-          <a href="#" className={styles.legalLink}>Пользовательское соглашение</a>
-          <a href="#" className={styles.legalLink}>Политика конфиденциальности</a>
+          <a href="#" className={styles.legalLink}>{translations[language].footer.terms}</a>
+          <a href="#" className={styles.legalLink}>{translations[language].footer.privacy}</a>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

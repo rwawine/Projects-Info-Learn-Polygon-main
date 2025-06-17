@@ -29,7 +29,7 @@ export default function Breadcrumb() {
           <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4d549310ebe5a8f966f4a1fa43bed15bf863fb06?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf" className={styles.breadcrumbArrow} alt="" />
           <div className={styles.breadcrumbButton}>
             <div className={styles.breadcrumbButtonInner}>
-              <span className={styles.breadcrumbText}>Яндекс</span>
+              <span className={styles.breadcrumbText}>{translations[language].breadcrumb.companyName}</span>
             </div>
           </div>
         </div>

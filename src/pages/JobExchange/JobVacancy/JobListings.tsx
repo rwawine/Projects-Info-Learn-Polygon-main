@@ -3,83 +3,85 @@ import styles from './JobVacancy.module.css';
 import FilterControls from './FilterControls.tsx';
 import JobCard from './JobCard.tsx';
 import Pagination from './Pagination.tsx';
-
-const jobsData = [
-  {
-    id: 1,
-    company: 'VK',
-    position: 'Аналитик данных',
-    isNew: true,
-    location: 'Минск',
-    type: 'Полная занятость',
-    salary: '50-55 тыс.',
-    timeAgo: '29 минут назад',
-    logo: 'https://cdn.builder.io/api/v1/image/assets/TEMP/6f64b65cfa0c7c96503ac986edbd0fe9f184609c?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf',
-    isHighlighted: false
-  },
-  {
-    id: 2,
-    company: 'CAPCO',
-    position: 'Консультант по визуализации данных - Power BI',
-    isNew: false,
-    location: 'Мадрид',
-    type: 'Полная занятость',
-    salary: '30-32 тыс.',
-    timeAgo: '1 день назад',
-    logo: 'https://cdn.builder.io/api/v1/image/assets/TEMP/bbcf41f0489b55d9798bff01556ee865e0d58346?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf',
-    isHighlighted: true
-  },
-  {
-    id: 3,
-    company: 'Яндекс',
-    position: 'Разработчик Full Stack',
-    isNew: false,
-    location: 'Соединенные Штаты',
-    type: 'Полная занятость',
-    salary: '50-52 тыс.',
-    timeAgo: '1 день назад',
-    logo: 'https://cdn.builder.io/api/v1/image/assets/TEMP/20ca315d00748f4c3d789edc1287602310bcb923?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf',
-    isHighlighted: false
-  },
-  {
-    id: 4,
-    company: 'Raycast corp',
-    position: 'Дизайнер продукта',
-    isNew: false,
-    location: 'Лондон',
-    type: 'Полная занятость',
-    salary: '40-42 тыс.',
-    timeAgo: '2 дня назад',
-    logo: 'https://cdn.builder.io/api/v1/image/assets/TEMP/aac02a05760d3a2841029f618f624e536a9813f7?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf',
-    isHighlighted: false
-  },
-  {
-    id: 5,
-    company: 'Loom',
-    position: 'Копирайтер (Рост)',
-    isNew: false,
-    location: 'Лондон',
-    type: 'Полная занятость',
-    salary: '38-40 тыс.',
-    timeAgo: '3 дня назад',
-    logo: 'https://cdn.builder.io/api/v1/image/assets/TEMP/f9ef193a799fa8183243f50bbf0cc5f3655c5875?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf',
-    isHighlighted: false
-  },
-  {
-    id: 6,
-    company: 'Trainline group',
-    position: 'Старший UX/UI дизайнер',
-    isNew: false,
-    location: 'Париж',
-    type: 'Полная занятость',
-    salary: '38-40 тыс.',
-    timeAgo: '20 часов в неделю',
-    logo: 'https://cdn.builder.io/api/v1/image/assets/TEMP/88dd4600c73920de352235c9b500580f67f574d7?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf',
-    isHighlighted: false
-  }
-];
+import { useLanguage } from '../../../context/LanguageContext';
 
 const JobListings: React.FC = () => {
+  const { language, translations } = useLanguage();
+  const jobsData = [
+    {
+      id: 1,
+      company: translations[language].jobListings.company1,
+      position: translations[language].jobListings.title1,
+      isNew: true,
+      location: translations[language].jobListings.location1,
+      type: translations[language].jobListings.type1,
+      salary: translations[language].jobListings.salary1,
+      timeAgo: translations[language].jobListings.time1,
+      logo: 'https://cdn.builder.io/api/v1/image/assets/TEMP/6f64b65cfa0c7c96503ac986edbd0fe9f184609c?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf',
+      isHighlighted: false
+    },
+    {
+      id: 2,
+      company: translations[language].jobListings.company2,
+      position: translations[language].jobListings.title2,
+      isNew: false,
+      location: translations[language].jobListings.location2,
+      type: translations[language].jobListings.type2,
+      salary: translations[language].jobListings.salary2,
+      timeAgo: translations[language].jobListings.time2,
+      logo: 'https://cdn.builder.io/api/v1/image/assets/TEMP/bbcf41f0489b55d9798bff01556ee865e0d58346?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf',
+      isHighlighted: true
+    },
+    {
+      id: 3,
+      company: translations[language].jobListings.company3,
+      position: translations[language].jobListings.title3,
+      isNew: false,
+      location: translations[language].jobListings.location3,
+      type: translations[language].jobListings.type3,
+      salary: translations[language].jobListings.salary3,
+      timeAgo: translations[language].jobListings.time3,
+      logo: 'https://cdn.builder.io/api/v1/image/assets/TEMP/20ca315d00748f4c3d789edc1287602310bcb923?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf',
+      isHighlighted: false
+    },
+    {
+      id: 4,
+      company: translations[language].jobListings.company4,
+      position: translations[language].jobListings.title4,
+      isNew: false,
+      location: translations[language].jobListings.location4,
+      type: translations[language].jobListings.type4,
+      salary: translations[language].jobListings.salary4,
+      timeAgo: translations[language].jobListings.time4,
+      logo: 'https://cdn.builder.io/api/v1/image/assets/TEMP/aac02a05760d3a2841029f618f624e536a9813f7?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf',
+      isHighlighted: false
+    },
+    {
+      id: 5,
+      company: translations[language].jobListings.company5,
+      position: translations[language].jobListings.title5,
+      isNew: false,
+      location: translations[language].jobListings.location5,
+      type: translations[language].jobListings.type5,
+      salary: translations[language].jobListings.salary5,
+      timeAgo: translations[language].jobListings.time5,
+      logo: 'https://cdn.builder.io/api/v1/image/assets/TEMP/f9ef193a799fa8183243f50bbf0cc5f3655c5875?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf',
+      isHighlighted: false
+    },
+    {
+      id: 6,
+      company: translations[language].jobListings.company6,
+      position: translations[language].jobListings.title6,
+      isNew: false,
+      location: translations[language].jobListings.location6,
+      type: translations[language].jobListings.type6,
+      salary: translations[language].jobListings.salary6,
+      timeAgo: translations[language].jobListings.time6,
+      logo: 'https://cdn.builder.io/api/v1/image/assets/TEMP/88dd4600c73920de352235c9b500580f67f574d7?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf',
+      isHighlighted: false
+    }
+  ];
+
   return (
     <section className={styles.jobListings}>
       <div className={styles.jobListingsContainer}>

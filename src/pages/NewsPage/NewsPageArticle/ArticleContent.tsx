@@ -44,7 +44,7 @@ export const ArticleContent: React.FC<ArticleContentProps> = ({
                 ))}
             </div>
             {!isVerified && (
-                <div className={captchaStyles.inlineAbsolute}>
+                <div className={captchaStyles.inlineContainer}>
                     <CaptchaOverlay onVerify={handleVerify} mode="inline" />
                 </div>
             )}

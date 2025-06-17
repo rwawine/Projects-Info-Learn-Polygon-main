@@ -8,10 +8,11 @@ import JobListings from './JobListings.tsx';
 import JobDetailPanel from './JobDetailPanel.tsx';
 import Footer from './Footer.tsx';
 import CompanyOverview from './CompanyOverview.tsx';
+import { useLanguage } from '../../../context/LanguageContext';
 
 export default function JobBoardPage() {
   const [activeTab, setActiveTab] = useState<'description' | 'jobs' | 'events'>('jobs');
-
+  const { language, translations } = useLanguage();
   const renderMainContent = () => {
     switch (activeTab) {
       case 'description':
@@ -30,7 +31,7 @@ export default function JobBoardPage() {
       case 'events':
         return (
           <div className={styles.eventsContainer}>
-            <h2>События компании</h2>
+            <h2>{translations[language].events.title}</h2>
           </div>
         );
     }
@@ -48,19 +49,19 @@ export default function JobBoardPage() {
               className={activeTab === 'description' ? styles.segmentActive : styles.segmentInactive}
               onClick={() => setActiveTab('description')}
             >
-              Описание
+              {translations[language].jobBoardPage.description}
             </div>
             <div 
               className={activeTab === 'jobs' ? styles.segmentActive : styles.segmentInactive}
               onClick={() => setActiveTab('jobs')}
             >
-              Вакансии
+              {translations[language].jobBoardPage.jobs}
             </div>
             <div 
               className={activeTab === 'events' ? styles.segmentActive : styles.segmentInactive}
               onClick={() => setActiveTab('events')}
             >
-              События
+              {translations[language].jobBoardPage.events}
             </div>
           </div>
         </div>

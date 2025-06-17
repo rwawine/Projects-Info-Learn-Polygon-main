@@ -6,7 +6,7 @@ const paginationStyles = {
         borderTopWidth: '1px',
         borderTopStyle: 'solid' as const,
         display: 'flex',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         alignItems: 'center',
         width: '100%',
         minHeight: '61px',

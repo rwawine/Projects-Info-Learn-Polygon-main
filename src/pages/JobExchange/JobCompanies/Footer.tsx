@@ -1,64 +1,47 @@
-"use client";
-import * as React from "react";
-import styles from "./CompanyListing.module.css";
+import React from 'react';
+import styles from '../CompanyProfile/Footer.module.css';
+import { useLanguage } from '../../../context/LanguageContext';
 
-interface FooterProps {}
-
-export const Footer: React.FC<FooterProps> = () => {
+export default function Footer() {
+  const { language, translations } = useLanguage();
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footerContainer}>
       <div className={styles.footerContent}>
         <div className={styles.footerTop}>
-          <h2 className={styles.footerLogo}>
-            Биржа труда
-          </h2>
+          <h2 className={styles.footerTitle}>{translations[language].footer.title}</h2>
           <div className={styles.footerLinks}>
-            <div className={styles.footerColumn}>
-              <h3 className={styles.footerColumnTitle}>
-                Работодателям
-              </h3>
-              <div className={styles.footerColumnLinks}>
-                <div>Размещение вакансий</div>
-                <div className={styles.footerColumnLink}>Страница компании</div>
+            <div className={styles.linkColumn}>
+              <h3 className={styles.columnTitle}>{translations[language].footer.employers}</h3>
+              <div className={styles.columnLinks}>
+                <a href="#" className={styles.footerLink}>{translations[language].footer.vacancyPlacement}</a>
+                <a href="#" className={styles.footerLink}>{translations[language].footer.companyPage}</a>
               </div>
             </div>
-            <div className={styles.footerColumnSmall}>
-              <h3 className={styles.footerColumnTitle}>
-                Соискателям
-              </h3>
-              <div className={styles.footerColumnLinks}>
-                <div>Вакансии</div>
-                <div className={styles.footerColumnLink}>Создать резюме</div>
+            <div className={styles.linkColumn}>
+              <h3 className={styles.columnTitle}>{translations[language].footer.jobSeekers}</h3>
+              <div className={styles.columnLinks}>
+                <a href="#" className={styles.footerLink}>{translations[language].footer.vacancies}</a>
+                <a href="#" className={styles.footerLink}>{translations[language].footer.createResume}</a>
               </div>
             </div>
-            <div className={styles.footerColumnAbout}>
-              <h3 className={styles.footerColumnTitle}>
-                О нас
-              </h3>
-              <div className={styles.footerColumnLinks}>
-                Новости
-              </div>
+            <div className={styles.linkColumn}>
+              <h3 className={styles.columnTitle}>{translations[language].footer.aboutUs}</h3>
+              <a href="#" className={styles.footerLink}>{translations[language].footer.news}</a>
             </div>
           </div>
         </div>
-        <a href="/" className={styles.footerBackLink}>
-          Вернуться в Контур системы
+        <a href="/" className={styles.backToSystem}>
+          {translations[language].footer.backToSystem}
         </a>
       </div>
       <div className={styles.footerDivider} />
       <div className={styles.footerBottom}>
-        <div className={styles.footerCopyright}>
-          2023, Все права защищены
-        </div>
-        <div className={styles.footerBottomLinks}>
-          <div className={styles.footerBottomLink}>
-            Пользовательское соглашение
-          </div>
-          <div className={styles.footerBottomLink}>
-            Политика конфиденциальности
-          </div>
+        <span className={styles.copyright}>{translations[language].footer.copyright}</span>
+        <div className={styles.legalLinks}>
+          <a href="#" className={styles.legalLink}>{translations[language].footer.terms}</a>
+          <a href="#" className={styles.legalLink}>{translations[language].footer.privacy}</a>
         </div>
       </div>
     </footer>
   );
-};
+}

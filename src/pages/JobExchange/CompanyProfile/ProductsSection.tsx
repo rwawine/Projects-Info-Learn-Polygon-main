@@ -1,12 +1,14 @@
 "use client";
 import * as React from "react";
 import styles from "./CompanyOverview.module.css";
+import { useLanguage } from '../../../context/LanguageContext';
 
 export function ProductsSection() {
+  const { language, translations } = useLanguage();
   return (
     <section className={styles.productsSection}>
       <h2 className={styles.sectionTitle}>
-        Продукты
+        {translations[language].productsSection.title}
       </h2>
       <p className={styles.productsDescription}>
         Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras

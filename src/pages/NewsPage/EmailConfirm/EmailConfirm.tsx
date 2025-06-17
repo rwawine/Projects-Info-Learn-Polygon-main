@@ -1,6 +1,8 @@
 "use client";
 import * as React from "react";
 import styles from "./EmailConfirm.module.css";
+import { useLanguage } from '../../../context/LanguageContext';
+import { translations } from "../../../translations";
 
 interface EmailConfirmProps {
     title?: string;
@@ -10,13 +12,15 @@ interface EmailConfirmProps {
     successText?: string;
 }
 
-export const EmailConfirm: React.FC<EmailConfirmProps> = ({
-    title = "Новостной ресурс",
-    subtitle = "Подпишитесь, чтобы получать актуальные новости сразу на почту",
-    buttonText = "Подписаться",
-    termsText = "Условия подписки",
-    successText = "Спасибо за подписку!"
-}) => {
+export const EmailConfirm: React.FC<EmailConfirmProps> = (props) => {
+    const { language, translations } = useLanguage();
+    const {
+        title = translations[language].emailConfirm.title,
+        subtitle = translations[language].emailConfirm.subtitle,
+        buttonText = translations[language].emailConfirm.buttonText,
+        termsText = translations[language].emailConfirm.termsText,
+        successText = translations[language].emailConfirm.successText
+    } = props;
     const [email, setEmail] = React.useState("");
     const [error, setError] = React.useState("");
     const [isSubmitted, setIsSubmitted] = React.useState(false);
@@ -62,12 +66,12 @@ export const EmailConfirm: React.FC<EmailConfirmProps> = ({
         e.preventDefault();
 
         if (!email) {
-            setError("Пожалуйста, введите email");
+            setError(translations[language].emailConfirm.error);
             return;
         }
 
         if (!validateEmail(email)) {
-            setError("Пожалуйста, введите корректный email");
+            setError(translations[language].emailConfirm.error);
             return;
         }
 

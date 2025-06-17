@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import styles from './JobVacancy.module.css';
+import { useLanguage } from '../../../context/LanguageContext';
 
 const JobDetails: React.FC = () => {
   const [isExpanded, setIsExpanded] = useState(false);
-
+  const { language, translations } = useLanguage();
   const toggleDescription = () => {
     setIsExpanded(!isExpanded);
   };
@@ -14,57 +15,57 @@ const JobDetails: React.FC = () => {
         <div className={styles.jobDetailsHeader}>
           <div className={styles.companyInfo}>
             <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/04224ac7b1ec90a658947e6bfe73ba67349b58f5?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf" className={styles.companyIcon} alt="CAPCO logo" />
-            <span className={styles.companyLocation}>CAPCO, <span>Москва, Россия</span></span>
+            <span className={styles.companyLocation}>CAPCO, <span>{translations[language].jobDetails.location}</span></span>
           </div>
-          <button className={styles.applyButton}>Откликнуться</button>
+          <button className={styles.applyButton}>{translations[language].jobDetails.apply}</button>
         </div>
-        <h2 className={styles.jobTitle}>Консультант по визуализации данных - Power BI</h2>
+        <h2 className={styles.jobTitle}>{translations[language].jobDetails.title}</h2>
 
         <div className={styles.jobTags}>
           <div className={styles.tagsList}>
-            <span className={styles.tag}>Москва</span>
-            <span className={styles.tag}>Офис</span>
-            <span className={styles.tag}>40 часов в неделю</span>
+            <span className={styles.tag}>{translations[language].jobDetails.location2}</span>
+            <span className={styles.tag}>{translations[language].jobDetails.office}</span>
+            <span className={styles.tag}>{translations[language].jobDetails.hours}</span>
           </div>
           <div className={styles.jobDescription}>
             <p className={`${styles.descriptionText} ${!isExpanded ? styles.collapsed : ''}`}>
-              Capco - это глобальная консалтинговая компания в области технологий и бизнеса, специализирующаяся на секторе финансовых услуг. Мы стремимся помочь нашим клиентам добиться успеха в постоянно меняющейся отрасли, сочетая инновационное мышление с уникальными экспертными ноу-хау. Решения, которые мы предлагаем нашим клиентам каждый день, так же разнообразны, как и наши сотрудники.
-              <br />В рамках нашей продолжающейся глобальной стратегии расширения Capco расширяет свою практику обработки данных в Великобритании в нашем лондонском офисе. В настоящее время мы ищем консультантов по управлению, обладающих опытом анализа данных, для руководства и развития команд для поддержки крупномасштабных проектов по преобразованию для наших ведущих клиентов в сфере финансовых услуг.
-              <br />Кандидат должен:Обладаете настоящей страстью к обработке данных и стремлением перевести отрасль на перспективный подход к анализу данныхБудьте готовы присоединиться к команде, которая будет развивать возможности британской практики визуализации данных и более широкую британскую и глобальную практику обработки данных для поддержки таких изменяющихся в отрасли тем, как визуализация данных, рассказывание историй о данных, описательная и диагностическая аналитика, Диалоговая аналитика и
+              {translations[language].jobDetails.description}
+              <br />{translations[language].jobDetails.description2}
+              <br />{translations[language].jobDetails.description3}
             </p>
             <button className={styles.loadMoreButton} onClick={toggleDescription}>
-              {isExpanded ? 'Свернуть' : 'Загрузить еще'}
+              {isExpanded ? translations[language].jobDetails.collapse : translations[language].jobDetails.loadMore}
             </button>
           </div>
         </div>
       </div>
 
       <div className={styles.companyOverview}>
-        <h3 className={styles.overviewTitle}>Обзор компании</h3>
+        <h3 className={styles.overviewTitle}>{translations[language].jobDetails.overview}</h3>
         <div className={styles.companyStats}>
           <div className={styles.statRow}>
-            <span className={styles.statLabel}>Количество сотрудников</span>
-            <span className={styles.statValue}>От 5 тыс. до 10 тыс. чел</span>
+            <span className={styles.statLabel}>{translations[language].jobDetails.employees}</span>
+            <span className={styles.statValue}>{translations[language].jobDetails.employeesValue}</span>
           </div>
           <div className={styles.statRow}>
-            <span className={styles.statLabel}>Средняя зарплата</span>
-            <span className={styles.statValue}>183 895 рублей (2023)</span>
+            <span className={styles.statLabel}>{translations[language].jobDetails.averageSalary}</span>
+            <span className={styles.statValue}>{translations[language].jobDetails.averageSalaryValue}</span>
           </div>
           <div className={styles.statRow}>
-            <span className={styles.statLabel}>Год создания</span>
-            <span className={styles.statValue}>30.08.2022</span>
+            <span className={styles.statLabel}>{translations[language].jobDetails.creationYear}</span>
+            <span className={styles.statValue}>{translations[language].jobDetails.creationYearValue}</span>
           </div>
           <div className={styles.statRow}>
-            <span className={styles.statLabel}>Уставной капитал, ₽</span>
-            <span className={styles.statValue}>875,3 млн</span>
+            <span className={styles.statLabel}>{translations[language].jobDetails.capital}</span>
+            <span className={styles.statValue}>{translations[language].jobDetails.capitalValue}</span>
           </div>
           <div className={styles.statRow}>
-            <span className={styles.statLabel}>Чистая прибыль, ₽</span>
-            <span className={styles.statValue}>2,6 млрд (2023 г.)</span>
+            <span className={styles.statLabel}>{translations[language].jobDetails.profit}</span>
+            <span className={styles.statValue}>{translations[language].jobDetails.profitValue}</span>
           </div>
           <div className={styles.statRow}>
-            <span className={styles.statLabel}>Баланс, ₽</span>
-            <span className={styles.statValue}>18,26 млрд (2023 г.)</span>
+            <span className={styles.statLabel}>{translations[language].jobDetails.balance}</span>
+            <span className={styles.statValue}>{translations[language].jobDetails.balanceValue}</span>
           </div>
         </div>
       </div>

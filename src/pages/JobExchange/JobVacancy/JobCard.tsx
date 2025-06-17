@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './JobVacancy.module.css';
+import { useLanguage } from '../../../context/LanguageContext';
 
 interface JobData {
   id: number;
@@ -20,7 +21,7 @@ interface JobCardProps {
 
 const JobCard: React.FC<JobCardProps> = ({ job }) => {
   const cardClass = job.isHighlighted ? styles.jobCardHighlighted : styles.jobCard;
-
+  const { language, translations } = useLanguage();
   return (
     <article className={cardClass}>
       <img src={job.logo} className={styles.companyLogo} alt={`${job.company} logo`} />
@@ -31,7 +32,7 @@ const JobCard: React.FC<JobCardProps> = ({ job }) => {
             <div className={styles.positionRow}>
               <h4 className={styles.positionTitle}>{job.position}</h4>
               {job.isNew && (
-                <span className={styles.newBadge}>Новая вакансия</span>
+                <span className={styles.newBadge}>{translations[language].jobCard.newJob}</span>
               )}
             </div>
           </div>

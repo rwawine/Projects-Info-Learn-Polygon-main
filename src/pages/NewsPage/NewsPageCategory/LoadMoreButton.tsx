@@ -1,8 +1,10 @@
 "use client";
 import * as React from "react";
 import styles from "./LoadMoreButton.module.css";
+import { useLanguage } from '../../../context/LanguageContext';
 
 export const LoadMoreButton: React.FC = () => {
+  const { language, translations } = useLanguage();
   const handleLoadMore = () => {
     // Handle load more functionality
     console.log("Load more clicked");
@@ -14,7 +16,7 @@ export const LoadMoreButton: React.FC = () => {
       onClick={handleLoadMore}
       type="button"
     >
-      Показать еще
+      {translations[language].loadMoreButton}
     </button>
   );
 };

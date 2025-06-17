@@ -1,7 +1,7 @@
 "use client";
 import * as React from "react";
 import styles from "./HomePage.module.css";
-
+import { useLanguage } from '../../context/LanguageContext';
 import { Link } from "react-router-dom";
 
 interface FeaturedArticleProps {
@@ -17,6 +17,7 @@ export const FeaturedArticle: React.FC<FeaturedArticleProps> = ({
   date,
   readTime,
 }) => {
+  const { language, translations } = useLanguage();
   return (
     <article className={styles.featuredArticleWrapper}>
       <Link to="/news/article" className={styles.featuredArticle}>
@@ -25,7 +26,7 @@ export const FeaturedArticle: React.FC<FeaturedArticleProps> = ({
             <img src={imageUrl} className={styles.featuredImage} alt={title} />
             <div className={styles.hotNewsBadge}>
               <div className={styles.badgeIndicator} />
-              <div className={styles.badgeText}>Горячие новости</div>
+              <div className={styles.badgeText}>{translations[language].featuredArticle.badgeText}</div>
             </div>
           </div>
         </div>

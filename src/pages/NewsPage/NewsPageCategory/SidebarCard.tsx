@@ -1,11 +1,13 @@
 import * as React from "react";
 import styles from "./SidebarCard.module.css";
+import { useLanguage } from '../../../context/LanguageContext';
 
 export const SidebarCard: React.FC = () => {
+  const { language, translations } = useLanguage();
   return (
     <aside className={styles.sidebarContainer}>
       <h2 className={styles.sidebarTitle}>
-        Вам также может быть интересно
+        {translations[language].sidebarCard.title}
       </h2>
 
       <div className={styles.cardWrapper}>
@@ -13,12 +15,11 @@ export const SidebarCard: React.FC = () => {
           <div className={styles.cardContent}>
             <div className={styles.adLabel}>
               <div className={styles.adIndicator} />
-              <span className={styles.adText}>Реклама</span>
+              <span className={styles.adText}>{translations[language].sidebarCard.adText}</span>
             </div>
 
             <p className={styles.cardDescription}>
-              Узнайте, как исторические контексты формируют современные
-              реалии и как это отражается на политике и культуре региона.
+              {translations[language].sidebarCard.description}
             </p>
           </div>
 

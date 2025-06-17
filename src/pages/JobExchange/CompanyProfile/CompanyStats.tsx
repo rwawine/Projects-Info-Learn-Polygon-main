@@ -2,37 +2,39 @@
 import * as React from "react";
 import styles from "./CompanyOverview.module.css";
 import { StatItem } from "./StatItem";
+import { useLanguage } from '../../../context/LanguageContext';
 
 export function CompanyStats() {
+  const { language, translations } = useLanguage();
   return (
     <section className={styles.statsSection}>
       <h2 className={styles.sectionTitle}>
-        Обзор компании
+        {translations[language].companyProfile.overviewTitle}
       </h2>
       <div className={styles.statsContainer}>
         <StatItem
-          label="Количество сотрудников"
-          value="От 5 тыс. до 10 тыс. чел"
+          label={translations[language].companyProfile.employees}
+          value={translations[language].companyProfile.employeesValue}
         />
         <StatItem
-          label="Средняя зарплата"
-          value="183 895 рублей (2023)"
+          label={translations[language].companyProfile.averageSalary}
+          value={translations[language].companyProfile.averageSalaryValue}
         />
         <StatItem
-          label="Год создания"
-          value="30.08.2022"
+          label={translations[language].companyProfile.creationYear}
+          value={translations[language].companyProfile.creationYearValue}
         />
         <StatItem
-          label="Уставной капитал, ₽"
-          value="875,3 млн"
+          label={translations[language].companyProfile.capital}
+          value={translations[language].companyProfile.capitalValue}
         />
         <StatItem
-          label="Чистая прибыль, ₽"
-          value="2,6 млрд (2023 г.)"
+          label={translations[language].companyProfile.profit}
+          value={translations[language].companyProfile.profitValue}
         />
         <StatItem
-          label="Баланс, ₽"
-          value="18,26 млрд (2023 г.)"
+          label={translations[language].companyProfile.balance}
+          value={translations[language].companyProfile.balanceValue}
         />
       </div>
     </section>

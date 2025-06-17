@@ -1,16 +1,18 @@
 "use client";
 import * as React from "react";
 import styles from "./JobBoard.module.css";
+import { useLanguage } from '../../../context/LanguageContext';
 
 function BlogSection() {
+  const { language, translations } = useLanguage();
   return (
     <section className={styles.blogSection}>
       <div className={styles.blogContainer}>
         <header className={styles.blogHeader}>
-          <h2 className={styles.blogTitle}>Недавние блоги</h2>
+          <h2 className={styles.blogTitle}>{translations[language].blogSection.recentBlogs}</h2>
           <a href="#" className={styles.viewAllButton}>
             <span className={styles.viewAllText}>
-              Все статьи
+              {translations[language].blogSection.allArticles}
             </span>
             <img
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/8a14ce2c0a793027f0c3d1103219b6e7727ccfae?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf"
@@ -29,11 +31,11 @@ function BlogSection() {
             <div className={styles.blogPostContent}>
               <div className={styles.blogPostMeta}>
                 <p className={styles.blogAuthor}>
-                  Оливия Рей • 1 Янв 2023
+                  {translations[language].blogSection.author}
                 </p>
                 <div className={styles.blogTitleContainer}>
                   <h3 className={styles.blogPostTitle}>
-                    Топ-5 профессий будущего
+                    {translations[language].blogSection.title}
                   </h3>
                   <div className={styles.blogIconWrapper}>
                     <img
@@ -44,14 +46,13 @@ function BlogSection() {
                   </div>
                 </div>
                 <p className={styles.blogPostExcerpt}>
-                  Узнайте, какие профессии будут наиболее востребованы в
-                  ближайшие годы.
+                  {translations[language].blogSection.excerpt}
                 </p>
               </div>
               <div className={styles.blogCategories}>
                 <div className={styles.blogBadge}>
                   <span className={styles.blogBadgeText}>
-                    Тенденции
+                    {translations[language].blogSection.trends}
                   </span>
                 </div>
               </div>
@@ -67,22 +68,21 @@ function BlogSection() {
               <div className={styles.blogPostCardContent}>
                 <div className={styles.blogPostCardMeta}>
                   <p className={styles.blogPostAuthor}>
-                    Феникс Бейкер • 1 Янв 2023
+                    {translations[language].blogSection.author}
                   </p>
                   <div className={styles.blogPostCardText}>
                     <h3 className={styles.blogPostCardTitle}>
-                      Как написать идеальное резюме
+                      {translations[language].blogSection.title2}
                     </h3>
                     <p className={styles.blogPostCardExcerpt}>
-                      Полезные советы по созданию резюме, которое
-                      привлечёт внимание работодателей
+                      {translations[language].blogSection.excerpt2}
                     </p>
                   </div>
                 </div>
                 <div className={styles.blogPostCardCategories}>
                   <div className={styles.blogBadge}>
                     <span className={styles.blogBadgeRecommendations}>
-                      Рекомендации
+                      {translations[language].blogSection.recommendations}
                     </span>
                   </div>
                 </div>
@@ -97,22 +97,21 @@ function BlogSection() {
               <div className={styles.blogPostCardContent}>
                 <div className={styles.blogPostCardMeta}>
                   <p className={styles.blogPostAuthor}>
-                    Лана Штайнер • 1 Янв 2023
+                    {translations[language].blogSection.author}
                   </p>
                   <div className={styles.blogPostCardText}>
                     <h3 className={styles.blogPostCardTitle}>
-                      Новые вакансии месяца
+                      {translations[language].blogSection.title3}
                     </h3>
                     <p className={styles.blogPostCardExcerpt}>
-                      Обзор самых свежих объявлений о работе в различных
-                      отраслях.
+                      {translations[language].blogSection.excerpt3}
                     </p>
                   </div>
                 </div>
                 <div className={styles.blogPostCardCategories}>
                   <div className={styles.blogBadge}>
                     <span className={styles.blogBadgeJobs}>
-                      Вакансии
+                      {translations[language].blogSection.jobs}
                     </span>
                   </div>
                 </div>

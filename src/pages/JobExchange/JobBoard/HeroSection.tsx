@@ -1,22 +1,24 @@
 "use client";
 import * as React from "react";
 import styles from "./JobBoard.module.css";
+import { useLanguage } from '../../../context/LanguageContext';
+
 function HeroSection() {
+  const { language, translations } = useLanguage();
   return (
     <section className={styles.heroSection}>
       <article className={styles.heroCardJobs}>
         <div className={styles.heroCardContent}>
           <div className={styles.heroCardHeader}>
             <span className={styles.heroCardCategory}>
-              Вакансии
+              {translations[language].heroSection.jobs}
             </span>
             <div className={styles.heroCardText}>
               <h2 className={styles.heroCardTitle}>
-                Найти подходящую вакансию
+                {translations[language].heroSection.findJob}
               </h2>
               <p className={styles.heroCardDescription}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore
+                {translations[language].heroSection.description}
               </p>
             </div>
           </div>
@@ -41,21 +43,21 @@ function HeroSection() {
         <div className={styles.heroCardContent}>
           <div className={styles.heroCardHeader}>
             <span className={styles.heroCardCategoryCompanies}>
-              Компании
+              {translations[language].heroSection.companies}
             </span>
             <div className={styles.heroCardText}>
               <h2 className={styles.heroCardTitle}>
-                Найти подходящую компанию
+                {translations[language].heroSection.findCompany}
               </h2>
               <p className={styles.heroCardDescription}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore
+                {translations[language].heroSection.description}
+                
               </p>
             </div>
           </div>
           <button className={styles.heroButtonCompanies}>
             <span className={styles.buttonText}>
-              Перейти
+              {translations[language].heroSection.goTo}
             </span>
             <img
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/18560a1952e3ed9158eb82f505417e3389290af7?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf"

@@ -1,72 +1,74 @@
 "use client";
 import React from 'react';
 import styles from './JobListings.module.css';
+import { useLanguage } from '../../../context/LanguageContext';
 
 export default function JobListings() {
+  const { language, translations } = useLanguage();
   const jobCards = [
     {
       id: 1,
-      company: "Яндекс",
-      title: "Консультант по визуализации данных - Power BI",
-      location: "Брюссель",
-      type: "Полная занятость",
-      salary: "50-55 тыс.",
-      time: "29 минут назад",
+      company: translations[language].jobListings.company,
+      title: translations[language].jobListings.title,
+      location: translations[language].jobListings.location,
+      type: translations[language].jobListings.type,
+      salary: translations[language].jobListings.salary,
+      time: translations[language].jobListings.time,
       isNew: true,
       isHighlighted: true
     },
     {
       id: 2,
-      company: "Яндекс",
-      title: "Младший UI-дизайнер",
-      location: "Мадрид",
-      type: "Полная занятость",
-      salary: "30-32 тыс.",
-      time: "1 день назад",
+      company: translations[language].jobListings.company2,
+      title: translations[language].jobListings.title2,
+      location: translations[language].jobListings.location2,
+      type: translations[language].jobListings.type2,
+      salary: translations[language].jobListings.salary2,
+      time: translations[language].jobListings.time2,
       isNew: false,
       isHighlighted: false
     },
     {
       id: 3,
-      company: "Яндекс",
-      title: "Инженер технической поддержки",
-      location: "Соединенные Штаты",
-      type: "Полная занятость",
-      salary: "50-52 тыс.",
-      time: "1 день назад",
+      company: translations[language].jobListings.company3,
+      title: translations[language].jobListings.title3,
+      location: translations[language].jobListings.location3,
+      type: translations[language].jobListings.type3,
+      salary: translations[language].jobListings.salary3,
+      time: translations[language].jobListings.time3,
       isNew: false,
       isHighlighted: false
     },
     {
       id: 4,
-      company: "Яндекс",
-      title: "Дизайнер продукта",
-      location: "Лондон",
-      type: "Полная занятость",
-      salary: "40-42 тыс.",
-      time: "2 дня назад",
+      company: translations[language].jobListings.company4,
+      title: translations[language].jobListings.title4,
+      location: translations[language].jobListings.location4,
+      type: translations[language].jobListings.type4,
+      salary: translations[language].jobListings.salary4,
+      time: translations[language].jobListings.time4,
       isNew: false,
       isHighlighted: false
     },
     {
       id: 5,
-      company: "Яндекс",
-      title: "Копирайтер (Рост)",
-      location: "Лондон",
-      type: "Полная занятость",
-      salary: "38-40 тыс.",
-      time: "3 дня назад",
+      company: translations[language].jobListings.company5,
+      title: translations[language].jobListings.title5,
+      location: translations[language].jobListings.location5,
+      type: translations[language].jobListings.type5,
+      salary: translations[language].jobListings.salary5,
+      time: translations[language].jobListings.time5,
       isNew: false,
       isHighlighted: false
     },
     {
       id: 6,
-      company: "Яндекс",
-      title: "Старший UX/UI дизайнер",
-      location: "Соединенные Штаты",
-      type: "Полная занятость",
-      salary: "38-40 тыс.",
-      time: "20 дней назад",
+      company: translations[language].jobListings.company6,
+      title: translations[language].jobListings.title6,
+      location: translations[language].jobListings.location6,
+      type: translations[language].jobListings.type6,
+      salary: translations[language].jobListings.salary6,
+      time: translations[language].jobListings.time6,
       isNew: false,
       isHighlighted: false
     }
@@ -79,11 +81,11 @@ export default function JobListings() {
           <button className={styles.filtersButton}>
             <div className={styles.filtersButtonContent}>
               <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f421666852abc14cef0f91a1ac1b06af326229c8?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf" className={styles.filterIcon} alt="" />
-              <span className={styles.filtersText}>Фильтры</span>
+              <span className={styles.filtersText}>{translations[language].jobListings.filters}</span>
             </div>
           </button>
           <div className={styles.sortDropdown}>
-            <span className={styles.sortText}>Сортировать по</span>
+            <span className={styles.sortText}>{translations[language].jobListings.sortBy}</span>
             <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4b85ca9008a9ad320b2a03b59d84901d35103d3c?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf" className={styles.sortIcon} alt="" />
           </div>
         </div>
@@ -103,7 +105,7 @@ export default function JobListings() {
                   <div className={styles.titleContainer}>
                     <h4 className={styles.jobTitle}>{job.title}</h4>
                     {job.isNew && (
-                      <span className={styles.newBadge}>Новая вакансия</span>
+                      <span className={styles.newBadge}>{translations[language].jobListings.newJob}</span>
                     )}
                   </div>
                 </div>

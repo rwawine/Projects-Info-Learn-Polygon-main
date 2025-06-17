@@ -1,19 +1,20 @@
 "use client";
 import * as React from "react";
 import styles from "./CompanyListing.module.css";
+import { useLanguage } from '../../../context/LanguageContext';
 
 interface SearchSectionProps {}
 
 export const SearchSection: React.FC<SearchSectionProps> = () => {
+  const { language, translations } = useLanguage();
   return (
     <section className={styles.searchSection}>
       <div className={styles.searchContent}>
         <h2 className={styles.searchTitle}>
-          Найдите свою новую компанию сегодня
+          {translations[language].searchSection.title}
         </h2>
         <p className={styles.searchDescription}>
-          Компании в области компьютерных технологий, инженерии и
-          технологий ждут вас.
+          {translations[language].searchSection.description}
         </p>
       </div>
       <form className={styles.searchForm}>
@@ -24,7 +25,7 @@ export const SearchSection: React.FC<SearchSectionProps> = () => {
             className={styles.searchIcon}
           />
           <span className={styles.searchPlaceholder}>
-            Какую должность вы ищете?
+            {translations[language].searchSection.placeholder}
           </span>
         </div>
         <div className={styles.locationInput}>
@@ -34,11 +35,11 @@ export const SearchSection: React.FC<SearchSectionProps> = () => {
             className={styles.searchIcon}
           />
           <span className={styles.locationPlaceholder}>
-            Местоположение
+            {translations[language].searchSection.location}
           </span>
         </div>
         <button type="submit" className={styles.searchButton}>
-          Найти компанию
+          {translations[language].searchSection.button}
         </button>
       </form>
     </section>

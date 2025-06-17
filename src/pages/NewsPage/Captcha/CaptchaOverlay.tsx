@@ -1,13 +1,14 @@
 "use client";
 import * as React from "react";
 import styles from "./CaptchaComponent.module.css";
-
+import { useLanguage } from '../../../context/LanguageContext';
 interface CaptchaOverlayProps {
     onVerify: () => void;
     mode?: 'fullscreen' | 'inline';
 }
 
 export const CaptchaOverlay: React.FC<CaptchaOverlayProps> = ({ onVerify, mode = 'fullscreen' }) => {
+    const { language, translations } = useLanguage();
     // Generate random colors function
     const generateRandomColors = () => {
         return Array(9).fill(0).map(() =>
@@ -35,7 +36,7 @@ export const CaptchaOverlay: React.FC<CaptchaOverlayProps> = ({ onVerify, mode =
             }
             setError(null);
         } else {
-            setError("Выберите только фиолетовые квадраты");
+            setError(translations[language].captcha.error);
         }
     };
 
@@ -44,9 +45,9 @@ export const CaptchaOverlay: React.FC<CaptchaOverlayProps> = ({ onVerify, mode =
             selectedSquares.every(index => colors[index] === '#845bff')) {
             onVerify();
         } else if (selectedSquares.length !== 2) {
-            setError("Выберите ровно 2 фиолетовых квадрата");
+            setError(translations[language].captcha.error2);
         } else {
-            setError("Выбраны неверные квадраты");
+            setError(translations[language].captcha.error3);
         }
     };
 
@@ -66,7 +67,7 @@ export const CaptchaOverlay: React.FC<CaptchaOverlayProps> = ({ onVerify, mode =
             {mode === 'fullscreen' && <div className={styles.overlay}></div>}
             <div className={containerClassName}>
                 <div className={styles.headerContainer}>
-                    <div className={styles.title}>Выберите космонавта с табличкой в руках</div>
+                    <div className={styles.title}>{translations[language].captcha.title}</div>
 
                     <div className={styles.randomizeContainer}>
                         <button
@@ -105,7 +106,7 @@ export const CaptchaOverlay: React.FC<CaptchaOverlayProps> = ({ onVerify, mode =
                     className={styles.button}
                     onClick={handleVerify}
                 >
-                    Я не робот
+                    {translations[language].captcha.button}
                 </button>
             </div>
         </>
