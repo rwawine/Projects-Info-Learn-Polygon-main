@@ -278,6 +278,11 @@
     margin-top: 36px;
     display: flex;
   }
+
+  .contentGrid > section {
+    width: 56.9%;
+    position: relative;
+  }
   
   @media (width <= 991px) {
     .contentGrid {

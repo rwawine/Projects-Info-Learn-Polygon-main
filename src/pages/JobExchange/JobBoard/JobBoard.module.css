@@ -32,7 +32,7 @@
     align-items: center;
     gap: 40px 100px;
     width: 100%;
-    font-family: Manrope, -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: "Manrope", sans-serif;
     display: flex;
   }
   
@@ -94,7 +94,7 @@
     align-items: center;
     gap: 20px;
     margin-top: 28px;
-    font-family: Manrope, -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: "Manrope", sans-serif;
     display: flex;
   }
   
@@ -356,7 +356,7 @@
     align-items: center;
     gap: 40px 100px;
     width: 100%;
-    font-family: Manrope, -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: "Manrope", sans-serif;
     font-weight: 500;
     display: flex;
   }
@@ -477,7 +477,7 @@
   
   .blogAuthor {
     color: #6941c6;
-    font-family: Manrope, -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: "Manrope", sans-serif;
     font-size: 14px;
     font-weight: 600;
     line-height: 1;
@@ -508,7 +508,7 @@
   .blogPostTitle {
     color: #1a1a1a;
     flex: 1;
-    font-family: Manrope, -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: "Manrope", sans-serif;
     font-size: 24px;
     font-weight: 600;
     line-height: 1;
@@ -535,7 +535,7 @@
   .blogPostExcerpt {
     color: #667085;
     margin-top: 12px;
-    font-family: Manrope, -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: "Manrope", sans-serif;
     font-size: 16px;
     font-weight: 400;
   }
@@ -555,7 +555,7 @@
     gap: 8px;
     width: 100%;
     margin-top: 24px;
-    font-family: Manrope, -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: "Manrope", sans-serif;
     font-size: 14px;
     font-weight: 500;
     line-height: 1;
@@ -602,7 +602,7 @@
     align-self: start;
     align-items: stretch;
     min-width: 240px;
-    font-family: Manrope, -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: "Manrope", sans-serif;
     display: flex;
   }
   
@@ -735,7 +735,7 @@
   .footerSection {
     width: 100%;
     margin-top: 100px;
-    font-family: Manrope, -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: "Manrope", sans-serif;
   }
   
   @media (width <= 991px) {

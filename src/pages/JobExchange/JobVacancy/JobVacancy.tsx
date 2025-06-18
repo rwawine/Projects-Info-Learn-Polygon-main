@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './JobVacancy.module.css';
 import Header from './Header.tsx';
 import { SearchSection } from '../JobCompanies/SearchSection.tsx';
-import JobListings from './JobListings.tsx';
+import JobListingsVacancy from './JobListings.tsx';
 import JobDetails from './JobDetails.tsx';
 import Footer from './Footer.tsx';
 import { useLanguage } from '../../../context/LanguageContext';
@@ -19,7 +19,7 @@ const JobVacancy: React.FC = () => {
         </h1>
           <SearchSection />
           <div className={styles.contentGrid}>
-            <JobListings />
+            <JobListingsVacancy />
             <JobDetails />
           </div>
         </main>

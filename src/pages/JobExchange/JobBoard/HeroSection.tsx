@@ -24,7 +24,7 @@ function HeroSection() {
           </div>
           <button className={styles.heroButtonJobs}>
             <span className={styles.buttonText}>
-              Перейти
+             {translations[language].heroSection.goTo}
             </span>
             <img
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/f67a28db363ac0f8faa9cf42d6ef4f4b59692ec0?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf"

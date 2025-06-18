@@ -33,7 +33,6 @@ const blogCardStyles = {
   },
   author: {
     color: '#6941c6',
-    fontFamily: 'Manrope, -apple-system, Roboto, Helvetica, sans-serif',
     fontSize: '14px',
     fontWeight: 600,
     lineHeight: 1,
@@ -50,7 +49,6 @@ const blogCardStyles = {
   title: {
     color: '#1a1a1a',
     flex: 1,
-    fontFamily: 'Manrope, -apple-system, Roboto, Helvetica, sans-serif',
     fontSize: '24px',
     fontWeight: 600,
     lineHeight: 1,
@@ -68,7 +66,6 @@ const blogCardStyles = {
   description: {
     color: '#667085',
     marginTop: '12px',
-    fontFamily: 'Manrope, -apple-system, Roboto, Helvetica, sans-serif',
     fontSize: '16px',
     fontWeight: 400,
   },
@@ -79,7 +76,6 @@ const blogCardStyles = {
     gap: '8px',
     width: '100%',
     marginTop: '24px',
-    fontFamily: 'Manrope, -apple-system, Roboto, Helvetica, sans-serif',
     fontSize: '14px',
     fontWeight: 500,
     lineHeight: 1,
