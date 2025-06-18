@@ -1,10 +1,13 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './JobListings.module.css';
 import { useLanguage } from '../../../context/LanguageContext';
+import { Filter } from '../Filter/Filter';
 
 export default function JobListings() {
   const { language, translations } = useLanguage();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const jobCards = [
     {
       id: 1,
@@ -74,64 +77,78 @@ export default function JobListings() {
     }
   ];
 
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
-    <aside className={styles.listingsContainer}>
-      <div className={styles.filtersContainer}>
-        <div className={styles.filterControls}>
-          <button className={styles.filtersButton}>
-            <div className={styles.filtersButtonContent}>
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f421666852abc14cef0f91a1ac1b06af326229c8?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf" className={styles.filterIcon} alt="" />
-              <span className={styles.filtersText}>{translations[language].jobListings.filters}</span>
+    <>
+      <aside className={styles.listingsContainer}>
+        <div className={styles.filtersContainer}>
+          <div className={styles.filterControls}>
+            <button className={styles.filtersButton} onClick={handleOpenModal}>
+              <div className={styles.filtersButtonContent}>
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f421666852abc14cef0f91a1ac1b06af326229c8?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf" className={styles.filterIcon} alt="" />
+                <span className={styles.filtersText}>{translations[language].jobListings.filters}</span>
+              </div>
+            </button>
+            <div className={styles.sortDropdown}>
+              <span className={styles.sortText}>{translations[language].jobListings.sortBy}</span>
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4b85ca9008a9ad320b2a03b59d84901d35103d3c?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf" className={styles.sortIcon} alt="" />
             </div>
-          </button>
-          <div className={styles.sortDropdown}>
-            <span className={styles.sortText}>{translations[language].jobListings.sortBy}</span>
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4b85ca9008a9ad320b2a03b59d84901d35103d3c?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf" className={styles.sortIcon} alt="" />
           </div>
         </div>
-      </div>
 
-      <div className={styles.jobCardsContainer}>
-        {jobCards.map((job) => (
-          <article
-            key={job.id}
-            className={job.isHighlighted ? styles.jobCardHighlighted : styles.jobCard}
-          >
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/40844b18408884f1e749dc7eefced0cbdfd4a10f?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf" className={styles.companyAvatar} alt={`${job.company} логотип`} />
-            <div className={styles.jobContent}>
-              <div className={styles.jobHeader}>
-                <div className={styles.jobHeaderContent}>
-                  <h3 className={styles.companyName}>{job.company}</h3>
-                  <div className={styles.titleContainer}>
-                    <h4 className={styles.jobTitle}>{job.title}</h4>
-                    {job.isNew && (
-                      <span className={styles.newBadge}>{translations[language].jobListings.newJob}</span>
-                    )}
+        <div className={styles.jobCardsContainer}>
+          {jobCards.map((job) => (
+            <article
+              key={job.id}
+              className={job.isHighlighted ? styles.jobCardHighlighted : styles.jobCard}
+            >
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/40844b18408884f1e749dc7eefced0cbdfd4a10f?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf" className={styles.companyAvatar} alt={`${job.company} логотип`} />
+              <div className={styles.jobContent}>
+                <div className={styles.jobHeader}>
+                  <div className={styles.jobHeaderContent}>
+                    <h3 className={styles.companyName}>{job.company}</h3>
+                    <div className={styles.titleContainer}>
+                      <h4 className={styles.jobTitle}>{job.title}</h4>
+                      {job.isNew && (
+                        <span className={styles.newBadge}>{translations[language].jobListings.newJob}</span>
+                      )}
+                    </div>
                   </div>
-                </div>
-                <div className={styles.jobDetails}>
-                  <div className={styles.jobDetailItem}>
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c370e234ab7119b1829f967dc284f005757bec71?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf" className={styles.detailIcon} alt="" />
-                    <span className={styles.detailText}>{job.location}</span>
-                  </div>
-                  <div className={styles.jobDetailItem}>
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d38bca87e40bc217b5152e5c39b8532a96e14f4e?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf" className={styles.detailIcon} alt="" />
-                    <span className={styles.detailText}>{job.type}</span>
-                  </div>
-                  <div className={styles.jobDetailItem}>
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8249060218663101a26c00799b08f1f09cd4c3c5?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf" className={styles.detailIcon} alt="" />
-                    <span className={styles.detailText}>{job.salary}</span>
-                  </div>
-                  <div className={styles.jobDetailItem}>
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/02829ddc1c6a2d36295c27a1f4bf864640fd653f?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf" className={styles.detailIcon} alt="" />
-                    <span className={styles.detailText}>{job.time}</span>
+                  <div className={styles.jobDetails}>
+                    <div className={styles.jobDetailItem}>
+                      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c370e234ab7119b1829f967dc284f005757bec71?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf" className={styles.detailIcon} alt="" />
+                      <span className={styles.detailText}>{job.location}</span>
+                    </div>
+                    <div className={styles.jobDetailItem}>
+                      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d38bca87e40bc217b5152e5c39b8532a96e14f4e?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf" className={styles.detailIcon} alt="" />
+                      <span className={styles.detailText}>{job.type}</span>
+                    </div>
+                    <div className={styles.jobDetailItem}>
+                      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8249060218663101a26c00799b08f1f09cd4c3c5?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf" className={styles.detailIcon} alt="" />
+                      <span className={styles.detailText}>{job.salary}</span>
+                    </div>
+                    <div className={styles.jobDetailItem}>
+                      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/02829ddc1c6a2d36295c27a1f4bf864640fd653f?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf" className={styles.detailIcon} alt="" />
+                      <span className={styles.detailText}>{job.time}</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </article>
-        ))}
-      </div>
-    </aside>
+            </article>
+          ))}
+        </div>
+      </aside>
+
+      {isModalOpen && (
+        <Filter onClose={handleCloseModal} />
+      )}
+    </>
   );
 }

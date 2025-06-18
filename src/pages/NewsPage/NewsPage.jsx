@@ -15,10 +15,9 @@ import { CaptchaOverlay } from "./Captcha/CaptchaOverlay";
 import { useLanguage } from '../../context/LanguageContext';
 
 function NewsPage() {
-  const { language, translations } = useLanguage();
   const [showCaptcha, setShowCaptcha] = React.useState(false);
   const [contentBlurred, setContentBlurred] = React.useState(false);
-
+  const { language, translations } = useLanguage();
   React.useEffect(() => {
     // Check if user has verified captcha in this session
     const hasVerifiedCaptcha = sessionStorage.getItem("captchaVerified");
@@ -36,10 +35,10 @@ function NewsPage() {
   };
 
   const categories = [
-    { text: translations[language].newsPageCategory.category1, link: "/news/category" },
-    { text: translations[language].newsPageCategory.category2, link: "/news/category" },
-    { text: translations[language].newsPageCategory.category3, link: "/news/category" },
-    { text: translations[language].newsPageCategory.category4, link: "/news/category" }
+    { text: translations[language].newsPage.category1, link: "/news/category" },
+    { text: translations[language].newsPage.category2, link: "/news/category" },
+    { text: translations[language].newsPage.category3, link: "/news/category" },
+    { text: translations[language].newsPage.category4, link: "/news/category" }
   ];
 
   return (
@@ -68,10 +67,10 @@ function NewsPage() {
             <div className={styles.mainLayout}>
               <div className={styles.primaryContent}>
                 <FeaturedArticle
-                  title={translations[language].featuredArticle.title}
+                  title={translations[language].newsPageArticle.articleTitle}
                   imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/a4c23fc82f29bdd2f35e7d887b71ef0cac845de8?placeholderIfAbsent=true"
-                  date={translations[language].featuredArticle.date}
-                  readTime={translations[language].featuredArticle.readTime}
+                  date={translations[language].newsPage.date}
+                  readTime={translations[language].newsPage.readTime}
                 />
               </div>
 

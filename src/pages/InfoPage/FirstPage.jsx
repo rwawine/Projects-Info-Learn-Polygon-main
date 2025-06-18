@@ -6,6 +6,7 @@ import LanguageDropdown from "../../components/LanguageDropdown";
 import { useLanguage } from "../../context/LanguageContext";
 
 function CollapseButton({ name, children, symbol }) {
+  const { language, translations } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div style={{ backgroundColor: "#EFEEEC", display: "flex", flexDirection: "column", gap: "20px", paddingLeft: "190px", paddingTop: "50px", paddingBottom: "50px", borderBottom: "1px solid #000" }}>
@@ -97,87 +98,93 @@ function Burger({ isOpen, open, close }) {
 
 function RecoveryForm({ onBack, translations, language }) {
   return (
-    <div style={{backgroundColor: '#F2F1EF', width: '100%'}}>
-    <div style={{
-      background: '#F2F1EF',
-      padding: '50px 0 50px 0',
-    }}>
-      <button
-        onClick={onBack}
-        style={{
-          background: 'none',
-          border: 'none',
-          color: '#222',
-          fontSize: '16px',
-          marginLeft: '200px',
-          marginBottom: '24px',
-          cursor: 'pointer',
-          display: 'flex',
-          alignItems: 'center',
-        }}
-      >
-        <span style={{ fontSize: '20px', marginRight: '8px' }}>←</span>
-        {translations[language].backToAuth || 'Вернуться к авторизации'}
-      </button>
+    <div style={{ backgroundColor: '#F2F1EF', width: '100%' }}>
       <div style={{
-        marginLeft: '200px',
-        width: '100%',
-        maxWidth: '1000px',
+        background: '#F2F1EF',
+        padding: '50px 0 50px 0',
       }}>
-        <h1 style={{
-          color: '#000',
-          fontSize: '64px',
+        <button
+          onClick={onBack}
+          style={{
+            background: 'none',
+            border: 'none',
+            color: '#222',
+            fontSize: '16px',
+            marginLeft: '200px',
+            marginBottom: '24px',
+            cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+          }}
+        >
+          <span style={{ fontSize: '20px', marginRight: '8px' }}>←</span>
+          {translations[language].backToAuth || translations[language].backToLogin}
+        </button>
+        <div style={{
+          marginLeft: '200px',
+          width: '100%',
           maxWidth: '1000px',
-          fontStyle: 'normal',
-          fontWeight: 400,
-          marginBottom: '42px',
         }}>
-          {translations[language].accessRecovery || 'Восстановление доступа'}
-        </h1>
-        <form style={{ display: 'flex', flexDirection: 'column', gap: '20px', width: '100%', maxWidth: '460px',}}>
-          <input
-            type="text"
-            placeholder={translations[language].username || 'Введите логин'}
-            style={{
-              fontSize: '20px',
-              padding: '16px',
-              borderRadius: '12px',
-              background: '#FFF',
-              border: '1px solid #E0E0E0',
-              outline: 'none',
-            }}
-          />
-          <input
-            type="email"
-            placeholder={translations[language].email || 'Введите почту'}
-            style={{
-              fontSize: '20px',
-              padding: '16px',
-              borderRadius: '12px',
-              background: '#FFF',
-              border: '1px solid #E0E0E0',
-              outline: 'none',
-            }}
-          />
-          <button
-            type="submit"
-            style={{
-              background: '#FF6600',
-              color: '#fff',
-              fontSize: '22px',
-              border: 'none',
-              borderRadius: '12px',
-              padding: '18px 0',
-              marginTop: '10px',
-              cursor: 'pointer',
-              fontWeight: 500,
-            }}
-          >
-            {translations[language].restore || 'Восстановить'}
-          </button>
-        </form>
-      </div>
-    </div></div>
+          <h1 style={{
+            color: '#000',
+            fontSize: '64px',
+            maxWidth: '1000px',
+            fontStyle: 'normal',
+            fontWeight: 400,
+            marginBottom: '42px',
+          }}>
+            {translations[language].accessRecovery || 'Восстановление доступа'}
+          </h1>
+          <form style={{ display: 'flex', flexDirection: 'column', gap: '20px', width: '100%', maxWidth: '460px', }}>
+            <input
+              type="text"
+              placeholder={translations[language].username || 'Введите логин'}
+              style={{
+                display: 'flex',
+                height: '56px',
+                padding: '14px 18px',
+                alignItems: 'center',
+                gap: '18px',
+                borderRadius: 'var(--radius-controls-input-l, 14px)',
+                border: '1px solid var(--control-input-border, rgba(31, 31, 31, 0.20))',
+                background: '#FFF',
+                alignSelf: 'stretch',
+              }}
+            />
+            <input
+              type="email"
+              placeholder={translations[language].email || translations[language].emailConfirm.placeholder}
+              style={{
+                display: 'flex',
+                height: '56px',
+                padding: '14px 18px',
+                alignItems: 'center',
+                gap: '18px',
+                borderRadius: 'var(--radius-controls-input-l, 14px)',
+                border: '1px solid var(--control-input-border, rgba(31, 31, 31, 0.20))',
+                background: '#FFF',
+                alignSelf: 'stretch',
+              }}
+            />
+            <button
+              type="submit"
+              style={{
+                background: '#FF6600',
+                color: '#fff',
+                fontSize: '22px',
+                border: 'none',
+                borderRadius: '12px',
+                padding: '18px 0',
+                marginTop: '10px',
+                cursor: 'pointer',
+                fontWeight: 500,
+              }}
+            >
+              {translations[language].restore || translations[language].restoreAccess}
+            </button>
+          </form>
+        </div>
+      </div></div>
   );
 }
 
@@ -225,11 +232,13 @@ function AuthPage() {
     <div style={{ width: "100%" }}>
       <div style={{ flexGrow: 1, background: "#E1D6E7" }}>
         <CollapseButton name={translations[language].login} symbol={<svg xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none" style={{ transform: 'rotate(90deg)' }}>
-  <path d="M16.8341 28.5L24.0058 21.3284L31.1774 28.5C31.9584 29.2809 33.2246 29.2809 34.0058 28.5C34.1034 28.4022 34.1888 28.297 34.262 28.1862C34.7746 27.4098 34.6892 26.3548 34.0058 25.6714L25.42 17.0856C25.0448 16.7106 24.5362 16.5 24.0058 16.5C23.4752 16.5 22.9666 16.7106 22.5916 17.0856L14.0057 25.6714C13.2247 26.4526 13.2247 27.7188 14.0057 28.5C14.1033 28.5975 14.2086 28.6829 14.3195 28.7562C15.0958 29.2687 16.1507 29.1833 16.8341 28.5Z" fill="black"/>
-</svg>}>
+          <path d="M16.8341 28.5L24.0058 21.3284L31.1774 28.5C31.9584 29.2809 33.2246 29.2809 34.0058 28.5C34.1034 28.4022 34.1888 28.297 34.262 28.1862C34.7746 27.4098 34.6892 26.3548 34.0058 25.6714L25.42 17.0856C25.0448 16.7106 24.5362 16.5 24.0058 16.5C23.4752 16.5 22.9666 16.7106 22.5916 17.0856L14.0057 25.6714C13.2247 26.4526 13.2247 27.7188 14.0057 28.5C14.1033 28.5975 14.2086 28.6829 14.3195 28.7562C15.0958 29.2687 16.1507 29.1833 16.8341 28.5Z" fill="black" />
+        </svg>}>
           <LoginForm onRecovery={() => setShowRecovery(true)} />
         </CollapseButton>
-        <CollapseButton name={translations[language].registration} symbol={">"}>
+        <CollapseButton name={translations[language].registration} symbol={<svg xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none" style={{ transform: 'rotate(90deg)' }}>
+          <path d="M16.8341 28.5L24.0058 21.3284L31.1774 28.5C31.9584 29.2809 33.2246 29.2809 34.0058 28.5C34.1034 28.4022 34.1888 28.297 34.262 28.1862C34.7746 27.4098 34.6892 26.3548 34.0058 25.6714L25.42 17.0856C25.0448 16.7106 24.5362 16.5 24.0058 16.5C23.4752 16.5 22.9666 16.7106 22.5916 17.0856L14.0057 25.6714C13.2247 26.4526 13.2247 27.7188 14.0057 28.5C14.1033 28.5975 14.2086 28.6829 14.3195 28.7562C15.0958 29.2687 16.1507 29.1833 16.8341 28.5Z" fill="black" />
+        </svg>}>
           <RegForm />
         </CollapseButton>
       </div>

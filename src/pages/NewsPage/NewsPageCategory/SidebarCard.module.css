@@ -42,9 +42,9 @@
   }
   
   .cardContent {
-    z-index: 0;
+    z-index: 1;
     flex-direction: column;
-    flex: 1;
+    position: relative;
     justify-content: space-between;
     align-items: stretch;
     width: 100%;
@@ -108,7 +108,7 @@
   
   .cardImage {
     aspect-ratio: 1.01;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
     z-index: 0;
     width: 393px;

@@ -302,6 +302,7 @@
   
   .jobListingsContainer {
     width: 100%;
+    position: relative;
     font-family: Manrope, -apple-system, Roboto, Helvetica, sans-serif;
   }
   

@@ -61,10 +61,9 @@
 }
 
 .gridItem {
-  aspect-ratio: 1;
+  width: 95px;
   border-radius: 4px;
   overflow: hidden;
-  width: 95px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -192,7 +191,6 @@
   border-radius: 8px;
   padding: 24px;
   z-index: 1001;
-  width: 400px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 

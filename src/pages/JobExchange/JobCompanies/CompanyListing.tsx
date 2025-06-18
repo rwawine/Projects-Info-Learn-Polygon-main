@@ -50,7 +50,7 @@ export const CompanyListing: React.FC<CompanyListingProps> = () => {
         <Header />
         <main className={styles.mainContent}>
           <h1 className={styles.pageTitle}>
-            Компании
+            {translations[language].companyListing.titlesMain}
           </h1>
           <SearchSection />
           <section className={styles.companiesGrid}>

@@ -8,7 +8,7 @@ export const translations = {
         politicalSite: "Сайт политического устройства",
         jobExchange: "Биржа труда",
         newsResource: "Новостной ресурс",
-
+        backToLogin: "Вернуться к авторизации",
         login: "Вход",
         registration: "Регистрация",
         username: "Логин",
@@ -17,7 +17,7 @@ export const translations = {
         groupNumber: "Номер группы",
         enter: "Войти",
         accessRecovery: "Восстановление доступа",
-
+        restoreAccess: "Восстановить",
         infoTitle: "Информационный учебный полигон \"Катариум\"",
         aboutSystem: "О системе",
 
@@ -217,6 +217,7 @@ export const translations = {
         },
 
         companyListing: {
+            titlesMain: "Companies",
             companyName1: "Dribbble",
             location1: "Соединенные Штаты",
             description1: "Яндекс — одна из крупнейших IT-компаний в России. Мы развиваем самую популярную в стране поисковую систему и создаём сервисы, которые делают жизнь людей более комфортной и яркой.",
@@ -401,7 +402,8 @@ export const translations = {
             subtitle: "Подпишитесь, чтобы получать актуальные новости сразу на почту",
             buttonText: "Подписаться",
             termsText: "Условия подписки",
-            successText: "Спасибо за подписку!"
+            successText: "Спасибо за подписку!",
+            placeholder: "Пожалуйста, введите вашу почту"
         },
 
         newsPageArticle: {
@@ -496,7 +498,7 @@ export const translations = {
             title2: "Социальные изменения в эпоху цифровизации",
             author2: "Ли Чен",
             date2: "22 сентября 2024 года",
-            title3: "Новые вакансии месяца",
+            title3: "Экологическая ответственность бизнеса: новые тренды и вызовы",
             author3: "Эмили Тейлор",
             date3: "29 сентября 2024 года",
             title4: "Общество",
@@ -538,7 +540,7 @@ export const translations = {
             title16: "Технологические тренды, формирующие будущее нашего мира",
             author16: "Александр Грейсон",
             date16: "30 октября 2024 года",
-            title17: "Влияние искусственного интеллекта на финансовые рынки",
+            title17: "Экономика",
             moreText17: "Больше новостей экономики",
             title18: "Влияние искусственного интеллекта на финансовые рынки",
             author18: "Экономика",
@@ -591,7 +593,7 @@ export const translations = {
 
         personProfileBreadcrumbs: {
             backButton: "Вернуться",
-            breadcrumbText: "Самира Наргес",
+            breadcrumbText: "Перечень политических персон",
             breadcrumbDescription: "Самира Наргес"
         }
         ,
@@ -669,14 +671,21 @@ export const translations = {
             home: "Главная",
             parties: "Партии",
             persons: "Персоны",
-            politicalSystem: "Политическое устройство"
+            politicalSystem: "Политическое устройство",
+            siteTitle: "Сайт государственного устройства \"Катариум\"",
+            copyright: "2023. Все права защищены",
+            backLinkText: "Вернуться в контур системы"
         },
 
         PoliticalPageHeader: {
+            title: "Катариум",
             home: "Главная",
             parties: "Партии",
             persons: "Персоны",
-            politicalSystem: "Политическое устройство"
+            politicalSystem: "Политическое устройство",
+            siteTitle: "Сайт государственного устройства \"Катариум\"",
+            copyright: "2023. Все права защищены",
+            backLinkText: "Вернуться в контур системы"
         },
 
         PoliticalPagePoliticalPage: {
@@ -728,8 +737,826 @@ export const translations = {
             siteTitle: "Сайт государственного устройства \"Катариум\"",
             copyright: "2023. Все права защищены",
             backLinkText: "Вернуться в контур системы"
-        }
+        },
 
+        PoliticalPageSearchForm: {
+            searchTitle: "Lorem ipsum dolor sit amet",
+            selectPlaceholder: "Все разделы",
+            searchPlaceholder: "Поиск...",
+            buttonText: "Найти",
+            filtersText: "Фильтры"
+        },
+
+        filterComponent: {
+            title: "Фильтры",
+            location: "Местоположение",
+            nearby: "Рядом со мной",
+            remote: "Удаленная работа",
+            exact: "Точное местоположение",
+            any: "Любая",
+            salary: "Зарплата",
+            publicationDate: "Дата публикации",
+            allTime: "Все время",
+            last24Hours: "Последние 24 часа",
+            last3Days: "Последние 3 дня",
+            last7Days: "Последние 7 дней",
+            anyExperience: "Любой опыт",
+            internship: "Стажировка",
+            remoteWork: "Работа удаленно",
+            fullTime: "Полная занятость",
+            temporary: "Временная",
+            partTime: "Частичная занятость",
+            resultsCount: "Найдено",
+            applyButton: "Применить",
+            monthly: "Ежемесячная",
+            yearly: "Ежегодная",
+            experience: "Опыт работы",
+            employmentType: "Тип занятости"
+        }
     },
-    en: {}
+    en: {
+        restoreAccess: "Restore access",
+        systemContour: "System Contour",
+        landing: "Landing",
+        politicalSite: "Political System Site",
+        jobExchange: "Job Exchange",
+        newsResource: "News Resource",
+
+        login: "Login",
+        registration: "Registration",
+        username: "Username",
+        password: "Password",
+        phone: "Phone Number",
+        groupNumber: "Group Number",
+        enter: "Enter",
+        accessRecovery: "Access Recovery",
+        backToLogin: "Back to Login",
+        infoTitle: "Informational Training Platform 'Katarium'",
+        aboutSystem: "About the System",
+
+        fromDate: "dd.mm.yyyy",
+
+        history: "HISTORY",
+        historyText1: "In the 1550s, on the northern part of Itugum Island, washed by the Arabian Sea, the Kingdom of Katariy established dominance, claiming absolute power. It constantly waged destructive wars of conquest with its neighbors, capturing and annexing new territories.",
+        historyText2: "On the southern side of the island was a small but strong Kingdom of Rium. Its lands stretched along the large, full-flowing rivers Gitsem and Seya, as well as in the Yamchinsky Mountains. It was inhabited by warlike tribes that fiercely defended the borders of their kingdom and conducted swift raids on Katariy's territories, causing significant trouble for its authorities.",
+        historyText3: "The population of Rium engaged in the search for gold and silver deposits, as well as the extraction of iron ore necessary for producing weapons and military equipment. Besides metal mining, great attention was paid to cattle breeding and agriculture, facilitated by fertile lands and numerous mountain and lowland pastures.",
+        historyText4: "However, the authorities of Katariy had grand plans for the fertile lands and riches of the southern part of the island, where Rium was located, to increase the prosperity of the kingdom's residents.",
+        historyText5: "In 1556, the Kingdom of Katariy launched a military campaign against the state of Rium. Its troops spent long weeks in exhausting battles, failing to seize control of the capital. Exhausted by constant wars, the rulers of the two kingdoms decided to sit down for negotiations.",
+        historyText6: "Through lengthy discussions, the rulers realized that uniting the two kingdoms into one strong and independent republic would be the best solution for the prosperity and well-being of their residents. They signed the Itugum Peace Treaty, which marked the beginning of the development of a new state – Katarium, consisting of two provinces, Katariy and Rium.",
+
+        geography: "GEOGRAPHICAL LOCATION",
+        geographyText: "The island's territory is dominated by a tropical climate with a monsoon season. The air temperature remains stable year-round at 25–30 degrees. From late May to August, 80% of the annual precipitation falls.",
+
+        politicalStructure: "POLITICAL SYSTEM",
+        politicalStructureText1: "Today, Katarium is a democratic republic with a parliamentary form of government.",
+        politicalStructureText2: "Heads of State",
+        tinaWilson: "Tina Wilson",
+        tinaWilsonTitle: "Captain-Regent",
+
+        PoliticalSystemPageMainContent: {
+            politicalSystemPageTitle: "Democratic Republic with Parliamentary Form of Government",
+            republicanParty: "Republican Party",
+            democraticParty: "Democratic Party",
+        },
+
+        breadcrumb: {
+            back: "Back",
+            companies: "Companies",
+            companyName: "Yandex"
+        },
+
+        companyProfile: {
+            description: "Yandex is one of the largest IT companies in Russia. We develop the country's most popular search engine and create services that make people's lives more comfortable and vibrant.",
+            overviewTitle: "Company Overview",
+            employees: "Number of Employees",
+            employeesValue: "From 5,000 to 10,000",
+            averageSalary: "Average Salary",
+            averageSalaryValue: "183,895 RUB (2023)",
+            creationYear: "Year of Creation",
+            creationYearValue: "08.30.2022",
+            capital: "Authorized Capital, ₽",
+            capitalValue: "875.3 million",
+            profit: "Net Profit, ₽",
+            profitValue: "2.6 billion (2023)",
+            balance: "Balance, ₽",
+            balanceValue: "18.26 billion (2023)"
+        },
+
+        footer: {
+            title: "Job Exchange",
+            employers: "Employers",
+            vacancyPlacement: "Vacancy Posting",
+            companyPage: "Company Page",
+            jobSeekers: "Job Seekers",
+            vacancies: "Vacancies",
+            createResume: "Create Resume",
+            aboutUs: "About Us",
+            news: "News",
+            backToSystem: "Back to System Contour",
+            copyright: "2023, All Rights Reserved",
+            terms: "User Agreement",
+            privacy: "Privacy Policy"
+        },
+
+        header: {
+            title: "Job Exchange",
+            home: "Home",
+            news: "News",
+            companies: "Companies",
+            vacancies: "Vacancies"
+        },
+
+        events: {
+            title: "Company Events"
+        },
+
+        jobBoardPage: {
+            description: "Description",
+            jobs: "Vacancies",
+            events: "Events"
+        },
+
+        jobDetailPanel: {
+            applyButton: "Apply",
+            companyLocation: "Yandex, Brussels",
+            jobTitle: "Data Visualization Consultant - Power BI",
+            location: "Brussels",
+            office: "Office",
+            hours: "40 hours per week",
+            salary: "50-55 thousand",
+            description: "Yandex's people analytics team is looking for a specialist to help develop HR marketing analytics. You will explore how various recruitment channels affect the hiring funnel: advertising campaigns, DevRel, CRM marketing, Weekend Offer, and Fast Track events.",
+            tasks: "What tasks await you",
+            task1: "Develop analytics for DevRel, rapid hiring events, and candidate satisfaction",
+            task2: "Analyze candidate databases and CRM communications",
+            task3: "Build end-to-end analytics from various data sources (Yandex Metrika, Forms, Contest, Femida, Tracker, external advertising sources)",
+            task4: "Create analytical reports and dashboards, calculate correlations and regressions",
+            task5: "Propose hypotheses, explore data, and find insights",
+            task6: "Yandex's people analytics team is looking for a specialist to help develop HR marketing analytics. You will explore how various recruitment channels affect the hiring funnel: advertising campaigns, DevRel, CRM marketing, Weekend Offer, and Fast Track events.",
+            task7: "Create analytical reports and dashboards, calculate correlations and regressions",
+            task8: "Propose hypotheses, explore data, and find insights",
+            collapse: "Collapse",
+            loadMore: "Load More",
+            overviewTitle: "Company Overview",
+            stat1: "Number of Employees",
+            stat1Value: "From 5,000 to 10,000",
+            stat2: "Average Salary",
+            stat2Value: "183,895 RUB (2023)",
+            stat3: "Year of Creation",
+            stat3Value: "08.30.2022",
+            stat4: "Authorized Capital, ₽",
+            stat4Value: "875.3 million",
+            stat5: "Net Profit, ₽",
+            stat5Value: "2.6 billion (2023)",
+            stat6: "Balance, ₽",
+            stat6Value: "18.26 billion (2023)"
+        },
+
+        jobListings: {
+            company: "Yandex",
+            title: "Data Visualization Consultant - Power BI",
+            location: "Brussels",
+            type: "Full-time",
+            salary: "50-55 thousand",
+            time: "29 minutes ago",
+            company1: "Yandex",
+            title1: "Data Visualization Consultant - Power BI",
+            location1: "Brussels",
+            type1: "Full-time",
+            salary1: "50-55 thousand",
+            time1: "29 minutes ago",
+            company2: "Yandex",
+            title2: "Junior UI Designer",
+            location2: "Madrid",
+            type2: "Full-time",
+            salary2: "30-32 thousand",
+            time2: "1 day ago",
+            company3: "Yandex",
+            title3: "Technical Support Engineer",
+            location3: "United States",
+            type3: "Full-time",
+            salary3: "50-52 thousand",
+            time3: "1 day ago",
+            company4: "Yandex",
+            title4: "Product Designer",
+            location4: "London",
+            type4: "Full-time",
+            salary4: "40-42 thousand",
+            time4: "2 days ago",
+            company5: "Yandex",
+            title5: "Copywriter (Growth)",
+            location5: "London",
+            type5: "Full-time",
+            salary5: "38-40 thousand",
+            time5: "3 days ago",
+            company6: "Yandex",
+            title6: "Senior UX/UI Designer",
+            location6: "United States",
+            type6: "Full-time",
+            salary6: "38-40 thousand",
+            time6: "20 days ago",
+            filters: "Filters",
+            sortBy: "Sort By",
+            newJob: "New Vacancy"
+        },
+
+        productsSection: {
+            title: "Products"
+        },
+
+        blogSection: {
+            recentBlogs: "Recent Blogs",
+            allArticles: "All Articles",
+            author: "Olivia Ray • Jan 1, 2023",
+            title: "Top 5 Professions of the Future",
+            excerpt: "Learn which professions will be in high demand in the coming years.",
+            title2: "How to Write the Perfect Resume",
+            trends: "Trends",
+            excerpt2: "Useful tips for creating a resume that will catch employers' attention",
+            recommendations: "Recommendations",
+            author2: "Lana Steiner • Jan 1, 2023",
+            excerpt3: "A review of the latest job postings across various industries.",
+            jobs: "Vacancies",
+            title3: "New Vacancies of the Month"
+        },
+
+        heroSection: {
+            jobs: "Vacancies",
+            findJob: "Find a Suitable Vacancy",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+            companies: "Companies",
+            findCompany: "Find a Suitable Company",
+            description2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+            goTo: "Go To"
+        },
+
+        companyListing: {
+            titlesMain: "Companies",
+            companyName1: "Dribbble",
+            location1: "United States",
+            description1: "Yandex is one of the largest IT companies in Russia. We develop the country's most popular search engine and create services that make people's lives more comfortable and vibrant.",
+            jobCount1: "16 open vacancies",
+            companyName2: "Behance",
+            location2: "Canada",
+            description2: "Tinkoff is a financial ecosystem for 15 million customers. Our team creates and develops convenient products and services: superapp, voice assistants, investments, credit and debit cards.",
+            jobCount2: "12 open vacancies",
+            companyName3: "Adobe",
+            location3: "Australia",
+            description3: "VK Team is 10,000 professionals creating convenient services for millions of people. We aim to improve all aspects of our users' lives.",
+            jobCount3: "8 open vacancies",
+            companyName4: "Capco",
+            location4: "Australia",
+            description4: "Capco is a global technology and business consultancy specializing in the financial services sector. We strive to help our clients succeed in an ever-changing industry.",
+            jobCount4: "8 open vacancies"
+        },
+
+        searchSection: {
+            title: "Companies in computer technology, engineering, and technology are waiting for you.",
+            description: "Discover opportunities in innovative industries.",
+            placeholder: "What position are you looking for?",
+            location: "Location",
+            button: "Find Company"
+        },
+
+        newsPageJob: {
+            title: "Exchange News",
+            author1: "Olivia Ray",
+            date1: "Jan 1, 2023",
+            title1: "Top 5 Professions of the Future",
+            description1: "Learn which professions will be in high demand in the coming years.",
+            category1: "Trends",
+            author2: "Phoenix Baker",
+            date2: "Jan 1, 2023",
+            title2: "How to Write the Perfect Resume",
+            description2: "Useful tips for creating a resume that will catch employers' attention",
+            category2: "Recommendations",
+            author3: "Lana Steiner",
+            date3: "Jan 1, 2023",
+            title3: "New Vacancies of the Month",
+            description3: "A review of the latest job postings across various industries.",
+            category3: "Vacancies",
+            author4: "Olivia Ray",
+            date4: "Jan 1, 2023",
+            title4: "Top 5 Professions of the Future",
+            description4: "Learn which professions will be in high demand in the coming years.",
+            category4: "Trends",
+            author5: "Phoenix Baker",
+            date5: "Jan 1, 2023",
+            title5: "How to Write the Perfect Resume",
+            description5: "Useful tips for creating a resume that will catch employers' attention",
+            category5: "Recommendations",
+            author6: "Lana Steiner",
+            date6: "Jan 1, 2023",
+            title6: "New Vacancies of the Month",
+            description6: "A review of the latest job postings across various industries.",
+            category6: "Vacancies",
+            author7: "Candice Wu",
+            date7: "Jan 1, 2023",
+            title7: "Top 5 Professions of the Future",
+            description7: "Learn which professions will be in high demand in the coming years.",
+            category7: "Trends",
+            author8: "Olivia Ray",
+            date8: "Jan 1, 2023",
+            title8: "How to Write the Perfect Resume",
+            description8: "Useful tips for creating a resume that will catch employers' attention",
+            category8: "Recommendations",
+            author9: "Phoenix Baker",
+            date9: "Jan 1, 2023",
+            title9: "New Vacancies of the Month",
+            description9: "A review of the latest job postings across various industries.",
+            category9: "Vacancies",
+            author10: "Lana Steiner",
+            date10: "Jan 1, 2023",
+            title10: "Top 5 Professions of the Future",
+            description10: "Learn which professions will be in high demand in the coming years.",
+            category10: "Trends",
+            author11: "Olivia Ray",
+            date11: "Jan 1, 2023",
+            title11: "How to Write the Perfect Resume",
+            description11: "Useful tips for creating a resume that will catch employers' attention",
+            category11: "Recommendations"
+        },
+
+        filterControls: {
+            filters: "Filters",
+            sortBy: "Sort By"
+        },
+
+        jobCard: {
+            newJob: "New Vacancy"
+        },
+
+        jobDetails: {
+            apply: "Apply",
+            location: "Moscow, Russia",
+            title: "Data Visualization Consultant - Power BI",
+            office: "Office",
+            location2: "Moscow",
+            hours: "40 hours per week",
+            description: "Capco is a global technology and business consultancy specializing in the financial services sector. We strive to help our clients succeed in an ever-changing industry by combining innovative thinking with unique expertise. The solutions we offer our clients every day are as diverse as our employees.",
+            description2: "As part of our ongoing global expansion strategy, Capco is growing its data practice in the UK at our London office. We are currently seeking management consultants with data analytics experience to lead and develop teams to support large-scale transformation projects for our leading financial services clients.",
+            description3: "The candidate must: Have a genuine passion for data processing and a drive to move the industry toward a forward-thinking approach to data analytics. Be ready to join a team that will develop the UK data visualization practice and the broader UK and global data practice to support evolving industry themes such as data visualization, data storytelling, descriptive and diagnostic analytics, conversational analytics, and more.",
+            collapse: "Collapse",
+            loadMore: "Load More",
+            overview: "Company Overview",
+            employees: "Number of Employees",
+            employeesValue: "From 5,000 to 10,000",
+            averageSalary: "Average Salary",
+            averageSalaryValue: "183,895 RUB (2023)",
+            creationYear: "Year of Creation",
+            creationYearValue: "08.30.2022",
+            capital: "Authorized Capital, ₽",
+            capitalValue: "875.3 million",
+            profit: "Net Profit, ₽",
+            profitValue: "2.6 billion (2023)",
+            balance: "Balance, ₽",
+            balanceValue: "18.26 billion (2023)"
+        },
+
+        jobVacancy: {
+            title: "Vacancies",
+            company1: "VK",
+            position1: "Data Analyst",
+            location1: "Minsk",
+            salary1: "50-55 thousand",
+            timeAgo1: "29 minutes ago",
+            type1: "Full-time",
+            company2: "CAPCO",
+            position2: "Data Visualization Consultant - Power BI",
+            location2: "Madrid",
+            salary2: "30-32 thousand",
+            timeAgo2: "1 day ago",
+            type2: "Full-time",
+            company3: "Yandex",
+            position3: "Full Stack Developer",
+            location3: "United States",
+            salary3: "50-52 thousand",
+            timeAgo3: "1 day ago",
+            type3: "Full-time",
+            company4: "Raycast corp",
+            position4: "Product Designer",
+            location4: "London",
+            salary4: "40-42 thousand",
+            timeAgo4: "2 days ago",
+            type4: "Full-time",
+            company5: "Loom",
+            position5: "Copywriter (Growth)",
+            location5: "London",
+            salary5: "38-40 thousand",
+            timeAgo5: "3 days ago",
+            type5: "Full-time",
+            company6: "Trainline group",
+            position6: "Senior UX/UI Designer",
+            location6: "Paris",
+            salary6: "38-40 thousand",
+            timeAgo6: "20 days ago",
+            type6: "Full-time"
+        },
+
+        searchSection: {
+            title: "Find Your New Company Today",
+            description: "Companies in computer technology, engineering, and technology are waiting for you.",
+            placeholder: "What position are you looking for?",
+            location: "Location",
+            button: "Find Company"
+        },
+
+        captcha: {
+            error: "Select only purple squares",
+            error2: "Select exactly 2 purple squares",
+            error3: "Incorrect squares selected",
+            title: "Select the astronaut holding a sign",
+            button: "I am not a robot"
+        },
+
+        emailConfirm: {
+            error: "Please enter an email",
+            error2: "Please enter a valid email",
+            title: "News Resource",
+            subtitle: "Subscribe to receive the latest news directly to your inbox",
+            buttonText: "Subscribe",
+            termsText: "Subscription Terms",
+            successText: "Thank you for subscribing!",
+            placeholder: "Enter your email"
+        },
+
+        newsPageArticle: {
+            category1: "Economy",
+            category2: "Technology",
+            category3: "Society",
+            category4: "Other",
+            articleTitle: "A Deep Dive into the Impact of Cultural Movements on Modern Society",
+            tag1: "Politics",
+            tag2: "Breaking News",
+            ArticleContent: "Cultural movements have been a driving force behind societal change for centuries, but in today's globally connected world, their impact has become more pronounced and immediate. These movements, ranging from social justice initiatives to environmental campaigns and digital innovations, are shaping not only individual beliefs but entire communities and industries. The growing awareness and advocacy for these causes highlight a societal shift toward principles of inclusivity, diversity, and sustainability, which increasingly define the evolution of modern society. One of the most prominent cultural movements in recent years has been the call for social justice and equality. This movement has manifested in various forms, from advocating for gender equality and racial justice to promoting LGBTQ+ rights and workplace inclusivity. As a result, companies, organizations, and even governments have been compelled to reassess their practices and policies. Many businesses are implementing diversity and inclusion programs, while several organizations are actively working to address pay gaps, ensure equitable representation, and create safe spaces for marginalized groups. The impact of these efforts is evident not only in the corporate world but also in entertainment, education, and media, where diverse representation and authentic storytelling are now priorities. Environmental movements are another powerful force redefining modern society. From climate change activism to sustainable agriculture, people worldwide are uniting to address environmental challenges. This call for sustainability is influencing not only consumer behavior—where eco-friendly products and services are now highly valued—but also prompting entire industries to innovate. Many companies are investing in renewable energy, adopting zero-waste policies, and striving to reduce their carbon footprint. Governments are also beginning to prioritize green policies, influenced by grassroots activism and the urgency of global warming. These environmental movements underscore the need for both immediate and long-term changes to protect the planet and its resources, encouraging both individuals and corporations to rethink their environmental impact. The rise of digital culture and technology-driven movements has further transformed how people interact and engage with cultural change. Social media platforms have become powerful tools for raising awareness, enabling messages to spread quickly and widely. Hashtags, viral campaigns, and online communities have empowered individuals to unite around shared causes, from human rights to political reforms. This digital connectivity has not only amplified the reach of cultural movements but also enabled individuals to play a more active role in societal change. People can now share resources, organize events, and foster a global sense of community, bringing together individuals from diverse backgrounds and regions in pursuit of common goals. At the same time, cultural movements have significantly influenced the arts and media industries. As awareness of issues such as representation, mental health, and inclusivity grows, artists and creators are using their work to reflect these themes. From films and TV shows that tackle complex social issues to literature challenging traditional norms, art has become a medium through which societal issues are discussed and understood. Artists are championing stories that reflect a broad range of human experiences, amplifying voices and narratives that have often been overlooked. This trend not only expands the boundaries of artistic expression but also encourages audiences to consider diverse perspectives and engage in meaningful conversations about identity, equality, and empathy.",
+            date: "September 9, 2024",
+            weather: "Moscow: +22°C, cloudy",
+            backButton: "Back",
+            authorName: "Guy Hawkins",
+            publishDate: "September 9, 2024",
+            articleTitle: "A Deep Dive into the Impact of Cultural Movements on Modern Society",
+            similarArticles: "Similar Articles",
+            articleTitle2: "Future Technologies: Challenges and Solutions",
+            authorName2: "Elena Petrova",
+            date2: "October 20, 2024",
+            articleTitle3: "Digital Transformation: New Horizons",
+            authorName3: "Sergey Lebedev",
+            date3: "October 21, 2024",
+            articleTitle4: "Social Media: Impact on Society and Culture",
+            authorName4: "Anna Sidorova",
+            date4: "October 22, 2024"
+        },
+
+        loadMoreButton: "Show More",
+
+        newsPageCategory: {
+            category1: "Economy",
+            category2: "Technology",
+            category3: "Society",
+            category4: "Other",
+            date: "September 9, 2024",
+            weather: "Moscow: +22°C, cloudy",
+            tag1: "Society",
+            tag2: "Current Events",
+            articleTitle1: "How Volunteering is Rewriting the Rules of Social Responsibility",
+            description1: "Modern volunteering initiatives are becoming a critical tool for addressing social issues. They demonstrate how selfless actions by individuals can lead to significant changes at local and global levels. This article explores examples of successful projects that inspire participation and activism.",
+            author1: "Ava Smith",
+            date1: "Oct 12, 2024",
+            articleTitle2: "New Forms of Social Interaction in the Digital Age",
+            description2: "With the acceleration of digitalization, public life is undergoing profound changes. The emergence of online interaction platforms and social networks creates new opportunities for connection and idea exchange but also poses challenges related to isolation and mental health.",
+            author2: "Liam Johnson",
+            date2: "Oct 12, 2024",
+            articleTitle3: "Environmental Initiatives: From Grassroots to Global",
+            description3: "In recent years, there has been a rise in environmental movements transitioning from local initiatives to global campaigns. This article analyzes how grassroots initiatives inspire global shifts in mindset and actions toward sustainability and environmental protection.",
+            author3: "Olivia Brown",
+            date3: "Oct 12, 2024",
+            articleTitle4: "How Artificial Intelligence is Changing Societal Norms",
+            description4: "Technological advancements, particularly in artificial intelligence, are causing significant shifts in social norms and ethical standards. The article examines the implications of AI integration into daily life and its impact on societal relationships, work, and personal data.",
+            author4: "Noah Davis",
+            date4: "Oct 5, 2024",
+            title: "Society",
+            subtitle: "Showing 10 of 1245 news"
+        },
+
+        sidebarCard: {
+            title: "You May Also Be Interested In",
+            description: "Learn how historical contexts shape modern realities and how this is reflected in the region's politics and culture.",
+            adText: "Advertisement"
+        },
+
+        featuredArticle: {
+            title: "A Deep Dive into the Impact of Cultural Movements on Modern Society",
+            date: "September 9, 2024",
+            readTime: "06 minutes",
+            badgeText: "Breaking News"
+        },
+
+        footerNewsPage: {
+            copyrightText: "Copyright © 2024 - News - All Rights Reserved",
+            backLink: "Back to System Contour"
+        },
+
+        SearchResultSearchResult: {
+            searchTitle: "Search Results for: 'Samira Narges'",
+            personName: "Samira Narges",
+            personParty: "Republican Party",
+            fullInformation: "Full Information"
+        },
+
+        newsPage: {
+            category1: "Economy",
+            category2: "Technology",
+            category3: "Society",
+            category4: "Other",
+            date: "September 9, 2024",
+            weather: "Moscow: +22°C, cloudy",
+            title: "Exchange News",
+            date: "September 9, 2024",
+            readTime: "06 minutes",
+            title1: "The Impact of Artificial Intelligence on the Future Workforce",
+            author1: "Sarah Blake",
+            date1: "September 15, 2024",
+            title2: "Social Changes in the Digital Era",
+            author2: "Li Chen",
+            date2: "September 22, 2024",
+            title3: "Business Sustainability: New Trends and Challenges",
+            author3: "Emily Taylor",
+            date3: "September 29, 2024",
+            title4: "Society",
+            moreText4: "More Society News",
+            category5: "Economic Trends and Innovations",
+            date5: "September 6, 2024",
+            title5: "Riding the Wave of New Ideas and Technologies",
+            author5: "James Wilson",
+            date5: "September 12, 2024",
+            title6: "Global Economic Trends and Their Impact on Society",
+            author6: "Guy Hawkins",
+            date6: "September 29, 2024",
+            title7: "The Future of Technology: How AI is Transforming Economic Models",
+            author7: "Guy Hawkins",
+            date7: "September 29, 2024",
+            title8: "Sustainable Development: New Approaches and Strategies",
+            author8: "Guy Hawkins",
+            date8: "September 29, 2024",
+            title9: "Economic Implications of Business Digitalization",
+            author9: "Economy",
+            date9: "September 22, 2024",
+            title10: "The Future of Social Media in the Era of New Technologies",
+            author10: "Society",
+            date10: "September 29, 2024",
+            title11: "Innovations in Renewable Energy Sources",
+            author11: "Technology",
+            date11: "October 6, 2024",
+            title12: "Technology",
+            moreText12: "More Technology News",
+            title13: "Technological Horizons: New Challenges and Perspectives",
+            author13: "Alexei Smirnov",
+            date13: "October 6, 2024",
+            title14: "The Future of Technologies: Challenges and Opportunities",
+            author14: "Anastasia Sokolova",
+            date14: "June 15, 2027",
+            title15: "Technological Trends Shaping Our World's Future",
+            author15: "Alexander Grayson",
+            date15: "October 30, 2024",
+            title16: "Technological Trends Shaping Our World's Future",
+            author16: "Alexander Grayson",
+            date16: "October 30, 2024",
+            title17: "Economy",
+            moreText17: "More Economy News",
+            title18: "The Impact of Artificial Intelligence on Financial Markets",
+            author18: "Economy",
+            date18: "October 10, 2024",
+            title19: "Trends in Sustainable Development in the Global Economy",
+            author19: "Economy",
+            date19: "November 15, 2024",
+            title20: "Prospects for Cryptocurrencies in Current Economic Conditions",
+            author20: "Economy",
+            date20: "December 5, 2024",
+            mostReadTitle: "Most Read",
+            title21: "Future Technologies: Challenges and Solutions",
+            author21: "Elena Petrova",
+            date21: "October 20, 2024",
+            title22: "Digital Transformation: New Horizons",
+            author22: "Sergey Lebedev",
+            date22: "October 21, 2024",
+            title23: "Social Media: Impact on Society and Culture",
+            author23: "Anna Sidorova",
+            date23: "October 22, 2024",
+            title24: "Analysis of Global Economic Changes and Their Impact on Society",
+            author24: "Li Chen",
+            date24: "September 15, 2024",
+            title25: "The Impact of Technology on Financial Systems and Its Consequences",
+            author25: "Sarah Blake",
+            date25: "September 22, 2024",
+            title26: "Trends in Global Economy and Their Impact on the Future",
+            author26: "Emily Taylor",
+            date26: "September 29, 2024"
+        },
+        SearchResultSearchPage: {
+            searchTitle: "Search Results for: 'Samira Narges'",
+            personName: "Samira Narges",
+            personParty: "Republican Party",
+            fullInformation: "Full Information"
+        },
+
+        partyPage: {
+            title: "Katarium",
+            activeNavItem: "Parties",
+            copyright: "2023. All Rights Reserved",
+            backLinkText: "Back to System Contour"
+        },
+
+        representativeCard: {
+            title: "Minister",
+            name: "Ramin Shahram",
+            name1: "Javed Mehran",
+            name2: "Dilshat Lalek",
+            name3: "Bulat Berim",
+            name4: "Farzan Shabnam",
+            name5: "Milinda Zeynab",
+            sectionTitle: "Party Representatives",
+            sectionDescription: "Proin rutrum euismod leo non aliquam. Mauris lacinia ultrices diam, quis bibendum justo auctor eget. Proin rutrum euismod leo non aliquam."
+        },
+
+        personProfileBreadcrumbs: {
+            backButton: "Back",
+            breadcrumbText: "List of Political Figures",
+            breadcrumbDescription: "Samira Narges"
+        },
+
+        partyMembers: {
+            name: "Ramin Shahram",
+            name1: "Javed Mehran",
+            name2: "Dilshat Lalek",
+            name3: "Bulat Berim",
+            name4: "Farzan Shabnam",
+            name5: "Milinda Zeynab",
+            position: "Minister",
+            sectionTitle: "Party Members",
+            sectionDescription: "Proin rutrum euismod leo non aliquam. Mauris lacinia ultrices diam, quis bibendum justo auctor eget. Proin rutrum euismod leo non aliquam."
+        },
+
+        personProfile: {
+            title: "Katarium",
+            activeNavItem: "Persons",
+            copyright: "2023. All Rights Reserved",
+            backLinkText: "Back to System Contour"
+        },
+
+        profileHero: {
+            position: "Minister of Healthcare",
+            name: "Samira Narges",
+            gender: "Gender: Female",
+            birthDate: "Date of Birth: 09.19.1975",
+            maritalStatus: "Marital Status: Married",
+            children: "Number of Children: 1",
+            education: "Education: Master's Degree from Katariy State University named after David Kemp",
+            militaryService: "Military Service: None",
+            party: "Republican Party",
+            downloadButton: "Download Declaration"
+        },
+
+        PoliticalDirectoryPersonCard: {
+            infoButtonText: "Full Information"
+        },
+
+        PoliticalDirectoryPoliticalDirectory: {
+            name: "Abhay Ajit",
+            party: "Representative of the Growth Party",
+            name1: "Anusheh Sartra",
+            party1: "Representative of the Republican Party",
+            name2: "Argavan Sumati",
+            party2: "Representative of the Justice Aspirations Party",
+            name3: "Samira Narges",
+            party3: "Republican Party",
+            name4: "Abhay Ajit",
+            party4: "Representative of the Growth Party",
+            name5: "Anusheh Sartra",
+            party5: "Representative of the Republican Party",
+            name6: "Samira Narges",
+            party6: "Republican Party",
+            name7: "Argavan Sumati",
+            party7: "Representative of the Justice Aspirations Party",
+            name8: "Abhay Ajit",
+            party8: "Representative of the Growth Party",
+            title: "Katarium",
+            subtitle: "List of Political Figures",
+            activeNavItem: "Persons",
+            loadMoreButton: "Load More",
+            copyright: "2023. All Rights Reserved",
+            backLinkText: "Back to System Contour"
+        },
+
+        PoliticalDirectorySearchSection: {
+            searchPlaceholder: "Search by name or position...",
+            sortLabel: "Sort by",
+            searchButton: "Find"
+        },
+
+        PoliticalPageFooter: {
+            home: "Home",
+            parties: "Parties",
+            persons: "Persons",
+            politicalSystem: "Political System",
+            siteTitle: "Katarium State System Site",
+            copyright: "2023. All Rights Reserved",
+            backLinkText: "Back to System Contour"
+        },
+
+        PoliticalPageHeader: {
+            title: "Katarium",
+            home: "Home",
+            parties: "Parties",
+            persons: "Persons",
+            politicalSystem: "Political System",
+            siteTitle: "Katarium State System Site",
+            copyright: "2023. All Rights Reserved",
+            backLinkText: "Back to System Contour"
+        },
+
+        PoliticalPagePoliticalPage: {
+            title: "Katarium",
+            subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing.",
+            description: "Proin rutrum euismod leo non aliquam. Mauris lacinia ultrices diam, quis bibendum justo auctor eget. Praesent aliquam vestibulum nisi et porttitor.",
+            selectPlaceholder: "All Sections",
+            searchPlaceholder: "Search...",
+            buttonText: "Find",
+            filtersText: "Filters",
+            searchTitle: "Lorem ipsum dolor sit amet",
+            siteTitle: "Katarium State System Site",
+            copyright: "2023. All Rights Reserved",
+            backLinkText: "Back to System Contour"
+        },
+
+        PoliticalSearchPagePoliticalCard: {
+            fullInformation: "Full Information"
+        },
+
+        PoliticalSearchPagePoliticalSearchPage: {
+            person1Name: "Abhay Ajit",
+            person1Party: "Representative of the Growth Party",
+            person2Name: "Anusheh Sartra",
+            person2Party: "Representative of the Republican Party",
+            person3Name: "Argavan Sumati",
+            person3Party: "Representative of the Justice Aspirations Party",
+            person4Name: "Bijoy Vanada",
+            person4Party: "Representative of the New Katarium Party",
+            title: "Katarium",
+            activeNavItem: "Persons",
+            otherPoliticiansTitle: "Other Political Figures",
+            loadMoreButton: "Load More",
+            siteTitle: "Katarium State System Site",
+            copyright: "2023. All Rights Reserved",
+            backLinkText: "Back to System Contour"
+        },
+
+        SearchResultSearchPage: {
+            searchTitle: "Search Results for: 'Samira Narges'",
+            personName: "Samira Narges",
+            personParty: "Republican Party",
+            fullInformation: "Full Information"
+        },
+
+        PoliticalSystemPagePoliticalSystemPage: {
+            title: "Katarium",
+            activeNavItem: "Political System",
+            siteTitle: "Katarium State System Site",
+            copyright: "2023. All Rights Reserved",
+            backLinkText: "Back to System Contour"
+        },
+
+        PoliticalPageSearchForm: {
+            searchTitle: "Lorem ipsum dolor sit amet",
+            selectPlaceholder: "All Sections",
+            searchPlaceholder: "Search...",
+            buttonText: "Find",
+            filtersText: "Filters"
+        },
+
+        filterComponent: {
+            experience: "Experience",
+            employmentType: "Employment Type",
+            title: "Filters",
+            location: "Location",
+            nearby: "Near Me",
+            remote: "Remote Work",
+            exact: "Exact Location",
+            any: "Any",
+            salary: "Salary",
+            publicationDate: "Publication Date",
+            allTime: "All Time",
+            last24Hours: "Last 24 Hours",
+            last3Days: "Last 3 Days",
+            last7Days: "Last 7 Days",
+            anyExperience: "Any Experience",
+            internship: "Internship",
+            remoteWork: "Remote Work",
+            fullTime: "Full-time",
+            temporary: "Temporary",
+            partTime: "Part-time",
+            resultsCount: "Found",
+            applyButton: "Apply",
+            monthly: "Monthly",
+            yearly: "Yearly"
+        }
+    }
 }; 

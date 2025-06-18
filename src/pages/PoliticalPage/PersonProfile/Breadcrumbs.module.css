@@ -89,7 +89,6 @@
     align-self: stretch;
     align-items: center;
     gap: 4px;
-    min-width: 240px;
     margin-top: auto;
     margin-bottom: auto;
     display: flex;
