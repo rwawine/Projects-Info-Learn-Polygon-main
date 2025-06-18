@@ -1,18 +1,19 @@
 "use client";
 import * as React from "react";
 import styles from "./InputDesign.module.css";
-
+import { useLanguage } from '../../../context/LanguageContext';
 interface HeaderProps {
   logo: string;
   activeNavItem?: string;
 }
 
 export const Header: React.FC<HeaderProps> = ({ logo, activeNavItem = "Главная" }) => {
+  const { language, translations } = useLanguage();
   const navItems = [
-    { label: "Главная", href: "/political-site" },
-    { label: "Персоны", href: "/political-site/directory" },
-    { label: "Партии", href: "/political-site/party" },
-    { label: "Политическое устройство", href: "/political-site/system" }
+    { label: translations[language].PoliticalPageHeader.home, href: "/political-site" },
+    { label: translations[language].PoliticalPageHeader.persons, href: "/political-site/directory" },
+    { label: translations[language].PoliticalPageHeader.parties, href: "/political-site/party" },
+    { label: translations[language].PoliticalPageHeader.politicalSystem, href: "/political-site/system" }
   ];
 
   return (

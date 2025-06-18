@@ -2,6 +2,7 @@
 import * as React from "react";
 import styles from "./PersonCard.module.css";
 import { ArrowIcon } from "./icons/ArrowIcon.tsx";
+import { useLanguage } from '../../../context/LanguageContext';
 
 interface Person {
   id: string;
@@ -15,6 +16,7 @@ interface PersonCardProps {
 }
 
 export function PersonCard({ person }: PersonCardProps) {
+  const { language, translations } = useLanguage();
   return (
     <article className={styles.personCard}>
       <div className={styles.imageContainer}>
@@ -35,7 +37,7 @@ export function PersonCard({ person }: PersonCardProps) {
         </div>
         <button className={styles.infoButton}>
           <span className={styles.infoButtonText}>
-            Полная информация
+            {translations[language].PoliticalDirectoryPersonCard.infoButtonText}
           </span>
           <ArrowIcon />
         </button>

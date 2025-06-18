@@ -2,7 +2,7 @@ import React from 'react';
 import { SearchResult } from './SearchResult';
 import { PoliticalCard } from './PoliticalCard';
 import { Footer } from '../PoliticalPage/Footer';
-
+import { useLanguage } from '../../../context/LanguageContext';
 import { Header } from '../PoliticalPage/Header';
 
 import styles from './PoliticalSearchPage.module.css';
@@ -13,37 +13,38 @@ import person3 from "../../../assets/Persons/Person3.png";
 import person5 from "../../../assets/Persons/Person5.png";
 
 export const PoliticalSearchPage: React.FC = () => {
+  const { language, translations } = useLanguage();
   const politicalFigures = [
     {
-      name: "Абхай Аджит",
-      party: "Представитель партии Роста",
+      name: translations[language].PoliticalSearchPagePoliticalSearchPage.person1Name,
+      party: translations[language].PoliticalSearchPagePoliticalSearchPage.person1Party,
       imageUrl: person1
     },
     {
-      name: "Анушех Сартра",
-      party: "Представитель партии Республиканцев",
+      name: translations[language].PoliticalSearchPagePoliticalSearchPage.person2Name,
+      party: translations[language].PoliticalSearchPagePoliticalSearchPage.person2Party,
       imageUrl: person2
     },
     {
-      name: "Аргаван Сумати",
-      party: "Представитель партии Стремлений к справедливости",
+      name: translations[language].PoliticalSearchPagePoliticalSearchPage.person3Name,
+      party: translations[language].PoliticalSearchPagePoliticalSearchPage.person3Party,
       imageUrl: person3
     },
     {
-      name: "Биджой Ванада",
-      party: "Представитель партии \"Новый Катариум\"",
+      name: translations[language].PoliticalSearchPagePoliticalSearchPage.person4Name,
+      party: translations[language].PoliticalSearchPagePoliticalSearchPage.person4Party,
       imageUrl: person5
     }
   ];
 
   return (
     <div className={styles.pageContainer}>
-      <Header logo="Катариум" activeNavItem="Персоны" />
+      <Header logo={translations[language].PoliticalSearchPagePoliticalSearchPage.title} activeNavItem={translations[language].PoliticalSearchPagePoliticalSearchPage.activeNavItem} />
       <main className={styles.mainContent}>
         <SearchResult />
         <section className={styles.otherPoliticiansSection}>
           <h2 className={styles.otherPoliticiansTitle}>
-            Другие политические деятели
+            {translations[language].PoliticalSearchPagePoliticalSearchPage.otherPoliticiansTitle}
           </h2>
           <div className={styles.politiciansContainer}>
             <div className={styles.politiciansGrid}>
@@ -58,13 +59,13 @@ export const PoliticalSearchPage: React.FC = () => {
             </div>
             <div className={styles.loadMoreButtonContainer}>
               <button className={styles.loadMoreButton}>
-                Загрузить еще
+                {translations[language].PoliticalSearchPagePoliticalSearchPage.loadMoreButton}
               </button>
             </div>
           </div>
         </section>
       </main>
-      <Footer siteTitle="Катариум" copyright="2023. Все права защищены" backLinkText="Вернуться в контур системы" />
+      <Footer siteTitle={translations[language].PoliticalSearchPagePoliticalSearchPage.siteTitle} copyright={translations[language].PoliticalSearchPagePoliticalSearchPage.copyright} backLinkText={translations[language].PoliticalSearchPagePoliticalSearchPage.backLinkText} />
     </div>
   );
 };

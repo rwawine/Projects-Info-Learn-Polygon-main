@@ -1,4 +1,5 @@
-import { ArticleContent } from "../pages/NewsPage/NewsPageArticle/ArticleContent";
+import RepresentativeCard from "../pages/PoliticalPage/PartyPage/RepresentativeCard";
+import { PartyMembers } from "../pages/PoliticalPage/PersonProfile/PartyMembers";
 
 export const translations = {
     ru: {
@@ -39,7 +40,7 @@ export const translations = {
         tinaWilson: "Тина Вильсон",
         tinaWilsonTitle: "Капитан-Регент",
 
-        poilitical: {
+        PoliticalSystemPageMainContent: {
             politicalSystemPageTitle: "Демократическая республика с парламентской формой правления",
             republicanParty: "Партия республиканцев",
             democraticParty: "Партия демократов",
@@ -567,7 +568,168 @@ export const translations = {
             title26: "Тренды в мировой экономике и их влияние на будущее",
             author26: "Эмили Тейлор",
             date26: "29 сентября 2024 года"
+        },
+
+        partyPage: {
+            title: "Катариум",
+            activeNavItem: "Партии",
+            copyright: "2023. Все права защищены",
+            backLinkText: "Вернуться в контур системы"
+        },
+
+        representativeCard: {
+            title: "Министр",
+            name: "Рамин Шахрам",
+            name1: "Джавед Мехран",
+            name2: "Дильшат Лалек",
+            name3: "Булат Берим",
+            name4: "Фарзан Шабнам",
+            name5: "Милинда Зейнаб",
+            sectionTitle: "Представители партии",
+            sectionDescription: "Proin rutrum euismod leo non aliquam. Mauris lacinia ultrices diam, quis bibendum justo auctor eget. Proin rutrum euismod leo non aliquam."
+        },
+
+        personProfileBreadcrumbs: {
+            backButton: "Вернуться",
+            breadcrumbText: "Самира Наргес",
+            breadcrumbDescription: "Самира Наргес"
         }
+        ,
+        partyMembers: {
+            name: "Рамин Шахрам",
+            name1: "Джавед Мехран",
+            name2: "Дильшат Лалек",
+            name3: "Булат Берим",
+            name4: "Фарзан Шабнам",
+            name5: "Милинда Зейнаб",
+            position: "Министр",
+            sectionTitle: "Однопартийцы",
+            sectionDescription: "Proin rutrum euismod leo non aliquam. Mauris lacinia ultrices diam, quis bibendum justo auctor eget. Proin rutrum euismod leo non aliquam."
+        },
+
+        personProfile: {
+            title: "Катариум",
+            activeNavItem: "Персоны",
+            copyright: "2023. Все права защищены",
+            backLinkText: "Вернуться в контур системы"
+        },
+
+        profileHero: {
+            position: "Министр Здравоохранения",
+            name: "Самира Наргес",
+            gender: "Пол: женский",
+            birthDate: "Дата рождения: 19.09. 1975",
+            maritalStatus: "Семейное положение: в браке",
+            children: "Количество детей: 1",
+            education: "Образование: Магистратура Катарийский государственный университет имени Давида Кемпа",
+            militaryService: "Военная служба: нет",
+            party: "Партия Республиканцев",
+            downloadButton: "Скачать декларацию"
+        },
+
+        PoliticalDirectoryPersonCard: {
+            infoButtonText: "Полная информация"
+        },
+
+        PoliticalDirectoryPoliticalDirectory: {
+            name: "Абхай Аджит",
+            party: "Представитель партии Роста",
+            name1: "Анушех Сартра",
+            party1: "Представитель партии Республиканцев",
+            name2: "Аргаван Сумати",
+            party2: "Представитель партии Стремлений к справедливости",
+            name3: "Самира Наргес",
+            party3: "Республиканская партия",
+            name4: "Абхай Аджит",
+            party4: "Представитель партии Роста",
+            name5: "Анушех Сартра",
+            party5: "Представитель партии Республиканцев",
+            name6: "Самира Наргес",
+            party6: "Республиканская партия",
+            name7: "Аргаван Сумати",
+            party7: "Представитель партии Стремлений к справедливости",
+            name8: "Абхай Аджит",
+            party8: "Представитель партии Роста",
+            title: "Катариум",
+            subtitle: "Перечень политических персон",
+            activeNavItem: "Персоны",
+            loadMoreButton: "Загрузить еще",
+            copyright: "2023. Все права защищены",
+            backLinkText: "Вернуться в контур системы"
+        },
+
+        PoliticalDirectorySearchSection: {
+            searchPlaceholder: "Поиск по имени или должности...",
+            sortLabel: "Сортировать по",
+            searchButton: "Найти"
+        }
+        ,
+
+        PoliticalPageFooter: {
+            home: "Главная",
+            parties: "Партии",
+            persons: "Персоны",
+            politicalSystem: "Политическое устройство"
+        },
+
+        PoliticalPageHeader: {
+            home: "Главная",
+            parties: "Партии",
+            persons: "Персоны",
+            politicalSystem: "Политическое устройство"
+        },
+
+        PoliticalPagePoliticalPage: {
+            title: "Катариум",
+            subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing.",
+            description: "Proin rutrum euismod leo non aliquam. Mauris lacinia ultrices diam, quis bibendum justo auctor eget. Praesent aliquam vestibulum nisi et porttitor.",
+            selectPlaceholder: "Все разделы",
+            searchPlaceholder: "Поиск...",
+            buttonText: "Найти",
+            filtersText: "Фильтры",
+            searchTitle: "Lorem ipsum dolor sit amet",
+            siteTitle: "Сайт государственного устройства \"Катариум\"",
+            copyright: "2023. Все права защищены",
+            backLinkText: "Вернуться в контур системы"
+        },
+
+        PoliticalSearchPagePoliticalCard: {
+            fullInformation: "Полная информация"
+        },
+
+        PoliticalSearchPagePoliticalSearchPage: {
+            person1Name: "Абхай Аджит",
+            person1Party: "Представитель партии Роста",
+            person2Name: "Анушех Сартра",
+            person2Party: "Представитель партии Республиканцев",
+            person3Name: "Аргаван Сумати",
+            person3Party: "Представитель партии Стремлений к справедливости",
+            person4Name: "Биджой Ванада",
+            person4Party: "Представитель партии \"Новый Катариум\"",
+            title: "Катариум",
+            activeNavItem: "Персоны",
+            otherPoliticiansTitle: "Другие политические деятели",
+            loadMoreButton: "Загрузить еще",
+            siteTitle: "Сайт государственного устройства \"Катариум\"",
+            copyright: "2023. Все права защищены",
+            backLinkText: "Вернуться в контур системы"
+        },
+
+        SearchResultSearchResult: {
+            searchTitle: "Результат поиска по запросу: «Самира Наргес»",
+            personName: "Самира Наргес",
+            personParty: "Республиканская партия",
+            fullInformation: "Полная информация"
+        },
+
+        PoliticalSystemPagePoliticalSystemPage: {
+            title: "Катариум",
+            activeNavItem: "Политическое устройство",
+            siteTitle: "Сайт государственного устройства \"Катариум\"",
+            copyright: "2023. Все права защищены",
+            backLinkText: "Вернуться в контур системы"
+        }
+
     },
     en: {}
 }; 

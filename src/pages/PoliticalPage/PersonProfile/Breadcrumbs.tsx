@@ -1,7 +1,9 @@
 import React from 'react';
 import styles from './Breadcrumbs.module.css';
+import { useLanguage } from '../../../context/LanguageContext';
 
 export function Breadcrumbs() {
+  const { language, translations } = useLanguage();
   return (
     <nav className={styles.breadcrumbsContainer}>
       <a href='/political-site/search' className={styles.backButton}>
@@ -11,7 +13,7 @@ export function Breadcrumbs() {
           alt="Back"
         />
         <span className={styles.backText}>
-          Вернуться
+          {translations[language].personProfileBreadcrumbs.backButton}
         </span>
       </a>
       <div className={styles.breadcrumbsPath}>
@@ -28,7 +30,7 @@ export function Breadcrumbs() {
           />
           <a href='/political-site/directory' className={styles.breadcrumbButton}>
             <div className={styles.breadcrumbText}>
-              Перечень политических персон
+              {translations[language].personProfileBreadcrumbs.breadcrumbText}
             </div>
           </a>
         </div>
@@ -40,7 +42,7 @@ export function Breadcrumbs() {
           />
           <div className={styles.breadcrumbButton}>
             <div className={styles.breadcrumbText}>
-              Самира Наргес
+              {translations[language].personProfileBreadcrumbs.breadcrumbDescription}
             </div>
           </div>
         </div>

@@ -8,17 +8,17 @@ export function MainContent() {
   return (
     <main className={styles.mainSection}>
       <h1 className={styles.mainTitle}>
-      {translations[language].political.politicalSystemPageTitle}
+      {translations[language].PoliticalSystemPageMainContent.politicalSystemPageTitle}
       </h1>
       <div className={styles.buttonGroup}>
         <button className={styles.partyButton}>
           <span className={styles.buttonLabel}>
-            {translations[language].political.republicanParty}
+            {translations[language].PoliticalSystemPageMainContent.republicanParty}
           </span>
         </button>
         <button className={styles.partyButton}>
           <span className={styles.buttonLabel}>
-            {translations[language].political.democraticParty}
+            {translations[language].PoliticalSystemPageMainContent.democraticParty}
           </span>
         </button>
       </div>

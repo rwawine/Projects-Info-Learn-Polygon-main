@@ -4,16 +4,17 @@ import { Hero } from "./Hero";
 import { MainContent } from "./MainContent";
 import { Footer } from "../PoliticalPage/Footer";
 import styles from "./PoliticalSystemPage.module.css";
-
+import { useLanguage } from '../../../context/LanguageContext';
 import { Header } from "../PoliticalPage/Header";
 
 function PoliticalSystemPage() {
+    const { language, translations } = useLanguage();
     return (
         <div className={styles.pageContainer}>
-            <Header logo="Катариум" activeNavItem="Политическое устройство" />
+            <Header logo={translations[language].PoliticalSystemPagePoliticalSystemPage.title} activeNavItem={translations[language].PoliticalSystemPagePoliticalSystemPage.activeNavItem} />
             <Hero />
             <MainContent />
-            <Footer siteTitle="Катариум" copyright="2023. Все права защищены" backLinkText="Вернуться в контур системы" />
+            <Footer siteTitle={translations[language].PoliticalSystemPagePoliticalSystemPage.siteTitle} copyright={translations[language].PoliticalSystemPagePoliticalSystemPage.copyright} backLinkText={translations[language].PoliticalSystemPagePoliticalSystemPage.backLinkText} />
         </div>
     );
 }

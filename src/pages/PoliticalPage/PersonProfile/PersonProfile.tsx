@@ -5,11 +5,13 @@ import { ProfileHero } from './ProfileHero';
 import { PartyMembers } from './PartyMembers.tsx';
 import { Footer } from '../PoliticalPage/Footer';
 import styles from './PersonProfile.module.css';
+import { useLanguage } from '../../../context/LanguageContext';
 
 export default function PersonProfile() {
+  const { language, translations } = useLanguage();
   return (
     <div className={styles.pageContainer}>
-        <Header logo="Катариум" activeNavItem="Персоны" />
+        <Header logo={translations[language].personProfile.title} activeNavItem={translations[language].personProfile.activeNavItem} />
       <main className={styles.mainContent}>
         <div className={styles.contentWrapper}>
           <Breadcrumbs />
@@ -17,7 +19,7 @@ export default function PersonProfile() {
         </div>
         <PartyMembers />
       </main>
-      <Footer siteTitle="Катариум" copyright="2023. Все права защищены" backLinkText="Вернуться в контур системы" />
+      <Footer siteTitle={translations[language].personProfile.title} copyright={translations[language].personProfile.copyright} backLinkText={translations[language].personProfile.backLinkText} />
     </div>
   );
 }

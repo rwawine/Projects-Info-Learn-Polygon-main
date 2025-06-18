@@ -6,7 +6,10 @@ import { HeroSection } from "./HeroSection.tsx";
 import { SearchForm } from "./SearchForm.tsx";
 import { Footer } from "./Footer.tsx";
 
+import { useLanguage } from '../../../context/LanguageContext';
+
 function PoliticalPage() {
+  const { language, translations } = useLanguage();
   return (
     <div className={styles.container}>
       <main className={styles.mainWrapper}>
@@ -16,28 +19,28 @@ function PoliticalPage() {
           className={styles.backgroundImage}
         />
 
-        <Header logo="Катариум" />
+        <Header logo={translations[language].PoliticalPageHeader.title} />
 
         <HeroSection
-          title="Lorem ipsum dolor sit amet, consectetur adipiscing."
-          description="Proin rutrum euismod leo non aliquam. Mauris lacinia ultrices diam, quis bibendum justo auctor eget. Praesent aliquam vestibulum nisi et porttitor."
+          title={translations[language].PoliticalPagePoliticalPage.subtitle}
+          description={translations[language].PoliticalPagePoliticalPage.description}
         />
 
         <SearchForm
-          title="Lorem ipsum dolor sit amet"
-          selectPlaceholder="Все разделы"
-          searchPlaceholder="Поиск..."
-          buttonText="Найти"
-          filtersText="Фильтры"
+          title={translations[language].PoliticalPageSearchForm.searchTitle}
+          selectPlaceholder={translations[language].PoliticalPageSearchForm.selectPlaceholder}
+          searchPlaceholder={translations[language].PoliticalPageSearchForm.searchPlaceholder}
+          buttonText={translations[language].PoliticalPageSearchForm.buttonText}
+          filtersText={translations[language].PoliticalPageSearchForm.filtersText}
           selectIcon="https://cdn.builder.io/api/v1/image/assets/TEMP/54846b380c22bf284c9fd857673c102a9c227630?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf"
           filtersIcon="https://cdn.builder.io/api/v1/image/assets/TEMP/f421666852abc14cef0f91a1ac1b06af326229c8?placeholderIfAbsent=true&apiKey=8428921ce7c94552a2de6858b09e0ebf"
         />
       </main>
 
       <Footer
-        siteTitle='Сайт государственного устройства "Катариум"'
-        copyright="2023. Все права защищены"
-        backLinkText="Вернуться в контур системы"
+        siteTitle={translations[language].PoliticalPageFooter.siteTitle}
+        copyright={translations[language].PoliticalPageFooter.copyright}
+        backLinkText={translations[language].PoliticalPageFooter.backLinkText}
       />
     </div>
   );

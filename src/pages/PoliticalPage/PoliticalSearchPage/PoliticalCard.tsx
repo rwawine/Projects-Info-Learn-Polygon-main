@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowIcon } from './ArrowIcon.tsx';
 import styles from './PoliticalSearchPage.module.css';
+import { useLanguage } from '../../../context/LanguageContext';
 
 interface PoliticalCardProps {
   name: string;
@@ -15,6 +16,7 @@ export const PoliticalCard: React.FC<PoliticalCardProps> = ({
   imageUrl,
   imageAlt = ""
 }) => {
+  const { language, translations } = useLanguage();
   return (
     <article className={styles.politicalCard}>
       <div className={styles.cardImageContainer}>
@@ -35,7 +37,7 @@ export const PoliticalCard: React.FC<PoliticalCardProps> = ({
         </div>
         <div className={styles.cardInfoLink}>
           <span className={styles.cardInfoText}>
-            Полная информация
+            {translations[language].PoliticalSearchPagePoliticalCard.fullInformation}
           </span>
           <ArrowIcon />
         </div>

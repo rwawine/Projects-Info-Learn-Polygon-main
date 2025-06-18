@@ -1,7 +1,7 @@
 "use client";
 import * as React from "react";
 import styles from "./InputDesign.module.css";
-
+import { useLanguage } from '../../../context/LanguageContext';
 interface FooterProps {
   siteTitle: string;
   copyright: string;
@@ -9,11 +9,12 @@ interface FooterProps {
 }
 
 export const Footer: React.FC<FooterProps> = ({ siteTitle, copyright, backLinkText }) => {
+  const { language, translations } = useLanguage();
   const navItems = [
-    { label: "Главная", href: "/political-site" },
-    { label: "Партии", href: "/political-site/party" },
-    { label: "Персоны", href: "/political-site/person" },
-    { label: "Политическое устройство", href: "/political-site/system" }
+    { label: translations[language].PoliticalPageFooter.home, href: "/political-site" },
+    { label: translations[language].PoliticalPageFooter.parties, href: "/political-site/party" },
+    { label: translations[language].PoliticalPageFooter.persons, href: "/political-site/person" },
+    { label: translations[language].PoliticalPageFooter.politicalSystem, href: "/political-site/system" }
   ];
 
   return (
