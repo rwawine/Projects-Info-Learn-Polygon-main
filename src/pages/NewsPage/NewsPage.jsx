@@ -178,7 +178,7 @@ function NewsPage() {
                   author={translations[language].newsPage.author16}
                   date={translations[language].newsPage.date16}
                   imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/7db43ddbdb063546425552b39800245806af2e7e?placeholderIfAbsent=true"
-                  badge="30 октября 2024 года"
+                  badge={translations[language].newsPage.date16}
                 />
               </div>
             </NewsSection>
